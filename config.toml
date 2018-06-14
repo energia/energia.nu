@@ -1,0 +1,7 @@
+baseURL = "http://energia.nu/"
+languageCode = "en-us"
+title = "Energia"
+theme = "energia"
+[permalinks]
+    top = "/:filename/"
+    guide = "/guide/:filename/"
