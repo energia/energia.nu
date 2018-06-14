@@ -1,0 +1,23 @@
+== Sensors ==
+
+Sensors have always been an important part of electronics and are getting even more important +
+as data collection becomes one of the major jobs of embedded systems.
+
+https://en.wikipedia.org/wiki/Sensor[Sensors] are hardware devices that produce a measurable response to a change in a physical +
+condition like temperature or pressure. Sensors measure physical data of the parameter to be +
+monitored. The continual https://en.wikipedia.org/wiki/Analog_signal[analog signal] produced by the sensors is digitized by an https://en.wikipedia.org/wiki/Analog-to-digital_converter[analog-to- +
+digital] converter and sent to controllers for further processing. A sensor node should be small in +
+size, consume extremely low energy, operate in high volumetric densities, be autonomous and +
+operate unattended, and be adaptive to the environment. As wireless sensor nodes are typically +
+very small electronic devices, they can only be equipped with a limited power source of less than +
+0.5-2 ampere-hour and 1.2-3.7 volts.
+
+Sensors are classified into three categories: passive, omni-directional sensors; passive, narrow- +
+beam sensors; and active sensors. Passive sensors sense the data without actually manipulating +
+the environment by active probing. They are self powered; that is, energy is needed only to +
+amplify their analog signal. Active sensors actively probe the environment, for example, a sonar +
+or radar sensor, and they require continuous energy from a power source. Narrow-beam sensors +
+have a well-defined notion of direction of measurement, similar to a camera. Omni-directional +
+sensors have no notion of direction involved in their measurements.
+
+http://en.wikipedia.org/wiki/Sensor_node

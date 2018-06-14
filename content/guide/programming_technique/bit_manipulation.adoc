@@ -1,0 +1,5 @@
+== Bit Manipulation ==
+
+Bits are binary units that we use in electronics.
+
+Sparkfun has a https://learn.sparkfun.com/tutorials/binary[great tutorial on binary and bit math] if you want to learn more about them.

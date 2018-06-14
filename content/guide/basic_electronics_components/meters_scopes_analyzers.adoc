@@ -1,0 +1,12 @@
+== Meters, Scopes, and Analyzers ==
+
+A digital multimeter is a powerful tool that you need to learn how to use when working with +
+electronics.
+
+An oscilloscope is an even more powerful but often expensive tool that you can use when +
+developing and verifying electronics.
+
+A logic analyzer is a crucial tool to determine what kind of signals are going through your circuit.
+
+Sparkfun has a https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter[great tutorial on how to use a multimeter] if you want to know more about it.
+

@@ -1,0 +1,4 @@
+== Resistors ==
+
+Sparkfun has a https://learn.sparkfun.com/tutorials/resistors[great tutorial on resistors] if you want to know more about them.
+

@@ -1,0 +1,9 @@
+== Wires ==
+
+Wires help us connect electrical components into circuits. A wire essentially is any length of +
+conductive material that can join electrical components. There are many types of wires with +
+different gauges, connectors, and internals. For breadboarding, you can use male jumper wires +
+to connect the rows together. On a printed circuit board, there are traces, which are essentially +
+copper wires connecting components.
+
+Sparkfun has a https://learn.sparkfun.com/tutorials/working-with-wire[great tutorial on working with wire] if you want to know more about them.

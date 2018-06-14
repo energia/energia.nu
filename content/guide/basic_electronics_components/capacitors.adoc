@@ -1,0 +1,5 @@
+== Capacitors ==
+
+Capacitors are able to store energy.
+
+Sparkfun has a https://learn.sparkfun.com/tutorials/capacitors[great tutorial on capacitors] if you want to learn more about them.

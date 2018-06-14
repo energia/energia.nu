@@ -1,0 +1,86 @@
+== Multitasking ==
+
+Multitasking is the ability to run multiple tasks or threads concurrently on a microcontroller. In +
+Energia MT or EMT, multitasking is achieved by treating each tab as a separate task and letting +
+http://www.ti.com/tool/ti-rtos[TI-RTOS] and Energia take care of the rest. Currently, Multitasking is supported on the MSP432, +
+CC3200 LaunchPads, the RedBearLabs CC3200, WiFi Mini and Micro and the CC2650 +
+SensorTag. The boards are identified with EMT in the Tools->Board menu.
+
+=== Setting up Multitasking applications in Energia MT ===
+
+Each tab in Energia MT will be treated as a new task, assuming the tab has a `setup()` and `loop()` + 
+function with a matching and unique name.  For example, an application with 2 tasks could be +
+called `setupTask1()`/`loopTask1()` and `setupTask2()`/`loopTask2()`. Energia MT will look for these +
+keyword pairs and automatically turn them into tasks.  Its also important that each setup/loop + 
+pair be in a file with a “.ino” extension.  Setup/loop pairs that are in .c files will not be treated +
+as  a new task and therefore will not execute at run time.
+
+Interprocess communication can easily be done by using global variables. Global variables are +
+truly global (so you cannot use the variable name again in any other tab) and globals must be +
+declared in the first tab.
+
+=== Example ===
+
+video::0f8brpzvdD0[youtube]
+
+A classic example to show multitasking in an embedded application is to blink multiple LEDs at +
+different rates.  While this sounds simple, it can become very complex in a single threaded +
+application. To begin, we need to set up three tabs, each with a `setup()` and `loop()` function. We +
+will also define which LED will be used in each tab with a #define statement. For the MSP432, +
+the tri-color LED is aliased to `GREEN_LED`, `BLUE_LED`, and `RED_LED`.
+
+In the `setup()` function, we will define the LED as an output using `pinMode()`.
+
+In each loop tab, we will toggle the LED with `digitalWrite`(high or low depending on whether we +
+want to turn the LED on or off) and different `delay()` values so the LEDs toggle at different rates.
+
+Tab 1
+
+----
+#define LED BLUE_LED
+void setup() { 
+ // initialize the digital pin as an output.
+ pinMode(LED, OUTPUT); 
+}
+void loop() {
+ digitalWrite(LED, HIGH); //turn the LED on by making the voltage HIGH
+ delay(100); // wait for a second
+ digitalWrite(LED, LOW); //turn the LED off by making the voltage LOW
+ delay(100); // wait for a second
+}
+----
+
+Tab 2
+
+----
+#define LED GREEN_LED
+void setupGreenLed() { 
+ // initialize the digital pin as an output.
+ pinMode(LED, OUTPUT); 
+}
+void loopGreenLed() {
+ digitalWrite(LED, HIGH); // turn the LED on 
+ delay(500);  // wait for half a second
+ digitalWrite(LED, LOW); // turn the LED off 
+ delay(500); // wait for half a second
+}
+----
+
+Tab 3
+
+----
+#define LED RED_LED
+void setupRedLed() { 
+ // initialize the digital pin as an output.
+ pinMode(LED, OUTPUT); 
+}
+void loopRedLed() { 
+digitalWrite(LED, HIGH); // turn the LED on 
+ delay(1000); // wait for 1/10 second
+ digitalWrite(LED, LOW); // turn the LED off 
+ delay(1000); // wait for 1/10 second
+}
+----
+
+This example can be found in Energia MT under File -> Examples -> MultiTasking -> MultiBlink
+

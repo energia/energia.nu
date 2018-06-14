@@ -1,0 +1,8 @@
+== Current ==
+
+Current in electricity is similar in concept to current in water. It is a measure of how fast the +
+flow of the electricity or water. There are two type of current, Direct and Alternating. DC is what +
+is used in most electronics. AC is used for wall outlets, big machines, and appliances.
+
+Sparkfun has a https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law[great tutorial about Current] and a https://learn.sparkfun.com/tutorials/alternating-current-ac-vs-direct-current-dc/direct-current-dc[great tutorial about DC current vs. AC current] +
+if you want to know more about it.

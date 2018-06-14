@@ -1,0 +1,7 @@
+== Diode ==
+
+A diode will limit the electricity flow in one direction. This can be helpful to prevent spikes in +
+voltage from damaging parts of a circuit.
+
+Sparkfun has a https://learn.sparkfun.com/tutorials/diodes[great tutorial on diodes] if you want to know more about them.
+
