@@ -4,4 +4,3 @@ title = "Energia"
 theme = "energia"
 [permalinks]
     top = "/:filename/"
-    guide = "/guide/:filename/"
