@@ -4,26 +4,26 @@
 Step-by-step instructions for setting up the Energia IDE and running your first + 
 Sketch on a Texas Instruments LaunchPad board.
 
-* http://energia.nu/guide/guide_windows/[Windows]
-* http://energia.nu/guide/guide_macosx/[Mac OS X]
-* http://energia.nu/guide/guide_linux/[Linux]
+* link:guide_windows/[Windows]
+* link:guide_macosx/[Mac OS X]
+* link:guide_linux/[Linux]
  
 
-link:/guide/environment/[Environment]: Description of the Energia development environment.
+link:/environment/[Environment]: Description of the Energia development environment.
 
-http://energia.nu/guide/boards/[Boards]: Use the board manager to install support for additional cores (*new in Energia 18*).
+link:boards/[Boards]: Use the board manager to install support for additional cores (*new in Energia 18*).
 
-http://energia.nu/guide/guide_preferences/[Preferences]: The Energia preferences file contains many options for customizing the way Energia compiles and upload sketches.
+link:guide_preferences/[Preferences]: The Energia preferences file contains many options for customizing the way Energia compiles and upload sketches.
 
-http://energia.nu/guide/guide_buildprocess/[Build Process]: Find out what steps your sketch goes through on its way to the LaunchPad board.
+link:guide_buildprocess/[Build Process]: Find out what steps your sketch goes through on its way to the LaunchPad board.
 
-http://energia.nu/pin-maps/[Pin Mapping]: Complete list of all Pin Mapping images and instructions for each Energia supported hardware board.
+link:pin-maps/[Pin Mapping]: Complete list of all Pin Mapping images and instructions for each Energia supported hardware board.
 
-http://energia.nu/reference/libraries/[Libraries]: Complete list of all add-on libraries supported by Energia. *Check out http://energia.nu/guide/library-manager/[this tutorial] for Energia 18!*
+link:reference/libraries/[Libraries]: Complete list of all add-on libraries supported by Energia. *Check out link:library-manager/[this tutorial] for Energia 18!*
 
 https://github.com/energia/Energia/wiki/Build-Energia[Build IDE from Source]: Use the latest code base from Github to create a build of Energia.
 
-http://energia.nu/guide/import-energia-sketch-to-ccsv6/[Import to Code Composer Studio]: Use Energia functions and sketches in CCS version 6+, TI’s Eclipse-based IDE.
+link:import-energia-sketch-to-ccsv6/[Import to Code Composer Studio]: Use Energia functions and sketches in CCS version 6+, TI’s Eclipse-based IDE.
 
 Import to CCS Cloud: Use Energia functions and sketches in https://dev.ti.com/[CCS Cloud], TI’s browser-based IDE.
 
@@ -31,119 +31,119 @@ Import to CCS Cloud: Use Energia functions and sketches in https://dev.ti.com/[C
 This section contains explanations of some of the elements of electronics, the LaunchPad hardware, the Energia software, and the concepts behind them.
 
 Basics::
-* http://energia.nu/guide/tutorial_sketch/[Sketch]: The various components of a sketch (Energia program) and how they work.
-* http://energia.nu/guide/tutorial_electricity/[Electricity]: The principle that powers electronics.
-* http://energia.nu/guide/tutorial_circuits/[Circuits]: The fundamental concept to electrical design.
-* http://energia.nu/guide/tutorial_voltage/[Voltage]: Electrical charge transported between two points.
-* http://energia.nu/guide/tutorial_current/[Current]: The flow of electrons in a wire.
+* link:basics/tutorial_sketch/[Sketch]: The various components of a sketch (Energia program) and how they work.
+* link:basics/tutorial_electricity/[Electricity]: The principle that powers electronics.
+* link:basics/tutorial_circuits/[Circuits]: The fundamental concept to electrical design.
+* link:basics/tutorial_voltage/[Voltage]: Electrical charge transported between two points.
+* link:basics/tutorial_current/[Current]: The flow of electrons in a wire.
  
 
 Microcontrollers::
-* http://energia.nu/guide/tutorial_digitalpins/[Digital Pins]: How the pins work and what it means for them to be configured as inputs or outputs.
-* http://energia.nu/guide/tutorial_analoginputpins/[Analog Input Pins]: Details about the analog-to-digital conversion and other uses of the pins.
-* http://energia.nu/guide/tutorial_pwm/[PWM]: How the analogWrite() function simulates an analog output using pulse-width modulation.
-* http://energia.nu/guide/tutorial_memory/[Memory]: The various types of memory available on the LaunchPad board.
+* link:micro/tutorial_digitalpins/[Digital Pins]: How the pins work and what it means for them to be configured as inputs or outputs.
+* link:micro/tutorial_analoginputpins/[Analog Input Pins]: Details about the analog-to-digital conversion and other uses of the pins.
+* link:micro/tutorial_pwm/[PWM]: How the analogWrite() function simulates an analog output using pulse-width modulation.
+* link:micro/tutorial_memory/[Memory]: The various types of memory available on the LaunchPad board.
 * Timers: Digital counters that increment or decrement at a fixed frequency used to sync electronic systems.
 * Registers: A placeholder for information about some hardware condition.
-* http://energia.nu/guide/tutorial_sensors/[Sensors]: Sensors are used to detect and measure analog signals from the environment.
+* link:micro/tutorial_sensors/[Sensors]: Sensors are used to detect and measure analog signals from the environment.
  
 
 Programming Technique::
-* http://energia.nu/guide/variabledeclaration/[Variables]: How to define and use variables.
-* http://energia.nu/guide/functiondeclaration/[Functions]: How to define and use functions.
-* http://energia.nu/guide/tutorial_library/[Libraries]: How to write your own library.
-* http://energia.nu/guide/bit_manipulation/[Bit Manipulation]: How to use bit math.
-* http://energia.nu/guide/communication_protocols/[Communication Protocols]: How to use protocols to pass data.
-* http://energia.nu/guide/multitasking/[Multitasking]: How to set up multithreaded applications.
+* link:programming_technique/variabledeclaration/[Variables]: How to define and use variables.
+* link:programming_technique/functiondeclaration/[Functions]: How to define and use functions.
+* link:programming_technique/tutorial_library/[Libraries]: How to write your own library.
+* link:programming_technique/bit_manipulation/[Bit Manipulation]: How to use bit math.
+* link:programming_technique/communication_protocols/[Communication Protocols]: How to use protocols to pass data.
+* link:programming_technique/multitasking/[Multitasking]: How to set up multithreaded applications.
  
 
 Basic Electronics Components::
-* http://energia.nu/guide/breadboard/[Breadboard]: A prototyping surface to create solderless circuits.
-* http://energia.nu/guide/wires/[Wires]: Connect electrical components and systems.
-* http://energia.nu/guide/resistors/[Resistors]: Alter your circuit voltage and current.
-* http://energia.nu/guide/capacitors/[Capacitors]: Store energy in a circuit.
+* link:basic_electronics_components/breadboard/[Breadboard]: A prototyping surface to create solderless circuits.
+* link:basic_electronics_components/wires/[Wires]: Connect electrical components and systems.
+* link:basic_electronics_components/resistors/[Resistors]: Alter your circuit voltage and current.
+* link:basic_electronics_components/capacitors/[Capacitors]: Store energy in a circuit.
 * Filters: Remove or enhance frequency components from the signal.
 * Amplifiers: Increase the power of a signal.
-* http://energia.nu/guide/transistors/[Transistors]: Amplify and switch electronic signals.
+* link:basic_electronics_components/transistors/[Transistors]: Amplify and switch electronic signals.
 * Inductors: Resist changes in electric current.
-* http://energia.nu/guide/switches/[Switches]: Change the path of the electric flow.
+* link:basic_electronics_components/switches/[Switches]: Change the path of the electric flow.
 * Push Button: Inject a signal into a circuit.
-* http://energia.nu/guide/diode/[Diode]: Allows electric flow in only one direction.
-* http://energia.nu/guide/leds/[LEDs]: Light emitting diodes act as visual indicators.
-* http://energia.nu/guide/leds/[Meters, Scopes, and Analyzers]: Use these tools to measure voltage and current.
-* http://energia.nu/guide/integrated_circuits/[Integrated Circuits]: Components that can do complex operations.
+* link:basic_electronics_components/diode/[Diode]: Allows electric flow in only one direction.
+* link:basic_electronics_components/leds/[LEDs]: Light emitting diodes act as visual indicators.
+* link:basic_electronics_components/meters_scopes_analyzers/[Meters, Scopes, and Analyzers]: Use these tools to measure voltage and current.
+* link:basic_electronics_components/integrated_circuits/[Integrated Circuits]: Components that can do complex operations.
  
 
 == Tutorials ==
 Core Functions::
-Simple programs that demonstrate basic Energia commands. These are included with the Energia environment; to open them, click the Open button on the toolbar and look in the *examples* folder.  For some examples, additional hardware is required. These can be acquired individually or in popular electronics starter kits.  The http://energia.nu/guide/sidekick/[Sidekick Basic Kit for TI LaunchPad] from Seeedstudio is highly recommended by the Energia community.
+Simple programs that demonstrate basic Energia commands. These are included with the Energia environment; to open them, click the Open button on the toolbar and look in the *examples* folder.  For some examples, additional hardware is required. These can be acquired individually or in popular electronics starter kits.  The link:sidekick/[Sidekick Basic Kit for TI LaunchPad] from Seeedstudio is highly recommended by the Energia community.
 
 . Basics
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]: Read a potentiometer, print it’s state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_fade/[Fade]: Demonstrates the use of analog output to fade an LED.
-* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]: Reads an analog input and prints the voltage to the serial monitor. 
+* link:tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
+* link:tutorial_blink/[Blink]: Turn an LED on and off.
+* link:tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
+* link:tutorial_analogreadserial/[AnalogReadSerial]: Read a potentiometer, print it’s state out to the Energia Serial Monitor.
+* link:tutorial_fade/[Fade]: Demonstrates the use of analog output to fade an LED.
+* link:tutorial_readanalogvoltage/[ReadAnalogVoltage]: Reads an analog input and prints the voltage to the serial monitor. 
 
 . Digital
-* http://energia.nu/guide/tutorial_blinkwithoutdelay/[Blink Without Delay]: Blinking an LED without using the delay() function.
-* http://energia.nu/guide/tutorial_button/[Button]: Use a pushbutton to control an LED.
-* http://energia.nu/guide/tutorial_debounce/[Debounce]: Read a pushbutton, filtering noise.
-* http://energia.nu/guide/tutorial_buttonstatechange/[Button State Change]: Counting the number of button pushes.
-* http://energia.nu/guide/tutorial_inputpullupserial/[Input Pullup Serial]: Demonstrates the use of INPUT_PULLUP with pinMode().
-* http://energia.nu/guide/tutorial_tone/[Tone]: Play a melody with a Piezo speaker.
-* http://energia.nu/guide/tutorial_tone2/[Pitch follower]: Play a pitch on a piezo speaker depending on an analog input.
-* http://energia.nu/guide/tutorial_tone3/[Simple Keyboard]: A three-key musical keyboard using force sensors and a piezo speaker.
-* http://energia.nu/guide/tutorial_tone4/[Tone4]: Play tones on multiple speakers sequentially using the tone() command.
+* link:tutorial_blinkwithoutdelay/[Blink Without Delay]: Blinking an LED without using the delay() function.
+* link:tutorial_button/[Button]: Use a pushbutton to control an LED.
+* link:tutorial_debounce/[Debounce]: Read a pushbutton, filtering noise.
+* link:tutorial_buttonstatechange/[Button State Change]: Counting the number of button pushes.
+* link:tutorial_inputpullupserial/[Input Pullup Serial]: Demonstrates the use of INPUT_PULLUP with pinMode().
+* link:tutorial_tone/[Tone]: Play a melody with a Piezo speaker.
+* link:tutorial_tone2/[Pitch follower]: Play a pitch on a piezo speaker depending on an analog input.
+* link:tutorial_tone3/[Simple Keyboard]: A three-key musical keyboard using force sensors and a piezo speaker.
+* link:tutorial_tone4/[Tone4]: Play tones on multiple speakers sequentially using the tone() command.
  
 
 . Analog
-* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]: Read an analog input pin, map the result, and then use that data to dim or brighten an LED.
-* http://energia.nu/guide/tutorial_analoginput/[Analog Input]: Use a potentiometer to control the blinking of an LED.
-* http://energia.nu/guide/tutorial_analogwrite/[AnalogWrite]: Fade 7 LEDs on and off, one by one, using an MSP430G2 LaunchPad board.
-* http://energia.nu/guide/tutorial_calibration/[Calibration]: Define a maximum and minimum for expected analog sensor values.
-* http://energia.nu/guide/tutorial_fading/[Fading]: Use an analog output (PWM pin) to fade an LED.
-* http://energia.nu/guide/tutorial_smoothing/[Smoothing]: Smooth multiple readings of an analog input.
+* link:tutorial_analoginoutserial/[AnalogInOutSerial]: Read an analog input pin, map the result, and then use that data to dim or brighten an LED.
+* link:tutorial_analoginput/[Analog Input]: Use a potentiometer to control the blinking of an LED.
+* link:tutorial_analogwrite/[AnalogWrite]: Fade 7 LEDs on and off, one by one, using an MSP430G2 LaunchPad board.
+* link:tutorial_calibration/[Calibration]: Define a maximum and minimum for expected analog sensor values.
+* link:tutorial_fading/[Fading]: Use an analog output (PWM pin) to fade an LED.
+* link:tutorial_smoothing/[Smoothing]: Smooth multiple readings of an analog input.
  
 
 . Communication +
 _These examples include code that allows the LaunchPad to talk to Processing sketches running on the computer. For more information or to download Processing, see https://processing.org/[processing.org]._
 
-* http://energia.nu/Tutorial_ReadASCIIString.html[ReadASCIIString]: Parse a comma-separated string of ints to fade an LED.
-* http://energia.nu/Tutorial_ASCIITable.html[ASCII Table]: Demonstrates Energia’s advanced serial output functions.
-* http://energia.nu/Tutorial_Dimmer.html[Dimmer]: Move the mouse to change the brightness of an LED.
-* http://energia.nu/Tutorial_Graph.html[Graph]: Send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]: Turn a LED on and off by sending data to your LaunchPad from Processing.
-* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]: Send multiple variables from LaunchPad to your computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]: Send multiple vairables using a call-and-response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call Response ASCII]: Send multiple variables using a call-and-response (handshaking) method, and ASCII-encode the values before sending.
-* http://energia.nu/Tutorial_SerialEvent.html[SerialEvent]: Demonstrates the use of SerialEvent().
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial input (Switch (case) Statement)]: How to take different actions based on characters received by the serial port.
+* link:Tutorial_ReadASCIIString.html[ReadASCIIString]: Parse a comma-separated string of ints to fade an LED.
+* link:Tutorial_ASCIITable.html[ASCII Table]: Demonstrates Energia’s advanced serial output functions.
+* link:Tutorial_Dimmer.html[Dimmer]: Move the mouse to change the brightness of an LED.
+* link:Tutorial_Graph.html[Graph]: Send data to the computer and graph it in Processing.
+* link:Tutorial_PhysicalPixel.html[Physical Pixel]: Turn a LED on and off by sending data to your LaunchPad from Processing.
+* link:Tutorial_VirtualColorMixer.html[Virtual Color Mixer]: Send multiple variables from LaunchPad to your computer and read them in Processing.
+* link:Tutorial_SerialCallResponse.html[Serial Call Response]: Send multiple vairables using a call-and-response (handshaking) method.
+* link:Tutorial_SerialCallResponseASCII.html[Serial Call Response ASCII]: Send multiple variables using a call-and-response (handshaking) method, and ASCII-encode the values before sending.
+* link:Tutorial_SerialEvent.html[SerialEvent]: Demonstrates the use of SerialEvent().
+* link:Tutorial_SwitchCase2.html[Serial input (Switch (case) Statement)]: How to take different actions based on characters received by the serial port.
  
  
 . Control Structures
 
-* http://energia.nu/guide/tutorial_ifstatement/[If Statement (Conditional)]: How to use an if statement to change output conditions based on changing input conditions.
-* http://energia.nu/guide/tutorial_forloop/[For Loop]: Controlling multiple LEDs with a for loop.
-* http://energia.nu/guide/tutorial_whileloop/[Array]: A variation on the For Loop example that demonstrates how to use an array.
-* http://energia.nu/Tutorial_WhileLoop.html[While Loop]: How to use a while loop to calibrate a sensor while a button is being read.
-* http://energia.nu/guide/tutorial_switchcase/[Switch Case]: How to choose between a discrete number of values. Equivalent to multiple If statements. This example shows how to divide a sensor’s range into a set of four bands and to take four different actions depending on which band the result is in.
-* http://energia.nu/guide/tutorial_switchcase2/[Switch Case 2]: A second switch-case example, showing how to take different actions based in characters received in the serial port.
+* link:tutorial_ifstatement/[If Statement (Conditional)]: How to use an if statement to change output conditions based on changing input conditions.
+* link:tutorial_forloop/[For Loop]: Controlling multiple LEDs with a for loop.
+* link:tutorial_whileloop/[Array]: A variation on the For Loop example that demonstrates how to use an array.
+* link:Tutorial_WhileLoop.html[While Loop]: How to use a while loop to calibrate a sensor while a button is being read.
+* link:tutorial_switchcase/[Switch Case]: How to choose between a discrete number of values. Equivalent to multiple If statements. This example shows how to divide a sensor’s range into a set of four bands and to take four different actions depending on which band the result is in.
+* link:tutorial_switchcase2/[Switch Case 2]: A second switch-case example, showing how to take different actions based in characters received in the serial port.
  
 
 . Strings
-* http://energia.nu/guide/tutorial_stringadditionoperator/[StringAdditionOperator]: Add strings together in a variety of ways.
-* http://energia.nu/guide/tutorial_stringappendoperator/[StringAppendOperator]: Append data to strings.
-* http://energia.nu/guide/string_casechanges/[StringCaseChanges]: Change the case of a string.
-* http://energia.nu/guide/tutorial_stringcharacters/[StringCharacters]: Get/set the value of a specific character in a string.
-* http://energia.nu/guide/tutorial_stringcomparisonoperators/[StringComparisonOperators]: Compare strings alphabetically.
-* http://energia.nu/guide/tutorial_stringconstructors/[StringConstructors]: How to initialize string objects.
-* http://energia.nu/guide/tutorial_stringindexof/[StringIndexOf]: Look for the first/last instance of a character in a string.
-* http://energia.nu/guide/tutorial_stringlengthtrim/[StringLength & StringLengthTrim]: Get and trim the length of a string.
-* http://energia.nu/guide/tutorial_stringreplace/[StringReplace]: Replace individual characters in a string.
-* http://energia.nu/guide/tutorial_stringstartswithendswith/[StringStartsWithEndsWith]: Check which characters/substrings a given string starts or ends with.
-* http://energia.nu/guide/tutorial_stringsubstring/[StringSubstring]: Look for “phrases” within a given string.
+* link:tutorial_stringadditionoperator/[StringAdditionOperator]: Add strings together in a variety of ways.
+* link:tutorial_stringappendoperator/[StringAppendOperator]: Append data to strings.
+* link:string_casechanges/[StringCaseChanges]: Change the case of a string.
+* link:tutorial_stringcharacters/[StringCharacters]: Get/set the value of a specific character in a string.
+* link:tutorial_stringcomparisonoperators/[StringComparisonOperators]: Compare strings alphabetically.
+* link:tutorial_stringconstructors/[StringConstructors]: How to initialize string objects.
+* link:tutorial_stringindexof/[StringIndexOf]: Look for the first/last instance of a character in a string.
+* link:tutorial_stringlengthtrim/[StringLength & StringLengthTrim]: Get and trim the length of a string.
+* link:tutorial_stringreplace/[StringReplace]: Replace individual characters in a string.
+* link:tutorial_stringstartswithendswith/[StringStartsWithEndsWith]: Check which characters/substrings a given string starts or ends with.
+* link:tutorial_stringsubstring/[StringSubstring]: Look for “phrases” within a given string.
  
 
 . Sensors, Motors, & Displays
@@ -159,18 +159,18 @@ _These examples include code that allows the LaunchPad to talk to Processing ske
 * ButtonEvent: Read a button in one task and have another task wait for the button to be pressed.
 * EventLibrary: Send an event in one task and have another task wait for the event.
 * Monitor: Displays CPU utilization, task memory usage, etc. Requires VT100 terminal.
-* http://energia.nu/Tutorial_MultiAnalogInput/[MultiAnalogInput]: Reads analog inputs in differents tasks at different rates.
-* http://energia.nu/guide/tutorial_multiblink/[MultiBlink]: Blink 3 LEDs at different rates.
+* link:Tutorial_MultiAnalogInput/[MultiAnalogInput]: Reads analog inputs in differents tasks at different rates.
+* link:tutorial_multiblink/[MultiBlink]: Blink 3 LEDs at different rates.
 * MultiTaskSerial: Shows 2 threads sending a string to the Serial monitor at different rates.
  
 
 . Connectivity
 * WiFi: WiFi library examples.
-* http://energia.nu/guide/tutorial_mqtt/[MQTT]: Use the MQTT lightweight protocol to enable IoT & M2M applications.
-* http://energia.nu/guide/tutorial_standardfirmata/[StandardFirmata]: Use firmata protocol to dynamically communicate with the microcontroller.
-* http://energia.nu/guide/tutorial_temboo/[Temboo]: Access hundreds of web APIs through Temboo using Energia.
-* http://energia.nu/reference/tutorial_att_m2x/[AT&T M2X]: Post Energia data to AT&T M2X cloud service.
-* http://energia.nu/reference/redbearlab_blemini/[BLE Mini]: Use Red Bear Lab BLE Mini to control you LaunchPad.
+* link:tutorial_mqtt/[MQTT]: Use the MQTT lightweight protocol to enable IoT & M2M applications.
+* link:tutorial_standardfirmata/[StandardFirmata]: Use firmata protocol to dynamically communicate with the microcontroller.
+* link:tutorial_temboo/[Temboo]: Access hundreds of web APIs through Temboo using Energia.
+* link:reference/tutorial_att_m2x/[AT&T M2X]: Post Energia data to AT&T M2X cloud service.
+* link:reference/redbearlab_blemini/[BLE Mini]: Use Red Bear Lab BLE Mini to control you LaunchPad.
 * Freeboard.io: Create a cloud dashboard with your Energia data using freeboard.io.
 * Contiki: Access Contiki OS for IoT using Energia.
  
@@ -179,32 +179,32 @@ _These examples include code that allows the LaunchPad to talk to Processing ske
 * Olimex8x8matrix: Create a scrolling marquee with an LED matrix.
 * Sharp LCD Display: Display images and text on the low power LCD.
 * EducationalBP: Create a magic 8 ball with an accelerometer and LCD display.
-* http://energia.nu/guide/edumkii/[EducationalBP MKII]: Examples involving buzzer, LCD, LEDs, accelerometer, push buttons, and more.
-* http://energia.nu/guide/tutorial_cc3000/[CC3000]: Introduction to SimpleLink WiFi CC3000 BoosterPack.
-* http://energia.nu/guide/tutorial_cc3100/[CC3100]: Introduction to SimpleLink WiFi CC3100 BoosterPack.
+* link:edumkii/[EducationalBP MKII]: Examples involving buzzer, LCD, LEDs, accelerometer, push buttons, and more.
+* link:tutorial_cc3000/[CC3000]: Introduction to SimpleLink WiFi CC3000 BoosterPack.
+* link:tutorial_cc3100/[CC3100]: Introduction to SimpleLink WiFi CC3100 BoosterPack.
  
 
 Other Tutorials 
 
-* http://energia.nu/guide/sidekick/[Sidekick for TI LaunchPad]: Use the Seeedstudio Sidekick Basic Kit for TI LaunchPad with Energia.
-* http://energia.nu/guide/sik-for-launchpad/[SIK for LaunchPad]: Use the Sparkfun Inventor’s Kit with Energia.
-* http://energia.nu/guide/grove-starter-kit/[Grove Starter Kit for LaunchPad]: Use Grove modules to access sensors and components for prototyping.
-* http://energia.nu/guide/o-scope-operation/[O-Scope Operation]: Learning how to use an Tektronix Oscilloscope with MSP430 LaunchPad.
+* link:sidekick/[Sidekick for TI LaunchPad]: Use the Seeedstudio Sidekick Basic Kit for TI LaunchPad with Energia.
+* link:sik-for-launchpad/[SIK for LaunchPad]: Use the Sparkfun Inventor’s Kit with Energia.
+* link:grove-starter-kit/[Grove Starter Kit for LaunchPad]: Use Grove modules to access sensors and components for prototyping.
+* link:o-scope-operation/[O-Scope Operation]: Learning how to use an Tektronix Oscilloscope with MSP430 LaunchPad.
 * LabVIEW Home: Use Energia in National Instruments LabVIEW.
 * Processing: Create GUIs and visual representations of Energia data using Processing IDE.
-* http://energia.nu/learn/[Energia.nu/learn]: Full workshops on Energia material.
-* http://energia.nu/guide/tutorial_iop/[IoP Machine]: Learn how to create an internet connected popcorn machine.
-* http://energia.nu/guide/tutorial_energytrace/[Energy Trace]: Learn how to measure energy consumption in your Energia system.
+* link:learn/[Energia.nu/learn]: Full workshops on Energia material.
+* link:tutorial_iop/[IoP Machine]: Learn how to create an internet connected popcorn machine.
+* link:tutorial_energytrace/[Energy Trace]: Learn how to measure energy consumption in your Energia system.
  
 
 == Extending and Developing Energia == 
 *Software*
 
 * Adding Web Content: How to properly contribute new tutorials and references to the Energia website.
-* http://energia.nu/guide/tutorial_library/[Writing a Library]: Creating libraries to extend the functionality of Energia. Goes step-by-step through the process of making a library from a sketch.
+* link:tutorial_library/[Writing a Library]: Creating libraries to extend the functionality of Energia. Goes step-by-step through the process of making a library from a sketch.
 * https://github.com/energia/Energia/wiki/Build-Energia[Build Energia from Source]: How to build Energia on your machine from the latest code base.
-* http://energia.nu/guide/guide_preferences/[Preferences]: The Energia preferences file contains many options for customizing the way Energia compiles and upload sketches.
-* http://energia.nu/guide/guide_buildprocess/[Build Process]: Find out what steps your sketch goes through on its way to the LaunchPad board.
+* link:guide_preferences/[Preferences]: The Energia preferences file contains many options for customizing the way Energia compiles and upload sketches.
+* link:guide_buildprocess/[Build Process]: Find out what steps your sketch goes through on its way to the LaunchPad board.
 * https://github.com/energia/Energia[Source]: Online browsing of the Energia source code (on an external website).
 * https://github.com/energia/Energia/issues[Bugs]: The current list of Energia software bugs (on an external website).
 * https://github.com/energia/Energia/wiki[Wiki]: Energia project technical details, enhancements, issues, references can be found on the Wiki (on an external website).
@@ -214,7 +214,7 @@ Energia sketches are C/C++ based and compiled with the open-source compiler MSPG
 
 *Hardware*
 
-* http://energia.nu/byob/[Energia BYOB (Build Your Own BoosterPack)]: Maker focused instructions for designing and building your own LaunchPad compatible BoosterPack.
+* link:byob/[Energia BYOB (Build Your Own BoosterPack)]: Maker focused instructions for designing and building your own LaunchPad compatible BoosterPack.
 * http://www.ti.com/tools-software/launchpads/boosterpacks/build.html[TI BYOB (Build Your Own BoosterPack)]: Official TI instructions for designing and building your own LaunchPad compatible BoosterPack.
  
 
