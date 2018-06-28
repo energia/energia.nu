@@ -1,0 +1,100 @@
+== Fading ==
+
+Demonstrates the use of analog output (http://energia.nu/guide/tutorial_pwm/[Pulse Width Modulation (PWM)]) to fade an LED. PWM +
+is a technique for getting an analog-like behavior from a digital output by switching it off and on +
+very fast.
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* 10k ohm resistor
+* Breadboard
+* Hook-up wire
+* LED (available on-board)
+ 
+=== Relevant Groundwork ===
+
+An LED connected to digital output pin 14 through a 220-ohm resistor. Note that pin 14 is +
+connected to the green LED on the MSP-EXP430G2 LaunchPad. Also, it is important to note +
+that not all pins on the LaunchPad are capable of generating a PWM signal using the +
+`analogWrite()` function. To see all of the pins that support `analogWrite()`, visit the http://energia.nu/guide/pinmapping/[Energia pin- +
+mapping guide.]
+
+=== Circuit ===
+
+image::../img/Fading_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Fading_schem.png[]
+
+=== Code Explanation ===
+
+None. See comments below.
+
+=== Code ===
+
+----
+/*
+  Fading
+
+  This example shows how to fade an LED using the analogWrite() function.
+
+  The circuit:
+  * LED attached from digital pin 14 to ground.
+
+  Created 1 Nov 2008
+  By David A. Mellis
+  modified 16 Apr 2013
+  By Adrian Fernandez
+
+  This example code is in the public domain.
+
+*/
+
+int ledPin = 14;    // LED connected to digital pin 9
+
+void setup()  { 
+  // nothing happens in setup 
+} 
+
+void loop()  { 
+  // fade in from min to max in increments of 5 points:
+  for(int fadeValue = 0 ; fadeValue <= 255; fadeValue +=5) { 
+    // sets the value (range from 0 to 255):
+    analogWrite(ledPin, fadeValue);         
+    // wait for 30 milliseconds to see the dimming effect    
+    delay(30);                            
+  } 
+
+  // fade out from max to min in increments of 5 points:
+  for(int fadeValue = 255 ; fadeValue >= 0; fadeValue -=5) { 
+    // sets the value (range from 0 to 255):
+    analogWrite(ledPin, fadeValue);         
+    // wait for 30 milliseconds to see the dimming effect    
+    delay(30);                            
+  } 
+}
+----
+
+=== Working Video ===
+
+video::j7gj51XqMd0[youtube]
+
+=== Try it out ===
+
+- Try PWM on a different type of output.
+
+=== See Also ===
+
+* http://energia.nu/reference/for/[for()]
+* http://energia.nu/reference/analogwrite/[analogWrite()]
+* http://energia.nu/reference/delay/[delay()]
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]–read a potentiometer, print its state to the serial monitor.
+* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]–read an analog input, map its values, and then use that information to dim or brighten an LED.
+* http://energia.nu/guide/tutorial_fade/[Fade]–use an analog input to fade an LED.
+* http://energia.nu/guide/tutorial_calibration/[Calibration]–calibrating analog sensor readings.
+ 
+

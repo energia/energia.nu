@@ -1,12 +1,3 @@
-= Prototyping Software to Make Things Easy =
-
-11/20/17 MSP-EXP430FR2433 support added through board manager
-
-The new MSP-EXP430FR2433 is a “replacement” for the value line MSP-EXP430G2. Support for the MSP-EXP430FR2433 has been added to the MSP430 core and made available through the board manager in Energia.
-
-The pinmap for the MSP-EXP430FR2433 is available here: http://energia.nu/launchpad-msp430fr2433-pins-map/[MSP-EXP430FR2433 pinmap]
-
----
 == What is Energia and how did it get started ==
 Energia is an https://github.com/energia/energia[open-source] electronics prototyping platform started by Robert Wessels in January of 2012 with the goal to bring the Wiring and Arduino framework to the Texas Instruments MSP430 based LaunchPad. The Energia IDE is cross platform and supported on Mac OS, Windows, and Linux. Energia uses the http://mspgcc.sourceforge.net/[mspgcc] compiler by http://sourceforge.net/users/pabigot[Peter Bigot] and is based on the http://wiring.org.co/[Wiring] and http://arduino.cc/[Arduino] framework. Energia includes an integrated development environment (IDE) that is based on http://www.processing.org/[Processing]. Energia is also a portable framework/abstraction layer that can be used in other popular IDEs. Utilize a web browser based environment with CCS Cloud at http://dev.ti.com/[dev.ti.com]. Community maintained Energia plug-ins and integrations are available for http://energia.nu/download/#communitycontributedalternatives[Xcode, Visual Studio, and Code Composer Studio].
 

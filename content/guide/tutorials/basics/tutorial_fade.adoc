@@ -1,0 +1,122 @@
+== Fading ==
+
+This program illustrates how to fade LED ON & OFF with the help of http://energia.nu/reference/analogwrite/[analogWrite( )].
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* 10k ohm resistor
+* Breadboard
+* Hook-up wire
+* LED (available on-board)
+
+=== Relevant Groundwork ===
+
+We can fade a LED at varying brightness levels between ON & OFF. This can be done with the +
+help of http://energia.nu/reference/analogwrite/[analogWrite( )]. The function call to `analogWrite()`,will generate a steady square wave of +
+the specified duty cycle until the next call to `analogWrite( )` and write the value to the specified +
+pin. Refer to the http://energia.nu/guide/pinmapping/[pin mapping guide] to know the pins which can be used for `analogWrite( )`. In +
+this example, we use pin 14.
+
+[.underline]#For on-board LED:#
+
+No external circuitry is required, if MSP430 onboard LED is used.
+
+[.underline]#For external LED:#
+
+Connect the anode (the longer, positive leg) of your LED to output pin 14 on your Launchpad +
+through a 220-ohm resistor. Connect the cathode (the shorter, negative leg) directly to ground. +
+The circuit is as shown above.
+
+=== Circuit ===
+
+image::../img/Fading_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Fading_schem.png[]
+
+=== Code Explanation ===
+
+In set up function, After declaring pin 14 to be your `ledPin`, there is nothing to do in the `setup()` +
+function of your code.
+
+The `analogWrite()` function that you will be using in the main loop of your code requires two +
+arguments: One telling the function which pin to write to, and one indicating what PWM value +
+to write.
+
+In order to fade your LED off and on, gradually increase your PWM value from 0 (all the way +
+off) to 255 (all the way on), and then back to 0 once again to complete the cycle. In the sketch +
+below, the PWM value is set using a variable called brightness. Each time through the loop, it +
+increases by the value of the variable `fadeAmount`.
+
+If brightness is at either extreme of its value (either 0 or 255), then `fadeAmount` is changed to its +
+negative. In other words, if `fadeAmount` is 5, then it is set to -5. If it’s -5, then it’s set to 5. The +
+next time through the loop, this change causes brightness to change direction as well.
+
+`analogWrite()` can change the PWM value very fast, so the delay at the end of the sketch controls +
+the speed of the fade.
+
+=== Code ===
+
+----
+/*
+  Fade
+
+  This example shows how to fade an LED on pin 14
+  using the analogWrite() function.
+
+  This example code is in the public domain.
+
+*/
+
+int brightness = 0;    // how bright the LED is
+int fadeAmount = 5;    // how many points to fade the LED by
+
+void setup()  {
+  // declare pin 14 to be an output:
+  pinMode(GREEN_LED, OUTPUT);
+}
+
+void loop()  {
+  // set the brightness of pin 9:
+  analogWrite(GREEN_LED, brightness);
+
+  // change the brightness for next time through the loop:
+  brightness = brightness + fadeAmount;
+
+  // reverse the direction of the fading at the ends of the fade:
+  if (brightness == 0 || brightness == 255) {
+    fadeAmount = -fadeAmount ;
+  }
+  // wait for 30 milliseconds to see the dimming effect
+  delay(30);
+}
+----
+
+=== Working Video ===
+
+video::j7gj51XqMd0[youtube]
+
+=== Try it out ===
+
+– Fade multiple LEDs in a cool pattern.
+
+=== See Also ===
+
+* http://energia.nu/reference/setup/[setup()]
+* http://energia.nu/reference/loop/[loop()]
+* http://energia.nu/reference/pinmode/[pinMode()]
+* http://energia.nu/reference/digitalread/[digitalRead()]
+* http://energia.nu/reference/delay/[delay()]
+* http://energia.nu/reference/int/[int]
+* http://energia.nu/reference/serial/[serial]
+* http://energia.nu/guide/tutorial_digitalpins/[DigitalPins]
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]: Read a potentiometer, print it’s state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_fade/[Fade]: Demonstrates the use of analog output to fade an LED.
+* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]: Reads an analog input and prints the voltage to the serial monitor.

@@ -1,0 +1,90 @@
+== String Case Change Functions ==
+
+This example shows how to change the case of a string using `toUpperCase()` and `toLowerCase()` +
+functions. They work just as their names imply. `toUpperCase()` changes the whole string to +
+upper case characters, and `toLowerCase()` changes the whole String to lower case characters. +
+Only the characters A to Z or a to z are affected.
+
+=== Relevant Groundwork ===
+
+None
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+
+=== Circuit ===
+
+Only LaunchPad is required for this example.
+
+image::../img/../img/Blink_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+
+=== Schematic ===
+
+image::../img/../img/Blink_schem.png[]
+
+=== Code Explanation ===
+
+In the program, we first declare two strings. We then change the first string to upper case and +
+the second string to lower case.
+
+=== Code ===
+
+----
+/*
+  String Case changes
+
+ Examples of how to change the case of a string
+
+ created 27 July 2010
+ modified 2 Apr 2012
+ by Tom Igoe
+
+ This example code is in the public domain.
+ */
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+
+  // send an intro:
+  Serial.println("\n\nString  case changes:");
+  Serial.println();
+}
+
+void loop() {
+  // toUpperCase() changes all letters to upper case:
+  String stringOne = "";
+  Serial.println(stringOne);
+  stringOne.toUpperCase();
+  Serial.println(stringOne);
+
+  // toLowerCase() changes all letters to lower case:  
+  String stringTwo = "";
+  Serial.println(stringTwo);
+  stringTwo.toLowerCase();
+  Serial.println(stringTwo);
+
+  // do nothing while true:
+  while(true);
+}
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+– Change case of multiple strings and print to serial.
+
+=== See Also ===
+
+* http://energia.nu/Setup.html[setup()]
+* http://energia.nu/Loop.html[loop()]
+* http://energia.nu/Serial_Println.html[println()]
+
+
+
+ 

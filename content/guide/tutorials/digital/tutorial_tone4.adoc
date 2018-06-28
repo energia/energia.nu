@@ -1,0 +1,72 @@
+== SPlaying tones on Multiple outputs using the tone() function ==
+
+This example shows how to use the `tone()` command to play different notes on multiple outputs.
+
+The `tone()` command works by taking over one of the LaunchPad’s internal timers, setting it to +
+the frequency you want, and using the timer to pulse an output pin. Since it’s only using one +
+timer, you can only play one note at a time. You can, however, play notes on multiple pins +
+sequentially. To do this, you need to turn the timer off for one pin before moving on to the next.
+
+Thanks to Greg Borenstein for clarifying this.
+
+=== Hardware Required ===
+
+* (3) 8-ohm speakers
+* (3) 100 ohm resistor
+* Breadboard
+* Hook up wire
+
+=== Circuit ===
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic === 
+
+=== Code ===
+
+The sketch below plays a tone on each of the speakers in sequence, turning off the previous +
+speaker first. Note that the duration of each tone is the same as the delay that follows it.
+
+Here’s the main sketch:
+
+----
+/*
+ Multiple tone playerPlays multiple tones on multiple pins in sequence
+
+ circuit:
+ * 3 8-ohm speaker on digital pins 6, 7, and 8
+
+ created 8 March 2010
+ by Tom Igoe
+ based on a snippet from Greg Borenstein
+
+ modified 7 Feb 2014
+ by Mark Easley 
+ This example code is in the public domain. 
+*/ 
+void setup() { } 
+void loop() { 
+  // turn off tone function for pin 8: 
+  noTone(8); 
+  // play a note on pin 6 for 200 ms: 
+  tone(6, 440, 200); delay(200); 
+  // turn off tone function for pin 6: 
+  noTone(6); 
+  // play a note on pin 7 for 500 ms: 
+  tone(7, 494, 500); delay(500); 
+  // turn off tone function for pin 7: 
+  noTone(7); 
+  // play a note on pin 8 for 500 ms: 
+  tone(8, 523, 300); 
+  delay(300); 
+}
+---- 
+
+=== See Also ===
+
+* http://energia.nu/reference/tone/[tone()]
+* http://energia.nu/guide/tutorial_tone/[Tone]–play a melody with a piezo speaker.
+* http://energia.nu/guide/tutorial_tone2/[Pitch follower]–play a pitch on a piezo speaker depending on an analog input.
+* http://energia.nu/guide/tutorial_tone3/[Tone 3]–a three-key musical keyboard using force sensors.
+ 
+

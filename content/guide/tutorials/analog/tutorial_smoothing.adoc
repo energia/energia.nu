@@ -1,0 +1,146 @@
+== Smoothing ==
+
+This sketch reads repeatedly from an analog input, calculating a running average and printing it +
+to the computer. This example is useful for smoothing out the values from jumpy or erratic +
+sensors, and also demonstrates the use of http://energia.nu/reference/array/[arrays] to store data.
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* A variable resistor, like a potentiometer
+ 
+=== Relevant Groundwork ===
+
+The code below sequentially stores 10 readings from your analog sensor into an array, one by +
+one. With each new value, the sum of all the numbers is generated and divided, producing an +
+average value which can then be used to smooth outlying data. Because this averaging takes +
+place each time a new value is added to the array (rather than waiting for 10 new values, for +
+instance) there is no lag time in calculating this running average. Altering the size of the array +
+used, by changing `numReadings` to a larger value will smooth the data collected even further. +
+
+Connect the three wires from the potentiometer to your LaunchPad board. The first goes to +
+ground from one of the outer pins of the potentiometer. The second goes from 3 volts to the +
+other outer pin of the potentiometer. The third goes from analog input A3 to the middle pin of +
+the potentiometer. By turning the shaft of the potentiometer, you change the amount of +
+resistance on either side of the wiper which is connected to the center pin of the potentiometer. +
+This changes the voltage at the center pin. When the resistance between the center and the side +
+connected to 3 volts is close to zero (and the resistance on the other side is close to 10 kilohms), +
+the voltage at the center pin nears 3 volts. When the resistances are reversed, the voltage at the +
+center pin nears 0 volts, or ground. This voltage is the *analog voltage* that you’re reading as an +
+input. 
+
+The LaunchPad has a circuit inside called an *analog-to-digital converter* that reads +
+this changing voltage and converts it to a number between 0 and 1023. When the shaft is turned +
+all the way in one direction, there are 0 volts going to the pin, and the input value is 0. When the +
+shaft is turned all the way in the opposite direction, there are 3 volts going to the pin and the +
+input value is 1023. In between, http://energia.nu/reference/analogread/[`analogRead()`] returns a number between 0 and 1023 that is +
+proportional to the amount of voltage being applied to the pin.
+
+=== Circuit ===
+
+image::[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Smoothing_schem.png[]
+
+=== Code Explanation ===
+
+None
+
+=== Code ===
+
+----
+/*
+  Smoothing
+
+  Reads repeatedly from an analog input, calculating a running average
+  and printing it to the computer. Keeps ten readings in an array and 
+  continually averages them.
+
+  The circuit:
+  * Analog sensor (potentiometer will do) attached to analog input 3
+
+  Created 22 April 2007
+  By David A. Mellis <dam@mellis.org>
+  modified 9 Apr 2012
+  by Tom Igoe
+  modified 9 May 2013
+  by Sean Alvarado
+
+  This example code is in the public domain.
+
+*/
+
+// Define the number of samples to keep track of. The higher the number,
+// the more the readings will be smoothed, but the slower the output will
+// respond to the input. Using a constant rather than a normal variable lets
+// use this value to determine the size of the readings array.
+
+const int numReadings = 10;
+
+int readings[numReadings]; // the readings from the analog input
+int index = 0; // the index of the current reading
+int total = 0; // the running total
+int average = 0; // the average
+
+int inputPin = A3;
+
+void setup()
+{
+  // initialize serial communication with computer:
+  Serial.begin(9600); 
+  // initialize all the readings to 0: 
+  for (int thisReading = 0; thisReading < numReadings; thisReading++)
+    readings[thisReading] = 0; 
+}
+
+void loop() {
+  // subtract the last reading:
+  total= total - readings[index]; 
+  // read from the sensor: 
+  readings[index] = analogRead(inputPin); 
+  // add the reading to the total:
+  total= total + readings[index]; 
+  // advance to the next position in the array: 
+  index = index + 1; 
+
+  // if we're at the end of the array...
+  if (index >= numReadings) 
+    // ...wrap around to the beginning: 
+    index = 0; 
+
+  // calculate the average:
+  average = total / numReadings; 
+  // send it to the computer as ASCII digits
+  Serial.println(average); 
+  delay(1); // delay in between reads for stability 
+}
+----
+
+=== Working Video ===
+
+video::DYf982c-Ia4[youtube]
+
+=== Try it out ===
+
+– Add an LED to the program that reacts to the potentiometer.
+
+=== See Also ===
+
+* http://energia.nu/reference/setup/[setup()]
+* http://energia.nu/reference/loop/[loop()]
+* http://energia.nu/reference/analogread/[analogRead()]
+* http://energia.nu/reference/int/[int]
+* http://energia.nu/reference/serial/[serial]
+* http://energia.nu/reference/float/[float]
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: the bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]: turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]: read a potentiometer, print it’s state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_fade/[Fade]: Demonstrates the use of analog output to fade an LED.
+* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]: reads an analog input and prints the voltage to the serial monitor.
+ 
+

@@ -1,0 +1,22 @@
+== Using the Energia Board Manager ==
+Starting from the Energia 18 release, only the MSP430 LaunchPads are installed by default. To use Energia with any other LaunchPads such as the CC1310, CC3200, TivaC MSP432 and CC3220, install them using the Boards manager.
+
+=== Installing additional LaunchPad boards ===
+In this example we will install the core required by the MSP432P401R. The first step is to click on the Tools menu and then Boards > Boards manager.
+
+image::/guide/img/boards_manager1.png[Boards Manager]
+
+The Boards Manager will open and you will see a list of available LaunchPad families, with the included boards in each family. Locate the LaunchPad family containing the board you need (in our case it’s the “Energia MSP432 boards” family). Select the family and click on install.
+
+image::/guide/img/boards_manager2.png[Boards Manager]
+
+The download time will depend on your connection speed. After installation is complete an Installed tag appears next to the family name. You can now close the Board Manager, and find the new board in the Board menu.
+
+image::/guide/img/boards_manager3.png[Boards Manager]
+
+=== Folders for boards packages ===
+The folder with the boards packages are located at:
+
+* Linux: ~/.energia15/packages/energia/hardware/
+* Windows: %LOCALAPPDATA%\Energia15\packages\hardware\
+* macOS: ~/Library/Energia15/packages/hardware/

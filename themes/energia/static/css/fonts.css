@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "TyponineSans Light 17";
+	src: url("fonts/typoninesanspro-light.eot");
+	src: url("fonts/typoninesanspro-light.eot?#iefix") format("embedded-opentype"), url("fonts/typoninesanspro-light.woff") format("woff"), url("fonts/typoninesanspro-light.svg") format("svg");
+	font-style: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	}
+
+@font-face{
+	font-family:Typonine Sans Light;
+	src:url("fonts/WF-028075-009795-001726.eot");
+	src:url("fonts/WF-028075-009795-001726.eot#iefix") format("embedded-opentype"),url("fonts/WF-028075-009795-001726.woff") format("woff"),url("fonts/WF-028075-009795-001726.woff") format("woff"),url("fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg")}
+
+@font-face{font-family:Typonine Sans Regular;
+  src:url("fonts/WF-028075-009795-001728.eot");
+	src:url("fonts/WF-028075-009795-001728.eot#iefix") format("embedded-opentype"),url("fonts/WF-028075-009795-001728.woff") format("woff"),url("fonts/WF-028075-009795-001728.woff") format("woff"),url("fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg")}

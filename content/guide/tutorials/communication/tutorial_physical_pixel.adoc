@@ -1,0 +1,196 @@
+== Physical Pixel ==
+
+This example uses the MSP430 Launchpad to receive data from the computer. The Launchpad turns on an LED when it +
+receives the character 'H', and turns off the LED when it receives the character 'L'. The data can be sent from the +
+Energia serial monitor, or another program like Processing (see code below).
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* LED [on-board as part of the LaunchPad]
+
+=== Relevant Groundwork ===
+
+For this example, it is easier to use the built-in LED on the LaunchPad corresponding to Pin 2 for Red or Pin 14 for +
+Green. You can attach an LED externally to pin 9 on the Launchpad where the long leg, or anode, goes to pin 9. The +
+short leg, or cathode, goes to ground.
+
+=== Circuit ===
+
+image::../img/PhysicalPixel_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/PhysicalPixel_schem.png[]
+
+=== Code Explanation ===
+
+*Energia*
+
+The LaunchPad will look for ASCII characters that will be sent from the Energia Serial Monitor in order to turn an LED +
+on the LaunchPad board on (High) or off (Low). When an 'H' is written in the Serial Monitor, the LED will turn on, +
+when an 'L' is written into the monitor, the LED will turn off. We begin by initializing a constant (in this code `ledPin`) to +
+the value of 14 or the pin associated with the Green LED on the LaunchPad board. We also need a new variable called +
+`incomingByte` that will save the ASCII character read by the Serial Monitor.
+
+In the `setup()` section, we initialize http://energia.nu/Serial.html[Serial] communication and set the pin associated to the Green LED (Pin 14) as an +
+output.
+
+In the `loop()` section, the http://energia.nu/Serial_Available.html[`Serial.available()`] will look for characters read from the Serial Monitor. This is inside an if +
+statement that will continuously run while the Serial is available. We set our variable `incomingByte` to what is being +
+read from the Serial Monitor. There are 2 if statements that follow. The first controls what will happen when an 'H' is +
+read in the Serial Monitor. If an 'H' is received, it will set the Green LED High using the `digitalWrite()` function. The +
+second if statement controls what happens when an 'L' is received. Very similar to the previous statement, only +
+difference is when 'L' is seen, the LED goes Low.
+
+*Processing*
+
+The Processing code will send data to the COM port to control what happens to the LED. The Processing code generates +
+a window that has a grey box inside surrounded by a blackbackground. When you place your mouse cursor into the grey +
+box, Processing will send 'H' to the port enabling the Green LED to go high. When the cursor is not in the grey box, +
+Processing will send 'L' to the port turning the LED low.
+
+=== Code ===
+
+----
+/*
+  Physical Pixel
+
+  An example of using the Launchpad to receive data from the 
+  computer. In this case, the Launchpad turns on an LED when
+  it receives the character 'H', and turns off the LED when it
+  receives the character 'L'.
+
+  The data can be sent from the Energia serial monitor, or another
+  program like Processing.
+
+  The circuit:
+  * LED connected from digital pin 14 to ground
+
+  created 2006
+  by David A. Mellis
+  modified 30 Aug 2011
+  by Tom Igoe and Scott Fitzgerald
+  Modified 15 April 2013
+  By Sean Alvarado
+
+  This example code is in the public domain.
+
+*/
+
+const int ledPin = 14; // the pin that the Green LED that is    attached to on Launchpad 
+int incomingByte; // a variable to read incoming serial data into
+
+void setup() {
+  // initialize serial communication:
+  Serial.begin(9600);
+  // initialize the LED pin as an output:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // see if there's incoming serial data:
+  if (Serial.available() > 0) {
+    // read the oldest byte in the serial buffer:
+    incomingByte = Serial.read();
+    // if it's a capital H (ASCII 72), turn on the LED:
+    if (incomingByte == 'H') {
+      digitalWrite(ledPin, HIGH);
+    } 
+    // if it's an L (ASCII 76) turn off the LED:
+    if (incomingByte == 'L') {
+      digitalWrite(ledPin, LOW);
+    }
+  }
+}
+
+/* Processing code for this example
+
+// mouseover serial 
+
+// Demonstrates how to send data to the Launchpad I/O board, in order to 
+// turn ON a light if the mouse is over a square and turn it off 
+// if the mouse is not. 
+
+// created 2003-4
+// based on examples by Casey Reas and Hernando Barragan
+// modified 30 Aug 2011
+// by Tom Igoe
+// modified 15 April 2013
+// by Sean Alvarado
+// This example code is in the public domain.
+
+
+
+import processing.serial.*; 
+
+float boxX;
+float boxY;
+int boxSize = 20;
+boolean mouseOverBox = false;
+
+Serial port; 
+
+void setup() {
+  size(200, 200);
+  boxX = width/2.0;
+  boxY = height/2.0;
+  rectMode(RADIUS); 
+
+  // List all the available serial ports in the output pane. 
+  // You will need to choose the port that the Launchpad is 
+  // connected to from this list. The first port in the list is 
+  // port #0 and the third port in the list is port #2. 
+  println(Serial.list()); 
+
+  // Open the port that the Launchpad is connected to (in this case #0) 
+  // Make sure to open the port at the same speed Energia is using (9600bps) 
+  port = new Serial(this, Serial.list()[0], 9600); // In the [] you will place the number corresponding to the COM your LaunchPad is connected to
+
+}
+
+void draw() { 
+  background(0);
+
+  // Test if the cursor is over the box 
+  if (mouseX > boxX-boxSize && mouseX < boxX+boxSize && mouseY > boxY-boxSize && mouseY < boxY+boxSize) {
+    mouseOverBox = true; 
+    // draw a line around the box and change its color:
+    stroke(255); 
+    fill(153);
+    // send an 'H' to indicate mouse is over square:
+    port.write('H'); 
+  } 
+  else {
+    // return the box to its inactive state:
+    stroke(153);
+    fill(153);
+    // send an 'L' to turn the LED off: 
+    port.write('L'); 
+    mouseOverBox = false;
+  }
+
+  // Draw the box
+  rect(boxX, boxY, boxSize, boxSize);
+}
+
+*/
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+=== See Also ===
+
+* http://energia.nu/Serial.html[serial()]
+* http://energia.nu/Serial_Read.html[serial.read()]
+* http://energia.nu/If.html[if()]
+* http://energia.nu/Tutorial_Dimmer.html[Dimmer]-move the mouse to change the brightness of an LED.
+* http://energia.nu/Tutorial_Graph.html[Graph]-send data to the computer and graph it in Processing.
+* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]-send multiple variables from a LaunchPad to the computer and read them in Processing.
+* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]-send multiple variables using a call and response (handshaking) method.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]-how to take different actions based on characters received by the serial port.

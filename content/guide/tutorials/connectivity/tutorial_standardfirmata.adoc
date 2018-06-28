@@ -1,0 +1,69 @@
+== Working Video ==
+
+video::CD-K1-LrVeQ[youtube]
+
+*FirmataGUI*
+
+* 40-pin LaunchPad look
+
+* Installation instruction is on GitHub  https://github.com/shengzhao91/FirmataGUI
+
+*FirmataGUI-Light*
+
+* Simple Firmata look. Populate long list of pins
+
+* Lightweight express web application framework
+
+* https://github.com/shengzhao91/FirmataGUI-Light
+
+*Atom Shell*
+
+* Firmata-Atom-Light
+
+– Atom shell version of FirmataGUI-Light
+
+* Native node module
+
+– node-serialport
+
+– require “apm install”
+
+* Zipped application folder: atom-shell
+
+– bypass native module hassle
+
+– Click “FirmataGUI-Light” shortcut or “atom” executable to run the application
+
+* Reference https://github.com/jacoblwe20/atom-hardware-demo
+
+*launchpad-firmata module*
+
+* A fork of jgautier’s firmata module customized for LaunchPad
+
+* The layer that writes Firmata protocol to the serial port
+
+* Hosted on npm for simple installation and used in FirmataGUI/-Light
+
+* Installation command: “npm install launchpad-firmata”
+
+* Git url: https://github.com/shengzhao91/launchpad-firmata.git
+
+* Npm url: https://www.npmjs.org/package/launchpad-firmata
+
+* Reference: https://github.com/jgautier/firmata
+
+*Firmata Boards.h file*
+
+* Fixed bug that TOTAL_PINS must be multiple of 8
+
+– fixed through customized launchpad-firmata module
+
+* Revisit pin definitions
+
+– Corrected wrong definitions
+
+* Push updated Boards.h file to GitHub
+
+– Merged to Energia’s main branch by Robert
+
+ 

@@ -1,0 +1,133 @@
+== Analog Write with 7 LEDs that are tied to the analogWrite-capable pins on the MSP-EXP430G2 LaunchPad ==
+
+This example fades 7 LEDs up and the down, one by one, on an MSP-EXP430G2 LaunchPad.
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* (7) LEDs
+* (7) 220 ohm resistors
+* Hook up wire
+* Breadboard
+
+=== Relevant Groundwork ===
+
+Connect the longer, positive legs of (anodes) 7 LEDs to digital pins 4, 9, 10, 12, 13, 14, 19 through +
+220 ohm current limiting resistors. Connect the shorter, negative legs (cathodes) to ground.
+
+=== Circuit ===
+ 
+image::../img/AnalogWrite_bb.png[]
+ 
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/AnalogWrite_schem.png[]
+
+=== Code Explanation ===
+
+In the `setup()` function of the code below, a http://energia.nu/reference/for/[`for()`] loop is used to assign digital pins 4, 9, 10, 12, +
+13, 14, 19 of the LaunchPad as outputs.
+
+Next, in the `loop()` function of the program below, a trio of nested `for()` loops are used.
+
+The first of these loops,
+
+----
+for (int thisPin =0; analogWritePin[thisPin] <= 7; thisPin++)
+----
+
+moves through each of the LEDS one by one, from the lowest pin to the highest. Before this loop +
+is allowed to move from one pin to the next, two things must be accomplished. First, you +
+brighten the individual LED through these lines of code:
+
+----
+for (int brightness = 0; brightness < 255; brightness++) {
+      analogWrite(analogWritePin[thisPin], brightness);
+      delay(2);
+}
+----
+
+With each pass through the loop above, the variable brightness increases by one point, and that +
+value is written to the pin currently selected to the main loop. One that pin reaches the +
+maximum PWM value (255), the following loop kicks in:
+
+----
+for (int brightness = 255; brightness >= 0; brightness--) {
+      analogWrite(analogWritePin[thisPin], brightness);
+      delay(2);
+}
+----
+
+This loop subtracts a point from the brightness variable, dimming the LED back down to 0. +
+Once zero is reached, the main `for()` loop kicks in, and the program moves on to the next LED +
+pin, repeating all the steps mentioned above.
+
+=== Code ===
+
+----
+/*
+  Using all of the analogWrite-capable pins on the LaunchPad!
+
+  This sketch fades LEDs up and down one at a time on digital pins 4, 9, 10, 12, 13, 14, 19.  
+  This sketch was written for the MSP-EXP430G2 LaunchPad, and leverages the analogWrite capable
+  pins on that particular board.     
+  The circuit:
+  * LEDs attached from pins 4, 9, 10, 12, 13, 14, 19 to ground.
+
+  created 8 Feb 2009
+  by Tom Igoe
+
+  Modified by Adrian Fernandez on 4/12/2013   This example code is in the public domain.
+
+ */
+// These constants won't change.  They're used to give names
+// to the pins used:
+const int analogWritePin[] = {4, 9, 10, 12, 13, 14, 19};
+
+void setup() {
+  // set pins 4, 9, 10, 12, 13, 14, 19 as outputs:
+  for (int thisPin =0; thisPin <= 7; thisPin++) { 
+    pinMode(analogWritePin[thisPin], OUTPUT); 
+  }
+}
+
+void loop() {
+  // iterate over the pins:
+  for (int thisPin =0; thisPin <= 7; thisPin++) { 
+    // fade the LED on thisPin from off to brightest:
+    for (int brightness = 0; brightness < 255; brightness++) {
+      analogWrite(analogWritePin[thisPin], brightness);
+      delay(2);
+    } 
+    // fade the LED on thisPin from brithstest to off:
+    for (int brightness = 255; brightness >= 0; brightness--) {
+      analogWrite(analogWritePin[thisPin], brightness);
+      delay(2);
+    } 
+    // pause between LEDs:
+    delay(100);
+  }
+}
+----
+
+=== Working Video ===
+
+video::Ved30DbPxAg[youtube]
+
+=== Try it out ===
+
+– Incorporate multiple analog signals into the program.
+
+=== See Also ===
+
+* http://energia.nu/reference/for/[for()]
+* http://energia.nu/reference/analogwrite/[analogWrite()]
+* http://energia.nu/reference/delay/[delay()]
+* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]–use a potentiometer to control the blinking of an LED.
+* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]–read an analog pin, map the result, and use that data to dim or brighten an LED.
+* http://energia.nu/guide/tutorial_fade/[Fade]–use an analog input to fade an LED.
+* http://energia.nu/guide/tutorial_calibration/[Calibration]–calibrating analog sensor readings.
+* http://energia.nu/guide/tutorial_forloop/[ForLoop]–how to use a `for()` loop (aka Knight Rider).
+ 

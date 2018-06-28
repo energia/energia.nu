@@ -1,0 +1,145 @@
+== Input Pull-up Serial ==
+
+This program shows the use of INPUT_PULLUP with `pinMode( )`. It monitors the state of a +
+switch by establishing serial communication between your Launchpad.
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* Pushbutton [available already on-board as part of the LaunchPad]
+* LED [available already on-board as a part of the Launchpad]
+* Momentary button or switch
+* 10K ohm resistor
+* Breadboard
+* Hook-up wire
+
+=== Relevant Groundwork ===
+
+By Enabling the Pull up resistor connected to an input pin. The output goes `HIGH` when the +
+input is `LOW` and the output goes `LOW` when the input is `HIGH`.
+
+=== Circuit ===
+
+image::../img/Button_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+[.underline]#For on-board push button#
+
+No external circuitry is required.
+
+[.underline]#For external push button#
+
+Connect three wires to the Launch pad board. The first two, red and black, connect to the two +
+long vertical rows on the side of the breadboard to provide access to the 3 volt supply +
+and ground. The third wire goes from digital pin p1.3 to one leg of the pushbutton. That same leg of +
+the button connects through a pull-up resistor (here 10 K Ohms) to Vcc. The other leg of the +
+button connects to the ground.
+
+=== Schematic ===
+
+image::../img/Button_schem.png[]
+
+=== Code Explanation ===
+
+In the program, pin 14, which has green LED connected to it, is set up as output in the setup +
+function.
+
+----
+pinMode(ledPin, OUTPUT);
+----
+
+Here the `ledpin` refers to the GREEN_LED which is set as output. The push button which is +
+connected to pin 5 is set up as input. The pull-up resistor connected to this pin is enabled.
+
+----
+pinMode(buttonPin, INPUT_PULLUP);
+----
+
+Begin serial communications, at 9600 bits of data per second, between your Launchpad and +
+your computer with the line.
+
+----
+Serial.begin(9600);
+----
+
+In the main loop, the value of the push button is continuously read and printed on serial +
+terminal. If the value of pin 5 to which pushbutton is attached, is `HIGH`, then a `LOW` is written + 
+to pin 14 to which green LED is attached. Likewise if pin 5 is `LOW`, then pin 14 is made `HIGH`.
+
+----
+if (buttonPushCounter % 4 == 0) {
+    digitalWrite(ledPin, HIGH);
+} else {
+   digitalWrite(ledPin, LOW);
+}
+----
+
+=== Code ===
+
+----
+/*
+  Input Pullup Serial
+
+  This example demonstrates the use of pinMode(INPUT_PULLUP). It reads a 
+  digital input on pin 5 and prints the results to the serial monitor.
+
+  Unlike pinMode(INPUT), there is no pull-down resistor necessary. An internal 
+  resistor is pulled to 3.3V. This configuration causes the input to 
+  read HIGH when the switch is open, and LOW when it is closed. 
+
+  created 14 March 2012
+  by Scott Fitzgerald
+  modified 27 Apr 2012
+  Robert Wessels
+*/
+
+void setup(){
+  //start serial connection
+  Serial.begin(9600);
+  //configure pin2 as an input and enable the internal pull-up resistor
+  pinMode(5, INPUT_PULLUP);
+  pinMode(14, OUTPUT); 
+
+}
+
+void loop(){
+  //read the pushbutton value into a variable
+  int sensorVal = digitalRead(5);
+  //print out the value of the pushbutton
+  Serial.println(sensorVal);
+
+  // Keep in mind the pullup means the pushbutton's
+  // logic is inverted. It goes HIGH when it's open,
+  // and LOW when it's pressed. Turn on pin 13 when the 
+  // button's pressed, and off when it's not:
+  if (sensorVal == HIGH) {
+    digitalWrite(14, LOW);
+  } 
+  else {
+    digitalWrite(14, HIGH);
+  }
+}
+----
+
+=== Working Video ===
+
+video::vg5P3tjMTP0[youtube]
+
+=== Try it out ===
+
+– Use the button to print something in binary to the serial monitor.
+
+=== See Also ===
+
+* http://energia.nu/reference/pinmode/[pinMode()]
+* http://energia.nu/reference/digitalwrite/[digitalWrite()]
+* http://energia.nu/reference/digitalread/[digitalRead()]
+* http://energia.nu/reference/delay/[delay()]
+* http://energia.nu/reference/int/[int]
+* http://energia.nu/reference/serial/[serial]
+* http://energia.nu/guide/tutorial_digitalpins/[DigitalPins]
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor. 
+* http://energia.nu/guide/tutorial_blinkwithoutdelay/[BlinkWithoutDelay]: Blinking an LED without using the `delay()` function.

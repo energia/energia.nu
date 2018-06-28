@@ -1,0 +1,102 @@
+== String Replace Function ==
+
+The String http://energia.nu/StringReplace.html[`replace()`] function allows you to replace all instances of a given character with +
+another character. You can also use replace to replace substrings of a string with a different +
+substring.
+
+=== Relevant Groundwork ===
+
+None
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+
+=== Circuit ===
+
+Only LaunchPad is required for this example.
+
+image::../img/Blink_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Blink_schem.png[]
+
+=== Code Explanation ===
+
+*Caution:* If you try to replace a substring that’s more than the whole string itself, nothing will +
+be replaced. For example:
+
+----
+  String stringOne = "dog";
+  String stringTwo = stringOne.replace("twodogs", "Blah");
+---- 
+
+In this case, the code will compile, but `stringOne` will remain unchanged, since the replacement +
+substring is more than the String itself.
+
+=== Code ===
+
+----
+/*
+  String replace()
+
+ Examples of how to replace characters or substrings of a string
+
+ created 27 July 2010
+ modified 2 Apr 2012
+ by Tom Igoe
+
+ This example code is in the public domain. 
+ */
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+
+  // send an intro:
+  Serial.println("\n\nString  replace:\n");
+  Serial.println();
+}
+
+void loop() {
+  String stringOne = "<HTML><HEAD><BODY>"";
+  Serial.println(stringOne);
+  // replace() changes all instances of one substring with another:
+  // first, make a copy of th original string:
+  String stringTwo = stringOne;
+  // then perform the replacements:
+  stringTwo.replace("<", "</");
+  // print the original:
+  Serial.println("Original string: " + stringOne);
+  // and print the modified string:
+  Serial.println("Modified string: " + stringTwo);
+
+  // you can also use replace() on single characters:
+  String normalString = "bookkeeper";
+  Serial.println("normal: " + normalString);
+  String leetString = normalString;
+  leetString.replace('o', '0');
+  leetString.replace('e', '3');
+  Serial.println("l33tspeak: " + leetString);
+
+  // do nothing while true:
+  while(true);
+}
+----
+
+=== Working Video ===
+
+video::CtIW9ulPFQU[youtube]
+
+=== Try it out ===
+
+– Replace all the nouns in a string with funny names.
+
+=== See Also ===
+
+* http://energia.nu/Setup.html[setup()]
+* http://energia.nu/Loop.html[loop()]
+* http://energia.nu/Serial_Println.html[println()]

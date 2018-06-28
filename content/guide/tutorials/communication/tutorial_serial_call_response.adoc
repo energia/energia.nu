@@ -1,0 +1,216 @@
+== Serial Call and Response (handshaking) ==
+
+This example demonstrates multi-byte communication from the MSP430 LaunchPad to the computer using a call-and- +
+response (handshaking) method. This sketch sends an ASCII A (byte of value 65) on startup and repeats that until it + 
+gets a serial response from the computer. Then it sends three sensor values as single bytes, and waits for another +
+response from the computer. You can use the Energia serial monitor to view the sent data, or it can be read by +
+Processing (see code below).
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* Two potentiometers
+* Momentary switch/button
+* Three 10K ohm resistors
+* Breadboard
+* Hook-up wire
+
+=== Relevant Groundwork ===
+
+In this code, we use the function http://energia.nu/Serial_Write.html[`Serial.write()`]. This function writes the value of what is in the function as binary data to +
+the Serial Monitor. For instance if we put `Serial.write(100)`; into Energia sketch, when we open the Serial monitor, we +
+will see a string of `'d'` written on the Serial Monitor which 100 in decimal corresponds to `'d'` in ASCII.
+
+Connect analog sensors to analog input pin 0 and 1 with 10K ohm resistors used as voltage dividers. Connect a +
+pushbutton or switch to digital I/O pin 2 with a 10Kohm resistor as a reference to ground.
+
+=== Circuit ===
+
+image::../img/SerialCallResponse_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/SerialCallResponse_schem.png[]
+
+=== Code Explanation ===
+
+*Energia*
+
+At the start of the program, the Serial Monitor will display a string of `'A'` until another ASCII character is written in the +
+Serial Monitor. Once another character is received, the values of the three sensor attached to the LaunchPad will be +
+displayed on the Serial Monitor as ASCII characters.
+
+*Processing*
+
+The Processing code will display a window with a grey circle inside. Changing the sensors will change the 
+position of the +
+grey circle inside the Processing window.
+
+=== Code ===
+
+----
+/*
+  Serial Call and Response
+
+  This program sends an ASCII A (byte of value 65) on startup
+  and repeats that until it gets some data in.
+  Then it waits for a byte in the serial port, and 
+  sends three sensor values whenever it gets a byte in.
+
+  Thanks to Greg Shakar and Scott Fitzgerald for the improvements
+
+  The circuit:
+  * potentiometers attached to analog inputs 0 and 1 
+  * pushbutton attached to digital I/O 11
+
+  Created 26 Sept. 2005
+  by Tom Igoe
+  modified 24 April 2012
+  by Tom Igoe and Scott Fitzgerald
+  Modified 19 April 2013
+  By Sean Alvarado
+
+  This example code is in the public domain.
+
+*/
+int firstSensor = 0; // first analog sensor
+int secondSensor = 0; // second analog sensor
+int thirdSensor = 0; // digital sensor
+int inByte = 0; // incoming serial byte
+
+void setup()
+{
+  // start serial port at 9600 bps:
+  Serial.begin(9600);
+
+  pinMode(11, INPUT); // digital sensor is on digital pin 11
+  establishContact(); // send a byte to establish contact until receiver responds 
+}
+
+void loop()
+{
+  // if we get a valid byte, read analog ins:
+  if (Serial.available() > 0) {
+    // get incoming byte:
+    inByte = Serial.read();
+    // read first analog input, divide by 4 to make the range 0-255:
+    firstSensor = analogRead(A0)/4;
+    // delay 10ms to let the ADC recover:
+    delay(10);
+    // read second analog input, divide by 4 to make the range 0-255:
+    secondSensor = analogRead(A1)/4;
+    // read switch, map it to 0 or 255L
+    thirdSensor = map(digitalRead(11), 0, 1, 0, 255); 
+    // send sensor values:
+    Serial.write(firstSensor);
+    Serial.write(secondSensor);
+    Serial.write(thirdSensor); 
+  }
+}
+
+void establishContact() {
+  while (Serial.available() <= 0) {
+    Serial.println('A'); // send a capital A
+    delay(300);
+  }
+}
+
+/*
+Processing sketch to run with this example:
+
+// This example code is in the public domain.
+
+import processing.serial.*;
+
+int bgcolor; // Background color
+int fgcolor; // Fill color
+Serial myPort; // The serial port
+int[] serialInArray = new int[3]; // Where we'll put what we receive
+int serialCount = 0; // A count of how many bytes we receive
+int xpos, ypos; // Starting position of the ball
+boolean firstContact = false; // Whether we've heard from the microcontroller
+
+void setup() {
+  size(256, 256); // Stage size
+  noStroke(); // No border on the next thing drawn
+
+  // Set the starting position of the ball (middle of the stage)
+  xpos = width/2;
+  ypos = height/2;
+
+  // Print a list of the serial ports, for debugging purposes:
+  println(Serial.list());
+
+  // I know that the first port in the serial list on my mac
+  // is always my FTDI adaptor, so I open Serial.list()[0].
+  // On Windows machines, this generally opens COM1.
+  // Open whatever port is the one you're using.
+  String portName = Serial.list()[0];
+  myPort = new Serial(this, portName, 9600);
+}
+
+void draw() {
+  background(bgcolor);
+  fill(fgcolor);
+  // Draw the shape
+  ellipse(xpos, ypos, 20, 20);
+}
+
+void serialEvent(Serial myPort) {
+  // read a byte from the serial port:
+  int inByte = myPort.read();
+  // if this is the first byte received, and it's an A,
+  // clear the serial buffer and note that you've
+  // had first contact from the microcontroller. 
+  // Otherwise, add the incoming byte to the array:
+  if (firstContact == false) {
+    if (inByte == 'A') { 
+      myPort.clear(); // clear the serial port buffer
+      firstContact = true; // you've had first contact from the microcontroller
+      myPort.write('A'); // ask for more
+    } 
+  } 
+  else {
+    // Add the latest byte from the serial port to array:
+    serialInArray[serialCount] = inByte;
+    serialCount++;
+
+    // If we have 3 bytes:
+    if (serialCount > 2 ) {
+      xpos = serialInArray[0];
+      ypos = serialInArray[1];
+      fgcolor = serialInArray[2];
+
+      // print the values (for debugging purposes only):
+      println(xpos + "\t" + ypos + "\t" + fgcolor);
+
+      // Send a capital A to request new sensor readings:
+      myPort.write('A');
+     // Reset serialCount:
+     serialCount = 0;
+    }
+  }
+}
+*/
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+=== See Also ===
+
+* http://energia.nu/Serial.html[serial()]
+* http://energia.nu/Serial_Begin.html[serial.begin()]
+* http://energia.nu/Serial_Available.html[serial.available()]
+* http://energia.nu/Serial_Print.html[serial.print()]
+* http://energia.nu/AnalogRead.html[analogRead()]
+* http://energia.nu/Tutorial_Dimmer.html[Dimmer]-move the mouse to change the brightness of an LED.
+* http://energia.nu/Tutorial_Graph.html[Graph]-send data to the computer and graph it in Processing.
+* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]-turn an LED on and off by sending data from Processing.
+* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]-send multiple variables from an LaunchPad to the computer and read them in Processing.
+* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]-send multiple variables using a call and response (handshaking) method.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]-how to take different actions based on characters received by the serial port.

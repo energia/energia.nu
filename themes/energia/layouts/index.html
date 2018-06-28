@@ -1,9 +1,10 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    {{ partial "analytics.html" . }}
   </head>
   <body>
-    <!-- <img class="logo-img" src="/img/energia.png" width="130" height="130" ALIGN=CENTER> -->
     {{ partial "menu.html" . }}
     <div id="pagetext">
     {{ .Content }}

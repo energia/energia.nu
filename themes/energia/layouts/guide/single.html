@@ -1,14 +1,18 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/energia-light.css">
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/main.js"></script>
+    {{ partial "analytics.html" . }}
   </head>
   <body>
-    <img class="logo-img" src="/img/energia.png" width="50" height="70">
     {{ partial "menu.html" . }}
     <div id="pagetext">
-    {{ .Content }}
-    {{ partial "guide_footer.html" . }}
+      {{ .Content }}
+      {{ partial "guide_footer.html" . }}
     </div>
     {{ partial "footer.html" . }}
   </body>

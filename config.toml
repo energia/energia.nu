@@ -1,6 +1,13 @@
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
 baseURL = "http://energia.nu/"
 languageCode = "en-us"
 title = "Energia"
 theme = "energia"
+preserveTaxonomyNames = true
 [permalinks]
     top = "/:filename/"
+[taxonomies]
+    category = "categories"
+    subCategory = "subCategories"

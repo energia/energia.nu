@@ -1,0 +1,209 @@
+== How to measure Energy profile in Energia with TI Energy Trace ==
+
+This tutorial is based on material originally posted at 43oh.com by Frank Milburn: +
+http://43oh.com/2015/09/how-to-measure-an-energia-applications-power-usage-with-energytrace/
+
+While experimenting with an http://www.nordicsemi.com/eng/Products/2.4GHz-RF/nRF24LU1P[nRF24L01 radio] and MSP430G2553 microcontroller powered by a +
+super capacitor and solar panel, the need to better understand the energy usage became +
+increasingly apparent. I was aware of http://www.ti.com/tool/energytrace[EnergyTrace], but didn’t think it could be used because I +
+was developing with the http://energia.nu/[Energia IDE]. After some digging though I found out that it can be used +
+on http://energia.nu/[Energia] applications and that it has powerful capabilities.
+
+image::energytrace_msp430.jpg[]
+
+This demonstration will show how to measure the energy and power usage of a http://www.ti.com/tool/msp-exp430g2[MSP-EXP430G2] +
+LaunchPad running an application developed entirely within the Energia IDE.
+
+In order to use EnergyTrace, it is necessary to have http://www.ti.com/tool/ccstudio[Code Composer Studio] version 6.1 or newer +
+and a LaunchPad with supporting hardware such as the http://www.ti.com/tool/msp-exp430fr5969[MSP-EXP430FR5969] in addition to the +
+target microcontroller. There is a free version of CCS and the MSP-EXP430FR5969 https://store.ti.com/msp-exp430fr5969.aspx[can be +
+obtained for US $15.99]. The MSP-EXP430FR5969 powers the MSP-EXP430G2 which allows +
+EnergyTrace to sample the supply voltage and provide energy and power data without using the +
+CCS debugger – so the Energia solution is being measured directly.
+
+Code Composer Studio is a full featured professional IDE and it takes time to learn if you are not +
+familiar with it. Fortunately, a detailed understanding of all the features is not necessary to use +
+EnergyTrace. Code Composer Studio can be downloaded http://processors.wiki.ti.com/index.php/Download_CCS[here] and the second chapter of http://processors.wiki.ti.com/index.php/Getting_Started_with_the_MSP430_LaunchPad_Workshop[this +
+workshop] gives an introduction on how to use it. https://myportal.ti.com/portal/dt?provider=TIPassLoginSingleContainer&lt=myti&j5=2&j3=1&goto=https%3A%2F%2Ffedid.ext.ti.com%3A443%2Ffedout%2Fe2e%2Findex.cgi[These videos] provide an understanding of how +
+to use EnergyTrace – pay particular attention to the one on “Using http://www.ti.com/tool/EnergyTrace[EnergyTrace] Technology +
+without a Debug Session” as that is the basic method used here.
+
+EnergyTrace works by continuously measuring the energy supplied to the target as opposed to +
+discrete measurement of voltage over a shunt resistor. This is done with a software controlled +
+dc-dc converter that generates the power for the target. The pulses from the dc-dc converter are +
+counted and the more pulses per unit time, the higher the current flow. Accordingly, even the +
+most rapid events that contribute to current consumption are captured, although the sampling +
+frequency is only on the order of 1 kHz.
+
+=== Inefficient Code – Blink Energy 1 ===
+
+As a demonstration, we will use that old standby Blink. The code below gives a pretty standard +
+sketch for Blink although the blink is shortened and the delay time between blinks is lengthened +
+from that which is normally used.
+
+----
+/*
+  Blink Energy – A sketch to explore the energy used to blink an LED on a MSP430G2 LaunchPad.
+  This example code is in the public domain.
+*/
+// the red LED is on pin 2 of the MSP430G2
+#define LED 2
+voidsetup()
+{                
+  // initialize the digital pin as an output.
+  pinMode(LED,OUTPUT);    
+}
+voidloop()
+{
+  digitalWrite(LED,HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(50);                 // wait for a while
+  digitalWrite(LED,LOW);    // turn the LED off by making the voltage LOW
+  delay(950);                // wait again
+}
+----
+
+EnergyTrace will be used to estimate how long this will run on two AA batteries.
+
+The sketch was uploaded to a M430G2553 microcontroller on the MSP-EXP430G2 LaunchPad +
+in the normal manner with Energia 16. Then the MSP-EXP430G2 LaunchPad and the MSP- +
+EXP430FR5969 LaunchPad were connected together with female-to-female jumpers as shown +
+in Figure 2.
+
+image::energia_energyTrace_launchpad.jpg[]
+
+The connections are described in detail starting at the bottom of page 26 of http://www.ti.com/lit/an/slaa603/slaa603.pdf[this reference]. +
+Pay attention to which side of J3 and J13 the connections are made. Then connect the MSP- +
+EXP430FR5969 via USB to your computer and open up Code Composer Studio. I chose to start +
+a new CCS Project for the MSP430FR5969 with the blink example but this is not important as +
+EnergyTrace will not use the code in the project or the debugger.
+
+Then, follow the directions for https://e2e.ti.com/blogs_/b/msp430blog/archive/2015/08/14/energytrace-simplifies-low-power-optimization[Using EnergyTrace Technology without a Debug Session].
+
+AA batteries were chosen in the preferences tab for EnergyTrace. After selecting 30 seconds for +
+the runtime and pressing start, the simulation began and gave the results in Figure 3.
+
+image::EnergyTrace-results-from-the-standard-Blink-example.jpg[]
+
+*_The summary table at left in Figure 3 reports an estimated battery life of 77 days._* +
+The battery life estimates are just that – battery life depends on chemistry, how the battery was +
+manufactured, its age, the temperature, how it is drained, etc.
+
+The power is graphed in the center chart and reports a rather steady 3 mW base with spikes up +
+to about 15.5 mW every second corresponding to the LED blinking. At right is the energy graph +
+showing a total energy usage of 109 mJ over the 30 second test. It may be hard to see, but there +
+are stair steps every second corresponding to the LED spikes.
+
+=== More Efficient Code – Blink Energy 2 ===
+
+It looks like the base load is coming from the microcontroller and that it is the primary user of +
+power. Leaving the unused pins floating on the microcontroller can result in incremental power +
+usage. To overcome this, put all pins in `OUTPUT` mode and then pull them `LOW`. So, take off +
+the female-to-female jumpers and put the J3 jumpers back in place for the MSP-EXP430G2. +
+The `setup()` function is then modified as shown in the snippet below.
+
+----
+voidsetup()
+{                
+  // initialize all pins as an output and put them in a low state
+  for(inti=2;i<20;i++)
+  {
+    pinMode(i,OUTPUT);
+    digitalWrite(i,LOW);
+  }
+}
+----
+
+Upload the revised sketch to the MSP-EXP430G2 and put everything back in place to use Code +
+Composer Studio. Open it up and run EnergyTrace. The results are shown in Figure 4.
+
+image::Energy-Trace-results-from-the-Blink-example-with-pins-pulled-LOW.jpg[]
+
+*_The energy used has been reduced to 105 mJ and the battery life of the 2xAA +
+batteries is now 80 days. An improvement, but can we do better?_*
+
+=== Even More Efficient Code – Blink Energy3 ===
+
+The `sleep()` function was introduced with Energia version 13. Using it instead of `delay()` puts the +
+microcontroller into Low Power Mode 3 (LPM3) which should reduce the base load. The code +
+below shows a modified `loop()` function that uses `sleep()` instead of `delay()`.
+
+----
+voidloop()
+{
+  digitalWrite(LED,HIGH);   // turn the LED on (HIGH is the voltage level)
+  sleep(50);                 // wait for a while
+  digitalWrite(LED,LOW);    // turn the LED off by making the voltage LOW
+  sleep(950);                // wait again
+}
+----
+
+The EnergyTrace results are shown in Figure 5.
+
+image::EnergyTrace-results-from-the-Blink-example-with-pins-pulled-LOW-and-using-sleep.png[]
+
+*_Impressive. The base has dropped to where it doesn’t show on the scale while in +
+sleep mode and the total energy is reduced to 19.1 mJ. Battery life is up to 441 +
+days now from 77 days in the first example. The energy chart now clearly shows +
+the stair step that occurs when the LED is turned on._*
+
+Two additional observations can be made from Figure 7. The first observation is that the spikes +
+appear to be of uneven width and don’t always drop immediately to the base. The User’s Guide +
+for Code Composer Studio contains the answers in the FAQ section of Chapter 3:
+
+*Q: My Power graph seems to include noise. Is my board defective?*
+
+_A: The power values shown in the Power graph are derived (that is, calculated) from the +
+accumulated energy counted by the measurement system. When the target is consuming little +
+energy, a small number of energy packets over time are supplied to the target, and the +
+software needs to accumulate the dc-dc charge pulses over time before a new current value +
+can be calculated. For currents under 1 µA, this can take up to one second, while for currents +
+in the milliamp range, a current can be calculated every millisecond._
+
+*Q: My power mode profile sometimes shows short periods of power modes that I +
+haven’t used anywhere in my code. For example, I’m expecting a transition from +
+active mode to LPM3, but I see a LPM2 during the transition.*
+
+_A: When capturing in EnergyTrace++ mode, digital information is continuously collected +
+from the target device. One piece of this information is the power mode control signals. +
+Activation of low-power modes requires stepping through a number of intermediate states. +
+Usually this happens too quickly to be captured by the trace function, but sometimes +
+intermediate states can be captured and are displayed for a short period of time as valid low- +
+power modes._
+
+The second observation is that the period is longer between blinks with the `sleep()` function. +
+This can occur because of the way `sleep()` is implemented and it may give lower timing +
+resolution than `delay()`.
+
+EnergyTrace can also compare the results between two cases as shown in Figure 6.
+
+image::Comparison-of-standard-Blink-to-more-efficient-example.jpg[]
+
+=== More on Energy Savings ===
+
+Energia users interested in improving the energy efficiency of their applications should also be +
+aware of the `sleepSeconds()`, `suspend()`, and `wakeup()` functions.
+
+Briefly, `sleepSeconds()` should be used whenever the interval is 1 second or greater. The one +
+second intervals of `sleepSeconds()` are relatively coarse and are subject to some inaccuracy.
+
+The `suspend()` function puts the microcontroller into Low Power Mode 4 (LPM4) for very low +
+power usage. It can then be woken with an external interrupt by the `wakeup()` function.
+
+A https://forum.43oh.com/[search on 43oh will turn up a number of threads] with information on these functions and +
+there is also a post on github https://github.com/fmilburn3/Energia_LPM[here] that demonstrates them. To get the full energy reductions and +
+accuracy that are available on MSP430 microcontrollers though it is necessary to use Code +
+Composer Studio with its full access to timers, lower energy states, and peripherals instead of +
+Energia.
+
+=== Summary ===
+
+EnergyTrace can provide information on the energy usage of MSP430 processors to Energia +
+users. It is necessary to have Code Composer Studio installed along with a LaunchPad having +
+the necessary supporting hardware such as the MSP-EXP430FR5969. In this demonstration the +
+estimated battery life of a simple example was increased from 77 days to 441 days – an increase +
+of a factor of 5.7. The primary benefit came from using the `sleep()` function instead of `delay()`. A +
+reduction in power usage from putting all pins in a known state was also demonstrated.
+
+Other means of improving power usage using the `sleepSeconds()`, `suspend()`, and `wakeup()` +
+functions were briefly introduced. Energia users should be aware that `sleep()` and `sleepSeconds()` +
+may result in less accurate sleep intervals.

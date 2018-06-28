@@ -1,0 +1,64 @@
+== MultiAnalogInput ==
+
+This example shows how to blink LEDs at different rates using multitasking in Energia MT.
+
+=== Hardware Required ===
+
+* MSP432P401R LaunchPad (Or any other LaunchPad that supports multi tasking. The analog pins input pin numbers might need to be changed to those that match the LaunchPad you are using)
+
+=== Relevant groundwork ===
+
+None
+
+=== Circuit ===
+
+Only your LaunchPad Board is needed for this example.
+
+=== Code Explanation ===
+
+This multitasking example is based on the basic Analog Input example, but adds multitasking functionality to read analog inputs at multiple rates in separate tasks. Each tab in the sketch is a different task with its own setup and loop functions.
+
+In this example, the first task reads in analog pin 23, then seizes the serial port (so that no other tasks can interrupt the serial output) and prints the value of the sensor to the COM terminal.
+
+In the Tab 1 `setup()` function `pinMode()` is used to set pin 23 as an analog input and we open a serial port with the `Serial.begin()` function.  In the `loop()` function, the value of analog pin 23 is read and set to the variable sensorValue.  The `Serial.seize()` function seizes the serial port, which makes sure no other tasks write to the serial port until the `Serial.release()` function is called. In between those two functions, the value of the analog pin (`sensorValue`) is printed to the serial terminal.
+
+In Tab 2, we use the same `sensorValue` variable (which was established as a global in Tab 1) to read the value of the analog input and print it to the serial terminal.
+
+=== Code ===
+
+*Tab 1*
+
+----
+int sensorPin = 23; // select the input pin for the potentiometer
+int sensorValue = 0; // variable to store the value coming from the sensor
+void setup() {
+ pinMode(8, INPUT);
+ Serial.begin(115200);
+}
+
+void loop() {
+ // read the value from the sensor:
+ sensorValue = analogRead(sensorPin);
+ Serial.seize();
+ Serial.print("Moisture Sensor Value: ");
+ Serial.println(sensorValue);
+ Serial.release();
+ delay(1000);
+}
+----
+
+*Tab 2*
+
+----
+void setup() {
+ Serial.begin(115200);
+}
+
+void loop() {
+ // read the value from the sensor:
+ sensorValue = analogRead(sensorPin);
+ Serial.print("Value read by task 2: ");
+ Serial.println(sensorValue);
+ delay(500);
+}
+----

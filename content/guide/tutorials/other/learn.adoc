@@ -1,0 +1,91 @@
+== Learn ==
+
+This page hosts custom lesson plans and training modules, called capsules, that go beyond the +
+standard http://energia.nu/guide/#tutorials[tutorials] provided in the http://energia.nu/guide/[Energia guide]. You can think of a capsule like a classroom +
+course pack. Each capsule is designed to be consumed in an hour or more and contains detailed +
+presentation and lab material to be used in an educational context. This includes explanations of +
+concepts and step by step procedures that explain what is happening and what concepts are +
+being demonstrated.  Most capsules will require some hardware components, as hands-on +
+learning is very important when teaching electronics and engineering.
+
+=== K-12 Capsule (90 minutes) ===
+
+This capsule is designed as a workshop that can be completed in 90-120 minutes. The target +
+audience is for middle school and highschool students and is meant as an introduction to +
+electronics, which means students with little or no exposure to electronics, software +
+programming, Energia, or LaunchPads. This capsule may not be suited for students who have +
+some experience with electronics, Energia, or LaunchPads.
+
+*Required Hardware* (per student or they can work in pairs)
+
+* MSP430G2 LaunchPad (MSP-EXP430G2) or MSP430F5529 LaunchPad (MSP-EXP430F5529LP) 
+* Small breadboard
+* Potentiometer
+* Jumper wires
+* (Optional) LEDs
+* (Optional) Pushbuttons
+ 
+
+*Presentation Slides:* K-12_Energia_Capsule.pptx
+
+*Lab Material:* Coming Soon!
+
+*Video Content:* N/A
+
+=== IoT Capsule (90 minutes) ===
+
+This capsule is designed to give an overview of LaunchPad and then shift over into the concept +
+of Internet of Things.  The target audience is for University students and above who have some +
+background in engineering, electronics, Energia, or LaunchPads.
+
+*Required Hardware*
+
+* CC3200 LaunchPad (CC3200-LAUNCHXL)
+ 
+*Presentation Slides:* http://energia.nu/wordpress/wp-content/uploads/2014/11/IoT_Energia_Capsule_v1.pptx[IoT_Energia_Capsule.pptx]
+
+*Lab Material:* Coming Soon!
+
+*Video Content:* N/A
+
+=== SIK Capsule (3-4 hours) ===
+
+This capsule goes through the entire Sparkfun Inventor’s Kit guide examples.  This is a long +
+workshop that can last several hours depending on the student. The target audience is +
+for students in middle school, high school, or university with some minor exposure to +
+electronics and software development. This capsule can be taken by beginners but they may +
+encounter some challenges and will require help from the instructor. Students will be required +
+to build multiple circuits by hand using a breadboard.
+
+*Required Hardware*
+
+* MSP430 LaunchPad
+* Sparkfun Inventor’s Kit
+ 
+*Presentation Slides:* Coming Soon!
+
+*Lab Material:* Coming Soon!
+
+*Video Content:* N/A
+
+=== MSP430 Design Capsule (6-8 hours) ===
+
+This capsule goes through the TI MSP430 Design workshop. This is a full day workshop. The +
+target audience is professionals or university students with good exposure to electronics and +
+software development and will introduce them to the MSP430 architecture. This capsule can be +
+taken by beginners but they may encounter some challenges and will require help from the +
+instructor. Students will be required to perform various labs with their MSP430 LaunchPad.
+
+*Required Hardware*
+
+* MSP430 LaunchPad
+
+*Presentation Slides:* http://processors.wiki.ti.com/index.php/MSP430_Design_Workshop
+
+*Lab Material:* http://processors.wiki.ti.com/index.php/MSP430_Design_Workshop
+
+*Video Content:* http://processors.wiki.ti.com/index.php/MSP430_Design_Workshop
+
+=== Other helpful resources ===
+
+https://learn.adafruit.com/[learn.adafruit.com] || https://learn.sparkfun.com/[learn.sparkfun.com]

@@ -26,12 +26,12 @@ function debounce(func, wait, immediate) {
 var myEfficientFn = debounce(function() {
     var width = getWidth();
 //    alert("resize event detected! width = " + width);
-    if(width < 900) {
-        document.getElementById('menu').style.display = 'none'; 
-        document.getElementById('nomenu').style.display = 'block'; 
+    if(width < 800) {
+//        document.getElementById('navigation-container').style.display = 'none'; 
+//        document.getElementById('navigation-container-mobile').style.display = 'block'; 
     } else {
-        document.getElementById('menu').style.display = 'block';
-        document.getElementById('nomenu').style.display = 'none'; 
+//        document.getElementById('navigation-container').style.display = 'block';
+//        document.getElementById('navigation-container-mobile').style.display = 'none'; 
     }
 }, 10);
 

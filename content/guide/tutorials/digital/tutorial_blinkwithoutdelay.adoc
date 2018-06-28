@@ -1,0 +1,159 @@
+== Blink without delay ==
+
+This example shows how to program MSP430 LaunchPad to blink its LED without using delay +
+function using Energia.
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+* LED [available already on-board as a part of the Launchpad]
+
+=== Relevant Groundwork ===
+
+Using `delay( )` while trying to blink the LED helps in discerning the blinking of LED, which +
+otherwise would be difficult in noticing. The disadvantage of using delay function is, it brings all +
+activities to halt. Sometimes when you need to do two things at once, For example, you might +
+want to blink an LED (or some other time-sensitive function) while reading a button press or +
+other input. In this case, you can’t use `delay()`, or you’d stop everything else the program while +
+the LED blinked. The program might miss the button press if it happens during the `delay( )`.
+
+This code below demonstrates how to blink the LED without using `delay()`. It keeps track of the +
+last time the Launchpad turned the LED on or off. Then, each time through `loop()`, it checks if a +
+long enough interval has passed. If it has, it toggles the LED on or off.
+
+MSP430 LaunchPad has LED attached to pin 2 and pin 14 on the board itself as shown above in +
+the image. If you run the below code example with no hardware attached, you should see that +
+LED blink.
+
+=== Circuit ===
+
+image::../img/Blink_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Blink_schem.png[]
+
+=== Code Explanation ===
+
+In the program, pin 14 is set up as output in the setup function.
+
+----
+pinMode(ledPin, OUTPUT);
+----
+
+Here the ledpin refers to the `GREEN_LED` which is set as output.
+
+In the main loop, in order to measure delay without using the delay function, current time, +
+which is the time elapsed in milliseconds since the Launchpad was booted up is obtained using +
+`millis( )`. The difference of this current time with the previous time ( which is 0 initially) when +
+LED blinked is checked. If the difference exceeds the delay time interval,
+
+----
+if(currentMillis - previousMillis > interval)
+----
+
+Then, the last time when LED blinked is saved,
+
+----
+previousMillis = currentMillis;
+----
+
+The state of the LED is now switched. If LED is ON, then it is turned off and vice-versa.
+
+----
+if (ledState == LOW)
+      ledState = HIGH;
+else
+      ledState = LOW;
+----
+
+The state of the output pin connected to LED reflects this accordingly,
+
+----
+digitalWrite(ledPin, ledState);
+----
+
+=== Code ===
+
+----
+/* Blink without Delay
+
+  Turns on and off a light emitting diode(LED) connected to a digital  
+  pin, without using the delay() function.  This means that other code
+  can run at the same time without being interrupted by the LED code.
+
+  In MSP430 Launchpad, there is already an LED on the board that's 
+  attached to pin 14, so no hardware is needed for this example. 
+
+  created 2005
+  by David A. Mellis
+  modified 8 Feb 2010
+  by Paul Stoffregen
+  modified 27 Apr 2012
+  by Robert Wessels
+*/
+
+// Pin 14 has an LED connected on MSP430 boards, has a name 'GREEN_LED' in the code.
+
+// constants won't change. Used here to 
+// set pin numbers:
+const int ledPin =  GREEN_LED;      // the number of the LED pin
+
+// Variables will change:
+int ledState = LOW;             // ledState used to set the LED
+long previousMillis = 0;        // will store last time LED was updated
+
+// the follow variables is a long because the time, measured in miliseconds, will quickly become a bigger 
+// number than can be stored in an int.
+long interval = 1000;           // interval at which to blink (milliseconds)
+
+void setup() {
+  // set the digital pin as output:
+  pinMode(ledPin, OUTPUT);      
+}
+
+void loop()
+{
+  // here is where you'd put code that needs to be running all the time.
+ // check to see if it's time to blink the LED; that is, if the 
+  // difference between the current time and last time you blinked 
+  // the LED is bigger than the interval at which you want to 
+  // blink the LED.
+  unsigned long currentMillis = millis();
+
+  if(currentMillis - previousMillis > interval) {
+    // save the last time you blinked the LED 
+    previousMillis = currentMillis;   
+
+    // if the LED is off turn it on and vice-versa:
+    if (ledState == LOW)
+      ledState = HIGH;
+    else
+      ledState = LOW;
+
+    // set the LED with the ledState of the variable:
+    digitalWrite(ledPin, ledState);
+  }
+}
+----
+
+=== Working Video ===
+
+video::Kn0zx3uH6Sk[youtube]
+
+=== Try it out ===
+
+– Alternate blinking between two LEDs.
+
+=== See Also ===
+
+* http://energia.nu/reference/setup/[setup()]
+* http://energia.nu/reference/loop/[loop()]
+* http://energia.nu/reference/millis/[millis()]
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
+ 
+

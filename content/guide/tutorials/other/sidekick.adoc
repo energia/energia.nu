@@ -1,0 +1,132 @@
+== Sidekick for TI LaunchPad ==
+
+video::iuAYQKBJkhM[youtube]
+
+The Seeedstudio Sidekick Basic Kit for TI LaunchPad™ is a great starting point for learning +
+electronics and building basic circuits using discrete components, a breadboard, and a +
+LaunchPad. Using Energia can greatly simplify the software creation so more focus can be +
+placed on rapid prototyping and modifying circuits to fit our project ideas.  This is an excellent +
+starter kit for new electronics engineers and makers!
+
+You can purchase the Sidekick Basic Kit for TI LaunchPad™ at https://www.mouser.com/ProductDetail/106060002?R=0virtualkey0virtualkey106060002[Mouser Electronics], https://www.digikey.com/product-detail/en/106060002/1597-1149-ND/5774940[Digi-Key], +
+and https://www.seeedstudio.com/Sidekick-Basic-Kit-for-TI-LaunchPad-p-2571.html[SeeedStudio today].
+
+Download the sample code folder here: http://energia.nu/wordpress/wp-content/uploads/2015/11/Sidekick_LaunchPad.zip[www.energia.nu/sidekickcode]
+
+Sidekick includes loose components, wires, and a breadboard to compliment your LaunchPad +
+development kit. The manual includes 10 different example circuits but many more are possible +
+by gathering additional components or using creativity.  This is a must have item for any + 
+LaunchPad developer!
+
+=== Examples ===
+
+Download the example code at http://energia.nu/wordpress/wp-content/uploads/2015/11/Sidekick_LaunchPad.zip[www.energia.nu/sidekickcode] +
+It will also be available in the Energia code examples for version 18+ +
+The code is also available on the example pages below for copy and paste into your sketches
+
+=== Basic Examples ===
+
+>> http://energia.nu/guide/sidekick/sidekick_blink/[Example 00: Blinking LED] (Output)
+
+>> http://energia.nu/guide/sidekick/sidekick_fadergbled/[Example 01: Fade RGB LED] (PWM)
+
+>> http://energia.nu/guide/sidekick/sidekick_pushbutton/[Example 02: Push Button] (Input)
+
+>> http://energia.nu/guide/sidekick/sidekick_blinkmultiple/[Example 03: Multiple LED] (Many Outputs)
+
+>> http://energia.nu/guide/sidekick/sidekick_shiftregister/[Example 04: Shift Register] (Integrated Circuit)
+
+>> http://energia.nu/guide/sidekick/sidekick_piezobuzzer/[Example 05: Piezo Buzzer] (Sound)
+
+>> http://energia.nu/guide/sidekick/sidekick_potentiometer/[Example 06: Potentiometer] (Variable Resistor)
+
+>> http://energia.nu/guide/sidekick/sidekick_photoresistor/[Example 07: Photoresistor] (Light Sensor)
+
+>> http://energia.nu/guide/sidekick/sidekick_spinmotor/[Example 08: Spin the Motor] (Transistor)
+
+>> http://energia.nu/guide/sidekick/sidekick_switchvoltage/[Example 08B: Switching Voltage] (Transistor)
+
+>> http://energia.nu/guide/sidekick/sidekick_temperature/[Example 09: Temperature] (Thermistor and Temp Sensor)
+
+>> http://energia.nu/guide/sidekick/sidekick_sevensegmentdisplay/[Example 10: 7 Segment Display] (Digital Display)
+
+*Advanced Examples*
+
+>> Example: Switches (Tilt Switch and Toggle Switch)
+
+>> Example: Button Press Counter (Input and Display)
+
+>> Example: Potentiometer Dial (Input and Display)
+
+>> Example: Photoresistor Fade (Input and Output)
+
+>> http://energia.nu/guide/sidekick/sidekick_shiftregister2/[Example: Shift Register 2] (IC and Display)
+
+>>* http://energia.nu/guide/sidekick/sidekick_shiftregister3/[Example: Shift Register 3] (IC)
+
+>>* http://energia.nu/guide/sidekick/sidekick_shiftregister4/[Example: Shift Register 4] (Shift In IC)
+
+>>* http://energia.nu/guide/sidekick/sidekick_spinmotor2/[Example: Spin the Motor 2] (Motor Driver)
+
+>>* http://energia.nu/guide/sidekick/sidekick_spinservo/[Example: Spin the Servo] (Servo)
+
+>>* http://energia.nu/guide/sidekick/sidekick_dac/[Example: DAC] (Digital to Analog IC)
+
+>>* http://energia.nu/guide/sidekick/sidekick_555timer/[Example: 555 Timer] (IC and Switch)
+
+>>* Example: IR Emitter and Receiver (Wireless)
+
+>>* http://energia.nu/guide/#tutorials[Energia Core Tutorials]
+
+>>* http://energia.nu/guide/grove-starter-kit/[Mix Sidekick with Grove Starter Kit for LaunchPad]
+
+* May require additional hardware beyond Sidekick Basic Kit for TI LaunchPad™
+
+=== Components ===
+
+1x 400 Tie-Point Breadboard +
+1x Breadboard Adapter BoosterPack +
+5x Green LED +
+5x Red LED + 
+1x RGB Common Anode LED +
+10x Ceramic Capacitor 10nF +
+10x Ceramic Capacitor 100nF + 
+5x Aluminum Capacitor 100uF +
+10x Resistor 330 ohm + 
+10x Resistor 1K ohm +
+10x Resistor 10K ohm +
+1x Tilt Switch +
+1x Thermistor +
+1x Photoresistor (photocell) +
+1x Diode (1N4004) +
+1x Piezo Buzzer +
+5x Button +
+5x Switch +
+2x Potentiometer with knob +
+1x Small DC Motor +
+1x 7 Segment Single Digit Display (http://www.kingbrightusa.com/error/baditem.asp[SA39-11SRWA] – http://energia.nu/wordpress/wp-content/uploads/2015/07/SevenSegmentDS.pdf[datasheet]) +
+1x 8-bit Shift Register (http://www.ti.com/product/SN74HC595[SN74HC595N] – http://www.ti.com/lit/ds/symlink/sn74hc595.pdf[datasheet]) +
+1x NPN Transistor (http://www.ti.com/product/LP395[LP395Z/NOPB] – http://www.ti.com/lit/ds/symlink/lp395.pdf[datasheet]) +
+1x NPN Transistor (2N2222 – datasheet) +
+1x Analog Temperature Sensor (http://www.ti.com/product/LM19[LM19CIZ/NOPB] – http://www.ti.com/lit/ds/symlink/lm19.pdf[datasheet]) +
+5x Jumper Wire Long +
+20x Jumper Wire Short +
+1x Sidekick Quick Start Guide +
+1x Sidekick Manual +
+
+=== Buy Now ===
+
+You can purchase the Sidekick Basic Kit for TI LaunchPad from these retailers.
+
+https://www.mouser.com/ProductDetail/106060002?R=0virtualkey0virtualkey106060002[Buy now from Mouser Electronics!]
+
+https://www.digikey.com/product-detail/en/106060002/1597-1149-ND/5774940[Buy now from Digi-Key!]
+
+https://www.seeedstudio.com/Sidekick-Basic-Kit-for-TI-LaunchPad-p-2571.html[Buy now from Seeedstudio!]
+
+image::SEEED-logo1-W280.jpg[]
+image::logo.png[]
+
+*Sidekick*   http://energia.nu/guide/sidekick/#examples[Examples] | http://energia.nu/guide/sidekick/#components[Components List] | http://energia.nu/guide/sidekick/#buy[Buy Now]
+
+ 

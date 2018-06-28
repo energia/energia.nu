@@ -1,0 +1,108 @@
+== String Character Functions ==
+
+The String functions `charAt()` and `setCharAt()` are used to get or set the value of a character at a +
+given position in a String.
+
+=== Relevant Groundwork ===
+
+At their simplest, these functions help you search and replace a given character. For example, +
+the following replaces the colon in a given String with an equals sign:
+
+----
+ String reportString = "SensorReading: 456";
+ int colonPosition = reportString.indexOf(':');
+ reportString.setCharAt(colonPosition, '=');
+---- 
+
+Here’s an example that checks to see if the first letter of the second word is ‘B’:
+
+----
+ String reportString = "Franklin, Benjamin";
+ int spacePosition = reportString.indexOf(' ');
+ if (reportString.charAt(spacePosition + 1) == 'B') {
+    Serial.println("You might have found the Benjamins.")
+ }
+----
+
+*Caution:* If you try to get the `charAt` or try to `setCharAt()` a value that’s longer than the String’s +
+length, you’ll get unexpected results. If you’re not sure, check to see that the position you want +
+to set or get is less than the string’s length using the `length()` function.
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+
+=== Circuit ===
+
+Only LaunchPad is required for this example.
+
+image::../img/Blink_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Blink_schem.png[]
+
+=== Code Explanation ===
+
+In the program, we take pull a character from one string and append it to the end of another +
+string. We then replace the character in position 13 of the first string with an `‘=’`
+
+=== Code ===
+
+----
+/*
+  String charAt() and setCharAt()
+
+ Examples of how to get and set characters of a String
+
+ created 27 July 2010
+ modified 2 Apr 2012
+ by Tom Igoe
+
+ This example code is in the public domain.
+ */
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+
+  Serial.println("\n\nString  charAt() and setCharAt():");
+}
+
+void loop() {
+  // make a string to report a sensor reading:
+  String reportString = "SensorReading: 456";
+  Serial.println(reportString);
+
+  // the reading's most significant digit is at position 15 in the reportString:
+  char mostSignificantDigit = reportString.charAt(15);
+  Serial.println("Most significant digit of the sensor reading is: " + mostSignificantDigit);
+
+  // add blank space:
+  Serial.println();
+
+  // you can alo set the character of a string. Change the : to a = character
+  reportString.setCharAt(13, '='); 
+  Serial.println(reportString);
+
+  // do nothing while true:
+  while(true);
+}
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+– Set one string as all the letter of the alphabet, pull out the vowels, and print to serial.
+
+=== See Also ===
+
+* http://energia.nu/Setup.html[setup()]
+* http://energia.nu/Loop.html[loop()]
+* http://energia.nu/Serial_Println.html[println()]
+
+ 
+

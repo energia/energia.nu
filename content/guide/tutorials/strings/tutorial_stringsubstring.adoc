@@ -1,0 +1,118 @@
+== String Substring Function ==
+
+The String function http://energia.nu/StringSubstring.html[`substring()`] is closely related to http://energia.nu/StringCharAt.html[`charAt()`], http://energia.nu/StringStartsWith.html[`startsWith()`] and http://energia.nu/StringEndsWith.html[`endsWith()`]. It +
+allows you to look for an instance of a particular substring within a given String.
+
+=== Relevant Groundwork ===
+
+None
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+
+=== Circuit ===
+
+Only LaunchPad is required for this example.
+
+image::../img/Blink_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Blink_schem.png[]
+
+=== Code Explanation ===
+
+`substring()` with only one parameter looks for a given substring from the position given to the +
+end of the string. It expects that the substring extends all the way to the end of the String. For +
+example:
+
+----
+  String stringOne = "Content-Type: text/html";
+
+  // substring(index) looks for the substring from the index position to the end:
+  if (stringOne.substring(19) == "html") {
+   }
+
+  //is true, while 
+
+  String stringOne = "Content-Type: text/html";
+
+  // substring(index) looks for the substring from the index position to the end:
+  if (stringOne.substring(19) == "htm") {
+   }
+
+  //is not true, because there's 1 after the htm in the String.
+---- 
+
+`substring()` with two parameters looks for a given substring from the first parameter to the +
+second. For example:
+
+----
+  String stringOne = "Content-Type: text/html";
+
+  // you can also look for a substring in the middle of a string:
+  if (stringOne.substring(14,18) == "text") {
+
+  }
+----
+
+This looks for the word text from positions 14 through 18 of the String.
+
+*Caution:* make sure your index values are within the String’s length or you’ll get unpredictable +
+results. This kind of error can be particularly hard to find with the second instance of `substring()` +
+if the starting position is less than the String’s length, but the ending position isn’t.
+
+=== Code ===
+
+----
+/*
+  String substring() 
+  Examples of how to use substring in a String
+
+  created 27 July 2010
+  by Tom Igoe
+
+  Hardware Required:
+  * MSP-EXP430G2 LaunchPad
+
+  This example code is in the public domain.
+*/
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("\n\nString  substring():");
+}
+
+void loop() {
+  // Set up a String:
+  String stringOne = "Content-Type: text/html";
+  Serial.println(stringOne);
+
+  // substring(index) looks for the substring from the index position to the end:
+  if (stringOne.substring(19) == "html") {
+    Serial.println("It's an html file"); 
+  } 
+  // you can also look for a substring in the middle of a string:
+  if (stringOne.substring(14,18) == "text") {
+    Serial.println("It's a text-based file"); 
+  } 
+
+  // do nothing while true:
+  while(true);
+}
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+– Use string comparison to blink an LED when strings are equal.
+
+=== See Also ===
+
+* http://energia.nu/Setup.html[setup()]
+* http://energia.nu/Loop.html[loop()]
+* http://energia.nu/Serial_Println.html[println()]

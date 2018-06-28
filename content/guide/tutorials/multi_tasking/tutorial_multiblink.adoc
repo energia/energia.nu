@@ -1,0 +1,94 @@
+== MultiBlink ==
+
+This example shows how to blink LEDs at different rates using multitasking in Energia MT.
+
+=== Hardware Required ===
+
+* MSP432P401R LaunchPad ((Or any other LaunchPad that supports multi tasking. The analog pins input pin numbers might need to be changed to those that match the LaunchPad you are using)
+
+=== Relevant groundwork ===
+
+None
+
+=== Circuit ===
+
+Only your LaunchPad Board is needed for this example.
+
+=== Code Explanation ===
+
+This multitasking example is based on the basic http://energia.nu/guide/tutorial_blink/[Blink Example], but adds multitasking functionality to blink multiple LEDs at different rates.  Each tab in the sketch is a different task with their own setup and loop functions. All the setup and loop functions must have matching name pairs for the ROTS compiler to recognize them as tasks.
+
+----
+void setupBlueLed(), void loopBlueLed()
+void setupGreenLed(), void loopGreenLed()
+void setupRedLed(), void loopRedLed()
+----
+
+Each of the three tabs will execute as separate tasks, toggling the LED at a rate of 100, 500, +
+and 1000 milliseconds respectively.  During the `delay()` functions, the RTOS will automatically +
+put the MCU into deep sleep mode to conserve power.
+
+=== Code ===
+
+*Tab 1*
+
+----
+#undef LED
+#define LED BLUE_LED
+
+void setupBlueLed() {
+ pinMode(LED, OUTPUT);
+}
+
+// the loop routine runs over and over again forever as a task.
+void loopBlueLed() {
+ digitalWrite(LED, HIGH); // turn the LED on (HIGH is the voltage level)
+ delay(100); // wait for 100 ms
+ digitalWrite(LED, LOW); // turn the LED off by making the voltage LOW
+ delay(100); // wait for 100 ms
+}
+----
+
+*Tab 2*
+
+----
+#undef LED
+#define LED GREEN_LED
+
+void setupGreenLed() {
+ // initialize the digital pin as an output.
+ pinMode(LED, OUTPUT);
+}
+
+// the loop routine runs over and over again forever as a task.
+void loopGreenLed() {
+ digitalWrite(LED, HIGH); // turn the LED on (HIGH is the voltage level)
+ delay(500); // wait for half a second
+ digitalWrite(LED, LOW); // turn the LED off by making the voltage LOW
+ delay(500); // wait for half a second
+}
+----
+
+*Tab 3*
+
+----
+#undef LED
+#define LED RED_LED
+
+void setupRedLed() {
+ // initialize the digital pin as an output.
+ pinMode(LED, OUTPUT);
+}
+
+// the loop routine runs over and over again forever as a task.
+void loopRedLed() {
+ digitalWrite(LED, HIGH); // turn the LED on (HIGH is the voltage level)
+ delay(1000); // wait for a second
+ digitalWrite(LED, LOW); // turn the LED off by making the voltage LOW
+ delay(1000); // wait for a second
+}
+----
+
+=== Video ===
+
+video::0f8brpzvdD0[youtube]

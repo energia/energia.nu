@@ -1,0 +1,28 @@
+== Learn how to use a Tektronix Oscilloscope with the MSP430G2 LaunchPad! ==
+
+_Original source material can be found here: https://www.tek.com/lab-course/learning-oscilloscope-operation-using-msp430-launchpad-board[http://www.tek.com/lab-course/ +
+learning-oscilloscope-operation-using-msp430-launchpad-board_]
+
+Learn digital oscillsocope fundamentals and how to use it for signal analysis using 22 lab +
+experiments.
+
+These 22 Lab Experiments are organized under 6 courses – each course focusing on specific +
+features of oscilloscope:
+
+* Amplitude Measurement
+* Timing Measurement
+* Advanced Measurement
+* Triggering
+* Waveform Math
+* Cursor Measurement
+
+
+MSP430 is a popular Embedded Hardware platform from Texas Instruments (TI) for rapid +
+prototyping of low -cost, low-power embedded system designs. MSP430 LaunchPad board can +
+be used for conducting these experiments as Device Under Test (DUT). MSP430 code (that runs +
+on Energia IDE), required for programming of the board to generate signals, is also provided +
+along with the lab package.
+
+link:/guide/tutorials/other/docs/MSP430_Codes_for_Signal_Generation.zip[Download The Lab Files here!]
+
+link:/guide/tutorials/other/docs/ST_MSP430_Labs_Combined.pdf[Download The PDF of the Labs here!]

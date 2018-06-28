@@ -1,0 +1,281 @@
+== The Internet of Popcorn Machine (IoP) ==
+
+Control your popcorn making from a world away
+
+video::hTC918Y3NBc[youtube]
+
+In this tutorial we will go through the build process of creating an internet connected popcorn +
+machine with the http://www.ti.com/tools-software/launchpads/overview.html[TI LaunchPad] ecosystem and off the shelf parts.  The http://www.ti.com/ww/en/internet_of_things/iot-applications.html[Internet of Things] is an +
+exciting subject because it encompasses the possibilities of taking many applications which are +
+analog or mechanical in nature and connecting them up to the internet to create new life and +
+“intelligence” for tired products. We can do a demonstration of this magic using a fairly +
+innocuous device, the classic popcorn machine found in movie theaters and homes everywhere.
+
+A popcorn machine is a device that is purpose built for the job of popping corn and in the case of +
+a movie theater popper, storing it for later consumption.  Popcorn making is a relatively simple +
+exercise. Special popping corn kernels are the key ingredient and are easily bought off the shelf. +
+These kernels, unlike regular corn kernels, are able to be popped when proper heat is applied. +
+This is due to a small amount of water stored insides that heats up and the steam forces the +
+inside of the kernel to expand out, creating the popped corn. Heat can be applied in a number of +
+ways and you can pop corn using a stove top pot, a microwave oven, a hot air popper, and a +
+kettle. The movie theater popper uses a kettle that is heated up with an electric heating element. +
+Using cooking oil (a popular one is coconut oil), the inside of the kettle can get nice and hot and +
+the popcorn can quickly pop out. Inside the kettle is a stirring mechanism to make sure the heat +
+and oil gets distributed across the kernels. The stirrer is powered by an AC motor at the top of +
+the machine.
+
+For this project, we will need to identify the things we can control. In this case we have the +
+heating element, the stirring motor, and a light bulb to illuminate the inside of the machine. All +
+of these components use AC power, which comes from the wall outlet. For high voltage control +
+such as 120V AC, we can use a relay to trigger each component on and off with our LaunchPad. +
+We could keep the light bulb, but LEDs are much more fun and functional!  We will mount RGB +
+LEDs on the inside of the case that can act as interior lighting as well as flash in patterns to give + 
+us visual indications of the machine state.  There are other things we can add to the machine to +
+make it a bit cooler or more functional. We can easily add a temperature sensor to give us the +
+temperature inside the machine or we can add a display to give us visual information like +
+status messages. An audio source would also be a good addition to turn our popcorn machine +
+into a jukebox or at the very least give us audio indicators about the machine’s status.
+
+For an IoP machine, we would like to automate as much of the cooking and serving process as +
+possible. The kettle has a tipping mechanism to help empty popcorn and unpopped kernels into +
+the serving area. We can add a servo mechanism that utilizes a string and pulley to help us pull +
+the handle that tips the kettle. We also want to add a way to automatically feed kernels into the +
+kettle. We can modify the machine to add a hopper system that will allow us to feed new kernels +
+for each batch of popcorn.
+
+Lastly, we’ll need to add an internet connection to our machine so we can control it while on the +
+couch or at work before we head home. We can do this using the CC3100 Wi-Fi device.
+
+Here is the list of materials we will need for this endeavor. Most can be ordered online, but we +
+also need to make a run to the local hardware store.  You will also need your tool box handy, the +
+required tools can cause additional cost if you don’t have them.  Keep in mind this list can +
+change depending on what features you want to incorporate into your machine.
+
+*BOM (Total Cost: ~$400)*
+
+* Energia IDE – Free!
+
+* 1x Popcorn Machine (https://www.amazon.com/gp/product/B002NLKYPA[Funtime 8oz Popper]) – Amazon $165 + free shipping
+
+* 1x MSP430F5529 LaunchPad (http://www.ti.com/tool/msp-exp430f5529lp[MSP-EXP430F5529LP]) – TI $12.99 + s&h
+
+* 1x CC3100 BoosterPack (http://www.ti.com/tool/cc3100boost[CC3100BOOST]) – TI $19.99 + s&h
+
+* 1x https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html[Grove BoosterPack] – Seeedstudio $7.50 + s&h
+
+* 2x http://www.seeedstudio.com/depot/Grove-Relay-p-769.html[Grove Relay] – Seeedstudio $2.90 + s&h
+
+* 1x https://www.seeedstudio.com/Grove-TemperatureHumidity-Sensor-Pro-p-838.html[Grove Temperature & Humidity Sensor] – Seeedstudio 14.90 + s&h
+
+* 7x https://www.olimex.com/Products/MSP430/Booster/MOD-LED8x8/open-source-hardware[Olimex 8×8 LED Matrix] (MOD-LED8x8) – Mouser $9.13 + s&h
+
+* 2x https://www.adafruit.com/product/1138?length=1[NeoPixel Digital RGB LED Strip] – Adafruit $24.95 + s&h
+
+* 1x https://www.adafruit.com/product/154[Continuous Rotation Servo] – Adafruit $14.00 + s&h
+
+* 1x https://www.adafruit.com/product/155[Standard Servo] – Adafruit $12.00 + s&h
+
+* 1x Micro USB Cable – Free with LaunchPad
+
+* 1x USB wall plug – included with many electronics products
+
+* 1x AC Socket plug
+
+* Velcro Industrial Strength
+
+* PVC pipe
+
+* Pulley
+
+* String
+
+* Spool
+
+=== The Microcontroller ===
+
+With Energia, we have so many options for an MCU. Which one do we choose?  Since this is a +
+pretty complex project with multiple subsystems being connected to the LaunchPad, we’ll need +
+something with higher performance and good access to the pins. While the http://www.ti.com/tool/cc3200-launchxl[CC3200 LaunchPad] +
+would be a good choice with it’s integrated Wi-Fi capability and 80MHz ARM M4 core, it +
+doesn’t quite have enough pins to handle our requirements. Since we know from experience +
+we’ll have an easier time with supported libraries that run on MSP430, we decided to go with the +
+http://www.ti.com/tool/msp-exp430f5529lp[MSP430F5529 LaunchPad]. This LaunchPad offers a good +
+balance of low power consumption + performance and gives us the pin access we need. If we pair this +
+LaunchPad with the http://www.ti.com/tool/cc3100boost[CC3100] we’ll have the perfect processing solution for this IoT project.
+
+=== Popcorn Machine Relay subsystem ===
+
+The popcorn machine has two primary electrical components, the heating element for the kettle +
+and the motor for the kettle stirrer. These components are AC driven, meaning they can be +
+powered directly from the AC power coming from a wall outlet. In this case we have several +
+options to control an AC circuit with a DC microcontroller. The most popular are https://en.wikipedia.org/wiki/Relay[Relays] and +
+https://en.wikipedia.org/wiki/TRIAC[TRIACs]. A common example of a relay is a turn signal in your car. The relay turns the signal +
+light on and off and makes a clicking noise when the switch flips. The noise is caused by the +
+mechanical part of the relay.  You may have used a TRIAC if you have a light switch in your +
+home that is dimmable. The dimming function is enabled by the TRIAC in addition to turning +
+the light on and off without a mechanical clicking noise. Depending on your application, relays +
+or TRIACs may be better suited. In this case, we just need a binary on/off switch for our kettle +
+and motor so we will go with relays. Thanks to Seeedstudio, there are some nice 3V Relays +
+available as http://wiki.seeedstudio.com/wiki/Grove[Grove Modules] that pair well with the http://wiki.seeedstudio.com/wiki/Grove_Base_BoosterPack[Grove Base BoosterPack] for LaunchPad. To +
+control the relay, we can simply http://energia.nu/reference/digitalwrite/[digital write] to the appropriate pin in Energia.
+
+We made some small mechanical modifications to our machine so that we could attach the +
+relays. There are many ways to go about this. What we did was buy some short AC cables and +
+splice into them. This allows us to hook up the relay and easily connect to any open AC plug. +
+Since AC power is very dangerous to the touch and you should use caution and safety as much as +
+possible when building electronics, we used a plastic enclosure to cover the relay and the + 
+exposed leads. [.underline]#To be extra safe, never plug in your popcorn machine until you +
+are ready to test and avoid touching any internals when the machine is powered on.#
+
+The http://wiki.seeedstudio.com/wiki/Grove_Base_BoosterPack[Grove Base BoosterPack] is not only nice
+for hooking up multiple Grove modules like we do +
+in this project, but it also is nice connection point for our other components to our LaunchPad. +
+We can use the Grove connectors to hook up our LED strips and servos which just require one +
+signal pin, VCC, and GND. The BoosterPack will help us maximize our VCC and GND buses so +
+we don’t run out of pins hooking up all this stuff! You can use standard jumper wires with +
+female ends to hook up to the Grove Connectors. The connections can be a little bit loose since +
+they aren’t the exact same size, but they do work together.
+
+=== Audio subsystem ===
+
+Adding audio cues is a fun additional feature we can add to make the popcorn machine just a +
+little more interactive. A boring but effective way to do this is to use a traditional http://wiki.seeedstudio.com/wiki/Grove_-_Buzzer[Piezo buzzer] to +
+play tones when different actions are happening. We can step up our game a little more though +
+with a little analog magic and add voice to our LaunchPad!  You can check out http://artists.sci-toys.com/speech[this tutorial] here +
+on the basics of how to accomplish this in Energia using WAV files. You can also add MIDI +
+Music with http://artists.sci-toys.com/music[this tutorial] (Credit: https://plus.google.com/+SimonField[Simon Field]). We can now add voice announcements at +
+different stages of the state machine using analog write to the appropriate pin in Energia.
+
+For a speaker you will want to get one that is reasonably sized. We had a spare lying around +
+from another project.  We will not be able to hear very well using the LaunchPad as the primary +
+driver (3V or 5V) so we will need to add an external power supply (9V) and a transistor or FET.
+
+You can also incorporate a piezo buzzer to act as another type of audio indicator. We used the +
+Grove Buzzer to beep when modes are getting changed or tasks complete. Audio can be tricky as +
+it can require some creativity to make it sound good. It can also be hard to amplify the audio to +
+be audible in a noisy environment. Having some type of basic audio does give the machine +
+an improved user experience.
+
+=== Hopper subsystem ===
+
+A hopper will make it that much easier to load in our popcorn and oil into the machine. There +
+are two options to create a hopper, electronic or manual. For a manual hopper you basically are +
+using gravity and a funnel to get your ingredients to the kettle.  For an electronic hopper, we can +
+use a value that can be actuated by a servo or motor. This can be tuned to pour the right amount + 
+of kernels through the system. Finding a valve that will be easy to turn with a servo is not easy. +
+During our build we did not successfully find a good valve using PVC piping. We then decided +
+to try a manual hopper using PVC but did not quite find the best way to mount it, so we decided to +
+postpone this subsystem for a future upgrade. It can be easily done using PVC pipe or other +
+common tubing and you will need to find a way to prop open the kettle lid to receive incoming +
+kernels and oil.
+
+=== Kettle Tipping subsystem ===
+
+As a way to make the entire process more automatic, we can create a basic electronic pulley +
+system to help us tip the kettle and empty out any contents. We will need some string, a small +
+pulley, a spool to attach to our servo (we used a solder wick spool), and a continuous servo +
+(some are restricted to 180 degrees, we want 360+).  The first step is to attach the spool to your +
+servo. Use super glue to glue the spool to one of your servo attachments like the cross or circle. +
+Let that dry for a while. Next tie the string to the kettle handle and thread through the pulley +
+system to the top of your machine. The string will be retracted around the spinning spool, +
+pulling the handle which will tip the kettle. You will need to tune your servo code to determine +
+how many rotations are needed to tip the kettle and not go beyond that range.
+
+On the software side, we will use the Servo Library. You will need to know your timing to +
+complete the operation. This can be found out through trial and error. In industrial settings, +
+they use a timing belt, which has a predetermined length that can provide consistency in a +
+repeatable operation.
+
+When building the kettle tipping subsystem using the servo, we had some trouble getting it +
+properly calibrated. It takes quite a bit of torque to tip the kettle and servo would skip at the +
+apex of the operation. It is recommended to use a stepper motor instead so that the operation +
+can be more exact and repeatable.  However, it may be possible to use the servo method, we just +
+didn’t find an easy way to incorporate it, so we will add the stepper motor to a future upgrade.
+
+=== LED Lighting subsystem ===
+
+The popcorn machine comes with a light bulb to help illuminate the interior and maybe double +
+as a heat lamp. We can improve the cool factor of our machine by adding RGB LEDs to act as +
+interior lighting. First we remove the lightbulb fixture to give us more room. There are many + 
+ways to mount LEDs inside of a project. You can use custom PCBs, wires, conductive ink, copper +
+tape and more. We’ve elected to use NeoPixel LED strips for a nice and clean solution that we +
+can mount to the top of our machine. NeoPixels are nice because they have an LED driver built +
+into the LED so all we need to do is send signals from our microcontroller. One of the challenges +
+of working with NeoPixels is they require very specific timings from the microcontroller, so just +
+because your Energia library works on an MSP430 doesn’t mean it will work easily on something else.
+
+To prepare your strips you will need to cut to size and then solder some hookup wire to the data +
+in (DI) side of the strip.  These pads can be tricky to solder correctly, make sure you properly +
+separate the three wires and add a bit of solder to each of the pads before you solder the wires +
+on.  Once this is done you are ready to mount them. You can either super glue the LED strips or +
+use some kind adhesive that can stand the residual heat from the kettle like double sided tape or +
+Velcro. In our build we used Velcro that we super glued to the LED strips to have a tight +
+connection but still gives us the option to swap out our LEDs at a later time. Line up your data in +
+(DI) side with the holes in the top so you can thread more hookup wire to your LaunchPad +
+sitting on top.
+
+On the software side, we will use the https://github.com/ILAMtitan/WS2811Driver[WS2811driver library] (Credit: https://github.com/ILAMtitan[ILAMtitan]) which is a port of +
+the https://github.com/adafruit/Adafruit_NeoPixel[Adafruit NeoPixel Library] (designed for Arduino) that works on MSP430.  We used many of +
+the predefined functions, feel free to reuse these or create your own patterns.
+
+=== LED Matrix Display subsystem ===
+
+For a nice way to display text that can be seen from far away, we can add an LED sign to the +
+front and back facade of the machine.  This has a number of benefits because it is cheaper than +
+an LCD screen, we can create a large display that can be seen and read at distance, and it is not +
+too complicated to program. There are definitely cases where an LCD screen makes more sense +
+and provides a better user experience, but for this machine, an LED Matrix will be more than +
+enough. Using Velcro so we can dismount and replace as needed, we attach https://www.mouser.com/ProductDetail/Olimex-Ltd/MOD-LED8x8/?qs=C3feHhap9PoNUml2%252bPTREA%3D%3D[Olimex 8×8 LED] +
+Matrices to the front and wrap hookup wire around to the interior.  It’s actually a perfect fit and +
+mounts very cleanly.  For our machine we were able to mount 7 8×8 LED sections across the top +
+and very easily wire it to the LaunchPad inside.
+
+The matrices we used have 5 pins: GND, DATA, LATCH, CLK, VCC. We use the 3.3V VCC from +
+our LaunchPad to power the modules.
+
+On the software side we will use the `showText()` function found in https://github.com/energia/Energia/blob/master/examples/7.Display/led8x8display_430/led8x8display_430.ino[this driver example] (Credit: +
+https://github.com/pbrier[Peter Brier]). This makes it super easy to display messages and chain the matrices together to make a bigger display.
+
+=== Interior Temperature subsystem ===
+
+It could be nice to know the temperature inside of the machine. Perhaps you popped corn but +
+now the machine has cooled down or maybe you made a lot and the temperature is quite hot +
+inside and you need a warning to not over do it. We can add a simple https://www.seeedstudio.com/Grove-TemperatureHumidity-Sensor-Pro-p-838.html[temperature and humidity +
+sensor Grove module] that can drop down through a hole in the top to help us measure the +
+internal temperature.
+
+On the software side we can use the https://github.com/Seeed-Studio/LaunchPad_Kit/tree/master/libraries/Humidity_Temperature_Sensor[sample code] provide by Seeedstudio which can be found on their wiki and Github.
+
+=== Wi-Fi subsystem ===
+
+To add Wi-Fi to our machine, we will use the http://www.ti.com/tool/cc3100boost[CC3100 BoosterPack]. This pretty much gives plug +
+and play Wi-Fi capabilities to our LaunchPad. Using the http://energia.nu/reference/wifi/[WiFi library] in Energia we can easily + 
+get connected to a local hotspot and then access any number of cloud APIs.  To make our tasks +
+super simple, we are going to use https://temboo.com/hardware/ti[Temboo]. Temboo is an API aggregator and can help act as a +
+glue for IoT, giving us access to many popular web services.  For control we can do a variety of +
+things. Maybe we can have it be text operated using SMS or maybe we can tweet at it. This time +
+we’ll set up a dashboard on a web page hosted on the LaunchPad. When we access this page, we +
+can issue commands to the machine via click buttons in the browser.  In this scenario, we’ll have +
+be connected to the same Wi-Fi hotspot as the IoP Machine.
+
+https://twitter.com/IoPopcorn[Tweets by @IoPopcorn]
+
+We are able to query the server for a wide variety of information. We can pull down the latest +
+weather information, get the date and time and a number of other things. We will query the +
+server for a time stamp and then use our real time clock locally to keep the time so we don’t +
+need to keep pinging the server. When we aren’t popping corn, we can use the display to share +
+tweets, stock information, or any other real time information that might be interesting
+
+=== Demo Code ===
+
+You can find the demo code on github.  If you’ve set up your machine like ours, it should just +
+work. If not, you will need to debug each subsystem separately.
+
+=== Demo Video
+
+Coming soon!
+
+ 
+
+Check out other tutorials at http://energia.nu/guide/[www.energia.nu/guide!]
+

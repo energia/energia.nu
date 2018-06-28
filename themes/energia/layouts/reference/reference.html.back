@@ -1,0 +1,3460 @@
+ <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/energia-light.css">
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/main.js"></script>
+    {{ partial "analytics.html" . }}
+  </head>
+  <body>
+    {{ partial "menu.html" . }}
+  <div id="reference">
+    <div class="container row">
+      <div class="first-column">
+        <div class="sidebar-nav">
+          <ul class="documentation-page-nav">
+      <li class="has-submenu">
+          <div class="bullet-icon">
+              <span class="icon"></span>
+              <span class="line"></span>
+          </div>
+          <a class="parent" href="//www.arduino.cc/reference/en/#page-title">Language</a>
+          <ul class="reference-menu">
+              <li><a class="functions active" href="//www.arduino.cc/reference/en/#functions">functions</a></li>
+              <li><a class="variables" href="//www.arduino.cc/reference/en/#variables">variables</a></li>
+              <li><a class="structure" href="//www.arduino.cc/reference/en/#structure">structure</a></li>
+          </ul>
+      </li>
+      <li>
+          <div class="bullet-icon">
+              <span class="icon"></span>
+              <span class="line"></span>
+          </div>
+          <a href="https://www.arduino.cc/en/Reference/Libraries">Libraries</a>
+      </li>
+      <li>
+          <div class="bullet-icon">
+              <span class="icon"></span>
+              <span class="line"></span>
+          </div>
+          <a href="https://www.arduino.cc/glossary/en">Glossary</a>
+      </li>
+  </ul>
+
+  <div class="licence">
+      <p>
+          The Energia Reference is based on the Arduino Reference which is based on the Wiring Reference and is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">Creative Commons Attribution-Share Alike 3.0 License</a>. 
+      </p>
+  </div>
+
+        </div>
+      </div>
+
+      <div class="main-content-column">
+          <div id="page-title">
+            <h1>Language Reference</h1>
+            <p>
+              Arduino programming language can be divided in three main parts: structure, values (variables and constants), and functions.
+            </p>
+          </div>
+
+          <div>
+
+              <hr>
+              <div id="functions">
+                  <h2>functions</h2>
+                  <p>For controlling the Arduino board and performing computations.</p>
+                  <div class="category">
+
+                        <div class="subcategory">
+                            <h5>Digital I/O</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/digital-io/digitalread/">
+                                          digitalRead()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/">
+                                          digitalWrite()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/digital-io/pinmode/">
+                                          pinMode()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Analog I/O</h5>
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/analog-io/analogread/">
+                                          analogRead()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/analog-io/analogreference/">
+                                          analogReference()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/">
+                                          analogWrite()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Zero, Due &amp; MKR Family</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/">
+                                          analogReadResolution()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/">
+                                          analogWriteResolution()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Advanced I/O</h5>
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/advanced-io/notone/">
+                                          noTone()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/">
+                                          pulseIn()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/advanced-io/pulseinlong/">
+                                          pulseInLong()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/advanced-io/shiftin/">
+                                          shiftIn()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/advanced-io/shiftout/">
+                                          shiftOut()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/advanced-io/tone/">
+                                          tone()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Time</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/time/delay/">
+                                          delay()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/time/delaymicroseconds/">
+                                          delayMicroseconds()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/time/micros/">
+                                          micros()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/time/millis/">
+                                          millis()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Math</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/abs/">
+                                          abs()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/constrain/">
+                                          constrain()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/map/">
+                                          map()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/max/">
+                                          max()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/min/">
+                                          min()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/pow/">
+                                          pow()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/sq/">
+                                          sq()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/math/sqrt/">
+                                          sqrt()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Trigonometry</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/trigonometry/cos/">
+                                          cos()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/trigonometry/sin/">
+                                          sin()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/trigonometry/tan/">
+                                          tan()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Characters</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isalpha/">
+                                          isAlpha()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isalphanumeric/">
+                                          isAlphaNumeric()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isascii/">
+                                          isAscii()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/iscontrol/">
+                                          isControl()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isdigit/">
+                                          isDigit()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isgraph/">
+                                          isGraph()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/ishexadecimaldigit/">
+                                          isHexadecimalDigit()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/islowercase/">
+                                          isLowerCase()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isprintable/">
+                                          isPrintable()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/ispunct/">
+                                          isPunct()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isspace/">
+                                          isSpace()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/isuppercase/">
+                                          isUpperCase()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/characters/iswhitespace/">
+                                          isWhitespace()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Random Numbers</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/random-numbers/random/">
+                                          random()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/random-numbers/randomseed/">
+                                          randomSeed()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Bits and Bytes</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/bits-and-bytes/bit/">
+                                          bit()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/bits-and-bytes/bitclear/">
+                                          bitClear()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/bits-and-bytes/bitread/">
+                                          bitRead()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/bits-and-bytes/bitset/">
+                                          bitSet()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/bits-and-bytes/bitwrite/">
+                                          bitWrite()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/bits-and-bytes/highbyte/">
+                                          highByte()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/bits-and-bytes/lowbyte/">
+                                          lowByte()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>External Interrupts</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/">
+                                          attachInterrupt()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/external-interrupts/detachinterrupt/">
+                                          detachInterrupt()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Interrupts</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/interrupts/interrupts/">
+                                          interrupts()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/interrupts/nointerrupts/">
+                                          noInterrupts()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Communication</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/communication/serial/">
+                                          Serial
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/communication/stream/">
+                                          stream
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>USB</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/usb/keyboard/">
+                                          Keyboard
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/functions/usb/mouse/">
+                                          Mouse
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                  </div>
+              </div>
+
+              <hr>
+              <div id="variables">
+                  <h2>variables</h2>
+                  <p>Arduino data types and constants.</p>
+                  <div class="category">
+
+                        <div class="subcategory">
+                            <h5>Constants</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/constants/floatingpointconstants/">
+                                          Floating Point Constants
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/constants/integerconstants/">
+                                          Integer Constants
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">HIGH</a> | <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">LOW</a>
+                                        <br>
+                                        <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">INPUT</a> | <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">OUTPUT</a> | <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">INPUT_PULLUP</a>
+                                        <br>
+                                        <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">LED_BUILTIN</a>
+                                        <br>
+                                        <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">true</a> | <a href="//www.arduino.cc/reference/en/language/variables/constants/constants/">false</a>
+                                        <br>
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Conversion</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/conversion/bytecast/">
+                                          byte()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/conversion/charcast/">
+                                          char()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/conversion/floatcast/">
+                                          float()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/conversion/intcast/">
+                                          int()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/conversion/longcast/">
+                                          long()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/conversion/wordcast/">
+                                          word()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Data Types</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/string/">
+                                          String
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/stringobject/">
+                                          String()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/array/">
+                                          array
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/bool/">
+                                          bool
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/boolean/">
+                                          boolean
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/byte/">
+                                          byte
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/char/">
+                                          char
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/double/">
+                                          double
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/float/">
+                                          float
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/int/">
+                                          int
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/long/">
+                                          long
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/short/">
+                                          short
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/unsignedchar/">
+                                          unsigned char
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/unsignedint/">
+                                          unsigned int
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/unsignedlong/">
+                                          unsigned long
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/void/">
+                                          void
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/data-types/word/">
+                                          word
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Variable Scope &amp; Qualifiers</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/variable-scope--qualifiers/const/">
+                                          const
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/variable-scope--qualifiers/scope/">
+                                          scope
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/variable-scope--qualifiers/static/">
+                                          static
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/variable-scope--qualifiers/volatile/">
+                                          volatile
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Utilities</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/utilities/progmem/">
+                                          PROGMEM
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/variables/utilities/sizeof/">
+                                          sizeof()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+                        </div>
+
+                  </div>
+              </div>
+
+              <hr>
+              <div id="structure">
+                  <h2>structure</h2>
+                  <p>The elements of Arduino (C++) code.</p>
+                  <div class="category">
+
+                        <div class="subcategory">
+                            <h5>Sketch</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/sketch/loop/">
+                                          loop()
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/sketch/setup/">
+                                          setup()
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Control Structure</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/break/">
+                                          break
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/continue/">
+                                          continue
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/dowhile/">
+                                          do...while
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/else/">
+                                          else
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/for/">
+                                          for
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/goto/">
+                                          goto
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/if/">
+                                          if...else
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/return/">
+                                          return
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/switchcase/">
+                                          switch...case
+                                        </a>
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/control-structure/while/">
+                                          while
+                                        </a>
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Further Syntax</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/further-syntax/define/">
+                                          #define
+                                        </a>
+
+                                          (define)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/further-syntax/include/">
+                                          #include
+                                        </a>
+
+                                          (include)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/further-syntax/blockcomment/">
+                                          /* */
+                                        </a>
+
+                                          (block comment)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/further-syntax/singlelinecomment/">
+                                          //
+                                        </a>
+
+                                          (single line comment)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/further-syntax/semicolon/">
+                                          ;
+                                        </a>
+
+                                          (semicolon)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/further-syntax/curlybraces/">
+                                          {}
+                                        </a>
+
+                                          (curly braces)
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Arithmetic Operators</h5>
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/arithmetic-operators/remainder/">
+                                          %
+                                        </a>
+
+                                          (remainder)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/arithmetic-operators/multiplication/">
+                                          *
+                                        </a>
+
+                                          (multiplication)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/arithmetic-operators/addition/">
+                                          +
+                                        </a>
+
+                                          (addition)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/arithmetic-operators/subtraction/">
+                                          -
+                                        </a>
+
+                                          (subtraction)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/arithmetic-operators/division/">
+                                          /
+                                        </a>
+
+                                          (division)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/arithmetic-operators/assignment/">
+                                          =
+                                        </a>
+
+                                          (assignment operator)
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Comparison Operators</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/comparison-operators/notequalto/">
+                                          !=
+                                        </a>
+
+                                          (not equal to)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/comparison-operators/lessthan/">
+                                          &lt;
+                                        </a>
+
+                                          (less than)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/comparison-operators/lessthanorequalto/">
+                                          &lt;=
+                                        </a>
+
+                                          (less than or equal to)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/comparison-operators/equalto/">
+                                          ==
+                                        </a>
+
+                                          (equal to)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/comparison-operators/greaterthan/">
+                                          &gt;
+                                        </a>
+
+                                          (greater than)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/comparison-operators/greaterthanorequalto/">
+                                          &gt;=
+                                        </a>
+
+                                          (greater than or equal to)
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Boolean Operators</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/boolean-operators/logicalnot/">
+                                          !
+                                        </a>
+
+                                          (logical not)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/boolean-operators/logicaland/">
+                                          &amp;&amp;
+                                        </a>
+
+                                          (logical and)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/boolean-operators/logicalor/">
+                                          ||
+                                        </a>
+
+                                          (logical or)
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Pointer Access Operators</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/pointer-access-operators/reference/">
+                                          &amp;
+                                        </a>
+
+                                          (reference operator)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/pointer-access-operators/dereference/">
+                                          *
+                                        </a>
+
+                                          (dereference operator)
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Bitwise Operators</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwiseand/">
+                                          &amp;
+                                        </a>
+
+                                          (bitwise and)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/bitwise-operators/bitshiftleft/">
+                                          &lt;&lt;
+                                        </a>
+
+                                          (bitshift left)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/bitwise-operators/bitshiftright/">
+                                          &gt;&gt;
+                                        </a>
+
+                                          (bitshift right)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwisexor/">
+                                          ^
+                                        </a>
+
+                                          (bitwise xor)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwiseor/">
+                                          |
+                                        </a>
+
+                                          (bitwise or)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/bitwise-operators/bitwisenot/">
+                                          ~
+                                        </a>
+
+                                          (bitwise not)
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="subcategory">
+                            <h5>Compound Operators</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/compoundbitwiseand/">
+                                          &amp;=
+                                        </a>
+
+                                          (compound bitwise and)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/compoundmultiplication/">
+                                          *=
+                                        </a>
+
+                                          (compound multiplication)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/increment/">
+                                          ++
+                                        </a>
+
+                                          (increment)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/compoundaddition/">
+                                          +=
+                                        </a>
+
+                                          (compound addition)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/decrement/">
+                                          --
+                                        </a>
+
+                                          (decrement)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/compoundsubtraction/">
+                                          -=
+                                        </a>
+
+                                          (compound subtraction)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/compounddivision/">
+                                          /=
+                                        </a>
+
+                                          (compound division)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/compoundbitwisexor/">
+                                          ^=
+                                        </a>
+
+                                          (compound bitwise xor)
+
+
+                                    <br>
+
+
+
+                                        <a href="//www.arduino.cc/reference/en/language/structure/compound-operators/compoundbitwiseor/">
+                                          |=
+                                        </a>
+
+                                          (compound bitwise or)
+
+
+                                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+    </div>
+
+    <!-- {{ range $category, $taxonomy := .Site.Taxonomies }}
+    {{ $taxonomy }}<br>
+    {{ end }} -->
+    <!-- {{ $subcategories := .Site.Taxonomies.subCategories }}
+
+    {{ range $subcategory, $taxonomy := $subcategories }}
+      {{ $subcategory }}
+    {{ end }} -->
+
+    <!-- {{ range $category, $taxonomy := .Site.Taxonomies.categories }}
+    {{ $category }}<br>
+
+      {{ range $subcategory, $taxonomy := $subcategories }}
+
+        {{ range $.Site.Pages.ByTitle }}
+          {{ if and (in .Params.categories $category) (in .Params.subCategories $subcategory) }}
+            <li><a href="{{ .Permalink }}">{{ $subcategory}} {{ .Title }}</a></li>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+    {{ end }} -->
+    <!-- {{ range .Site.Taxonomies.categories.variables }}
+	{{ .Title }}
+
+  <br>
+	{{ .Description }}
+{{ end }} -->
+<!-- {{ $home := . }}
+<div class="css-treeview box">
+	<ul>
+		<li><input type="checkbox" id="item-0" checked="checked" /><label for="item-0">Home</label>
+		<ul>
+		{{ template "section-tree-nav" $home }}
+		</ul>
+	</ul>
+</div>
+{{ define "section-tree-nav" }}
+{{ range .Sections}}
+<li>
+	<li><input type="checkbox" id="item-0-0" checked="checked"/><label for="item-0-0">{{ .Title }}</label>
+	<ul>
+		{{ range .Pages }}
+		<li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li>
+		{{ end }}
+		<ul>
+		{{ template "section-tree-nav" . }}
+		</ul>
+	</ul>
+</li>
+</li>
+{{ end }}
+{{ end }} -->
+</div>
+ </body>
+ </html>

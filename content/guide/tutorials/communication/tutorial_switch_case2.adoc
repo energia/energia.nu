@@ -1,0 +1,131 @@
+== Switch (case) Statement, used with sensor input ==
+
+Switch statements allow mulitple choices in which sections of code to run for a given conditional.
+
+=== Hardware Required ===
+
+* MSP430 LaunchPad
+* (5) LEDs
+* (5) 220 ohm resistors
+* Breadboard
+* Hook-up wire
+
+=== Relevant Groundwork ===
+
+An if statement allows you to choose between two discrete options, `TRUE` or `FALSE`. When there are more than two +
+options, you can use multiple if statements, or you can use the http://energia.nu/SwitchCase.html[*switch*] statement. Switch allows you to choose between +
+several discrete options.
+
+This tutorial shows you how to use switch to turn on one of several different LEDs based on a byte of data received + 
+serially. The sketch listens for serial input, and turns on a different LED for the characters a, b, c, d, or e.
+
+Five LEDs are attached to digital pins 2, 3, 4, 5, and 6 in series through 220 ohm resistors.
+
+To make this sketch work, your LaunchPad must be connected to your computer. Open the Serial Monitor, and send the characters a, b, c, d, or e, or anything else.
+
+=== Circuit ===
+
+image::../img/SwitchCase2_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/SwitchCase2_schem.png[]
+
+=== Code Explanation ===
+
+None
+
+=== Code ===
+
+----
+/*
+  Switch statement  with serial input
+ 
+  Demonstrates the use of a switch statement.  The switch
+  statement allows you to choose from among a set of discrete values
+  of a variable.  It's like a series of if statements.
+ 
+  To see this sketch in action, open the Serial monitor and send any character.
+  The characters a, b, c, d, and e, will turn on LEDs.  Any other character will turn
+  the LEDs off.
+ 
+  The circuit:
+  * 5 LEDs attached to digital pins 2 through 6 through 220-ohm resistors
+ 
+  created 1 Jul 2009
+  by Tom Igoe 
+  modified 30 Apr 2013
+  by Adrian Fernandez 
+ 
+  This example code is in the public domain.
+   
+ */
+
+void setup() {
+  // initialize serial communication:
+  Serial.begin(9600); 
+  // initialize the LED pins:
+  for (int thisPin = 2; thisPin < 7; thisPin++) {
+    pinMode(thisPin, OUTPUT);
+  } 
+}
+
+void loop() {
+  // read the sensor:
+  if (Serial.available() > 0) {
+    int inByte = Serial.read();
+    // do something different depending on the character received.  
+    // The switch statement expects single number values for each case;
+    // in this exmaple, though, you're using single quotes to tell
+    // the controller to get the ASCII value for the character.  For 
+    // example 'a' = 97, 'b' = 98, and so forth:
+
+    switch (inByte) {
+    case 'a':    
+      digitalWrite(2, HIGH);
+      break;
+    case 'b':    
+      digitalWrite(3, HIGH);
+      break;
+    case 'c':    
+      digitalWrite(4, HIGH);
+      break;
+    case 'd':    
+      digitalWrite(5, HIGH);
+      break;
+    case 'e':    
+      digitalWrite(6, HIGH);
+      break;
+    default:
+      // turn all the LEDs off:
+      for (int thisPin = 2; thisPin < 7; thisPin++) {
+        digitalWrite(thisPin, LOW);
+      }
+    } 
+  }
+}
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+- Use a switch case to integrate with a button.
+
+=== See Also ===
+
+* http://energia.nu/Serial_Begin.html[serial.begin()]
+* http://energia.nu/Serial_Read.html[serial.read()]
+* http://energia.nu/Serial_Available.html[serial.available()]
+* http://energia.nu/SwitchCase.html[switch() case]
+* http://energia.nu/DigitalWrite.html[digitalWrite()]
+* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]-send multiple variables using a call and response (handshaking) method.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_IfStatement.html[If Statement]-how to use an if statement to change output conditions based on changing input conditions.
+* http://energia.nu/Tutorial_ForLoop.html[For Loop]-controlling multiple LEDs with a for loop.
+* http://energia.nu/Tutorial_Array.html[Array]- a variation on the For Loop example that demonstrates how to use an array.
+* http://energia.nu/Tutorial_WhileLoop.html[While Loop]-how to use a while loop to calibrate a sensor while a button is being read.
+* http://energia.nu/Tutorial_SwitchCase.html[Switch Case]-how to choose between a discrete number of values. Equivalent to multiple If statements. This +
+example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.

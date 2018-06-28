@@ -1,0 +1,26 @@
+ <html>
+  <head>
+  </head>
+  <body> 
+{{ $home := . }}
+<div class="css-treeview box">
+		<ul>
+		{{ template "section-tree-nav" $home }}
+		</ul>
+	</ul>
+</div>
+{{ define "section-tree-nav" }}
+{{ range .Sections.Reverse}}
+<li>
+	<li><input type="checkbox" id="item-0-0" checked="checked"/><label for="item-0-0">{{ .Title }}</label>
+	<ul>
+		<ul>
+		{{ template "section-tree-nav" . }}
+		</ul>
+	</ul>
+</li>
+</li>
+{{ end }}
+{{ end }}
+  </body>
+ </html>

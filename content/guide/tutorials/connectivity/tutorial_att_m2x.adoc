@@ -1,0 +1,190 @@
+== AT&T M2X Client Library ==
+
+This is a basic tutorial on how to enable the Texas Instruments LaunchPad and Energia through +
+the use of AT&T’s M2X service! https://m2x.att.com/[AT&T’s M2X] is a cloud-based data storage service +
+and management tool set customized for the Internet of Things. M2X gathers data in real-time from +
+connected devices and equipment and translates that data into meaningful information for + 
+quick decisions, automated actions, and strategic analysis. IoT encompasses a broad range of +
+internet connected devices and services that are powering a new ecosystem. From wearables and +
+smart thermostats to cars and planes, this new generation of smart connected ‘things’ are +
+capable of data gathering, predictive analytics, and process automation. Such capabilities + 
+require powerful new infrastructure to support them and one of the options enabled in Energia +
+is AT&T M2X.
+
+AT&T M2X has a client library for Energia. Through these library API’s, we can enable our +
+LaunchPad to access the M2X cloud computing through the use of internet connected hardware +
+such as the SimpleLink WiFi devices and Ethernet capable microcontrollers. The library is +
+available through Energia IDE but you can get the latest version on their GitHub.
+
+AT&T M2X library GitHub: https://github.com/attm2x/m2x-launchpad-energia
+
+video::5FPMf2Bjmv8[youtube]
+
+In this tutorial, we will walk through getting M2X setup and then we demonstrate posting data + 
+streams with our CC3200 LaunchPad. We can see in real-time the data from inputs of the +
+LaunchPad such as button presses, accelerometer data, and temperature.
+
+There are places in the code that hold passwords and vital information that is unique to each +
+user such as M2X API keys and Wi-Fi router information. Please read through the code and +
+place your own passwords and tokens.
+
+The first thing you will need to do is sign up for a M2X account at http://m2x.att.com.
+
+Once you have signed up, you can create a new device. Name the device and indicate if you want +
+the data streams to be public or private.
+
+Once the device is created, M2X will assign an API Key and a Device ID. You will need this to +
+access the device in the cloud and we will insert into our code later. Go ahead and click into your +
+device.
+
+=== Streams ===
+
+Here you can create a stream. A stream is basically a time series graph, where you can see data +
+graphed over a period of time.  This can be useful for a variety of things including data logging +
+or data monitoring where you will want to trigger an action based on a value or threshold. Go +
+ahead and add a stream and name it `“buttonpress1”` with a numeric value. Since most +
+LaunchPads have two pushbuttons, let’s go ahead and add a second stream and name it +
+`“buttonpress2”` with a numeric value. Now we should be set up on our cloud side and can take a +
+look at the Energia code.
+
+----
+/* 
+   LaunchPadWiFiButtonPost.ino 
+
+   Author: Mark Easley
+   This code example released to the public domain.
+*/
+#include <aJSON.h>
+#include "SPI.h"
+#include "WiFi.h"
+
+#include "M2XStreamClient.h"
+
+char ssid[] = "<ssid>"; //  your network SSID (name)
+char pass[] = "<password>";    // your network password (use for WPA, or use as key for WEP)
+int keyIndex = 0;            // your network key Index number (needed only for WEP)
+
+int status = WL_IDLE_STATUS;
+
+char deviceId[] = "<device ID>"; // Device you want to push to
+char streamName1[] = "buttonpress1"; // Stream you want to push to
+char streamName2[] = "buttonpress2"; // Stream you want to push to
+char m2xKey[] = "<M2X API key>"; // Your M2X access key
+
+
+int btn1;
+int btn2;
+
+WiFiClient client;
+M2XStreamClient m2xClient(&client, m2xKey);
+
+void setup() {
+
+    Serial.begin(9600);
+    pinMode(PUSH1, INPUT_PULLUP);
+    pinMode(PUSH2, INPUT_PULLUP);
+    
+    // attempt to connect to Wifi network:
+    Serial.print("Attempting to connect to Network named: ");
+    // print the network name (SSID);
+    Serial.println(ssid); 
+    // Connect to WPA/WPA2 network. Change this line if using open or WEP network:
+    WiFi.begin(ssid, pass);
+    while ( WiFi.status() != WL_CONNECTED) {
+      // print dots while we wait to connect
+      Serial.print(".");
+      delay(300);
+    }
+  
+    Serial.println("\nYou're connected to the network");
+    Serial.println("Waiting for an ip address");
+  
+    while (WiFi.localIP() == INADDR_NONE) {
+      // print dots while we wait for an ip addresss
+      Serial.print(".");
+      delay(300);
+    }
+
+    Serial.println("\nIP Address obtained");
+  
+    // you're connected now, so print out the status  
+    printWifiStatus();
+}
+
+void loop() {
+
+  btn1 = digitalRead(PUSH1);
+  btn2 = digitalRead(PUSH2);
+  Serial.print("btn1: ");
+  Serial.println(btn1);
+  Serial.print("btn2: ");
+  Serial.println(btn2);
+
+  int response = m2xClient.updateStreamValue(deviceId, streamName1, btn1);
+  int response2 = m2xClient.updateStreamValue(deviceId, streamName2, btn2);
+  Serial.print("M2X client response code: ");
+  Serial.println(response);
+
+  if (response == -1)
+    while (1)
+      ;
+  if (response2 == -1)
+    while (1)
+      ;
+
+  delay(3000);
+}
+
+void printWifiStatus() {
+  // print the SSID of the network you're attached to:
+  Serial.print("SSID: ");
+  Serial.println(WiFi.SSID());
+
+  // print your WiFi shield's IP address:
+  IPAddress ip = WiFi.localIP();
+  Serial.print("IP Address: ");
+  Serial.println(ip);
+}
+----
+
+Using the code example you can replace <ssid> and <password> with your Wi-Fi router +
+information. Next replace <device ID> and <M2X API key> with your own device ID and API +
+key. Now you can flash your LaunchPad with the upload button and open the Serial Monitor. +
+You should see the LaunchPad connect to the internet and then get a response from the M2X +
+server. If you get a 200 response then you are successfully posting to the M2X stream. Go check +
+your stream page and you should see the graph refresh between one and zero when you press +
+your pushbuttons on the LaunchPad.
+
+This is a basic example of posting data to the M2X service. Using the pushbutton as a simple +
+digital input, we can now easily translate this to other components like sensors that use analog +
+input values. This will let us measure the world and send that data to the cloud so that it can be +
+digested by any number of web services.
+
+We can also fetch values from the M2X service. This can be useful for triggering events on the +
+local hardware based on information coming from the cloud. For example you may have a +
+LaunchPad posting data somewhere in the world and you want to do something like make a +
+sound or flash a light with a LaunchPad somewhere else in the world when that data does +
+something interesting.  There are many ways to accomplish this but using M2X is another good +
+way for IoT applications.
+
+=== Triggers ===
+
+There is also the concept of Triggers inside of the M2X service. Triggers allow you to do +
+an HTTP post to any service on the internet. If a stream has a certain value or threshold you want +
+to track and act upon, you can use a trigger to post to other services on the cloud and even other +
+connected hardware.  In the case of our LaunchPad, we can also do this directly using the Wi-Fi +
+library, but there may be a reason with distributed projects that are taking in multiple cloud +
+inputs where it makes sense to do it on the server side.
+
+=== Location ===
+
+Location data can also be stored in M2X. This can be useful for GPS enabled hardware where +
+you may want to track the location of a device. You can also enter pre-set data for static +
+applications or for testing purposes.
+
+=== Charts ===
+
+Embed custom charts on webpages to display your data streams. This can be useful for demos +
+and dashboards.
+
+ 

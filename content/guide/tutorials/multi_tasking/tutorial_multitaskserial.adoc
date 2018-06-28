@@ -1,0 +1,57 @@
+== MultitaskSerial ==
+
+This example shows how to print to the Serial port from 2 different task.
+
+=== Hardware Required ===
+
+* MSP432P401R LaunchPad (Or any other LaunchPad that supports multi tasking).
+
+=== Relevant groundwork ===
+
+None
+
+=== Circuit ===
+
+Only your LaunchPad Board is needed for this example.
+
+=== Code Explanation ===
+
+Both task 1 (tab 1) and task 2 (tab 2) both call `Serial.begin(115200)`. This is needed so that both tasks will be able to print / read from the Serial port. Task on then loops printing `millis()`` every 1000 ms. Task 2 loops printing `millis()` every 500 ms. Each tasks also calls `Serial.acquire()` to acquire exclusive access to the Serial port before printing and `Serial.release()` to release it's access for other tasks. Acquiring exclusive access to the Serial port will prevent other tasks printing to the Serial port. Note that `Serial.acquire()` is a blocking call if any other task has already acquired access to the Serial port. Thus care needs to be taken in what work is done between `Serial.acquire()` and `Serial.release()`.
+
+=== Code ===
+
+*Tab 1*
+
+----
+void setup()
+{
+  Serial.begin(115200);
+}
+
+void loop()
+{
+  Serial.acquire();
+  Serial.print("Task 1 millis: ");
+  Serial.println(millis());
+  Serial.release();
+  delay(1000);
+}
+----
+
+*Tab 2*
+
+----
+void setup2()
+{
+  Serial.begin(115200);
+}
+
+void loop2()
+{
+  Serial.acquire();
+  Serial.print("Task 2 millis: ");
+  Serial.println(millis());
+  Serial.release();
+  delay(500);
+}
+----

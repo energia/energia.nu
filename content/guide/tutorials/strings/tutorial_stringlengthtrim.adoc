@@ -1,0 +1,141 @@
+== String Length() and Trim() Commands ==
+
+You can get the length of a http://energia.nu/StringObject.html[String] using the `length()` command, or eliminate extra characters +
+using the `trim()` command. This example shows you how to use both commands.
+
+=== Relevant Groundwork ===
+
+None
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+
+=== Circuit ===
+
+Only LaunchPad is required for this example.
+
+image::../img/Blink_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Blink_schem.png[]
+
+=== Code Explanation ===
+
+`length()` returns the length of a String. There are many occasions when you need this. For +
+example,if you wanted to make sure a String was less than 140 characters, to fit it in a text +
+message, refer to code example 1.
+
+`trim()` is useful for when you know there are extraneous whitespace characters on the beginning +
+or the end of a String and you want to get rid of them. Whitespace refers to characters that take +
+space but aren’t seen. It includes the single space (ASCII 32), tab (ASCII 9), vertical tab (ASCII +
+11), form feed (ASCII 12), carriage return (ASCII 13), or newline (ASCII 10). Code example 2 +
+below shows a String with whitespace, before and after trimming.
+
+=== Code ===
+
+----
+/*
+  Code Example 1
+  String length() 
+
+ Examples of how to use length() in a String. 
+ Open the Serial Monitor and start sending characters to see the results.
+
+ created 1 Aug 2010
+ by Tom Igoe
+
+ This example code is in the public domain.
+ */
+String txtMsg = "";                         // a string for incoming text
+int lastStringLength = txtMsg.length();     // previous length of the String
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for Leonardo only
+  }
+
+  // send an intro:
+  Serial.println("\n\nString  length():");
+  Serial.println();
+}
+
+void loop() {
+  // add any incoming characters to the String:
+  while (Serial.available() > 0) {
+    char inChar = Serial.read();
+    txtMsg += inChar;
+  } 
+
+  // print the message and a notice if it's changed:
+  if (txtMsg.length() != lastStringLength) {
+    Serial.println(txtMsg);
+    Serial.println(txtMsg.length());
+    // if the String's longer than 140 characters, complain:
+    if (txtMsg.length() < 140) {
+      Serial.println("That's a perfectly acceptable text message");
+    } 
+    else {
+      Serial.println("That's too long for a text message."); 
+    }
+    // note the length for next time through the loop:
+    lastStringLength = txtMsg.length();
+  }
+}
+
+/*
+  Code Example 2
+  String length() and trim()
+
+ Examples of how to use length() and trim() in a String
+
+ created 27 July 2010
+ modified 2 Apr 2012
+ by Tom Igoe
+
+ This example code is in the public domain.
+ */
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+
+  // send an intro:
+  Serial.println("\n\nString  length() and trim():");
+  Serial.println();
+}
+
+void loop() {
+  // here's a String with empty spaces at the end (called white space):
+  String stringOne = "Hello!       ";
+  Serial.print(stringOne);
+  Serial.print("<--- end of string. Length: ");
+  Serial.println(stringOne.length());
+
+  // trim the white space off the string:
+  stringOne.trim();
+  Serial.print(stringOne);
+  Serial.print("<--- end of trimmed string. Length: ");
+  Serial.println(stringOne.length());
+
+  // do nothing while true:
+  while(true);
+}
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+– Blink an LED if string length exceeds 10 characters.
+
+=== See Also ===
+
+* http://energia.nu/Setup.html[setup()]
+* http://energia.nu/Loop.html[loop()]
+* http://energia.nu/Serial_Println.html[println()]

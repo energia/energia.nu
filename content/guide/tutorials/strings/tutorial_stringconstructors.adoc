@@ -1,0 +1,136 @@
+== String Constructors ==
+
+This example will go over how to use string constructors.
+
+=== Relevant Groundwork ===
+
+The String object allows you to manipulate strings of text in a variety of useful ways. You can +
+append characters to Strings, combine Strings through concatenation, get the length of a String, +
+search and replace substrings, and more. This tutorial shows you how to initialize String objects.
+
+----
+ String stringOne = "Hello String";                   // using a constant String
+ String stringOne =  String('a');                     // converting a constant char into a String
+ String stringTwo =  String("This is a string");      // converting a constant string into a String object
+ String stringOne =  String(stringTwo + " with more");// concatenating two strings
+ String stringOne =  String(13);                      // using a constant integer
+ String stringOne =  String(analogRead(0), DEC);      // using an int and a base
+ String stringOne =  String(45, HEX);                 // using an int and a base (hexadecimal)
+ String stringOne =  String(255, BIN);                // using an int and a base (binary)
+ String stringOne =  String(millis(), DEC);           // using a long and a base
+---- 
+
+All of these methods are valid ways to declare a String object. They all result in an object +
+containing a string of characters that can be manipulated using any of the String methods. To +
+see them in action, upload the code below onto an Arduino and open the Serial Monitor. You’ll +
+see the results of each declaration. Compare what’s printed by each `println()` to the declaration +
+above it.
+
+=== Hardware Required ===
+
+* MSP-EXP430G2 LaunchPad
+
+=== Circuit ===
+
+Only LaunchPad is required for this example.
+
+image::../img/Blink_bb.png[]
+
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/Blink_schem.png[]
+
+=== Code Explanation ===
+
+In the program, we use string contructors to create strings from other data types.
+
+=== Code ===
+
+----
+/*
+   String constructors
+
+ Examples of how  to create strings from other data types
+
+ created 27 July 2010
+ modified 30 Aug 2011
+ by Tom Igoe
+
+ This example code is in the public domain.
+ */
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+
+  // send an intro:
+  Serial.println("\n\nString Constructors:");
+  Serial.println();
+}
+
+void loop() {
+  // using a constant String:
+  String stringOne = "Hello String";     
+  Serial.println(stringOne);      // prints "Hello String"
+
+  // converting a constant char into a String:
+  stringOne =  String('a');        
+  Serial.println(stringOne);       // prints "a"
+
+  // converting a constant string into a String object:
+  String stringTwo =  String("This is a string");  
+  Serial.println(stringTwo);      // prints "This is a string"
+
+  // concatenating two strings:
+  stringOne =  String(stringTwo + " with more"); 
+  // prints "This is a string with more":
+  Serial.println(stringOne);      
+
+  // using a constant integer:
+  stringOne =  String(13);        
+  Serial.println(stringOne);      // prints "13"
+
+  // using an int and a base:
+  stringOne =  String(analogRead(A0), DEC);  
+  // prints "453" or whatever the value of analogRead(A0) is
+  Serial.println(stringOne);      
+
+  // using an int and a base (hexadecimal):
+  stringOne =  String(45, HEX);   
+  // prints "2d", which is the hexadecimal version of decimal 45:
+  Serial.println(stringOne);      
+
+  // using an int and a base (binary)
+  stringOne =  String(255, BIN);  
+  // prints "11111111" which is the binary value of 255
+  Serial.println(stringOne);      
+
+  // using a long and a base:
+  stringOne =  String(millis(), DEC);
+  // prints "123456" or whatever the value of millis() is: 
+  Serial.println(stringOne);      
+
+  // do nothing while true:
+  while(true);
+
+}
+----
+
+=== Working Video ===
+
+video::aEGULewNrqg[youtube]
+
+=== Try it out ===
+
+– Use all the possible string constructors in a sketch.
+
+=== See Also ===
+
+* http://energia.nu/Setup.html[setup()]
+* http://energia.nu/Loop.html[loop()]
+* http://energia.nu/Serial_Println.html[println()]
+
+ 
+

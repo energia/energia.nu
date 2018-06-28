@@ -1,0 +1,126 @@
+== Switch (case) Statement, used with sensor input ==
+
+Switch statements allow mulitple choices in which sections of code to run for a given +
+conditional.
+
+=== Hardware Required ===
+
+* MSP430 LaunchPad
+* (1) photocell, or analog sensor
+* (1) 10k ohm resistors
+* Breadboard
+* Hook-up wire
+
+=== Relevant Groundwork ===
+
+An if statement allows you to choose between two discrete options, `TRUE` or `FALSE`. When +
+there are more than two options, you can use multiple if statements, or you can use +
+the http://energia.nu/SwitchCase.html[*switch*] statement. Switch allows you to choose between several discrete options. This +
+tutorial shows you how to use it to switch between four desired states of a photo resistor: really +
+dark, dim, medium, and bright.
+
+This program first reads the photoresistor. Then it uses the `map()` function to map its output to +
+one of four values: 0, 1, 2, or 3. Finally, it uses the `switch()` statement to print one of four +
+messages back to the computer depending on which of the four values is returned.
+
+The photoresistor is connected to analog in pin `A3` using a voltage divider circuit. A 10Kilohm +
+resistor makes up the other side of the voltage divider, running from analog in `A3` to ground. +
+The `analogRead()` function returns a range of about 0 to 600 from this circuit in a reasonably lit +
+indoor space.
+
+=== Circuit ===
+ 
+image::../img/SwitchCaseTutorial_bb.png[]
+ 
+Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
+
+=== Schematic ===
+
+image::../img/SwitchCaseTutorial_schem.png[]
+
+=== Code Explanation ===
+
+None
+
+=== Code ===
+
+----
+/*
+  Switch statement
+
+  Demonstrates the use of a switch statement.  The switch
+  statement allows you to choose from among a set of discrete values
+  of a variable.  It's like a series of if statements.
+
+  To see this sketch in action, but the board and sensor in a well-lit
+  room, open the serial monitor, and and move your hand gradually
+  down over the sensor.
+
+  The circuit:
+  * photoresistor from analog in 0 to +3V
+  * 10K resistor from analog in 0 to ground
+
+  created 1 Jul 2009
+  by Tom Igoe 
+  modified 30 Apr 2013
+  by Adrian Fernandez 
+
+  This example code is in the public domain.
+
+*/
+
+// these constants won't change. They are the
+// lowest and highest readings you get from your sensor:
+const int sensorMin = 0;      // sensor minimum, discovered through experiment
+const int sensorMax = 600;    // sensor maximum, discovered through experiment
+
+void setup() {
+  // initialize serial communication:
+  Serial.begin(9600);  
+}
+
+void loop() {
+  // read the sensor:
+  int sensorReading = analogRead(A3);
+  // map the sensor range to a range of four options:
+  int range = map(sensorReading, sensorMin, sensorMax, 0, 3);
+
+  // do something different depending on the 
+  // range value:
+  switch (range) {
+  case 0:    // your hand is on the sensor
+    Serial.println("dark");
+    break;
+  case 1:    // your hand is close to the sensor
+    Serial.println("dim");
+    break;
+  case 2:    // your hand is a few inches from the sensor
+    Serial.println("medium");
+    break;
+  case 3:    // your hand is nowhere near the sensor
+    Serial.println("bright");
+    break;
+  } 
+  delay(1);        // delay in between reads for stability
+}
+----
+
+=== Working Video ===
+
+=== Try it out ===
+
+– Use a switch case to integrate with a button.
+
+=== See Also ===
+
+* http://energia.nu/Serial_Begin.html[serial.begin()]
+* http://energia.nu/AnalogRead.html[analogRead()]
+* http://energia.nu/Map.html[map()]
+* http://energia.nu/Serial_Print.html[Serial.println()]
+* http://energia.nu/Tutorial_IfStatement.html[If Statement]–how to use an if statement to change output conditions based on changing +
+input conditions.
+* http://energia.nu/Tutorial_ForLoop.html[For Loop]–controlling multiple LEDs with a for loop.
+* http://energia.nu/Tutorial_Array.html[Array]-a variation on the For Loop example that demonstrates how to use an array.
+* http://energia.nu/Tutorial_WhileLoop.html[While Loop]-how to use a while loop to calibrate a sensor while a button is being read.
+ 
+
