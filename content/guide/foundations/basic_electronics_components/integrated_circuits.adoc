@@ -1,11 +1,6 @@
 == Integrated Circuits ==
 
-ICs are components that are packaged up in various forms with various features and +
-capabilities. They can be through hole or surface mount devices. A processor, like a +
-microcontroller, is an IC, and usually a pretty complicated one. A shift register is another +
-example of an IC. Each IC has a job that it is suited for in a circuit and usually it helps +
-significantly reduce the size of electronics.
+ICs are components that are packaged up in various forms with various features and capabilities. They can be through hole or surface mount devices. A processor, like a microcontroller, is an IC, and usually a pretty complicated one. A shift register is another example of an IC. Each IC has a job that it is suited for in a circuit and usually it helps significantly reduce the size of electronics.
 
-Sparkfun has a https://learn.sparkfun.com/tutorials/integrated-circuits[great tutorial on integrated circuits] and a https://learn.sparkfun.com/tutorials/shift-registers[great tutorial on shift registers] if you +
-want to know more about them.
+Sparkfun has a https://learn.sparkfun.com/tutorials/integrated-circuits[great tutorial on integrated circuits] and a https://learn.sparkfun.com/tutorials/shift-registers[great tutorial on shift registers] if you want to know more about them.
 
