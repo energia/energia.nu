@@ -1,15 +1,10 @@
 == How to use a breadboard ==
 
-There are many tutorials that cover the subjects of breadboards. It is very easy and convenient, +
-however, there are many ways to prototype circuits including perf board and creating +
-inexpensive PCBs.
+There are many tutorials that cover the subjects of breadboards. It is very easy and convenient, however, there are many ways to prototype circuits including perf board and creating inexpensive PCBs.
 
 https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard
 
-A breadboard is a workspace that has electrical connections. Each row is electrically connected +
-to each point on the row. To make new connections, you use wires to connect rows to each other. +
-There are larger columns on the side that are called power rails. These are for your VCC (power) +
-and GND (ground) signals. You can use these to easily connect any rows to VCC or GND.
+A breadboard is a workspace that has electrical connections. Each row is electrically connected to each point on the row. To make new connections, you use wires to connect rows to each other. There are larger columns on the side that are called power rails. These are for your VCC (power) and GND (ground) signals. You can use these to easily connect any rows to VCC or GND.
 
 
-image::Sidekick_Breadboard_Internal_Connections.jpg[]
+image::Sidekick_Breadboard_Internal_Connections.jpg[450,450]
