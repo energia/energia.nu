@@ -1,66 +1,23 @@
 == Basic Circuits ==
 
-An https://en.wikipedia.org/wiki/Electronic_circuit[electronic circuit] is the fundamental building block of any embedded system. You can think +
-of any piece of hardware, it contains multiple circuits that work together to enable an end +
-application.
+An https://en.wikipedia.org/wiki/Electronic_circuit[electronic circuit] is the fundamental building block of any embedded system. You can think of any piece of hardware, it contains multiple circuits that work together to enable an end application.
 
-A circuit is composed of individual components such as resistors, transistors, capacitor, +
-inductors and diodes that are connected by wires. A wire is any kind of conductive material, +
-typically copper, and can be flexible (wire) or fixed (traces). The wire allows electric current to +
-flow to the components in the circuit when a power source is introduced. The combination of +
-components and wires allows various simple and complex operations to be performed: signals +
-can be amplified, computations can be performed, and data can be moved from one place to +
-another.
+A circuit is composed of individual components such as resistors, transistors, capacitor, inductors and diodes that are connected by wires. A wire is any kind of conductive material, typically copper, and can be flexible (wire) or fixed (traces). The wire allows electric current to flow to the components in the circuit when a power source is introduced. The combination of components and wires allows various simple and complex operations to be performed: signals can be amplified, computations can be performed, and data can be moved from one place to another.
 
-We can make circuits a number of ways. When starting out or creating simple circuits, it is +
-common to use breadboard or perfboard to help make the connections. It is more popular these +
-days to lay out a PCB (Printed Circuit Board) which will help keep the circuit small and +
-organized. There are some components called Integrated Circuits (ICs) which are circuits that +
-are created out of silicon wafers and encapsulated in a small package that can be soldered onto a +
-PCB or added to a breadboard.
+We can make circuits a number of ways. When starting out or creating simple circuits, it is common to use breadboard or perfboard to help make the connections. It is more popular these days to lay out a PCB (Printed Circuit Board) which will help keep the circuit small and organized. There are some components called Integrated Circuits (ICs) which are circuits that are created out of silicon wafers and encapsulated in a small package that can be soldered onto a PCB or added to a breadboard.
 
 Circuits can be classified under three categories: analog, digital, or mixed-signal.
 
-Analog circuits have their current or voltage vary continuously with time. In analog circuits +
-there are series and parallel circuits. In a series circuit, the same current passes through a series +
-of components. A string of lights is a good example of a series circuit: if one goes out, they all do. +
-In a parallel circuit, all the components are connected to the same voltage, and the current +
-divides between the various components according to their resistance.
+Analog circuits have their current or voltage vary continuously with time. In analog circuits there are series and parallel circuits. In a series circuit, the same current passes through a series of components. A string of lights is a good example of a series circuit: if one goes out, they all do. In a parallel circuit, all the components are connected to the same voltage, and the current divides between the various components according to their resistance.
 
-Digital circuits use electric signals to represent discrete values such as logical and numeric +
-values. This is typically done in binary where a certain voltage represents a binary `“1”` or `“HIGH”` +
-signal and another voltage represents a binary `“0”` or `“LOW”` signal. Digital circuits make +
-extensive use of https://en.wikipedia.org/wiki/Transistor[transistors], interconnected to create https://en.wikipedia.org/wiki/Logic_gate[logic gates] that provide the functions of +
-https://en.wikipedia.org/wiki/Boolean_algebra[Boolean logic]: `AND, NAND, OR, NOR, XOR` and all possible combinations thereof. Transistors +
-interconnected so as to provide positive feedback are used as latches and flip flops, circuits that +
-have two or more metastable states, and remain in one of these states until changed by an +
-external input. Digital circuits therefore can provide both logic and memory, enabling them to +
-perform arbitrary computational functions.
+Digital circuits use electric signals to represent discrete values such as logical and numeric values. This is typically done in binary where a certain voltage represents a binary `“1”` or `“HIGH”` signal and another voltage represents a binary `“0”` or `“LOW”` signal. Digital circuits make extensive use of https://en.wikipedia.org/wiki/Transistor[transistors], interconnected to create https://en.wikipedia.org/wiki/Logic_gate[logic gates] that provide the functions of https://en.wikipedia.org/wiki/Boolean_algebra[Boolean logic]: `AND, NAND, OR, NOR, XOR` and all possible combinations thereof. Transistors interconnected so as to provide positive feedback are used as latches and flip flops, circuits that +
+have two or more metastable states, and remain in one of these states until changed by an external input. Digital circuits therefore can provide both logic and memory, enabling them to perform arbitrary computational functions.
 
-The design process for digital circuits is fundamentally different from the process for analog +
-circuits. Each logic gate regenerates the binary signal, so the designer need not account for +
-distortion, gain control, offset voltages, and other concerns faced in an analog design. As a +
-consequence, extremely complex digital circuits, with billions of logic elements integrated on a +
-single silicon chip, can be fabricated at low cost. Such digital integrated circuits are ubiquitous +
-in modern electronic devices, such as calculators, mobile phone handsets, and computers. As +
-digital circuits become more complex, issues of time delay, https://en.wikipedia.org/wiki/Race_condition[logic races], power dissipation, non- +
-ideal switching, on-chip and inter-chip loading, and leakage currents, become limitations to the +
-density, speed and performance.
+The design process for digital circuits is fundamentally different from the process for analog circuits. Each logic gate regenerates the binary signal, so the designer need not account for distortion, gain control, offset voltages, and other concerns faced in an analog design. As a consequence, extremely complex digital circuits, with billions of logic elements integrated on a single silicon chip, can be fabricated at low cost. Such digital integrated circuits are ubiquitous in modern electronic devices, such as calculators, mobile phone handsets, and computers. As digital circuits become more complex, issues of time delay, https://en.wikipedia.org/wiki/Race_condition[logic races], power dissipation, non-ideal switching, on-chip and inter-chip loading, and leakage currents, become limitations to the density, speed and performance.
 
-Digital circuitry is used to create general purpose computing chips, such as https://en.wikipedia.org/wiki/Microprocessor[microprocessors], +
-and custom-designed logic circuits, known as https://en.wikipedia.org/wiki/Application-specific_integrated_circuit[application-specific integrated circuit (ASICs)]. +
-https://en.wikipedia.org/wiki/Field-programmable_gate_array[Field-programmable gate arrays] (FPGAs), chips with logic circuitry whose configuration can be +
-modified after fabrication, are also widely used in prototyping and development.
+Digital circuitry is used to create general purpose computing chips, such as https://en.wikipedia.org/wiki/Microprocessor[microprocessors], and custom-designed logic circuits, known as https://en.wikipedia.org/wiki/Application-specific_integrated_circuit[application-specific integrated circuit (ASICs)]. https://en.wikipedia.org/wiki/Field-programmable_gate_array[Field-programmable gate arrays] (FPGAs), chips with logic circuitry whose configuration can be modified after fabrication, are also widely used in prototyping and development.
 
-Mixed-signal or hybrid circuits contain elements of both analog and digital circuits. Examples +
-include https://en.wikipedia.org/wiki/Comparator[comparators], https://en.wikipedia.org/wiki/Timer[timers], https://en.wikipedia.org/wiki/Phase-locked_loop[phase-locked loops], https://en.wikipedia.org/wiki/Analog-to-digital_converter[analog-to-digital converters], and https://en.wikipedia.org/wiki/Digital-to-analog_converter[digital-to-analog converters]. +
-Most modern circuitry uses mixed signals. For example, in a radio receiver, +
-analog circuitry is used to amplify and frequency-convert signals so that they reach a suitable +
-state to be converted into digital values, after which further signal processing can be performed +
-in the digital domain.  You can also have an analog sensor that can be read with an ADC (analog- +
-to-digital converter) and then the data can be used by a digital circuit (like a microprocessor) to +
-process or data log.
+Mixed-signal or hybrid circuits contain elements of both analog and digital circuits. Examples include https://en.wikipedia.org/wiki/Comparator[comparators], https://en.wikipedia.org/wiki/Timer[timers], https://en.wikipedia.org/wiki/Phase-locked_loop[phase-locked loops], https://en.wikipedia.org/wiki/Analog-to-digital_converter[analog-to-digital converters], and https://en.wikipedia.org/wiki/Digital-to-analog_converter[digital-to-analog converters]. Most modern circuitry uses mixed signals. For example, in a radio receiver, analog circuitry is used to amplify and frequency-convert signals so that they reach a suitable state to be converted into digital values, after which further signal processing can be performed in the digital domain.  You can also have an analog sensor that can be read with an ADC (analog-to-digital converter) and then the data can be used by a digital circuit (like a microprocessor) to process or data log.
 
-Sparkfun has a https://learn.sparkfun.com/tutorials/what-is-a-circuit[great tutorial on basic circuits] and a https://learn.sparkfun.com/tutorials/series-and-parallel-circuits[great tutorial on Series and Parallel circuits] +
-if you want to know more about them.
+Sparkfun has a https://learn.sparkfun.com/tutorials/what-is-a-circuit[great tutorial on basic circuits] and a https://learn.sparkfun.com/tutorials/series-and-parallel-circuits[great tutorial on Series and Parallel circuits] if you want to know more about them.
 

@@ -91,7 +91,7 @@ http://energia.nu/downloads/downloadv2.php?file=energia-0101E0009-linux.tgz[ener
 
 == Community Contributed Alternatives ==
 
-Use Energia inside of TI’s http://processors.wiki.ti.com/index.php/Download_CCS[Code Composer Studio] v6.0+ or TI’s browser based https://dev.ti.com/[CCS Cloud] editor.
+Use Energia inside of TI's http://processors.wiki.ti.com/index.php/Download_CCS[Code Composer Studio] v6.0+ or TI's browser based https://dev.ti.com/[CCS Cloud] editor.
 
 
 Integration of Energia into Xcode by https://embedxcode.weebly.com/[embedXcode], with debugging support.

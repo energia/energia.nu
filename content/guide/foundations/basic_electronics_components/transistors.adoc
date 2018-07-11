@@ -1,7 +1,6 @@
 == Transistors ==
 
-Transistors are one of the most useful fundamental building blocks in all of electronics. Every +
-processor contains thousands or millions of tiny transistors.
+Transistors are one of the most useful fundamental building blocks in all of electronics. Every processor contains thousands or millions of tiny transistors.
 
 Sparkfun has a https://learn.sparkfun.com/tutorials/transistors[great tutorial on transistors] if you want to learn more about them.
 
