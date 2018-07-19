@@ -1,14 +1,8 @@
 == Electricity and Electric Power ==
 
-Electricity is what makes electronics work. It is a form of energy that can be harnessed to create +
-very useful machines and systems. The theory behind electricity, like learning any theory, can be +
-a bit boring, so if you need to skip ahead to doing stuff, it’s okay. However, it is good to know +
-how something works so that we can make better use of it when we apply the theory into a real +
-application.
+Electricity is what makes electronics work. It is a form of energy that can be harnessed to create very useful machines and systems. The theory behind electricity, like learning any theory, can be a bit boring, so if you need to skip ahead to doing stuff, it's okay. However, it is good to know how something works so that we can make better use of it when we apply the theory into a real application.
 
-Electricity will usually be presented in the study of Physics, however it is used in a variety of +
-fields in science and engineering.
+Electricity will usually be presented in the study of Physics, however it is used in a variety of fields in science and engineering.
 
-Sparkfun has a https://learn.sparkfun.com/tutorials/what-is-electricity[great tutorial on the basic principles of electricity] and a https://learn.sparkfun.com/tutorials/electric-power[great tutorial on electric +
-power] if you want to know more about them.
+Sparkfun has a https://learn.sparkfun.com/tutorials/what-is-electricity[great tutorial on the basic principles of electricity] and a https://learn.sparkfun.com/tutorials/electric-power[great tutorial on electric power] if you want to know more about them.
 

@@ -4,7 +4,7 @@ This example shows how to access task and TI-RTOS related statistics and print t
 
 === Hardware Required ===
 
-* MSP432P401R LaunchPad ((Or any other LaunchPad that supports multi tasking. The analog pins input pin numbers might need to be changed to those that match the LaunchPad you are using)
+* MSP432P401R LaunchPad (Or any other LaunchPad that supports multi tasking. The analog pins input pin numbers might need to be changed to those that match the LaunchPad you are using).
 
 === Relevant groundwork ===
 
@@ -16,7 +16,7 @@ Only your LaunchPad Board is needed for this example.
 
 === Code Explanation ===
 
-To add a command, simply create a prototype for the handler function following the model of the handler prototypes in the 'local functions' section below, add the function itself in the 'local function defs' section below, and add a line to the \_consoleCommandTable definition in the 'command table' section. The name of your command must have a length < MAX_COMMAND_LEN, and the handler's name should follow the format 'consoleHandler\_<NAME>'. Also note that the line that is passed into the handler starts right after the command's name; if arguments were supplied to the command, *line will be a space character.
+To add a command, simply create a prototype for the handler function following the model of the handler prototypes in the 'local functions' section below, add the function itself in the 'local function defs' section below, and add a line to the `\_consoleCommandTable` definition in the 'command table' section. The name of your command must have a length `< MAX_COMMAND_LEN`, and the handler's name should follow the format `'consoleHandler\_<NAME>'`. Also note that the line that is passed into the handler starts right after the command's name; if arguments were supplied to the command, *line will be a space character.
 
 === Code ===
 

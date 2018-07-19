@@ -1,7 +1,6 @@
 == Blink without delay ==
 
-This example shows how to program MSP430 LaunchPad to blink its LED without using delay +
-function using Energia.
+This example shows how to program MSP430 LaunchPad to blink its LED without using delay function using Energia.
 
 === Hardware Required ===
 
@@ -10,20 +9,11 @@ function using Energia.
 
 === Relevant Groundwork ===
 
-Using `delay( )` while trying to blink the LED helps in discerning the blinking of LED, which +
-otherwise would be difficult in noticing. The disadvantage of using delay function is, it brings all +
-activities to halt. Sometimes when you need to do two things at once, For example, you might +
-want to blink an LED (or some other time-sensitive function) while reading a button press or +
-other input. In this case, you can’t use `delay()`, or you’d stop everything else the program while +
-the LED blinked. The program might miss the button press if it happens during the `delay( )`.
+Using `delay( )` while trying to blink the LED helps in discerning the blinking of LED, which otherwise would be difficult in noticing. The disadvantage of using delay function is, it brings all activities to halt. Sometimes when you need to do two things at once, For example, you might want to blink an LED (or some other time-sensitive function) while reading a button press or other input. In this case, you can't use `delay()`, or you'd stop everything else the program while the LED blinked. The program might miss the button press if it happens during the `delay( )`.
 
-This code below demonstrates how to blink the LED without using `delay()`. It keeps track of the +
-last time the Launchpad turned the LED on or off. Then, each time through `loop()`, it checks if a +
-long enough interval has passed. If it has, it toggles the LED on or off.
+This code below demonstrates how to blink the LED without using `delay()`. It keeps track of the last time the Launchpad turned the LED on or off. Then, each time through `loop()`, it checks if a long enough interval has passed. If it has, it toggles the LED on or off.
 
-MSP430 LaunchPad has LED attached to pin 2 and pin 14 on the board itself as shown above in +
-the image. If you run the below code example with no hardware attached, you should see that +
-LED blink.
+MSP430 LaunchPad has LED attached to pin 2 and pin 14 on the board itself as shown above in the image. If you run the below code example with no hardware attached, you should see that LED blink.
 
 === Circuit ===
 
@@ -45,10 +35,7 @@ pinMode(ledPin, OUTPUT);
 
 Here the ledpin refers to the `GREEN_LED` which is set as output.
 
-In the main loop, in order to measure delay without using the delay function, current time, +
-which is the time elapsed in milliseconds since the Launchpad was booted up is obtained using +
-`millis( )`. The difference of this current time with the previous time ( which is 0 initially) when +
-LED blinked is checked. If the difference exceeds the delay time interval,
+In the main loop, in order to measure delay without using the delay function, current time, which is the time elapsed in milliseconds since the Launchpad was booted up is obtained using `millis( )`. The difference of this current time with the previous time ( which is 0 initially) when LED blinked is checked. If the difference exceeds the delay time interval,
 
 ----
 if(currentMillis - previousMillis > interval)
@@ -145,15 +132,15 @@ video::Kn0zx3uH6Sk[youtube]
 
 === Try it out ===
 
-– Alternate blinking between two LEDs.
+* Alternate blinking between two LEDs.
 
 === See Also ===
 
 * http://energia.nu/reference/setup/[setup()]
 * http://energia.nu/reference/loop/[loop()]
 * http://energia.nu/reference/millis/[millis()]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
  
 

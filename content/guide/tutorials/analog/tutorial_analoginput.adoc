@@ -1,8 +1,6 @@
 == Analog Input ==
 
-A potentiometer is a simple knob that provides a variable resistance, which you can read into +
-the LaunchPad board as an analog value. In this example, you’ll connect a potentiometer to one +
-of the LaunchPad’s analog inputs to control the rate at which the built-in LED on pin 2 blinks.
+A potentiometer is a simple knob that provides a variable resistance, which you can read into the LaunchPad board as an analog value. In this example, you'll connect a potentiometer to one of the LaunchPad's analog inputs to control the rate at which the built-in LED on pin 2 blinks.
 
 === Hardware Required ===
 
@@ -12,15 +10,9 @@ of the LaunchPad’s analog inputs to control the rate at which the built-in LED
 
 === Relevant Groundwork ===
 
-Connect three wires to the LaunchPad board. The first goes to ground from one of the outer pins +
-of the potentiometer. The second goes from ~3 volts to the other outer pin of the potentiometer. +
-The third goes from analog input A3 to the middle pin of the potentiometer.
+Connect three wires to the LaunchPad board. The first goes to ground from one of the outer pins of the potentiometer. The second goes from ~3 volts to the other outer pin of the potentiometer. The third goes from analog input A3 to the middle pin of the potentiometer.
 
-For this example, it is possible to use the LaunchPad board’s built in LED attached to pin 2. To +
-use an additional LED, attach its longer leg (the positive leg, or anode), to digital pin 2, and it’s +
-shorter leg (the negative leg, or cathode) to the ground (gnd) pin next to pin 2. Because of the +
-low amount of current coming from digital pin 2, it is not necessary to use a current limiting +
-resistor in this particular case.
+For this example, it is possible to use the LaunchPad board's built in LED attached to pin 2. To use an additional LED, attach its longer leg (the positive leg, or anode), to digital pin 2, and it's shorter leg (the negative leg, or cathode) to the ground (gnd) pin next to pin 2. Because of the low amount of current coming from digital pin 2, it is not necessary to use a current limiting resistor in this particular case.
 
 === Circuit === 
 
@@ -34,26 +26,13 @@ image::../img/AnalogInput_schem.png[]
 
 === Code Explanation ===
 
-In the beginning of this program, the variable `sensorPin` is set to to analog channel A3, where +
-your potentiometer is attached, and `ledPin` is set to digital pin 2. You’ll also create another +
-variable, `sensorValue i` to store the values read from your sensor.
+In the beginning of this program, the variable `sensorPin` is set to to analog channel A3, where your potentiometer is attached, and `ledPin` is set to digital pin 2. You'll also create another variable, `sensorValue i` to store the values read from your sensor.
 
-The `analogRead()` command converts the input voltage range, 0 to ~3 volts, to a digital value +
-between 0 and 1023. This is done by a circuit inside the LaunchPad called an *analog-to-digital* +
-*converter* or *ADC*.
+The `analogRead()` command converts the input voltage range, 0 to ~3 volts, to a digital value between 0 and 1023. This is done by a circuit inside the LaunchPad called an *analog-to-digital* *converter* or *ADC*.
 
-By turning the shaft of the potentiometer, you change the amount of resistance on either side of +
-the center pin (or wiper) of the potentiometer. This changes the relative resistances between the +
-center pin and the two outside pins, giving you a different voltage at the analog input. When the +
-shaft is turned all the way in one direction, there is no resistance between the center pin and the +
-pin connected to ground. The voltage at the center pin then is 0 volts, `andanalogRead()` returns +
-0. When the shaft is turned all the way in the other direction, there is no resistance between the +
-center pin and the pin connected to ~3 volts. The voltage at the center pin then is ~3 volts, +
-and `analogRead()` returns 1023. In between, http://energia.nu/AnalogRead[`analogRead()`] returns a number between 0 and +
-1023 that is proportional to the amount of voltage being applied to the pin.
+By turning the shaft of the potentiometer, you change the amount of resistance on either side of the center pin (or wiper) of the potentiometer. This changes the relative resistances between the center pin and the two outside pins, giving you a different voltage at the analog input. When the shaft is turned all the way in one direction, there is no resistance between the center pin and the pin connected to ground. The voltage at the center pin then is 0 volts, `andanalogRead()` returns 0. When the shaft is turned all the way in the other direction, there is no resistance between the center pin and the pin connected to ~3 volts. The voltage at the center pin then is ~3 volts, and `analogRead()` returns 1023. In between, http://energia.nu/AnalogRead[`analogRead()`] returns a number between 0 and 1023 that is proportional to the amount of voltage being applied to the pin.
 
-That value, stored in `sensorValue`, is used to set a `delay()` for your blink cycle. The higher the +
-value, the longer the cycle, the smaller the value, the shorter the cycle.
+That value, stored in `sensorValue`, is used to set a `delay()` for your blink cycle. The higher the value, the longer the cycle, the smaller the value, the shorter the cycle.
 
 === Code ===
 
@@ -113,7 +92,7 @@ video::zVkfIMFGx14[youtube]
 
 === Try it out ===
 
-– Incorporate multiple analog signals into the program.
+* Incorporate multiple analog signals into the program.
 
 === See Also ===
 
@@ -121,8 +100,8 @@ video::zVkfIMFGx14[youtube]
 * http://energia.nu/reference/analogread/[analogRead()]
 * http://energia.nu/reference/digitalwrite/[digitalWrite()]
 * http://energia.nu/reference/delay/[delay()]
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]–read a potentiometer, print it’s state to the serial monitor.
-* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]–read an analog input, map its values, and then use that information to dim or brighten an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]–use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_calibration/[Calibration]–calibrating analog sensor readings.
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state to the serial monitor.
+* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog input, map its values, and then use that information to dim or brighten an LED.
+* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
+* http://energia.nu/guide/tutorial_calibration/[Calibration]:scalibrating analog sensor readings.
  

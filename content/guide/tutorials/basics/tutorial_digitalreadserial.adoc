@@ -1,7 +1,6 @@
 == Digital Read Serial ==
 
-This example shows you how to monitor the state of a switch by establishing http://energia.nu/reference/serial/[serial +
-communication] between your LaunchPad and your computer over USB.
+This example shows you how to monitor the state of a switch by establishing http://energia.nu/reference/serial/[serial communication] between your LaunchPad and your computer over USB.
 
 === Hardware Required ===
 
@@ -13,8 +12,7 @@ communication] between your LaunchPad and your computer over USB.
 
 === Relevant Groundwork ===
 
-Any input pin can be used to connect to an external pushbutton. To see what pins support +
-external pushbuttons, refer to the hardware http://energia.nu/guide/pinmapping/[pin mapping guide].
+Any input pin can be used to connect to an external pushbutton. To see what pins support external pushbuttons, refer to the hardware http://energia.nu/guide/pinmapping/[pin mapping guide].
 
 [.underline]#For on-board pushbutton:#
 
@@ -22,22 +20,11 @@ You can use the pushbutton on the LaunchPad to complete this exercise.
 
 [.underline]#For an external pushbutton:#
 
-Connect three wires to the LaunchPad board. The first two, red and black, connect to the two +
-long vertical rows on the side of the breadboard to provide access to the 3 volt supply and +
-ground. The third wire goes from digital pin 5 (P1.3) to one leg of the pushbutton. That same leg +
-of the button connects through a pull-up resistor (here 10 KOhms) to VCC (~3V). The other leg +
-of the button connects to ground.
+Connect three wires to the LaunchPad board. The first two, red and black, connect to the two long vertical rows on the side of the breadboard to provide access to the 3 volt supply and ground. The third wire goes from digital pin 5 (P1.3) to one leg of the pushbutton. That same leg of the button connects through a pull-up resistor (here 10 KOhms) to VCC (~3V). The other leg of the button connects to ground.
 
-Pushbuttons or switches connect two points in a circuit when you press them. When the +
-pushbutton is open (unpressed) there is no connection between the two legs of the pushbutton, +
-so the pin is connected to VCC (through the pull-up resistor) and reads as `HIGH`, or 1. When the +
-button is closed (pressed), it makes a connection between its two legs, connecting the pin to +
-ground, so that the pin reads as `LOW`, or 0.
+Pushbuttons or switches connect two points in a circuit when you press them. When the pushbutton is open (unpressed) there is no connection between the two legs of the pushbutton, so the pin is connected to VCC (through the pull-up resistor) and reads as `HIGH`, or 1. When the button is closed (pressed), it makes a connection between its two legs, connecting the pin to ground, so that the pin reads as `LOW`, or 0.
 
-If you disconnect the digital i/o pin from everything, the LED may blink erratically. This is +
-because the input is “floating” – that is, it doesn’t have a solid connection to voltage or ground, +
-and it will randomly return either `HIGH` or `LOW`. That’s why you need a pull-up resistor in the +
-circuit.
+If you disconnect the digital i/o pin from everything, the LED may blink erratically. This is because the input is ''floating'': that is, it doesn't have a solid connection to voltage or ground, and it will randomly return either `HIGH` or `LOW`. That's why you need a pull-up resistor in the circuit.
 
 === Circuit ===
 
@@ -51,9 +38,7 @@ image::../img/DigitalReadSerial_schem.png[]
 
 === Code Explanation ===
 
-In the program below, the very first thing that you do will in the setup function is to begin serial +
-communications, at 9600 bits of data per second, between your LaunchPad and your computer +
-with the line:
+In the program below, the very first thing that you do will in the setup function is to begin serial communications, at 9600 bits of data per second, between your LaunchPad and your computer with the line:
 
 ----
 Serial.begin(9600);
@@ -66,31 +51,21 @@ pinMode(5,INPUT_PULLUP); //For on-board we need to enable internal pullup resist
 pinMode(5,INPUT); //For external pushbutton we need to use an external pullup resistor
 ----
 
-Now that your setup has been completed, move into the main loop of your code. When your +
-button is pressed, current will freely flow through your circuit, and when it is not pressed, the +
-input pin will be connected to ground through the 10-kilohm resistor. This is a digital input, +
-meaning that the switch can only be in either an on state (seen by your LaunchPad as a `“1”`, or +
-`HIGH`) or an off state (seen by your LaunchPad as a `“0”`, or `LOW`), with nothing in between.
+Now that your setup has been completed, move into the main loop of your code. When your button is pressed, current will freely flow through your circuit, and when it is not pressed, the input pin will be connected to ground through the 10-kilohm resistor. This is a digital input, meaning that the switch can only be in either an on state (seen by your LaunchPad as a `''1''`, or `HIGH`) or an off state (seen by your LaunchPad as a `''0''`, or `LOW`), with nothing in between.
 
-The first thing you need to do in the main loop of your program is to establish a variable to hold +
-the information coming in from your switch. Since the information coming in from the switch +
-will be either a `“1”` or a `“0”`, you can use an int datatype. Call this variable sensorValue, and set it +
-to equal whatever is being read on digital pin 5. You can accomplish all this with just one line of +
-code.
+The first thing you need to do in the main loop of your program is to establish a variable to hold the information coming in from your switch. Since the information coming in from the switch will be either a `''1''` or a `''0''`, you can use an int datatype. Call this variable sensorValue, and set it to equal whatever is being read on digital pin 5. You can accomplish all this with just one line of code.
 
 ----
 int sensorValue = digitalRead(5);
 ----
 
-Once the LaunchPad has read the input, make it print this information back to the computer as +
-a decimal value. You can do this with the command `Serial.println()` in our last line of code:
+Once the LaunchPad has read the input, make it print this information back to the computer as a decimal value. You can do this with the command `Serial.println()` in our last line of code:
 
 ----
 Serial.println(sensorValue);
 ----
 
-Now, when you open your Serial Monitor in the Energia environment, you will see a stream of +
-`“1”s` if your switch is open, or `“0”s` if your switch is closed.
+Now, when you open your Serial Monitor in the Energia environment, you will see a stream of `''1s''` if your switch is open, or `''0s''` if your switch is closed.
 
 === Code ===
 
@@ -173,9 +148,9 @@ video::3WDIMcMQCpE[youtube]
 * http://energia.nu/reference/int/[int]
 * http://energia.nu/reference/serial/[serial]
 * http://energia.nu/guide/tutorial_digitalpins/[DigitalPins]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]: Read a potentiometer, print it’s state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_fade/[Fade]: Demonstrates the use of analog output to fade an LED.
-* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]: Reads an analog input and prints the voltage to the serial monitor.
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_fade/[Fade]:demonstrates the use of analog output to fade an LED.
+* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]:reads an analog input and prints the voltage to the serial monitor.

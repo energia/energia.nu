@@ -1,8 +1,6 @@
 == Fading ==
 
-Demonstrates the use of analog output (http://energia.nu/guide/tutorial_pwm/[Pulse Width Modulation (PWM)]) to fade an LED. PWM +
-is a technique for getting an analog-like behavior from a digital output by switching it off and on +
-very fast.
+Demonstrates the use of analog output (http://energia.nu/guide/tutorial_pwm/[Pulse Width Modulation (PWM)]) to fade an LED. PWM is a technique for getting an analog-like behavior from a digital output by switching it off and on very fast.
 
 === Hardware Required ===
 
@@ -14,11 +12,7 @@ very fast.
  
 === Relevant Groundwork ===
 
-An LED connected to digital output pin 14 through a 220-ohm resistor. Note that pin 14 is +
-connected to the green LED on the MSP-EXP430G2 LaunchPad. Also, it is important to note +
-that not all pins on the LaunchPad are capable of generating a PWM signal using the +
-`analogWrite()` function. To see all of the pins that support `analogWrite()`, visit the http://energia.nu/guide/pinmapping/[Energia pin- +
-mapping guide.]
+An LED connected to digital output pin 14 through a 220-ohm resistor. Note that pin 14 is connected to the green LED on the MSP-EXP430G2 LaunchPad. Also, it is important to note that not all pins on the LaunchPad are capable of generating a PWM signal using the `analogWrite()` function. To see all of the pins that support `analogWrite()`, visit the http://energia.nu/guide/pinmapping/[Energia pin-mapping guide.]
 
 === Circuit ===
 
@@ -85,16 +79,16 @@ video::j7gj51XqMd0[youtube]
 
 === Try it out ===
 
-- Try PWM on a different type of output.
+* Try PWM on a different type of output.
 
 === See Also ===
 
 * http://energia.nu/reference/for/[for()]
 * http://energia.nu/reference/analogwrite/[analogWrite()]
 * http://energia.nu/reference/delay/[delay()]
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]–read a potentiometer, print its state to the serial monitor.
-* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]–read an analog input, map its values, and then use that information to dim or brighten an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]–use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_calibration/[Calibration]–calibrating analog sensor readings.
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print its state to the serial monitor.
+* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog input, map its values, and then use that information to dim or brighten an LED.
+* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
+* http://energia.nu/guide/tutorial_calibration/[Calibration]:calibrating analog sensor readings.
  
 

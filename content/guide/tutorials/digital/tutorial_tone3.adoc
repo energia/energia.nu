@@ -1,7 +1,6 @@
 == Simple keyboard using the tone() function ==
 
-This example shows how to use the `tone()` command to generate different pitches depending on +
-which sensor is pressed.
+This example shows how to use the `tone()` command to generate different pitches depending on which sensor is pressed.
 
 === Hardware Required ===
 
@@ -16,21 +15,18 @@ which sensor is pressed.
 
 Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
 
-Connect one terminal of your speaker to digital pin 8 through a 100 ohm resistor, and its other +
-terminal to ground.
+Connect one terminal of your speaker to digital pin 8 through a 100 ohm resistor, and its other terminal to ground.
 
-Power your three FSRs (or any other analog sensor) with 5V in parallel. Connect each sensor to +
-analog pins 0-2, using a 10K resistor as a reference to groud on each input line.
+Power your three FSRs (or any other analog sensor) with 5V in parallel. Connect each sensor to analog pins 0-2, using a 10K resistor as a reference to groud on each input line.
 
 
 === Schematic ===
 
 === Code ===
 
-The sketch below reads three analog sensors. Each corresponds to a note value in an array of +
-notes. IF any of the sensors is above a given threshold, the corresponding note is played.
+The sketch below reads three analog sensors. Each corresponds to a note value in an array of notes. IF any of the sensors is above a given threshold, the corresponding note is played.
 
-Here’s the main sketch:
+Here's the main sketch:
 
 ----
 /*
@@ -73,12 +69,9 @@ void loop() {
 }
 ----
 
-The sketch uses an extra file, pitches.h. This file contains all the pitch values for typical notes. +
-For example, `NOTE_C4` is middle C. `NOTE_FS4` is F sharp, and so forth. This note table was +
-originally written by Brett Hagman, on whose work the `tone()` command was based. You may +
-find it useful for whenever you want to make musical notes.
+The sketch uses an extra file, pitches.h. This file contains all the pitch values for typical notes. For example, `NOTE_C4` is middle C. `NOTE_FS4` is F sharp, and so forth. This note table was originally written by Brett Hagman, on whose work the `tone()` command was based. You may find it useful for whenever you want to make musical notes.
 
-To make this file, click on the “new Tab” button in the upper right hand corner of the window.
+To make this file, click on the ''new Tab'' button in the upper right hand corner of the window.
 
 Paste in the following code:
 
@@ -182,6 +175,6 @@ Paste in the following code:
 * http://energia.nu/reference/array/[array()]
 * http://energia.nu/reference/for/[for()]
 * http://energia.nu/reference/tone/[tone()]
-* http://energia.nu/guide/tutorial_tone/[Tone]–play a melody with a piezo speaker.
-* http://energia.nu/guide/tutorial_tone2/[Pitch follower]–play a pitch on a piezo speaker depending on an analog input.
-* http://energia.nu/guide/tutorial_tone4/[Tone 4]–play tones on multiple speakers sequentially.
+* http://energia.nu/guide/tutorial_tone/[Tone]: play a melody with a piezo speaker.
+* http://energia.nu/guide/tutorial_tone2/[Pitch follower]: play a pitch on a piezo speaker depending on an analog input.
+* http://energia.nu/guide/tutorial_tone4/[Tone 4]: play tones on multiple speakers sequentially.

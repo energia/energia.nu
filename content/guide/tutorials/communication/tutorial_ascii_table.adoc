@@ -1,7 +1,6 @@
 == ReadASCIIString ==
 
-Demonstrates the advanced serial printing functions by generating a table of characters and their ASCII values in +
-decimal, hexadecimal, octal, and binary. For more on ASCII, see http://www.asciitable.com/[asciitable.com]
+Demonstrates the advanced serial printing functions by generating a table of characters and their ASCII values in decimal, hexadecimal, octal, and binary. For more on ASCII, see http://www.asciitable.com/[asciitable.com]
 
 === Hardware Required ===
 
@@ -23,12 +22,7 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-This code demonstrates the serial printing functions that can be performed, using Energia, by generating a table of +
-characters and their ASCII values in decimal, hexadecimal, octal, and binary. `Serial.write()` function outputs the ASCII +
-symbol associated with the number. By associating the variable thisByte, we can start at the beginning of the ASCII +
-Table (33 which corresponds to 33 in decimal base and increase till we reach 126 representing the tilde (~) symbol. +
-`Serial.print()` allows you print directly to the Serial Monitor in different base formats depending on your need. Using +
-these two printing functions we can display the entire ASCII Table in our Serial Monitor.
+This code demonstrates the serial printing functions that can be performed, using Energia, by generating a table of characters and their ASCII values in decimal, hexadecimal, octal, and binary. `Serial.write()` function outputs the ASCII symbol associated with the number. By associating the variable thisByte, we can start at the beginning of the ASCII Table (33 which corresponds to 33 in decimal base and increase till we reach 126 representing the tilde (~) symbol. `Serial.print()` allows you print directly to the Serial Monitor in different base formats depending on your need. Using these two printing functions we can display the entire ASCII Table in our Serial Monitor.
 
 === Code ===
 
@@ -115,12 +109,11 @@ void loop() {
 
 === Try it out ===
 
--Play around with your RGB LED in a new way.
+* Play around with your RGB LED in a new way.
 
 === See Also ===
 
 * http://energia.nu/Increment.html[increment, ++]
 * http://energia.nu/While.html[while()]
 * http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-sending multiple vairables using a call-and-response (handshaking) method, and +
-ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:sending multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.

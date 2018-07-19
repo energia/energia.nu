@@ -4,7 +4,7 @@ This example shows how to blink LEDs at different rates using multitasking in En
 
 === Hardware Required ===
 
-* MSP432P401R LaunchPad (Or any other LaunchPad that supports multi tasking. The analog pins input pin numbers might need to be changed to those that match the LaunchPad you are using)
+* MSP432P401R LaunchPad (Or any other LaunchPad that supports multi tasking. The analog pins input pin numbers might need to be changed to those that match the LaunchPad you are using).
 
 === Relevant groundwork ===
 

@@ -4,9 +4,7 @@ This example will go over how to use string constructors.
 
 === Relevant Groundwork ===
 
-The String object allows you to manipulate strings of text in a variety of useful ways. You can +
-append characters to Strings, combine Strings through concatenation, get the length of a String, +
-search and replace substrings, and more. This tutorial shows you how to initialize String objects.
+The String object allows you to manipulate strings of text in a variety of useful ways. You can append characters to Strings, combine Strings through concatenation, get the length of a String, search and replace substrings, and more. This tutorial shows you how to initialize String objects.
 
 ----
  String stringOne = "Hello String";                   // using a constant String
@@ -20,11 +18,7 @@ search and replace substrings, and more. This tutorial shows you how to initiali
  String stringOne =  String(millis(), DEC);           // using a long and a base
 ---- 
 
-All of these methods are valid ways to declare a String object. They all result in an object +
-containing a string of characters that can be manipulated using any of the String methods. To +
-see them in action, upload the code below onto an Arduino and open the Serial Monitor. You’ll +
-see the results of each declaration. Compare what’s printed by each `println()` to the declaration +
-above it.
+All of these methods are valid ways to declare a String object. They all result in an object containing a string of characters that can be manipulated using any of the String methods. To see them in action, upload the code below onto an Arduino and open the Serial Monitor. You'll see the results of each declaration. Compare what's printed by each `println()` to the declaration above it.
 
 === Hardware Required ===
 
@@ -124,7 +118,7 @@ video::aEGULewNrqg[youtube]
 
 === Try it out ===
 
-– Use all the possible string constructors in a sketch.
+* Use all the possible string constructors in a sketch.
 
 === See Also ===
 

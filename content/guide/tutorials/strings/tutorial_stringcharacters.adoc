@@ -1,12 +1,10 @@
 == String Character Functions ==
 
-The String functions `charAt()` and `setCharAt()` are used to get or set the value of a character at a +
-given position in a String.
+The String functions `charAt()` and `setCharAt()` are used to get or set the value of a character at a given position in a String.
 
 === Relevant Groundwork ===
 
-At their simplest, these functions help you search and replace a given character. For example, +
-the following replaces the colon in a given String with an equals sign:
+At their simplest, these functions help you search and replace a given character. For example, the following replaces the colon in a given String with an equals sign:
 
 ----
  String reportString = "SensorReading: 456";
@@ -14,7 +12,7 @@ the following replaces the colon in a given String with an equals sign:
  reportString.setCharAt(colonPosition, '=');
 ---- 
 
-Here’s an example that checks to see if the first letter of the second word is ‘B’:
+Here's an example that checks to see if the first letter of the second word is 'B':
 
 ----
  String reportString = "Franklin, Benjamin";
@@ -24,9 +22,7 @@ Here’s an example that checks to see if the first letter of the second word is
  }
 ----
 
-*Caution:* If you try to get the `charAt` or try to `setCharAt()` a value that’s longer than the String’s +
-length, you’ll get unexpected results. If you’re not sure, check to see that the position you want +
-to set or get is less than the string’s length using the `length()` function.
+*Caution:* If you try to get the `charAt` or try to `setCharAt()` a value that's longer than the String's length, you'll get unexpected results. If you're not sure, check to see that the position you want to set or get is less than the string's length using the `length()` function.
 
 === Hardware Required ===
 
@@ -46,8 +42,7 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-In the program, we take pull a character from one string and append it to the end of another +
-string. We then replace the character in position 13 of the first string with an `‘=’`
+In the program, we take pull a character from one string and append it to the end of another string. We then replace the character in position 13 of the first string with an `'='`.
 
 === Code ===
 
@@ -96,7 +91,7 @@ void loop() {
 
 === Try it out ===
 
-– Set one string as all the letter of the alphabet, pull out the vowels, and print to serial.
+* Set one string as all the letter of the alphabet, pull out the vowels, and print to serial.
 
 === See Also ===
 

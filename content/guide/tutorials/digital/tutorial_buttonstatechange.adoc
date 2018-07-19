@@ -1,7 +1,6 @@
 == Button State Change Detection (Edge Detection) ==
 
-This program checks when the button changes state from off to on, and counts how many times +
-this change of state happens. This is called state change detection or edge detection.
+This program checks when the button changes state from off to on, and counts how many times this change of state happens. This is called state change detection or edge detection.
 
 === Hardware Required ===
 
@@ -15,10 +14,7 @@ this change of state happens. This is called state change detection or edge dete
 
 === Relevant Groundwork ===
 
-In order detect the state change, the current button state is compared with the last button state +
-and if the current button state is high, then the button changed from off to on. A counter is +
-incremented whenever this state change happens. The button push counter’s value is checked, +
-and if it’s an even multiple of four, it turns the LED on pin 14 `ON`. Otherwise, it turns it off.
+In order detect the state change, the current button state is compared with the last button state and if the current button state is high, then the button changed from off to on. A counter is incremented whenever this state change happens. The button push counter's value is checked, and if it's an even multiple of four, it turns the LED on pin 14 `ON`. Otherwise, it turns it off.
 
 === Circuit ===
 
@@ -32,11 +28,7 @@ No external circuitry is required.
 
 [.underline]#For external push button#
 
-Connect three wires to the Launch pad board. The first two, red and black, connect to the two +
-long vertical rows on the side of the breadboard to provide access to the 3 volt supply and +
-ground. The third wire goes from digital pin p1.3 to one leg of the pushbutton. That same leg of +
-the button connects through a pull-up resistor (here 10 K Ohms) to Vcc. The other leg of the + 
-button connects to the ground.
+Connect three wires to the Launch pad board. The first two, red and black, connect to the two long vertical rows on the side of the breadboard to provide access to the 3 volt supply and ground. The third wire goes from digital pin p1.3 to one leg of the pushbutton. That same leg of the button connects through a pull-up resistor (here 10 K Ohms) to Vcc. The other leg of the button connects to the ground.
 
 === Schematic ===
 
@@ -44,22 +36,19 @@ image::../img/Button_schem.png[]
 
 === Code Explanation ===
 
-In the program, pin 14, which has green LED connected to it, is set up as output in the setup +
-function.
+In the program, pin 14, which has green LED connected to it, is set up as output in the setup function.
 
 ----
 pinMode(ledPin, OUTPUT);
 ----
 
-Here the ledpin refers to the `GREEN_LED` which is set as output. The push button which is +
-connected to pin 5 is set up as input. The pull-up resistor connected to this pin is enabled.
+Here the ledpin refers to the `GREEN_LED` which is set as output. The push button which is connected to pin 5 is set up as input. The pull-up resistor connected to this pin is enabled.
 
 ----
 pinMode(buttonPin, INPUT_PULLUP);
 ----
 
-Begin serial communications, at 9600 bits of data per second, between your Launchpad and +
-your computer with the line.
+Begin serial communications, at 9600 bits of data per second, between your Launchpad and your computer with the line.
 
 ----
 Serial.begin(9600);
@@ -77,9 +66,7 @@ If the state of the pushbutton has changed from its previous stored state.
 if (ButtonState != lastButtonState)
 ----
 
-If the `ButtonState` is `High`, then the `ButtonPushCounter` is incremented and the value is output +
-to serial terminal. Every time the value of the counter is checked, if it has reached 4. If the +
-`ButtonPushCounter` reaches a value of 4, then the LED is turned `ON`.
+If the `ButtonState` is `High`, then the `ButtonPushCounter` is incremented and the value is output to serial terminal. Every time the value of the counter is checked, if it has reached 4. If the `ButtonPushCounter` reaches a value of 4, then the LED is turned `ON`.
 
 ----
 if (buttonPushCounter % 4 == 0) {
@@ -169,7 +156,7 @@ video::Lvbtync5-GM[youtube]
 
 === Try it out ===
 
-– Use the button to print something in binary to the serial monitor.
+* Use the button to print something in binary to the serial monitor.
 
 === See Also ===
 
@@ -178,9 +165,9 @@ video::Lvbtync5-GM[youtube]
 * http://energia.nu/reference/digitalread/[digitalRead()]
 * http://energia.nu/reference/if/[if()]
 * http://energia.nu/reference/millis/[millis()]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_blinkwithoutdelay/[BlinkWithoutDelay]: Blinking an LED without using the `delay()` function.
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_blinkwithoutdelay/[BlinkWithoutDelay]:blinking an LED without using the `delay()` function.
  
 

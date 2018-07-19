@@ -2,10 +2,7 @@
 
 This example shows how to use the `tone()` command to play different notes on multiple outputs.
 
-The `tone()` command works by taking over one of the LaunchPad’s internal timers, setting it to +
-the frequency you want, and using the timer to pulse an output pin. Since it’s only using one +
-timer, you can only play one note at a time. You can, however, play notes on multiple pins +
-sequentially. To do this, you need to turn the timer off for one pin before moving on to the next.
+The `tone()` command works by taking over one of the LaunchPad's internal timers, setting it to the frequency you want, and using the timer to pulse an output pin. Since it's only using one timer, you can only play one note at a time. You can, however, play notes on multiple pins sequentially. To do this, you need to turn the timer off for one pin before moving on to the next.
 
 Thanks to Greg Borenstein for clarifying this.
 
@@ -24,10 +21,9 @@ Image developed using http://fritzing.org/home/[Fritzing]. For more circuit exam
 
 === Code ===
 
-The sketch below plays a tone on each of the speakers in sequence, turning off the previous +
-speaker first. Note that the duration of each tone is the same as the delay that follows it.
+The sketch below plays a tone on each of the speakers in sequence, turning off the previous speaker first. Note that the duration of each tone is the same as the delay that follows it.
 
-Here’s the main sketch:
+Here's the main sketch:
 
 ----
 /*
@@ -65,8 +61,8 @@ void loop() {
 === See Also ===
 
 * http://energia.nu/reference/tone/[tone()]
-* http://energia.nu/guide/tutorial_tone/[Tone]–play a melody with a piezo speaker.
-* http://energia.nu/guide/tutorial_tone2/[Pitch follower]–play a pitch on a piezo speaker depending on an analog input.
-* http://energia.nu/guide/tutorial_tone3/[Tone 3]–a three-key musical keyboard using force sensors.
+* http://energia.nu/guide/tutorial_tone/[Tone]:play a melody with a piezo speaker.
+* http://energia.nu/guide/tutorial_tone2/[Pitch follower]:play a pitch on a piezo speaker depending on an analog input.
+* http://energia.nu/guide/tutorial_tone3/[Tone 3]:a three-key musical keyboard using force sensors.
  
 
