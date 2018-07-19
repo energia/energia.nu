@@ -1,0 +1,14 @@
+== Guide to the Audio BoosterPack (BOOSTXL-AUDIO)
+The http://www.ti.com/tool/BOOSTXL-AUDIO[BOOSTXL-AUDIO] is built around the DAC8311, a 14bit, Single Channel, 80uA, 2.0V-5.5V DAC in SC70 Package.
+
+This hardware is open source! Get the http://www.ti.com/tool/BOOSTXL-AUDIO[BOOSTXL-AUDIO] Software Examples and Design Files.
+
+=== Software
+There is no Energia library yet to support this BoosterPack.
+
+=== Pins Map
+:icons: font
+NOTE: The main signals (MIC Power, MIC Output, AMP On and Audio PMW) offer two options, a primary and alternate, with the corresponding 0 Ω shunts.
+
+[caption="Figure 1: ",link=../img/BOOSTXL-AUDIO.jpg]
+image::../img/BOOSTXL-AUDIO.jpg[BOOSTXL-AUDIO,800]

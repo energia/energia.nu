@@ -1,0 +1,9 @@
+== Guide to the Fuel Tank Battery BoosterPack
+:icons: font
+NOTE: This BoosterPack is deprecated and replaced by the link:../boostxl-batpakmkii[Fuel Tank Battery MK-II Battery BoosterPack (BOOSTXL-BATPAKMKII)].
+
+Energia supports the Fuel Tank BoosterPack made by Texas Instruments. The BoosterPack let’s you quickly add lithium polymer (Li-Po) battery power to your LaunchPad projects. Check out the http://www.ti.com/tool/boostxl-battpack[BOOSTXL-BATPAK tool folder] for more information.
+
+=== Pins Map
+[caption="Figure 1: ",link=../img/BOOSTXL-BATPAK.jpg]
+image::../img/BOOSTXL-BATPAK.jpg[BOOSTXL-BATPAK,800]

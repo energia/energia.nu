@@ -1,0 +1,9 @@
+== Kentec QVGA Display BoosterPack
+Energia supports the Kentec 3.5″ QVGA TFT LCD BoosterPack made by Texas Instruments. The BoosterPack let’s you quickly add an LCD with resistive touch screen option into your LaunchPad projects. Check out the http://www.ti.com/tool/BOOSTXL-K350QVG-S1[BOOSTXL-K350QVG-S1] tool folder for more information.
+
+=== Pin Map
+[caption="Figure 1: ",link=../img/BOOSTXL-K350QVG-S1.jpg]
+image::../img/BOOSTXL-K350QVG-S1.jpg[BOOSTXL-K350QVG-S1,800]
+
+=== Compatible Libraries
+http://embeddedcomputing.weebly.com/lcd_screen-library-suite.html[Rei Vilo’s LCD Library] (driver: Screen_K35_SPI)

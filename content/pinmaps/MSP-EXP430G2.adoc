@@ -1,0 +1,64 @@
+== Guide to the MSP430G2 LaunchPad (MSP-EXP430G2)
+
+This is the original MSP430 LaunchPad. The one that started it all and the very first microcontroller board to support Energia. This LaunchPad is still extremely useful for makers who want to do small projects that don’t require a lot of performance or for students who are learning electronics for the first time.  The DIP socket allows you to program the chip and then put it into your projects for permanent installation.  These LaunchPads are ~3.3V on all the pins.
+
+This hardware is open source! Get the design files from TI: HERE
+
+Drivers are often, but not always, required for this LaunchPad. You can find the driver instructions below. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430g2553 under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+
+{{< youtube xCRWe1yvVuk >}}
+
+=== Installing the drivers
+==========================
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================
+
+=== Pin Map
+The following diagram show the complete pin map for the MSP430G2553 LaunchPad Rev 1.5 in Energia.  Additional pin maps for other revisions and devices are further below.  Make sure the jumpers are correctly oriented for HW UART if you want to receive data through the Energia serial monitor.
+
+[caption="Figure 1: ",link=../img/LaunchPads-MSP430G2-—-Pins-Maps-13-42.jpeg]
+image::../img/LaunchPads-MSP430G2-—-Pins-Maps-13-42.jpeg[MSP430G2,800]
+
+=== Getting Started Video
+
+{{< youtube 3NrbUhDWCLo >}}
+
+Energia supports the LaunchPad with msp430g2231, msp430g2452 and msp430g2553. These are the most popular devices. V1.4 and earlier LaunchPad shipped with msp430g2231. The 430BOOST-SENSE1 ships with the msp430g2452 and LaunchPad v1.5 ships with msp430g2553. Pin numbering for the LaunchPad variant in Energia follows the pin numbering of the header on the LaunchPad (see pin mapping diagram below for details). Example: LED1 can be turned on with:
+----
+pinMode(2, OUTPUT);
+digitalWrite(2, HIGH);
+----
+Pins can also be address by there alternative names P1_0 … P1_7 and P2_0 … P2_5. See Energia/hardware/msp430/variants/launchpad/pins_energia.h for details. The LaunchPad pins_energia.h is here on github.
+
+----
+pinMode(P1_0, OUTPUT);
+digitalWrite(P1_0, HIGH);
+----
+LED1, LED2, S2 and internal temp sensor can also be addressed by the alternative names:
+----
+RED_LED
+GREEN_LED;
+PUSH2;
+TEMPSENSOR;
+----
+
+To turn on the red LED.
+----
+pinMode(RED_LED, OUTPUT);
+digitalWrite(RED_LED, HIGH);
+----
+=== When using I2C
+When using the Hardware I2C (Wire library) with SCL on P1.6 and SDA on P1.7 on the MSP-EXP430G2 you should remove the P1.6 jumper (GREEN LED) so that the LED doesn’t interfere with the I2C SCL signal. If the device you are connecting to does not already have pull-ups, you need to supply external pull-up resistors between P1.6-Vcc and P1.7-Vcc. Values under 10K ohm typically work; 4.7K is a good value to start with.
+
+=== LaunchPad MSP430G2452
+For the MSP430G2452, the jumpers J3 for serial port are unchanged although their order changes according to the revision of the LaunchPad board, revision 1.5 or 1.4.
+
+[caption="Figure 1: ",link=../img/LaunchPadMSP430G2452-v1.5.jpg]
+image::../img/LaunchPadMSP430G2452-v1.5.jpg[MSP430G2452,800]
+
+[caption="Figure 1: ",link=../img/LaunchPadMSP430G2452-v1.4.jpg]
+image::../img/LaunchPadMSP430G2452-v1.4.jpg[MSP430G2452,800]

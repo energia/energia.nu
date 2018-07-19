@@ -1,0 +1,19 @@
+== Grove Base BoosterPack
+Utilize the Grove ecosystem from Seeedstudio using the https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html[Grove BoosterPack] and Energia. You can use this BoosterPack and pair with over 100+ different https://www.seeedstudio.com/category/Grove-c-1003.html[Grove modules]. You can also use the https://www.seeedstudio.com/Grove-Starter-Kit-for-LaunchPad-p-2178.html[Grove Starter Kit] for LaunchPad to get a nice kit of pre-selected modules.
+
+=== Pin Map
+Grove BoosterPack (on top) — Pins Map
+
+[caption="Figure 1: ",link=../img/GroveBoosterPack.jpg]
+image::../img/GroveBoosterPack.jpg[GroveBoosterPack,800]
+
+
+=== Getting Started Video
+
+{{< youtube 8GucWeCFd9M >}} +
+
+:icons: font
+NOTE: Power switch referred to in the video has been removed in the release version. The BoosterPack provides 3.3V VCC to all connectors.
+
+=== Compatible libraries
+* https://github.com/Seeed-Studio/LaunchPad_Kit[Seeedstudio Grove Starter Kit]

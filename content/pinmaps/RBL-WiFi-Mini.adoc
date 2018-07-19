@@ -1,0 +1,36 @@
+== Guide to the WiFi Mini by RedBear
+
+CAUTION: Analog input is limited to 1.46V on the CC3200. Higher voltages may damage the MCU. — Reference: §3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins, CC3200 SimpleLink™ Wi-Fi® and Internet-of-Things Solution, a Single-Chip Wireless MCU (swas032f).
+
+Guide to the WiFi Mini by RedBear
+
+The WiFi Mini has on board Wi-Fi to easily add a wireless connection to the internet. Use the Energia WiFi library to get online quickly and easily.  You can also make use of many community contributed libraries that utilize the WiFi library APIs. Please go to www.redbear.cc to learn more and see the full spec.  You can also check out the RedBear CC3200 board supported in Energia!
+
+Energia MT is supported for CC3200. You can make use of multi-tasking in your Energia sketches and automatically enter low power modes when idle. Learn more about MT!
+
+The WiFi Mini uses the CC3200 module from Texas Instruments. Learn more about the CC3200 chipset at www.ti.com/product/cc3200.
+
+The following diagram shows the complete pin map for the WiFi Mini in Energia. Note: the lighter colors indicate no connects. Click the image to view a larger version of the image.
+
+=== Pin Map
+The following diagram shows the complete pin map for the RBL WiFi Mini in Energia. Note: the lighter colors indicate no connects. Click the image to view a larger version of the image.
+
+==== Main Headers
+[caption="Figure 1: ",link=../img/RBL-WiFi-Mini.jpg]
+image::../img/RBL-WiFi-Mini.jpg[RedBearLabs WiFi Mini,800]
+
+==== Extention Headers
+[caption="Figure 1: ",link=../img/RBL-Extention-Header.jpg]
+image::../img/RBL-Extention-Header.jpg[RedBearLabs WiFi Mini Extention Header,800]
+
+
+
+=== Installing the drivers
+==========================
+Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/product/CC3200[CC3200] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================

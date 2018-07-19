@@ -1,0 +1,15 @@
+== Guide to the CC1310 SimpleLink sub-1GHz (LAUNCHXL-CC1310)
+
+The http://www.ti.com/tool/LAUNCHXL-CC1310[LAUNCHXL-CC1310] has on board Sub 1-GHz radio to easily add a wireless connection. Use the Energia WiFi library to get online quickly and easily.  There is an official Eenrgia library for the http://www.ti.com/product/CC1310[CC1310], EasyLink.
+
+Energia MT is supported for CC1310. You can make use of multi-tasking in your Energia sketches and automatically enter low power modes when idle. Learn more about MT!
+
+This hardware is open source! Get the http://www.ti.com/lit/zip/swrc319[LAUNCHXL-CC1310 Design Files] from TI.
+
+=== Pin Map
+The following diagram shows the complete pins map for the http://www.ti.com/product/CC1310[CC1310] LaunchPad in Energia. Click the image to view a larger version of the image.
+
+[caption="Figure 1: ",link=../img/LAUNCHXL-CC1310.jpg]
+image::../img/LAUNCHXL-CC1310.jpg[LAUNCHXL-CC1310,800]
+
+NOTE: The lighter colors indicate no connection.

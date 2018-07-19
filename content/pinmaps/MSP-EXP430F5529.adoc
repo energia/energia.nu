@@ -1,0 +1,55 @@
+== Guide to the MSP430F5529 LaunchPad (MSP-EXP430F5529LP)
+
+{{< youtube 27fR-ZjR0Pk >}}
+
+The MSP-EXP430F5529LP is a good general purpose microcontroller board with a 25MHz MSP430 processor that can fit well in a wide variety of projects.  It also has USB2.0 capability for PC connected applications.
+
+Drivers may or may not be required to get started with this LaunchPad. Download and open Energia. Connect the LaunchPad to your computer over USB (you should see a green power indicator LED that turns on to indicate you are getting power to the LaunchPad). Select MSP430f5529 from Tools > Board.  Select the correct serial port under Tools > Serial Port. You should see two serial port options, the larger number is usually what you want to flash the device. The other COM port allows you to do Serial communication over UART. You can check your device manager if you are having trouble seeing the COM ports or want to double check which ports are assigned to which devices. If you don’t see a selectable serial port, you likely have a driver issue.
+
+=== Installing the drivers
+==========================
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================
+
+=== Pin Map
+The following diagram shows the complete pin map for the MSP430F5529 LaunchPad in Energia. Click  the image to enlarge.
+
+[caption="Figure 1: ",link=../img/MSP-EXP430F5529LP.jpeg]
+image::../img/MSP-EXP430F5529LP.jpeg[MSP-EXP430F5529LP,800]
+
+=== Getting Started Video
+
+{{< youtube WXRcbUxK0YQ >}}
+
+EPin numbering for the LaunchPad variant in Energia follows the pin numbering of the header on the LaunchPad (see pin mapping diagram below for details). Example: LED1 can be turned on with:
+
+----
+pinMode(43, OUTPUT);
+digitalWrite(43, HIGH);
+----
+
+Pins can also be address by there alternative names P1_0 … P1_7 and P2_0 … P2_5. See Energia/hardware/msp430/variants/launchpad/pins_energia.h for details. The LaunchPad pins_energia.h is here on github.
+
+----
+pinMode(P1_0, OUTPUT);
+digitalWrite(P1_0, HIGH);
+----
+LED1, LED2, S1, S2 and internal temp sensor can also be addressed by the alternative names:
+
+----
+RED_LED
+GREEN_LED;
+PUSH1;
+PUSH2;
+TEMPSENSOR;
+----
+
+To turn on the red LED.
+----
+pinMode(RED_LED, OUTPUT);
+digitalWrite(RED_LED, HIGH);
+----

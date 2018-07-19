@@ -1,0 +1,20 @@
+== Guide to the LaunchPad MSP430FR5994 (MSP-EXP430FR5994)
+
+The MSP-EXP430FR5994 features 256KB of FRAM (Ferroelectric Random Access Memory), and 8 KB of SRAM, plus a micro-SD-card slot.
+
+This hardware is open source! Get the http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSP-EXP430FR5994/latest/index_FDS.html[MSP-EXP430FR5994 Software Examples and Design Files].
+
+=== Installing the drivers
+==========================
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================
+
+=== Pin Map
+The following diagram shows the complete pin map for the MSP430FR5969 LaunchPad in Energia. Click  the image to enlarge.
+
+[caption="Figure 1: ",link=../img/MSP-EXP430FR5994.jpg]
+image::../img/MSP-EXP430FR5994.jpg[MSP430G2,800]

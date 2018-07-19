@@ -1,0 +1,111 @@
+:toc:
+:toc-placement!:
+
+++++
+<style>
+.container {
+    width: 960px;
+    position: relative;
+    margin: 0;
+    z-index:1;
+
+}
+#first {
+    width: 210px;
+    float: left;
+    position: fixed;
+    border-right: 1px dotted lightgray;
+
+}
+
+#second {
+    width: 740px;
+    float: right;
+      overflow: hidden;
+}
+</style>
+
+<div class='container'>
+    <div id="first">
+++++
+toc::[]
+++++
+    </div>
+    <div id="second">
+++++
+== Pin Naming
+
+Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depending on the LaunchPad) of the BoosterPack header pins as identifiers in their software.  Because these numbers are consistent between all Launchpads, this help to ensure the portability of the user’s software.  Some LaunchPads also support the use of GPIO or Port numbers such as “P1_3”.  These names are not recommended for use and will be deprecated in the future.  New LaunchPads that are added to Energia will not support pin names based on GPIO or Port numbers.
+
+== Pins Standard
+
+* http://energia.nu/pin-maps/guide_standardboosterpack/[Pins Standard for LaunchPads and BoosterPack]
+
+== LaunchPads
+
+=== 16-bit MSP430
+* link:msp-exp430g2[MSP430G2 LaunchPad (MSP-EXP430G2)]
+* link:msp-exp430g2et[MSP430G2ET LaunchPad (MSP-EXP430G2ET)]
+* link:msp-exp430f5529[MSP430F5529 LaunchPad (MSP-EXP430F5529LP)]
+* link:msp-exp430fr2311[MSP430FR2311 LaunchPad (MSP-EXP430FR2311)]
+* link:msp-exp430fr5739[MSP430FR5739 LaunchPad (MSP-EXP430FR5739)]
+* link:msp-exp430fr5969[MSP430FR5969 LaunchPad (MSP-EXP430FR5969)]
+* link:msp-exp430fr5994[MSP430FR5994 LaunchPad (MSP-EXP430FR5994)]
+* link:msp-exp430fr2433[MSP430FR2433 LaunchPad (MSP-EXP430FR2433)]
+
+=== 16-bit C2000
+* link:launchxl-f28027f[C2000 F28027 LaunchPad (LAUNCHXL-F28027F)]
+
+=== 32-bit CC13xx
+* link:launchxl-cc1310[CC1310 SimpleLink sub-1GHz (LAUNCHXL-CC1310)]
+
+=== 32-bit CC3200
+* link:cc3200-launchxl[CC3200 WiFi LaunchPad (CC3200-LAUNCHXL)]
+* link:rbl-wifi-mini[RedBearLab CC3200]
+* link:rbl-uno[RedBearLab WiFi Mini]
+
+=== 32-bit CC3220
+* link:cc3220sf-launchxl[CC3220S/SF WiFi LaunchPad (CC3220SF-LAUNCHXL/CC3220S-LAUNCHXL)]
+
+
+=== 32-bit MSP432
+* link:msp-exp432p401r[MSP432P401R LaunchPad (RED) (MSP-EXP432P401R)]
+* link:msp-exp432e401y[MSP432E401Y LaunchPad (RED) (MSP-EXP432E401Y)]
+
+=== 32-bit Tiva C
+* link:ek-tm4c123gxl[TM4C123 LaunchPad (EK-TM4C123GXL)]
+* link:ek-lm4f120xl[Stellaris LaunchPad (EK-LM4F120XL)] — NRND xref:anchor-1[*]
+* link:ek-tm4c1294xl[TM4C129 Connected LaunchPad (EK-TM4C1294XL)]
+
+== BoosterPacks
+=== Display
+* link:boostxl-k350qvg-s1[Kentec QVGA Display BP (BOOSTXL-K350QVG-S1)]
+* link:430boost-sharp96[Sharp Memory Display BP (430BOOST-SHARP96)]
+
+
+=== IoT
+* link:430boost-cc110l[Anaren CC110L AIR BoosterPack (430BOOST-CC110L)]
+* link:boostxl-cc2650ma[CC2650 SimpleLink BLE BoosterPack (BOOSTXL-CC2650MA)]
+* link:cc3100boost[CC3100 WiFi BoosterPack (CC3100BOOST)]
+* link:cc2530-air[Anaren A2530 ZigBee BoosterPack]
+
+=== Multi-sensors
+* link:boostxl-edumkii[Educational BoosterPack MK II (BOOSTXL-EDUMKII)]
+* link:boost-edu[Educational BoosterPack MK I (BP-EDUC-01)] — NRNDxref:anchor-1[*]
+* link:boostxl-sensors[Sensors BoosterPack (BOOSTXL-SENSORS)]
+* link:boost-grove[Grove Base BoosterPack (BOOST-GROVE)]
+
+
+=== Other
+* link:430boost-sense1[Capacitive Touch BoosterPack (430BOOST-SENSE1)]
+* link:boostxl-audio[Audio BoosterPack (BOOSTXL-AUDIO)]
+* link:boostxl-batpakmkii[Fuel Tank Battery MK-II Battery BoosterPack (BOOSTXL-BATPAKMKII)]
+* link:boostxl-batpak[Fuel Tank BoosterPack (BOOSTXL-BATTPACK)] — NRNDxref:anchor-1[*]
+
+[[anchor-1]]
+*NRND = Not Recommended for New Design
+
+++++
+    </div>
+</div>
+++++

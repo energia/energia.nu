@@ -1,0 +1,21 @@
+== Guide to the MSP430FR5739 Experimenter (MSP-EXP430FR5739) ==
+Energia supports the MSP-EXP430FR5739 Experimenter Board with MSP430FR5739. Common revision is V1.1.  This is not a LaunchPad (it looks very similar though!) so BoosterPacks or other ecosystem accessories may not work. Energia libraries written for LaunchPads are not guaranteed to work. It is recommended to use the other MSP430 FRAM LaunchPads supported in Energia to get maximum functionality.
+
+This board has an accelerometer and EM headers.
+
+Drivers may or may not be required in order to start using this Experimenter Board. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430fr5739 under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+
+=== Installing the drivers
+==========================
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================
+
+=== Pin Map
+The following diagram shows the complete pin map for the MSP430FR5739 Experimenter Board in Energia.
+
+[caption="Figure 1: ",link=../img/MSP-EXP430FR5739.jpeg]
+image::../img/MSP-EXP430FR5739.jpeg[MSP-EXP430FR2311,800]

@@ -1,0 +1,20 @@
+== Guide to the RBLCC3200 by RedBearLab
+
+CAUTION: Analog input is limited to 1.46V on the CC3200. Higher voltages may damage the MCU. — Reference: §3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins, CC3200 SimpleLink™ Wi-Fi® and Internet-of-Things Solution, a Single-Chip Wireless MCU (swas032f).
+
+The RBLCC3200 is an Arduino Uno R3 form factor development kit with on board Wi-Fi to easily add a wireless connection to the internet. Use the Energia WiFi library to get online quickly and easily.  You can also make use of many community contributed libraries that utilize the WiFi library APIs. Please go to www.redbearlab.com/cc3200 to learn more and see the full spec.  You can also check out the WiFi Mini board supported in Energia!
+
+Energia MT is supported for CC3200. You can make use of multi-tasking in your Energia sketches and automatically enter low power modes when idle. Learn more about MT!
+
+The RBLCC3200 uses the CC3200 module from Texas Instruments. Learn more about the CC3200 chipset at www.ti.com/product/cc3200.
+
+=== Pin Map
+The following diagram shows the complete pin map for the RBLCC3200 in Energia. Note: the lighter colors indicate no connects. Click the image to view a larger version of the image.
+
+==== Main Headers
+[caption="Figure 1: ",link=../img/RBL-WiFi-Mini.jpg]
+image::../img/RBL-CC3200.jpg[RedBearLabs Uno,800]
+
+==== Extention Headers
+[caption="Figure 1: ",link=../img/RBL-Extention-Header.jpg]
+image::../img/RBL-Extention-Header.jpg[RedBearLabs WiFi Mini Extention Header,800]

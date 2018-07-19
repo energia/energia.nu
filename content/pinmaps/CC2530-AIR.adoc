@@ -1,0 +1,12 @@
+== Anaren A2530 ZigBee BoosterPack
+The Anaren A2530 ZigBee BoosterPack brings ZigBee to the LaunchPads.
+
+=== Hardware
+This product is no longer available.
+
+=== Software
+https://github.com/mweintra/ZigBee[ZigBee library] and https://github.com/mweintra/ZigBee/wiki[wiki] by https://github.com/mweintra[mweintra]
+
+=== Pin Map
+[caption="Figure 1: ",link=../img/CC2530-AIR.jpg]
+image::../img/CC2530-AIR.jpg[CC2530-AIR,800]

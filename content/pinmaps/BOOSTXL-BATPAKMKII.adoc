@@ -1,0 +1,8 @@
+== Guide to the Fuel Tank MK-II Battery BoosterPack (BOOSTXL-BATPAKMKII)
+The http://www.ti.com/tool/boostxl-batpakmkii[BOOSTXL-BATPAKMKII] replaces the previous Fuel Tank Battery BoosterPack link:boostxl-batpak[BOOSTXL-BATPAK].
+
+This hardware is open source! Get the http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/BOOSTXL-BATPAKMKII/latest/index_FDS.html[BOOSTXL-BATPAKMKII Software Examples and Design Files] from TI.
+
+=== Pins Map
+[caption="Figure 1: ",link=../img/BOOSTXL-BATPAKMKII.jpg]
+image::../img/BOOSTXL-BATPAKMKII.jpg[BOOSTXL-BATPAKMKII,800]

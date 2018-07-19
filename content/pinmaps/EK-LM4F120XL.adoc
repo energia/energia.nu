@@ -1,0 +1,12 @@
+== Guide to the Stellaris LaunchPad (http://www.ti.com/tool/EK-LM4F120XL[EK-LM4F120XL])
+
+=== Not Recommended For New Designs
+NOTE: Stellaris LaunchPad has been discontinued by Texas Instruments, the recommended replacement is the EK-TM4C123GXL LaunchPad which has very similar specs and pinout.
+
+The following diagram shows the complete pin map for the StellarPad LM4F in Energia.
+
+[caption="Figure 1: ",link=../img/EK-LM4F120XL.jpg]
+image::../img/EK-LM4F120XL.jpg[EK-LM4F120XL,800]
+
+[caption="Figure 1: ",link=../img/EK-LM4F120XL-BACK.jpg]
+image::../img/EK-LM4F120XL-BACK.jpg[EK-LM4F120XL,800]

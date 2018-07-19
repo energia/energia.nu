@@ -1,0 +1,31 @@
+=== Guide to the CC2650 SimpleLink BLE BoosterPack (BOOSTXL-CC2650MA)
+Energia supports the http://www.ti.com/tool/BOOSTXL-CC2650MA[BOOSTXL-CC2650MA]. The BoosterPack let’s you quickly incorporate Bluetooth into your LaunchPad projects. The BLE libraries are included in the Energia release.
+
+This hardware is open source! Get the http://www.ti.com/tool/BOOSTXL-CC2650MA[BOOSTXL-CC2650MA] Design Files from TI.
+
+=== Pins Map
+There are two ways of connecting the BoosterPack to the LaunchPad: either SPI or Serial. Energia uses Serial.
+
+[caption="Figure 1: ",link=../img/BOOSTXL-CC2650MA.jpg]
+image::../img/BOOSTXL-CC2650MA.jpg[BOOSTXL-CC2650MA,800]
+
+=== Compatible libraries
+* BLE libraries
+
+=== Upgrading the CC2650 Firmware
+The firmware on your BoosterPack might not be the right one. If you are experiencing issues with running the app, you might have to upgrade the firmware on your CC2650 BoosterPack. We are working on making this cross platform and to accomplish for Energia users. For now Smart RF Flash Programmer 2 has to be used on a windows PC.
+
+* Download Smart RF Flash Programmer 2
+* Remove JTAG headers from MSP432 LP (TDI, TDO, TCK, TMS)
+* Remove the BoosterPack from the LaunchPad (you will need a RED MSP432 LaunchPad)
+* Attach 10 pin ARM ribbon cable (included in the BoosterPack box) to XDS110 header on the emulation side of the MSP432 LaunchPad. Attach other end to CC2650 BP. It is keyed so there is only one way to attach it.
+* Get the SNP images from this link: http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.exe&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files
+* Once installed, find the image simple_np_cc2650bp_uart_pm_xsbl.hex
+* Plug the LP into your computer.
+* Launch Smart RF Flash Programmer 2.
+* The CC2650 should show up in the left pane titled “Connected Devices”
+* Right click the CC2650 and select connect. The status bar should say “Success!” when finished connecting.
+* On the “Main” tab, in the “Flash Image” field select single and then browse to the simple_np_cc2650bp_uart_pm_xsbl.hex image.
+* Still on the main tab, under the header “Actions” check “Erase”, “Program” and “Verify”.
+* Then click the Green Arrow image on the right bottom to program the image.
+* Remove the ribbon cable, replace the JTAG headers and reseat the BoosterPack. You are now good to go to run the Sketch/App.

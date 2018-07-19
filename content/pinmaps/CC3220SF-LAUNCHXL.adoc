@@ -1,0 +1,25 @@
+== Guide to the CC3220S/SF SimpleLink WiFi (CC3220S/SF-LAUNCHXL)
+
+The http://www.ti.com/tool/CC3220S-LAUNCHXL[CC3220S-LAUNCHXL] and http://www.ti.com/tool/CC3220SF-LAUNCHXL[CC3220SF-LAUNCHXL] has on board Wi-Fi to easily add a wireless connection to the internet. Use the Energia WiFiMKII library to get online quickly and easily. You can also make use of many community contributed libraries that utilize the WiFi library APIs.
+
+Energia MT is supported for CC3220. You can make use of multi-tasking in your Energia sketches and automatically enter low power modes when idle. Learn more about MT!
+
+Energia MT is supported for http://www.ti.com/tool/CC3220S-LAUNCHXL[CC3220SF-LAUNCHXL] and http://www.ti.com/tool/CC3220S-LAUNCHXL[CC3220S-LAUNCHXL]. You can make use of multi-tasking in your Energia sketches and automatically enter low power modes when idle. link:/guide/foundations/programming_technique/multitasking/[Learn more about MT!]
+
+This hardware is open source! Get the design files from TI for the http://www.ti.com/lit/zip/sprcag0[CC3220SF-LAUNCHXL] and http://www.ti.com/lit/zip/sprcag0[CC3220S-LAUNCHXL].
+
+=== Pin Map
+The following diagram shows the complete pin map for the http://www.ti.com/product/cc3220[CC3200S] and http://www.ti.com/product/cc3220[CC3200SF] LaunchPad in Energia. Note: the lighter colors indicate no connects. Click the image to view a larger version of the image.
+
+[caption="Figure 1: ",link=../img/CC3220SF-LAUNCHXL.jpg]
+image::../img/CC3200-LAUNCHXL.jpg[CC3220SF-LAUNCHXL,800]
+
+=== Installing the drivers
+==========================
+Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/CC3220SF-LAUNCHXL[CC3220SF-LAUNCHXL] or http://www.ti.com/tool/CC3220S-LAUNCHXL[CC3220S-LAUNCHXL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================

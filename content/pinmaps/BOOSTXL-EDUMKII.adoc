@@ -1,0 +1,19 @@
+=== Guide to the Educational BoosterPack MK. 2 (BOOSTXL-EDUMKII)
+Energia supports the Educational BoosterPack MK II from Texas Instruments. The BoosterPack includes basic electronic components to demo a variety of use cases with your LaunchPad. Perfect for students, beginners to electronics, and newcomers to microcontollers. Check out the http://www.ti.com/tool/BOOSTXL-EDUMKII[BOOSTXL-EDUMKII] page for more information.
+
+This hardware is open source! Get the http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/BOOSTXL-EDUMKII/latest/index_FDS.html[BOOSTXL-EDUMKII] design files from TI.
+
+=== For EK-LM4F120XL and EK-TM4C123GXL:
+Make sure to remove R9 and R10 on the LaunchPad.
+
+=== Pin Map
+
+[caption="Figure 1: ",link=../img/BOOSTXL-EDUMKII.jpg]
+image::../img/BOOSTXL-EDUMKII.jpg[BOOSTXL-EDUMKII,800]
+
+=== Getting Started Video
+
+{{< youtube ft9gg899PRw >}}
+
+=== Compatible libraries
+* EDUMKII code examples

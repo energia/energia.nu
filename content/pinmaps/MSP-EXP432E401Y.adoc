@@ -1,0 +1,27 @@
+
+== Guide to MSP432E401Y LaunchPad (MSP-EXP432E401Y)
+
+The http://www.ti.com/tool/MSP-EXP432E401Y[MSP-EXP432E401Y] is the first 32-bit LaunchPad from the legendary MSP430 family.  It features an ARM Cortex-M4F core perfect for projects that require low power + performance such as battery operated applications.
+
+Energia MT is supported for http://www.ti.com/product/msp432e401y[MSP-EXP432E401Y]. You can make use of multi-tasking in your Energia sketches and automatically enter low power modes when idle. Learn more about MT!
+
+This hardware is open source!  Get the design files from TI: http://www.ti.com/lit/zip/slar147[HERE]
+
+=== Pin Map
+The following diagram shows the complete pin map for the http://www.ti.com/product/msp432e401y[MSP432E401Y] LaunchPad in Energia. Note: the lighter colors indicate no connects. Click the image to view a larger version of the image.
+
+==== Main Headers
+[caption="Figure 1: ",link=../img/MSP-EXP432E401Y.jpg]
+image::../img/MSP-EXP432E401Y.jpg[MSP-EXP432E401Y,800]
+
+Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430P401R under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+
+=== Installing the drivers
+==========================
+Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/MSP-EXP432E401Y[MSP-EXP432E401Y] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================

@@ -1,0 +1,17 @@
+== Guide to LaunchPad MSP430FR2311 (MSP-EXP430FR2311) ==
+The MSP-EXP430FR2311 features 4 KB of FRAM (Ferroelectric Random Access Memory), and 1 KB of SRAM.
+
+=== Installing the drivers
+==========================
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/guide_windows/[Windows]
+* link:/guide/guide_macosx/[Mac OS X]
+* link:/guide/guide_linux/[Linux]
+==========================
+
+=== Pin Map
+The following diagram shows the complete pin map for the MSP430F5529 LaunchPad in Energia. Click  the image to enlarge.
+
+[caption="Figure 1: ",link=../img/MSP-EXP430FR2311LP.jpeg]
+image::../img/MSP-EXP430FR2311LP.jpeg[MSP-EXP430FR2311,800]

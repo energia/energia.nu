@@ -1,0 +1,8 @@
+== Guide to the Sensors BoosterPack (BOOSTXL-SENSORS)
+The http://www.ti.com/tool/boostxl-sensors?keyMatch=sensors%20boosterpack&tisearch=Search-EN-Everything[BOOSTXL-SENSORS] replaces the Sensor Hub BoosterPack.
+
+This hardware is open source! Get the http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/BOOSTXL-SENSORS/latest/index_FDS.html[BOOSTXL-SENSORS Software Examples and Design Files] from TI.
+
+=== Pins Map
+[caption="Figure 1: ",link=../img/BOOSTXL-SENSORS.jpg]
+image::../img/BOOSTXL-SENSORS.jpg[BOOSTXL-SENSORS,800]

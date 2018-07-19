@@ -1,0 +1,11 @@
+== Guide to the Anaren CC110L AIR BoosterPack
+
+Energia supports the CC110L AIR BoosterPack made by Anaren. The BoosterPack let’s you quickly incorporate low power (sub-1GHz) wireless communication into your LaunchPad projects.  Check out the tool http://www.ti.com/tool/430boost-cc110l[430BOOST-CC110L]folder for more information. The AIR430BoostUSAFCC and AIR430BoostEuropeETSI libraries are included in the Energia release.
+
+=== Pin Map
+[caption="Figure 1: ",link=../img/430BOOST-CC110L.jpg]
+image::../img/430BOOST-CC110L.jpg[430BOOST-CC110L,800]
+
+=== Compatible libraries
+* Air430BoostUSAFCC
+* Air430BoostEuropeETSI
