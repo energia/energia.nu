@@ -167,6 +167,14 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/strings/tutorial_stringstartswithendswith/[StringStartsWithEndsWith]: Check which characters/substrings a given string starts or ends with.
 * link:tutorials/strings/tutorial_stringsubstring/[StringSubstring]: Look for ''phrases'' within a given string.
 
+. *Sensors, Motors, & Displays*
+* Temperature: use on board MCU core temp sensor.
+* Tilt Sensor: use a basic tilt sensor.
+* Servo: move a servo to control mechanical objects.
+* Basic Motor: turn a basic motor.
+* 7 Segment Display: display basic number and letter values.
+* 2×16 Character Display: output strings to a character display.
+
 . *MultiTasking*
 * link:tutorials/multi_tasking/tutorial_buttonevent/[ButtonEvent]: Read a button in one task and have another task wait for the button to be pressed.
 * link:tutorials/multi_tasking/tutorial_eventlibrary/[EventLibrary]: Send an event in one task and have another task wait for the event.
@@ -174,7 +182,6 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/multi_tasking/tutorial_multianaloginput/[MultiAnalogInput]: Reads analog inputs in differents tasks at different rates.
 * link:tutorials/multi_tasking/tutorial_multiblink/[MultiBlink]: Blink 3 LEDs at different rates.
 * link:tutorials/multi_tasking/tutorial_multitaskserial/[MultiTaskSerial]: Shows 2 threads sending a string to the Serial monitor at different rates.
-
 
 . *Connectivity*
 * WiFi: WiFi library examples.
@@ -186,15 +193,22 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * Freeboard.io: Create a cloud dashboard with your Energia data using freeboard.io.
 * Contiki: Access Contiki OS for IoT using Energia.
 
+. *BoosterPacks*
+* Olimex8x8matrix: create a scrolling marquee with an LED matrix.
+* Sharp LCD Display: display images and text on the low power LCD
+* EducationalBP: create a magic 8 ball with an accelerometer and LCD display.
+* link:tutorials/boosterpacks/boostxl-edumkii[EducationalBP MKII]: examples involving buzzer, LCD, LEDs, accelerometer, push buttons, and more
+* CC3000: introduction to SimpleLink WiFi CC3000 BoosterPack
+* CC3100: introduction to SimpleLink WiFi CC3100 BoosterPack
 
 . *Other Tutorials*
-// * link:tutorials/other/sidekick/[Sidekick for TI LaunchPad]: Use the Seeedstudio Sidekick Basic Kit for TI LaunchPad with Energia.
-// * link:tutorials/other/sik-for-launchpad/[SIK for LaunchPad]: Use the Sparkfun Inventor's Kit with Energia.
-// * link:tutorials/other/grove-starter-kit/[Grove Starter Kit for LaunchPad]: Use Grove modules to access sensors and components for prototyping.
+* link:tutorials/other/sidekick/[Sidekick for TI LaunchPad]: Use the Seeedstudio Sidekick Basic Kit for TI LaunchPad with Energia.
+* link:tutorials/other/sik-for-launchpad/[SIK for LaunchPad]: Use the Sparkfun Inventor's Kit with Energia.
+* link:tutorials/other/grove-starter-kit/[Grove Starter Kit for LaunchPad]: Use Grove modules to access sensors and components for prototyping.
 * link:tutorials/other/o-scope-operation/[O-Scope Operation]: Learning how to use an Tektronix Oscilloscope with MSP430 LaunchPad.
-// * LabVIEW Home: Use Energia in National Instruments LabVIEW.
-// * Processing: Create GUIs and visual representations of Energia data using Processing IDE.
-// * link:learn/[Energia.nu/learn]: Full workshops on Energia material.
+* LabVIEW Home: Use Energia in National Instruments LabVIEW.
+* Processing: Create GUIs and visual representations of Energia data using Processing IDE.
+* link:learn/[Energia.nu/learn]: Full workshops on Energia material.
 * link:tutorials/other/tutorials/basics/tutorial_iop/[IoP Machine]: Learn how to create an internet connected popcorn machine.
 * link:tutorials/basics/tutorial_energytrace/[Energy Trace]: Learn how to measure energy consumption in your Energia system.
 

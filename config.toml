@@ -2,6 +2,7 @@ pygmentsCodefences = true
 pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 baseURL = "http://energia.nu/"
+relativeURLs = true
 languageCode = "en-us"
 title = "Energia"
 theme = "energia"
