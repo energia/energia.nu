@@ -1,7 +1,6 @@
 == Pitch follower using the tone() function ==
 
-This example shows how to use the `tone()` command to generate a pitch that follows the values +
-of an analog input.
+This example shows how to use the `tone()` command to generate a pitch that follows the values of an analog input.
 
 === Hardware Required ===
 
@@ -16,21 +15,15 @@ of an analog input.
 
 Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
 
-Connect one terminal of your speaker to digital pin 9 through a 100 ohm resistor, and its other +
-terminal to ground. Power your photoresistor with 5V, and connect it to analog 0 with the +
-addition of a 4.7K resistor to ground.
+Connect one terminal of your speaker to digital pin 9 through a 100 ohm resistor, and its other terminal to ground. Power your photoresistor with 5V, and connect it to analog 0 with the addition of a 4.7K resistor to ground.
 
 === Schematic ===
 
 === Code ===
 
-The code for this example is very simple. Just take an analog input and map its values to a range +
-of audible pitches. Humans can hear from 20 – 20,000Hz, but 120 – 1500 usually works pretty +
-well for this sketch.
+The code for this example is very simple. Just take an analog input and map its values to a range of audible pitches. Humans can hear from 20–20,000Hz, but 120–1500 usually works pretty well for this sketch.
 
-You’ll need to get the actual range of your analog input for the mapping. In the circuit shown, +
-the analog input value ranged from about 400 to about 1000. Change the values in the `map()` +
-command to match the range for your sensor.
+You'll need to get the actual range of your analog input for the mapping. In the circuit shown, the analog input value ranged from about 400 to about 1000. Change the values in the `map()` command to match the range for your sensor.
 
 The sketch is as follows:
 
@@ -72,6 +65,6 @@ void loop() {
 * http://energia.nu/reference/for/[for()]
 * http://energia.nu/reference/tone/[tone()]
 * http://energia.nu/reference/map/[map()]
-* http://energia.nu/guide/tutorial_tone/[Tone]–play a melody with a piezo speaker.
-* http://energia.nu/guide/tutorial_tone3/[SimpleKeyboard]–a three-key musical keyboard using force sensors and a piezo speaker.
-* http://energia.nu/guide/tutorial_tone2/[Tone 4]–play tones on multiple speakers sequentially.
+* http://energia.nu/guide/tutorial_tone/[Tone]:play a melody with a piezo speaker.
+* http://energia.nu/guide/tutorial_tone3/[SimpleKeyboard]:a three-key musical keyboard using force sensors and a piezo speaker.
+* http://energia.nu/guide/tutorial_tone2/[Tone 4]:play tones on multiple speakers sequentially.

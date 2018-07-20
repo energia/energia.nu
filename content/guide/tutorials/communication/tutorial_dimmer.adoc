@@ -1,9 +1,6 @@
 == Dimmer ==
 
-This example shows how to send data from a personal computer to a the MSP430 LaunchPad, to control the brightness +
-of an LED. The data is sent in individual bytes, each of which ranges in value from 0 to 255. The LaunchPad reads these +
-bytes and uses them to set the brightness of the LED. You can send bytes to the LaunchPad from any software that can +
-access the computer serial port. Example for https://www.processing.org/[Processing] is shown below.
+This example shows how to send data from a personal computer to a the MSP430 LaunchPad, to control the brightness of an LED. The data is sent in individual bytes, each of which ranges in value from 0 to 255. The LaunchPad reads these bytes and uses them to set the brightness of the LED. You can send bytes to the LaunchPad from any software that can access the computer serial port. Example for https://www.processing.org/[Processing] is shown below.
 
 === Hardware Required ===
 
@@ -13,12 +10,9 @@ access the computer serial port. Example for https://www.processing.org/[Process
 
 === Relevant Groundwork ===
 
-The Serial Monitor in Energia, allows you to send and read information between the Launchpad and the computer +
-connected to it.
+The Serial Monitor in Energia, allows you to send and read information between the Launchpad and the computer connected to it.
 
-A Green LED is connected to pin 14 on the Launchpad. Use an appropriate resistor as needed if connecting an LED +
-from a Breadboard. For most common LEDs, you can usually do without the resistor, as the current output of the +
-digital I/O pins is limited.
+A Green LED is connected to pin 14 on the Launchpad. Use an appropriate resistor as needed if connecting an LED from a Breadboard. For most common LEDs, you can usually do without the resistor, as the current output of the digital I/O pins is limited.
 
 === Circuit ===
 
@@ -136,9 +130,9 @@ void draw() {
 * http://energia.nu/Serial_Read.html[serial.read()]
 * http://energia.nu/AnalogRead.html[analogRead()]
 * http://energia.nu/AnalogWrite.html[analogWrite()]
-* http://energia.nu/Tutorial_Graph.html[Graph]-send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]-turn an LED on and off by sending data from Processing.
-* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]-send multiple variables from a LaunchPad to the computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]-send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]-how to take different actions based on characters received by the serial port.
+* http://energia.nu/Tutorial_Graph.html[Graph]:send data to the computer and graph it in Processing.
+* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]:turn an LED on and off by sending data from Processing.
+* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from a LaunchPad to the computer and read them in Processing.
+* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.

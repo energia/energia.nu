@@ -22,12 +22,7 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-This code demonstrates the use of the `serialEvent()` function. In this code, `serialEvent()` runs after each time `loop()` +
-processes. Since we are placing characters read from the Serial Monitor into a buffer, the `serialEvent` will send +
-characters received back into the main loop to be processed. The best way to demonstrate this is to place a delay at the +
-end of the if statement in the main loop. The string read from the Serial monitor will be printed to the serial monitor +
-with a delay. During the delay, if you type more characters into the Serial Monitor, the code will send these characters +
-back into the main loop after the delay to be printed to the Serial Monitor.
+This code demonstrates the use of the `serialEvent()` function. In this code, `serialEvent()` runs after each time `loop()` processes. Since we are placing characters read from the Serial Monitor into a buffer, the `serialEvent` will send characters received back into the main loop to be processed. The best way to demonstrate this is to place a delay at the end of the if statement in the main loop. The string read from the Serial monitor will be printed to the serial monitor with a delay. During the delay, if you type more characters into the Serial Monitor, the code will send these characters back into the main loop after the delay to be printed to the Serial Monitor.
 
 === Code ===
 
@@ -103,10 +98,10 @@ void serialEvent() {
 * http://energia.nu/Serial_Available.html[serial.available()]
 * http://energia.nu/Serial_Print.html[serial.print()]
 * http://energia.nu/AnalogRead.html[analogRead()]
-* http://energia.nu/Tutorial_Dimmer.html[Dimmer]-move the mouse to change the brightness of an LED.
-* http://energia.nu/Tutorial_Graph.html[Graph]-send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]-turn an LED on and off by sending data from Processing.
-* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]-send multiple variables from an LaunchPad to the computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]-send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]-how to take different actions based on characters received by the serial port.
+* http://energia.nu/Tutorial_Dimmer.html[Dimmer]:move the mouse to change the brightness of an LED.
+* http://energia.nu/Tutorial_Graph.html[Graph]:send data to the computer and graph it in Processing.
+* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]:turn an LED on and off by sending data from Processing.
+* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from an LaunchPad to the computer and read them in Processing.
+* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.

@@ -12,12 +12,9 @@ Switch statements allow mulitple choices in which sections of code to run for a 
 
 === Relevant Groundwork ===
 
-An if statement allows you to choose between two discrete options, `TRUE` or `FALSE`. When there are more than two +
-options, you can use multiple if statements, or you can use the http://energia.nu/SwitchCase.html[*switch*] statement. Switch allows you to choose between +
-several discrete options.
+An if statement allows you to choose between two discrete options, `TRUE` or `FALSE`. When there are more than two options, you can use multiple if statements, or you can use the http://energia.nu/SwitchCase.html[*switch*] statement. Switch allows you to choose between several discrete options.
 
-This tutorial shows you how to use switch to turn on one of several different LEDs based on a byte of data received + 
-serially. The sketch listens for serial input, and turns on a different LED for the characters a, b, c, d, or e.
+This tutorial shows you how to use switch to turn on one of several different LEDs based on a byte of data received serially. The sketch listens for serial input, and turns on a different LED for the characters a, b, c, d, or e.
 
 Five LEDs are attached to digital pins 2, 3, 4, 5, and 6 in series through 220 ohm resistors.
 
@@ -112,7 +109,7 @@ void loop() {
 
 === Try it out ===
 
-- Use a switch case to integrate with a button.
+* Use a switch case to integrate with a button.
 
 === See Also ===
 
@@ -121,11 +118,10 @@ void loop() {
 * http://energia.nu/Serial_Available.html[serial.available()]
 * http://energia.nu/SwitchCase.html[switch() case]
 * http://energia.nu/DigitalWrite.html[digitalWrite()]
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]-send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_IfStatement.html[If Statement]-how to use an if statement to change output conditions based on changing input conditions.
-* http://energia.nu/Tutorial_ForLoop.html[For Loop]-controlling multiple LEDs with a for loop.
-* http://energia.nu/Tutorial_Array.html[Array]- a variation on the For Loop example that demonstrates how to use an array.
-* http://energia.nu/Tutorial_WhileLoop.html[While Loop]-how to use a while loop to calibrate a sensor while a button is being read.
-* http://energia.nu/Tutorial_SwitchCase.html[Switch Case]-how to choose between a discrete number of values. Equivalent to multiple If statements. This +
-example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
+* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_IfStatement.html[If Statement]:how to use an if statement to change output conditions based on changing input conditions.
+* http://energia.nu/Tutorial_ForLoop.html[For Loop]:controlling multiple LEDs with a for loop.
+* http://energia.nu/Tutorial_Array.html[Array]:a variation on the For Loop example that demonstrates how to use an array.
+* http://energia.nu/Tutorial_WhileLoop.html[While Loop]:how to use a while loop to calibrate a sensor while a button is being read.
+* http://energia.nu/Tutorial_SwitchCase.html[Switch Case]:how to choose between a discrete number of values. Equivalent to multiple If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.

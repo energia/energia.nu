@@ -1,8 +1,6 @@
 == String Replace Function ==
 
-The String http://energia.nu/StringReplace.html[`replace()`] function allows you to replace all instances of a given character with +
-another character. You can also use replace to replace substrings of a string with a different +
-substring.
+The String http://energia.nu/StringReplace.html[`replace()`] function allows you to replace all instances of a given character with another character. You can also use replace to replace substrings of a string with a different substring.
 
 === Relevant Groundwork ===
 
@@ -26,16 +24,14 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-*Caution:* If you try to replace a substring that’s more than the whole string itself, nothing will +
-be replaced. For example:
+*Caution:* If you try to replace a substring that's more than the whole string itself, nothing will be replaced. For example:
 
 ----
   String stringOne = "dog";
   String stringTwo = stringOne.replace("twodogs", "Blah");
 ---- 
 
-In this case, the code will compile, but `stringOne` will remain unchanged, since the replacement +
-substring is more than the String itself.
+In this case, the code will compile, but `stringOne` will remain unchanged, since the replacement substring is more than the String itself.
 
 === Code ===
 
@@ -93,7 +89,7 @@ video::CtIW9ulPFQU[youtube]
 
 === Try it out ===
 
-– Replace all the nouns in a string with funny names.
+* Replace all the nouns in a string with funny names.
 
 === See Also ===
 

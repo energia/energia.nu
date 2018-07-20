@@ -8,11 +8,7 @@ This example shows how to add strings together with different techniques.
 
 === Relevant Groundwork ===
 
-You can add Strings together in a variety of ways. This is called concatenation and it results in +
-the original String being longer by the length of the String or character array with which you +
-concatenate it. The `+` operator allows you to combine a String with another String, with a +
-constant character array, an ASCII representation of a constant or variable number, or a +
-constant character.
+You can add Strings together in a variety of ways. This is called concatenation and it results in the original String being longer by the length of the String or character array with which you concatenate it. The `+` operator allows you to combine a String with another String, with a constant character array, an ASCII representation of a constant or variable number, or a constant character.
 
 ----
   // adding a constant integer to a string:
@@ -31,25 +27,19 @@ constant character.
   stringThree = stringOne + stringTwo;
 ---- 
 
-You can also use the `+` operator to add the results of a function to a String, if the function +
-returns one of the allowed data types mentioned above. For example,
+You can also use the `+` operator to add the results of a function to a String, if the function returns one of the allowed data types mentioned above. For example,
 
 ----
   stringThree = stringOne + millis();
 ---- 
 
-This is allowable since the `millis()` function returns a long integer, which can be added to a String. +
-You could also do this:
+This is allowable since the `millis()` function returns a long integer, which can be added to a String. You could also do this:
 
 ----
   stringThree = stringOne + analogRead(A0);
 ---- 
 
-because `analogRead()` returns an integer. String concatenation can be very useful when you +
-need to display a combination of values and the descriptions of those values into one String to +
-display via serial communication, on an LCD display, over an Ethernet connection, or anywhere +
-that Strings are useful. Caution: You should be careful about concatenating multiple variable +
-types on the same line, as you may get unexpected results. For example:
+because `analogRead()` returns an integer. String concatenation can be very useful when you need to display a combination of values and the descriptions of those values into one String to display via serial communication, on an LCD display, over an Ethernet connection, or anywhere that Strings are useful. Caution: You should be careful about concatenating multiple variable types on the same line, as you may get unexpected results. For example:
 
 ----
   int sensorValue = analogRead(A0); 
@@ -58,7 +48,7 @@ types on the same line, as you may get unexpected results. For example:
   Serial.println(stringThree);
 ---- 
 
-results in “Sensor Value: 402” or whatever the `analogRead()` result is, but
+results in ''Sensor Value: 402'' or whatever the `analogRead()` result is, but
 
 ----
   int sensorValue = analogRead(A0); 
@@ -66,16 +56,13 @@ results in “Sensor Value: 402” or whatever the `analogRead()` result is, but
   Serial.println(stringThree);
 ---- 
 
-gives unpredictable results because `stringThree` never got an initial value before you started +
-concatenating different data types. Here’s another example where improper initialization will +
-cause errors:
+gives unpredictable results because `stringThree` never got an initial value before you started concatenating different data types. Here's another example where improper initialization will cause errors:
 
 ----
 Serial.println("I want " + analogRead(A0) + " donuts");
 ----
 
-This won’t compile because the compiler doesn’t handle the operator precedence correctly. On +
-the other hand, the following will compile, but it won’t run as expected:
+This won't compile because the compiler doesn't handle the operator precedence correctly. On the other hand, the following will compile, but it won't run as expected:
 
 ----
   int sensorValue = analogRead(A0); 
@@ -83,9 +70,7 @@ the other hand, the following will compile, but it won’t run as expected:
   Serial.println(stringThree  + " donuts");
 ---- 
 
-It doesn’t run correctly for the same reason as before: `stringThree` never got an initial value +
-before you started concatenating different data types. For best results, initialize your Strings +
-before you concatenate them.
+It doesn't run correctly for the same reason as before: `stringThree` never got an initial value before you started concatenating different data types. For best results, initialize your Strings before you concatenate them.
 
 === Circuit ===
 
@@ -101,8 +86,7 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-In the program , we first declare three strings. We then demonstrate various concatenation +
-examples.
+In the program , we first declare three strings. We then demonstrate various concatenation examples.
 
 === Code ===
 
@@ -172,7 +156,7 @@ void loop() {
 
 === Try it out ===
 
-– Concat multiple strings together and print to serial.
+* Concat multiple strings together and print to serial.
 
 === See Also ===
 

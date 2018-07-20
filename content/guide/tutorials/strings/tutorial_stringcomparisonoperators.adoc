@@ -1,13 +1,10 @@
 == String Comparison Operators ==
 
-The String comparison operators, `==`, `!=`,`>`, `<` ,`>=`, `<=`, and the `functionsequals()` and +
-`equalsIgoreCase()` allow you to make alphabetic comparisons between Strings. They’re useful for +
-sorting and alphabetizing, among other things.
+The String comparison operators, `==`, `!=`,`>`, `<` ,`>=`, `<=`, and the `functionsequals()` and `equalsIgoreCase()` allow you to make alphabetic comparisons between Strings. They're useful for sorting and alphabetizing, among other things.
 
 === Relevant Groundwork ===
 
-The operator `==` and the function `equals()` perform identically. It’s just a matter of which you +
-prefer. So,
+The operator `==` and the function `equals()` perform identically. It's just a matter of which you prefer. So,
 
 ----
  if (stringOne.equals(stringTwo)) {
@@ -19,13 +16,9 @@ is identical to
   if (stringOne == stringTwo) {
 ---- 
 
-The greater than and less than operators evaluate strings in alphabetical order, on the first +
-character where the two differ. So, for example “a” < “b” and “1” < “2”, but “999”> “1000” +
-because 9 comes after 1.
+The greater than and less than operators evaluate strings in alphabetical order, on the first character where the two differ. So, for example ''a'' < ''b'' and ''1'' < ''2'', but ''999''> ''1000'' because 9 comes after 1.
 
-*Caution:* String comparison operators can be confusing when you’re comparing numeric +
-strings, because you’re used to thinking of them as numbers, not strings. If you have to compare +
-numbers, compare them as ints, floats, or longs, and not as Strings.
+*Caution:* String comparison operators can be confusing when you're comparing numeric strings, because you're used to thinking of them as numbers, not strings. If you have to compare numbers, compare them as ints, floats, or longs, and not as Strings.
 
 === Hardware Required ===
 
@@ -179,7 +172,7 @@ void loop() {
 
 === Try it out ===
 
-– Use string comparison to blink an LED when strings are equal.
+* Use string comparison to blink an LED when strings are equal.
  
 === See Also ===
 

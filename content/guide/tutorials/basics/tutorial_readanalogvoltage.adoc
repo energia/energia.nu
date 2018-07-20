@@ -1,7 +1,6 @@
 == Analog Read Voltage ==
 
-This example shows you how to read an analog input on Pin A3, convert the values from +
-`analogRead()` into voltage, and print it out to the serial monitor.
+This example shows you how to read an analog input on Pin A3, convert the values from `analogRead()` into voltage, and print it out to the serial monitor.
 
 === Hardware Required ===
 
@@ -10,24 +9,11 @@ This example shows you how to read an analog input on Pin A3, convert the values
 
 === Relevant Groundwork ===
 
-Connect the three wires from the potentiometer to your LaunchPad board. The first goes to +
-ground from one of the outer pins of the potentiometer. The second goes from 3 volts to the +
-other outer pin of the potentiometer. The third goes from analog input A3 to the middle pin of +
-the potentiometer.
+Connect the three wires from the potentiometer to your LaunchPad board. The first goes to ground from one of the outer pins of the potentiometer. The second goes from 3 volts to the other outer pin of the potentiometer. The third goes from analog input A3 to the middle pin of the potentiometer.
 
-By turning the shaft of the potentiometer, you change the amount of resistance on either side of +
-the wiper which is connected to the center pin of the potentiometer. This changes the voltage at +
-the center pin. When the resistance between the center and the side connected to 3 volts is close +
-to zero (and the resistance on the other side is close to 10 kilohms), the voltage at the center pin +
-nears 3 volts. When the resistances are reversed, the voltage at the center pin nears 0 volts, or +
-ground. This voltage is the *analog voltage* that you’re reading as an input.
+By turning the shaft of the potentiometer, you change the amount of resistance on either side of the wiper which is connected to the center pin of the potentiometer. This changes the voltage at the center pin. When the resistance between the center and the side connected to 3 volts is close to zero (and the resistance on the other side is close to 10 kilohms), the voltage at the center pin nears 3 volts. When the resistances are reversed, the voltage at the center pin nears 0 volts, or ground. This voltage is the *analog voltage* that you're reading as an input.
 
-The LaunchPad has a circuit inside called an *analog-to-digital converter* that reads this +
-changing voltage and converts it to a number between 0 and 1023. When the shaft is turned all +
-the way in one direction, there are 0 volts going to the pin, and the input value is 0. When the +
-shaft is turned all the way in the opposite direction, there are 3 volts going to the pin and the +
-input value is 1023. In between, http://energia.nu/reference/analogread/[analogRead()] returns a number between 0 and 1023 that is +
-proportional to the amount of voltage being applied to the pin.
+The LaunchPad has a circuit inside called an *analog-to-digital converter* that reads this changing voltage and converts it to a number between 0 and 1023. When the shaft is turned all the way in one direction, there are 0 volts going to the pin, and the input value is 0. When the shaft is turned all the way in the opposite direction, there are 3 volts going to the pin and the input value is 1023. In between, http://energia.nu/reference/analogread/[analogRead()] returns a number between 0 and 1023 that is proportional to the amount of voltage being applied to the pin.
 
 === Circuit ===
 
@@ -41,44 +27,31 @@ image::../img/ReadAnalogVoltage_schem.png[]
 
 === Code Explanation ===
 
-In the program below, the very first thing that you do will in the setup function is to begin serial +
-communications, at 9600 bits of data per second, between your LaunchPad and your computer +
-with the line:
+In the program below, the very first thing that you do will in the setup function is to begin serial communications, at 9600 bits of data per second, between your LaunchPad and your computer with the line:
 
 ----
 Serial.begin(9600);
 ----
 
-Next, in the main loop of your code, you need to establish a variable to store the resistance value +
-(which will be between 0 and 1023, perfect for an http://energia.nu/reference/int/[int] datatype) coming in from your +
-potentiometer:
+Next, in the main loop of your code, you need to establish a variable to store the resistance value (which will be between 0 and 1023, perfect for an http://energia.nu/reference/int/[int] datatype) coming in from your potentiometer:
 
 ----
 int sensorValue = analogRead(A3);
 ----
 
-To change the values from 0-1023 to a range that corresponds to the voltage the pin is reading, +
-you’ll need to create another variable, a http://energia.nu/reference/int/[int], and do a little math. `int` is recommended +
-over http://energia.nu/reference/float/[float] on MSP430 (and microcontrollers in general) because it uses less memory. Memory +
-constraints are a big concern when programming microcontrollers. It is very easy to run out of +
-it, so always be careful what datatypes and variables are declared in the program. To scale the +
-numbers between 0.0 and 3.0, divide 3.0 by 1023.0 and multiply that by *sensorValue*:
+To change the values from 0-1023 to a range that corresponds to the voltage the pin is reading, you'll need to create another variable, a http://energia.nu/reference/int/[int], and do a little math. `int` is recommended over http://energia.nu/reference/float/[float] on MSP430 (and microcontrollers in general) because it uses less memory. Memory constraints are a big concern when programming microcontrollers. It is very easy to run out of it, so always be careful what datatypes and variables are declared in the program. To scale the numbers between 0.0 and 3.0, divide 3.0 by 1023.0 and multiply that by *sensorValue*:
 
 ----
 int voltage= sensorValue * (3.0 / 1024.0);
 ----
 
-Finally, you need to print this information to your serial window as. You can do this with the +
-command http://energia.nu/reference/serial/serial_println/[Serial.println()] in your last line of code:
+Finally, you need to print this information to your serial window as. You can do this with the command http://energia.nu/reference/serial/serial_println/[Serial.println()] in your last line of code:
 
 ----
 Serial.println(voltage);
 ----
 
-Now, when you open your Serial Monitor in the Energia development environment (by clicking +
-the button directly to the right of the “Upload” button in the header of the program), you should +
-see a steady stream of numbers ranging from 0.0 – 3.0. As you turn the pot, the values will +
-change, corresponding to the voltage coming into pin A3.
+Now, when you open your Serial Monitor in the Energia development environment (by clicking the button directly to the right of the ''Upload'' button in the header of the program), you should see a steady stream of numbers ranging from 0.0–3.0. As you turn the pot, the values will change, corresponding to the voltage coming into pin A3.
 
 === Code ===
 
@@ -125,7 +98,7 @@ video::UIZwyQz0teU[youtube]
 
 === Try it out ===
 
-– Use a potentiometer to manipulate an LED.
+* Use a potentiometer to manipulate an LED.
 
 === See Also ===
 
@@ -137,9 +110,9 @@ video::UIZwyQz0teU[youtube]
 * http://energia.nu/reference/int/[int]
 * http://energia.nu/reference/serial/[serial]
 * http://energia.nu/guide/tutorial_digitalpins/[DigitalPins]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]: Read a potentiometer, print it’s state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_fade/[Fade]: Demonstrates the use of analog output to fade an LED.
-* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]: Reads an analog input and prints the voltage to the serial monitor.
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_fade/[Fade]:demonstrates the use of analog output to fade an LED.
+* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]:reads an analog input and prints the voltage to the serial monitor.

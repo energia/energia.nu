@@ -1,8 +1,6 @@
 == Contact ==
 :linkattrs:
-Energia is a community effort, so the best way to ask questions is through the community +
-http://forum.43oh.com/forum/119-energia/[Forums, role="external", window="_blank"], the GitHub, and IRC, but if you need to get in touch with the lead developers and +
-community organizers you can send us a message.
+Energia is a community effort, so the best way to ask questions is through the community http://forum.43oh.com/forum/119-energia/[Forums, role="external", window="_blank"], the GitHub, and IRC, but if you need to get in touch with the lead developers and community organizers you can send us a message.
 
 info@energia.nu | robertinant@yahoo.com
 

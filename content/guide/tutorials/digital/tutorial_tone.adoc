@@ -1,7 +1,6 @@
 == Play a Melody using the tone() function ==
 
-This example shows how to use the `tone()` command to generate notes. It plays a little melody +
-you may have heard before.
+This example shows how to use the `tone()` command to generate notes. It plays a little melody you may have heard before.
 
 === Hardware Required ===
 
@@ -14,17 +13,13 @@ you may have heard before.
 
 Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
 
-Connect one terminal of your speaker to digital pin 8 through a 100 ohm resistor. Connect the + 
-other terminal to ground.
+Connect one terminal of your speaker to digital pin 8 through a 100 ohm resistor. Connect the other terminal to ground.
 
 === Schematic ===
 
 === Code ===
 
-The code below uses an extra file, pitches.h. This file contains all the pitch values for typical +
-notes. For example, `NOTE_C4` is middle C. `NOTE_FS4` is F sharp, and so forth. This note table +
-was originally written by Brett Hagman, on whose work the `tone()` command was based. You +
-may find it useful for whenever you want to make musical notes.
+The code below uses an extra file, pitches.h. This file contains all the pitch values for typical notes. For example, `NOTE_C4` is middle C. `NOTE_FS4` is F sharp, and so forth. This note table was originally written by Brett Hagman, on whose work the `tone()` command was based. You may find it useful for whenever you want to make musical notes.
 
 The main sketch is as follows:
 
@@ -63,8 +58,7 @@ void loop() {
 }
 ---- 
 
-To make the pitches.h file, click on the “new Tab” button that looks like an arrow pointing right +
-in the upper right hand corner of the window. Then paste in the following code:
+To make the pitches.h file, click on the ''new Tab'' button that looks like an arrow pointing right in the upper right hand corner of the window. Then paste in the following code:
 
 ----
 /*************************************************
@@ -165,7 +159,7 @@ in the upper right hand corner of the window. Then paste in the following code:
 * http://energia.nu/reference/array/[Array()]
 * http://energia.nu/reference/for/[for()]
 * http://energia.nu/reference/tone/[tone()]
-* http://energia.nu/guide/tutorial_tone2/[PitchFollower]–play a pitch on a piezo speaker depending on an analog input.
-* http://energia.nu/guide/tutorial_tone3/[SimpleKeyboard]–a three-key musical keyboard using force sensors and a piezo speaker.
+* http://energia.nu/guide/tutorial_tone2/[PitchFollower]:play a pitch on a piezo speaker depending on an analog input.
+* http://energia.nu/guide/tutorial_tone3/[SimpleKeyboard]:a three-key musical keyboard using force sensors and a piezo speaker.
  
 

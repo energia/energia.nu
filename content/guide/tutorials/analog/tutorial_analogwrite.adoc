@@ -12,8 +12,7 @@ This example fades 7 LEDs up and the down, one by one, on an MSP-EXP430G2 Launch
 
 === Relevant Groundwork ===
 
-Connect the longer, positive legs of (anodes) 7 LEDs to digital pins 4, 9, 10, 12, 13, 14, 19 through +
-220 ohm current limiting resistors. Connect the shorter, negative legs (cathodes) to ground.
+Connect the longer, positive legs of (anodes) 7 LEDs to digital pins 4, 9, 10, 12, 13, 14, 19 through 220 ohm current limiting resistors. Connect the shorter, negative legs (cathodes) to ground.
 
 === Circuit ===
  
@@ -27,8 +26,7 @@ image::../img/AnalogWrite_schem.png[]
 
 === Code Explanation ===
 
-In the `setup()` function of the code below, a http://energia.nu/reference/for/[`for()`] loop is used to assign digital pins 4, 9, 10, 12, +
-13, 14, 19 of the LaunchPad as outputs.
+In the `setup()` function of the code below, a http://energia.nu/reference/for/[`for()`] loop is used to assign digital pins 4, 9, 10, 12, 13, 14, 19 of the LaunchPad as outputs.
 
 Next, in the `loop()` function of the program below, a trio of nested `for()` loops are used.
 
@@ -38,9 +36,7 @@ The first of these loops,
 for (int thisPin =0; analogWritePin[thisPin] <= 7; thisPin++)
 ----
 
-moves through each of the LEDS one by one, from the lowest pin to the highest. Before this loop +
-is allowed to move from one pin to the next, two things must be accomplished. First, you +
-brighten the individual LED through these lines of code:
+moves through each of the LEDS one by one, from the lowest pin to the highest. Before this loop is allowed to move from one pin to the next, two things must be accomplished. First, you brighten the individual LED through these lines of code:
 
 ----
 for (int brightness = 0; brightness < 255; brightness++) {
@@ -49,9 +45,7 @@ for (int brightness = 0; brightness < 255; brightness++) {
 }
 ----
 
-With each pass through the loop above, the variable brightness increases by one point, and that +
-value is written to the pin currently selected to the main loop. One that pin reaches the +
-maximum PWM value (255), the following loop kicks in:
+With each pass through the loop above, the variable brightness increases by one point, and that value is written to the pin currently selected to the main loop. One that pin reaches the maximum PWM value (255), the following loop kicks in:
 
 ----
 for (int brightness = 255; brightness >= 0; brightness--) {
@@ -60,9 +54,7 @@ for (int brightness = 255; brightness >= 0; brightness--) {
 }
 ----
 
-This loop subtracts a point from the brightness variable, dimming the LED back down to 0. +
-Once zero is reached, the main `for()` loop kicks in, and the program moves on to the next LED +
-pin, repeating all the steps mentioned above.
+This loop subtracts a point from the brightness variable, dimming the LED back down to 0. Once zero is reached, the main `for()` loop kicks in, and the program moves on to the next LED pin, repeating all the steps mentioned above.
 
 === Code ===
 
@@ -118,16 +110,16 @@ video::Ved30DbPxAg[youtube]
 
 === Try it out ===
 
-– Incorporate multiple analog signals into the program.
+* Incorporate multiple analog signals into the program.
 
 === See Also ===
 
 * http://energia.nu/reference/for/[for()]
 * http://energia.nu/reference/analogwrite/[analogWrite()]
 * http://energia.nu/reference/delay/[delay()]
-* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]–use a potentiometer to control the blinking of an LED.
-* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]–read an analog pin, map the result, and use that data to dim or brighten an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]–use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_calibration/[Calibration]–calibrating analog sensor readings.
-* http://energia.nu/guide/tutorial_forloop/[ForLoop]–how to use a `for()` loop (aka Knight Rider).
+* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]:use a potentiometer to control the blinking of an LED.
+* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog pin, map the result, and use that data to dim or brighten an LED.
+* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
+* http://energia.nu/guide/tutorial_calibration/[Calibration]:calibrating analog sensor readings.
+* http://energia.nu/guide/tutorial_forloop/[ForLoop]:how to use a `for()` loop (aka Knight Rider).
  

@@ -1,17 +1,8 @@
-== SIK for LaunchPad (Sparkfun Inventor’s Kit) ==
+== SIK for LaunchPad (Sparkfun Inventor's Kit) ==
 
-This is a port of the Sparkfun Inventor’s Kit examples adapted for Energia and TI LaunchPad. +
-Content for this page is based on the SIK Guide produced by Sparkfun Electronics, Inc and is +
-shared under the Creative Commons Attribution Share-Alike 3.0 License. To view a copy of this +
-license visit: http://creativecommons.org/licenses/by-sa/3.0/. Thanks to Sparkfun for +
-developing such a great introduction kit for students and beginners!
+This is a port of the Sparkfun Inventor's Kit examples adapted for Energia and TI LaunchPad. Content for this page is based on the SIK Guide produced by Sparkfun Electronics, Inc and is shared under the Creative Commons Attribution Share-Alike 3.0 License. To view a copy of this license visit: http://creativecommons.org/licenses/by-sa/3.0/. Thanks to Sparkfun for developing such a great introduction kit for students and beginners!
 
-This port is based on version 3.1 of SIK. You can purchase the components you need from +
-the wishlist or by purchasing the complete kit: https://www.sparkfun.com/wish_lists/73858[SIK V3.1 Wishlist]. The Sparkfun RedBoard is not +
-required to run the examples with Energia and LaunchPad, but you may want it for your +
-miscellaneous hardware collection.  The http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Kits/SFE-SIK-RedBoard-Guide-Version3.0-Online.pdf[SIK Guidebook], carrying case, and breadboard holder +
-are also not required, but may be useful. You can find the original code examples on the +
-Sparkfun GitHub: https://github.com/sparkfun/SIK-Guide-Code[HERE].
+This port is based on version 3.1 of SIK. You can purchase the components you need from the wishlist or by purchasing the complete kit: https://www.sparkfun.com/wish_lists/73858[SIK V3.1 Wishlist]. The Sparkfun RedBoard is not required to run the examples with Energia and LaunchPad, but you may want it for your miscellaneous hardware collection.  The http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Kits/SFE-SIK-RedBoard-Guide-Version3.0-Online.pdf[SIK Guidebook], carrying case, and breadboard holder are also not required, but may be useful. You can find the original code examples on the Sparkfun GitHub: https://github.com/sparkfun/SIK-Guide-Code[HERE].
 
 http://energia.nu/guide/sik-for-launchpad/circuit1/[Circuit 1: Blinking an LED]
 

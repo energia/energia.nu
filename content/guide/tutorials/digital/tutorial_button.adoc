@@ -14,15 +14,9 @@ This program shows how to blink an LED on the LaunchPad by switching the pushbut
  
 === Relevant Groundwork ===
 
-Pushbuttons or switches connect two points in a circuit when you press them. For on-board +
-pushbuttons, the pushbuttons ( Pin 1.3) are connected Vcc through PULL-UP resistors. So, +
-when the pushbutton is open (unpressed) there is no connection between the two legs of the +
-pushbutton, so the pin is connected to Vcc(through the pull-up resistor) and reads as `HIGH`, or +
-`1`. When the button is closed (pressed), it makes a connection between its two legs, connecting +
-the pin to ground, so the pin reads as `LOW`, or `0`.
+Pushbuttons or switches connect two points in a circuit when you press them. For on-board pushbuttons, the pushbuttons ( Pin 1.3) are connected Vcc through PULL-UP resistors. So, when the pushbutton is open (unpressed) there is no connection between the two legs of the pushbutton, so the pin is connected to Vcc(through the pull-up resistor) and reads as `HIGH`, or `1`. When the button is closed (pressed), it makes a connection between its two legs, connecting the pin to ground, so the pin reads as `LOW`, or `0`.
 
-External pushbuttons can be connected either through PULL-UP or PULL-DOWN resistors to +
-any Digital I/0 pins.
+External pushbuttons can be connected either through PULL-UP or PULL-DOWN resistors to any Digital I/0 pins.
 
 === Circuit ===
 
@@ -36,11 +30,7 @@ No external circuitry is required.
 
 [.underline]#For external push button#
 
-Connect three wires to the Launch pad board. The first two, red and black, connect to the two +
-long vertical rows on the side of the breadboard to provide access to the 3 volt supply and +
-ground. The third wire goes from digital pin p1.3 to one leg of the pushbutton. That same leg of +
-the button connects through a pull-up resistor (here 10 K Ohms) to Vcc. The other leg of the +
-button connects to the ground.
+Connect three wires to the Launch pad board. The first two, red and black, connect to the two long vertical rows on the side of the breadboard to provide access to the 3 volt supply and ground. The third wire goes from digital pin p1.3 to one leg of the pushbutton. That same leg of the button connects through a pull-up resistor (here 10 K Ohms) to Vcc. The other leg of the button connects to the ground.
 
 === Schematic ===
 
@@ -48,29 +38,25 @@ image::../img/Button_schem.png[]
 
 === Code Explanation ===
 
-In the program, pin 14, which has green LED connected to it, is set up as output in the setup +
-function.
+In the program, pin 14, which has green LED connected to it, is set up as output in the setup function.
 
 ----
 pinMode(ledPin, OUTPUT);
 ----
 
-Here the ledpin refers to the `GREEN_LED` which is set as output. The push button which is +
-connected to pin 5 is set up as input. The pull-up resistor connected to this pin is enabled.
+Here the ledpin refers to the `GREEN_LED` which is set as output. The push button which is connected to pin 5 is set up as input. The pull-up resistor connected to this pin is enabled.
 
 ----
 pinMode(buttonPin, INPUT_PULLUP);
 ----
 
-In the main loop, the state of the push button is read to check if it is pressed or not. The state of +
-the pushbutton is read into variable buttonState.
+In the main loop, the state of the push button is read to check if it is pressed or not. The state of the pushbutton is read into variable buttonState.
 
 ----
 buttonState = digitalRead(buttonPin);
 ----
 
-If the `buttonState` is `HIGH`, it means that push button was pressed else it is not. Whenever the +
-button state is `HIGH`, the Green LED is accordingly switched `ON` else it is switched `OFF`.
+If the `buttonState` is `HIGH`, it means that push button was pressed else it is not. Whenever the button state is `HIGH`, the Green LED is accordingly switched `ON` else it is switched `OFF`.
 
 === Code ===
 
@@ -123,7 +109,7 @@ video::2v2ktTEsYGk[youtube]
 
 === Try it out ===
 
-– Use the button to print something in binary to the serial monitor.
+* Use the button to print something in binary to the serial monitor.
 
 === See Also ===
 
@@ -132,8 +118,8 @@ video::2v2ktTEsYGk[youtube]
 * http://energia.nu/reference/digitalread/[digitalRead()]
 * http://energia.nu/reference/if/[if()]
 * http://energia.nu/reference/else/[else()]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_debounce/[Debounce]: Read a pushbutton filtering noise.
-* http://energia.nu/guide/tutorial_buttonstatechange/[Button State Change]: Counting the number of button pushes.
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_debounce/[Debounce]:read a pushbutton filtering noise.
+* http://energia.nu/guide/tutorial_buttonstatechange/[Button State Change]:counting the number of button pushes.

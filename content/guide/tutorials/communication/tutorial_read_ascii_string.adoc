@@ -1,11 +1,6 @@
 == ReadASCIIString ==
 
-This sketch uses the http://energia.nu/Serial_ParseInt.html[`Serial.parseInt()`] function to locate values separated by a non-alphanumeric character. Often +
-people use a comma to indicate different pieces of information (this format is commonly referred to as comma- +
-separated-values), but other characters like a space or a period will work too. The values are parsed into ints and used +
-to determine the color of a RGB LED. You'll use the serial monitor to send strings like "5,220,70" to
-the LaunchPad to +
-change the lights.
+This sketch uses the http://energia.nu/Serial_ParseInt.html[`Serial.parseInt()`] function to locate values separated by a non-alphanumeric character. Often people use a comma to indicate different pieces of information (this format is commonly referred to as comma-separated-values), but other characters like a space or a period will work too. The values are parsed into ints and used to determine the color of a RGB LED. You'll use the serial monitor to send strings like "5,220,70" to the LaunchPad to change the lights.
 
 === Hardware Required ===
 
@@ -17,17 +12,9 @@ change the lights.
 
 === Relevant Groundwork ===
 
-You'll need five wires to make the circuit below. Connect a red wire to one of the long vertical rows on your breadboard. +
-Connect the other end to the 3V pin on your LaunchPad Board. Place an RGB LED on your breadboard. Check the +
-datasheet for your specific LED to verify the pins. Connect the power rail you just created to the common anode on the +
-LED. With your remaining wires, connect your red cathode to pin 3, green cathode to pin 5, and blue cathode to pin 6 in +
-series with the resistors.
+You'll need five wires to make the circuit below. Connect a red wire to one of the long vertical rows on your breadboard. Connect the other end to the 3V pin on your LaunchPad Board. Place an RGB LED on your breadboard. Check the datasheet for your specific LED to verify the pins. Connect the power rail you just created to the common anode on the LED. With your remaining wires, connect your red cathode to pin 3, green cathode to pin 5, and blue cathode to pin 6 in series with the resistors.
 
-RGB LEDs with a common anode share a common power pin. Instead of turning a pin `HIGH` to illuminate the LED, +
-you need to turn the pin `LOW`, to create a voltage difference across the diode. So sending 255 via `analogWrite()` turns +
-the LED off, while a value of 0 turns it on at full brightness. In the code below, you'll use a little bit of math on the +
-Energia side, so you can send values which correspond to the expected brightness. Essentially, instead of using +
-`analogWrite(pin, brightness)`, you'll be calling `analogWrite(pin, 255-brightness)`.
+RGB LEDs with a common anode share a common power pin. Instead of turning a pin `HIGH` to illuminate the LED, you need to turn the pin `LOW`, to create a voltage difference across the diode. So sending 255 via `analogWrite()` turns the LED off, while a value of 0 turns it on at full brightness. In the code below, you'll use a little bit of math on the Energia side, so you can send values which correspond to the expected brightness. Essentially, instead of using `analogWrite(pin, brightness)`, you'll be calling `analogWrite(pin, 255-brightness)`.
 
 === Circuit ===
 
@@ -41,8 +28,7 @@ image::../img/ReadASCIIString_schem.png[]
 
 === Code Explanation ===
 
-You'll first set up some http://energia.nu/VariableDeclaration.html[global variables] for the pins your LED will connect to. This will make it easier to differentiate +
-which one is red, green, and blue in the main part of your program:
+You'll first set up some http://energia.nu/VariableDeclaration.html[global variables] for the pins your LED will connect to. This will make it easier to differentiate which one is red, green, and blue in the main part of your program:
 
 ----
 const int redPin = 9;
@@ -50,8 +36,7 @@ const int greenPin = 10;
 const int bluePin = 12;
 ----
 
-In your http://energia.nu/Setup.html[`setup()`], begin serial communication at 9600 bits of data per second between LaunchPad and your computer + 
-with the line:
+In your http://energia.nu/Setup.html[`setup()`], begin serial communication at 9600 bits of data per second between LaunchPad and your computer with the line:
 
 ----
 Serial.begin(9600);
@@ -65,15 +50,13 @@ pinMode(greenPin, OUTPUT);
 pinMode(bluePin, OUTPUT);
 ----
 
-In the http://energia.nu/Loop.html[`loop()`], check to see if there is any data in the serial buffer. By making this a http://energia.nu/While.html[`while()`] statement, it will run as long +
-as there is information waiting to be read:
+In the http://energia.nu/Loop.html[`loop()`], check to see if there is any data in the serial buffer. By making this a http://energia.nu/While.html[`while()`] statement, it will run as long as there is information waiting to be read:
 
 ----
 while (Serial.available() > 0) {
 ----
 
-Next, declare some local variables for storing the serial information. This will be the brightness of the LEDs. Using +
-http://energia.nu/Serial_ParseInt.html[`Serial.parseInt()`] to separate the data by commas, read the information into your variables:
+Next, declare some local variables for storing the serial information. This will be the brightness of the LEDs. Using http://energia.nu/Serial_ParseInt.html[`Serial.parseInt()`] to separate the data by commas, read the information into your variables:
 
 ----
 int red = Serial.parseInt();
@@ -87,10 +70,7 @@ Once you've read the data into your variables, check for the new line character 
 if (Serial.read() == '\n') {
 ----
 
-Using http://energia.nu/Constrain.html[`constrain()`], you can keep the values in an acceptable range for PWM control. This way, if the value was outside +
-the range of what PWM can send, it will be limited to a valid number. By subtracting this value from 255 you will be +
-formatting the value to use with a common anode LED. As explained above, these LEDs will illuminate when there is a +
-voltage difference between the anode and the pin connected to the LaunchPad:
+Using http://energia.nu/Constrain.html[`constrain()`], you can keep the values in an acceptable range for PWM control. This way, if the value was outside the range of what PWM can send, it will be limited to a valid number. By subtracting this value from 255 you will be formatting the value to use with a common anode LED. As explained above, these LEDs will illuminate when there is a voltage difference between the anode and the pin connected to the LaunchPad:
 
 ----
 red = 255 - constrain(red, 0, 255);
@@ -98,8 +78,7 @@ green = 255 - constrain(green, 0, 255);
 blue = 255 - constrain(blue, 0, 255);
 ----
 
-Now that you have formatted the values for PWM, use `analogWrite()` to change the color of the LED. Because you +
-subtracted your value from 255 in the step above:
+Now that you have formatted the values for PWM, use `analogWrite()` to change the color of the LED. Because you subtracted your value from 255 in the step above:
 
 ----
 analogWrite(redPin, red);
@@ -123,10 +102,7 @@ Finally, close up your brackets from the if statement, while statement, and main
 }
 ----
 
-Once you have programmed the LaunchPad, open your Serial monitor. Make sure you have chosen to send a new line +
-character when sending a message. Enter values between 0-255 for the lights in the following format: Red, Green, Blue. +
-(i.e. 123,321,132) Once you have sent the values to the Launchpad, the attached LED will turn the color you specified, +
-and you will receive the HEX values in the serial monitor.
+Once you have programmed the LaunchPad, open your Serial monitor. Make sure you have chosen to send a new line character when sending a message. Enter values between 0-255 for the lights in the following format: Red, Green, Blue. (i.e. 123,321,132) Once you have sent the values to the Launchpad, the attached LED will turn the color you specified, and you will receive the HEX values in the serial monitor.
 
 === Code ===
 
@@ -206,12 +182,11 @@ while (Serial.available() > 0) {
 
 === Try it out ===
 
--Play around with your RGB LED in a new way.
+* Play around with your RGB LED in a new way.
 
 === See Also ===
 
 * http://energia.nu/If.html[if()]
 * http://energia.nu/While.html[while()]
 * http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]-sending multiple vairables using a call-and-response (handshaking) method, and +
-ASCII-encoding the values before sending.
+* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:sending multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.

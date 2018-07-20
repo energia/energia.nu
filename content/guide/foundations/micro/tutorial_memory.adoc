@@ -7,35 +7,20 @@ There are four pools of memory in the microcontrollers used on current LaunchPad
 * FRAM (ferroelectric random access memory) is a faster and better version of SRAM.
 * EEPROM is memory space that programmers can use to store long-term information.
  
-*Your LaunchPad will only have a specific combination of the above options, refer +
-to your specific datasheet to find out exact memory information.* Flash memory, +
-FRAM, and EEPROM memory are non-volatile (the information persists after the power is +
-turned off). SRAM is volatile and will be lost when the power is cycled.
+*Your LaunchPad will only have a specific combination of the above options, refer to your specific datasheet to find out exact memory information.* Flash memory, FRAM, and EEPROM memory are non-volatile (the information persists after the power is turned off). SRAM is volatile and will be lost when the power is cycled.
 
-Memory is super important when writing software for microcontrollers. You can write code to +
-do amazing things but if it doesn’t fit on your device, it won’t run. Make sure you get a +
-LaunchPad with the specs that will fit your intended applications.
+Memory is super important when writing software for microcontrollers. You can write code to do amazing things but if it doesn't fit on your device, it won't run. Make sure you get a LaunchPad with the specs that will fit your intended applications.
 
-It’s easy to use all your memory up by having lots of strings in your program. For example, a +
-declaration like:
+It's easy to use all your memory up by having lots of strings in your program. For example, a declaration like:
 
 ----
 char message[] = "I support the Energia Community.";
 ----
 
-puts 32 bytes into SRAM (each character takes a byte). This might not seem like a lot, but it +
-doesn’t take long to get to 2048, especially if you have a large amount of text to send to +
-a display, or a large lookup table, for example.
+puts 32 bytes into SRAM (each character takes a byte). This might not seem like a lot, but it doesn't take long to get to 2048, especially if you have a large amount of text to send to a display, or a large lookup table, for example.
 
-If you run out of SRAM, your program may fail in unexpected ways; it will appear to upload +
-successfully, but not run, or run strangely. To check if this is happening, you can try +
-commenting out or shortening the strings or other data structures in your sketch (without +
-changing the code). If it then runs successfully, you’re probably running out of SRAM. There are +
-a few things you can do to address this problem:
+If you run out of SRAM, your program may fail in unexpected ways; it will appear to upload successfully, but not run, or run strangely. To check if this is happening, you can try commenting out or shortening the strings or other data structures in your sketch (without changing the code). If it then runs successfully, you're probably running out of SRAM. There are a few things you can do to address this problem:
 
-* If your sketch talks to a program running on a (desktop/laptop) computer, you can try +
-shifting data or calculations to the computer, reducing the load on the LaunchPad.
-* If you have lookup tables or other large arrays, use the smallest data type necessary to store +
-the values you need; for example, an http://energia.nu/reference/int/[int] takes up two bytes, while a http://energia.nu/reference/byte/[byte] uses only one (but can +
-store a smaller range of values).
+* If your sketch talks to a program running on a (desktop/laptop) computer, you can try shifting data or calculations to the computer, reducing the load on the LaunchPad.
+* If you have lookup tables or other large arrays, use the smallest data type necessary to store the values you need; for example, an http://energia.nu/reference/int/[int] takes up two bytes, while a http://energia.nu/reference/byte/[byte] uses only one (but can store a smaller range of values).
  

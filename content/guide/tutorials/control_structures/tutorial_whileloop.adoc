@@ -1,8 +1,6 @@
 == While Loop ==
 
-A while loop is a section of code that will loop as long as the conditional argument is true. While +
-loops are popularly used as forever loops using `while(1)` or while always true, so that code loops +
-during the entire program execution, theoretically forever.
+A while loop is a section of code that will loop as long as the conditional argument is true. While loops are popularly used as forever loops using `while(1)` or while always true, so that code loops during the entire program execution, theoretically forever.
 
 === Hardware Required ===
 
@@ -14,21 +12,13 @@ during the entire program execution, theoretically forever.
  
 === Relevant Groundwork ===
 
-Sometimes you want everything in the program to stop while a given condition is true. You can +
-do this using a http://energia.nu/reference/while/[*while loop*]. This example shows how to use a while loop to http://energia.nu/guide/tutorial_calibration/[calibrate] the value of +
-an analog sensor.
+Sometimes you want everything in the program to stop while a given condition is true. You can do this using a http://energia.nu/reference/while/[*while loop*]. This example shows how to use a while loop to http://energia.nu/guide/tutorial_calibration/[calibrate] the value of an analog sensor.
 
-In the main loop, the sketch below reads the value of a photoresistor on analog pin `A3` and uses +
-it to fade an LED on pin 14. But while a button attached to digital pin 6 is pressed, the program +
-runs a method called `calibrate()` that looks for the highest and lowest values of the analog +
-sensor. When you release the button, the sketch continues with the main loop.
+In the main loop, the sketch below reads the value of a photoresistor on analog pin `A3` and uses it to fade an LED on pin 14. But while a button attached to digital pin 6 is pressed, the program runs a method called `calibrate()` that looks for the highest and lowest values of the analog sensor. When you release the button, the sketch continues with the main loop.
 
-This technique lets you update the maximum and minimum values for the photoresistor when +
-the lighting conditions change.
+This technique lets you update the maximum and minimum values for the photoresistor when the lighting conditions change.
 
-Connect your analog sensor (e.g. potentiometer, light sensor) on analog input `A3` with a 10K +
-ohm resistor to ground. Connect your button to digital pin 6, again with a 10K ohm resistor to +
-ground. Connect your LED to digital pin 14, with a 220 ohm resistor in series.
+Connect your analog sensor (e.g. potentiometer, light sensor) on analog input `A3` with a 10K ohm resistor to ground. Connect your button to digital pin 6, again with a 10K ohm resistor to ground. Connect your LED to digital pin 14, with a 220 ohm resistor in series.
 
 === Circuit ===
 
@@ -135,7 +125,7 @@ void calibrate() {
 
 === Try it out ===
 
-– Run a while loop and then try and exit it cleanly by changing the value of the conditional inside +
+* Run a while loop and then try and exit it cleanly by changing the value of the conditional inside +
 the code.
 
 === See Also ===
@@ -148,11 +138,8 @@ the code.
 * http://energia.nu/reference/map/[map()]
 * http://energia.nu/reference/constrain/[constrain()]
 * http://energia.nu/reference/if/[if()]
-* http://energia.nu/guide/tutorial_forloop/[For Loop]–control multiple LEDs with a For Loop.
-* http://energia.nu/guide/tutorial_switchcase/[Switch Case]–choose between a number of discrete values in a manner that is the +
-equivalent of using multiples If statements. This example shows how to divide a sensor’s range +
-into a set of four bands and to take four different actions depending on which band the result is +
-in.
-* http://energia.nu/guide/tutorial_array/[Array]-a variation on the For Loop example that demonstrates how to use an array.
+* http://energia.nu/guide/tutorial_forloop/[For Loop]:control multiple LEDs with a For Loop.
+* http://energia.nu/guide/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
+* http://energia.nu/guide/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
  
 
