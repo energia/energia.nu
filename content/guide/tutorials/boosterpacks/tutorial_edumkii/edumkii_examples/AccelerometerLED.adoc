@@ -12,6 +12,7 @@ This Example uses the Accelerometer to control the LED colors.
 This basic example just uses your LaunchPad and BoosterPack only and no external wiring is needed.
 
 === Code
+This example can be found in Energia under: File->Examples->09.EducationBP_MKII->AccelerometerLED.
 ----
 /*
  Analog signal chain on Educational BoosterPack MK II
