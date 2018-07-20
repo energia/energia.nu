@@ -3,10 +3,10 @@ Energia supports the CC3100 BoosterPack. The BoosterPack let’s you quickly inc
 
 This hardware is open source! Get the design files of the http://www.ti.com/lit/zip/swrc324[CC3100BOOST] from TI.
 
-NOTE: On some LaunchPads (MSP-EXP430FR4133, MSP-EXP430FR6989) not enough current gets sourced to the BoosterPack from the LaunchPad. To fix this, change the J8 Jumper to ‘LDO’ position instead of ‘MCU’ position. This should fix it. The use of the external power USB cable is not necessary in most use cases.
+:icons: font
+CAUTION: On some LaunchPads (MSP-EXP430FR4133, MSP-EXP430FR6989) not enough current gets sourced to the BoosterPack from the LaunchPad. To fix this, change the J8 Jumper to ‘LDO’ position instead of ‘MCU’ position. This should fix it. The use of the external power USB cable is not necessary in most use cases.
 
 === Pin Map
-CC3100 WiFi BoosterPack — Pins Maps
 
 CC3100BOOST
 [caption="Figure 1: ",link=../img/CC3100BOOST.jpg]
@@ -18,7 +18,7 @@ image::../img/CC3100BOOST.jpg[CC3100BOOST,800]
 
 === Compatible libraries
 
-* WiFi Library
+* link:/reference/wifi[WiFi Library]
 
 
 === Upgrading the CC3100 Firmware
@@ -41,6 +41,6 @@ This is the part where you need to jump through some hoops. Unfortunately this c
 . Select “Service Pack Update” from the Operation menu
 . Browse to the directory where you installed the service pack (under step 1) and select servicepack.bin. Probably called something c:\TI\xxx_servicePack_xxx\
 . It will immediately start the update. One thing that is totally not obvious is that in the small little console window below the main window, it will right after it start the upgrade say “—- please restart the device —” which means press the reset button (SW2 on the BoosterPack).
-. It will take a while for the process to complete but ones it does you are good to go and hopefully do not have to jump through these hoops again.
+. It will take a while for the process to complete but once it does you are good to go and hopefully do not have to jump through these hoops again.
 
 If you get stuck on the above then there is also a more elaborate set of instructions included in this document from TI: http://www.ti.com/lit/pdf/swru376
