@@ -1,0 +1,10 @@
+== CC3000 Wi-Fi BoosterPack Tutorial ==
+
+The CC3000 is a Wi-Fi network processor that communicates to a host MCU over SPI. You can use it to add Wi-Fi to your embedded projects.
+
+:icons: font
+NOTE: The CC300 has been set to NRND (Not Recommended for New Designs) by TI and is also no longer supported in Energia. If you want to use Wi-Fi look at the CC3100 BoosterPack.
+
+=== Tutorial Video ===
+
+{{< youtube 73DkIX3EXx4 >}}

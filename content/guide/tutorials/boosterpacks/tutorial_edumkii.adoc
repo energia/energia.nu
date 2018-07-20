@@ -1,0 +1,87 @@
+== Educational BoosterPack MK II ==
+
+The Educational BoosterPack MK II is a great starting point for rapidly prototyping a project +
+using Energia.
+
+{{< youtube L9vLIRhfUlk >}}
+
+*Start prototyping with over 10 different sensors, inputs, and outputs with +
+LaunchPad & Energia:* Start creating complete systems that react intelligently to real world +
+activity for the TI LaunchPad Development Ecosystem. This BoosterPack is jam packed with +
+functionality in an easy to use game pad form factor. This BoosterPack was developed with +
+Energia in mind – example software & libraries are available.
+
+*The BoosterPack features full compatibility with the 40-pin BoosterPack pin out +
+standard:* Since this BoosterPack adheres to the BoosterPack standard, it will work with any of +
+the TI LaunchPads. Use your favorite LaunchPad and upgrade your capabilities.
+
+*Have multiple BoosterPacks connected to your LaunchPad kit:* Create a complete +
+system of inputs & outputs by simply adding additional BoosterPacks to your LaunchPad. +
+Connect to the Internet using a Wi-Fi BoosterPack or add additional sensors with a SensorHub +
+or Grove BoosterPack. The combinations are vast.
+
+{{< youtube qGWS6GZJkzI >}}
+
+=== Pin Maps
+[caption="Figure 1: ",link=.pinmaps/img/BOOSTXL-EDUMKII.jpg.jpg]
+image::/pinmaps/img/BOOSTXL-EDUMKII.jpg[BOOSTXL-EDUMKII,800]
+
+*link:/pinmaps/boostxl-edumkii/[complete pin map page]*
+
+=== Example Code ===
+
+Examples are available in Energia under Examples > EducationalBP_MKII
+
+*Basic Examples*
+
+* http://energia.nu/guide/edumkii/edumkii_accelerometerled/[AccelerometerLED]
+* http://energia.nu/guide/edumkii/edumkii_accelerometerserial/[AccelerometerSerial]
+* http://energia.nu/guide/edumkii/edumkii_buttonsleds/[ButtonsLEDs]
+* http://energia.nu/guide/edumkii/edumkii_buzzerbirthdaytune/[BuzzerBirthdayTune]
+* http://energia.nu/guide/edumkii/edumkii_buzzerimperialmarchtune/[BuzzerImperialMarchTune]
+* http://energia.nu/guide/edumkii/edumkii_buzzerkonami/[BuzzerKonami]
+* http://energia.nu/guide/edumkii/edumkii_edubp_mkii_production_test/[EduBP_MKII_BP_Production_Test]
+* http://energia.nu/guide/edumkii/edumkii_edubp_mkii_production_test_serial/[EduBP_MKII_BP_Production_Test_Serial]
+* http://energia.nu/guide/edumkii/edumkii_gatorholebuzzer/[GatorHoleBuzzer]
+* http://energia.nu/guide/edumkii/edumkii_joystick/[Joystick]
+* http://energia.nu/guide/edumkii/edumkii_joystickdrawcolor/[JoystickDrawColor]
+* http://energia.nu/guide/edumkii/edumkii_joystickserial/[JoystickSerial]
+* http://energia.nu/guide/edumkii/edumkii_konamicontra/[KonamiContra]
+* http://energia.nu/guide/edumkii/edumkii_konamicodebuzzer/[KonamiContraBuzzer]
+* http://energia.nu/guide/edumkii/edumkii_lcd_joystick/[LCD_Joystick]
+* http://energia.nu/guide/edumkii/edumkii_lcd_lifegame/[LCD_LifeGame]
+* http://energia.nu/guide/edumkii/edumkii_lcd_screen_logos/[LCD_screen_Logos]
+* http://energia.nu/guide/edumkii/mkiiedu_lcd_screen_test/[LCD_screen_Test]
+* http://energia.nu/guide/edumkii/edumkii_led_blink_counter/[LED_Blink_Counter]
+* http://energia.nu/guide/edumkii/edumkii_microphoneinledout/[MicrophoneInLedOut]
+* http://energia.nu/guide/edumkii/edumkii_opt3001_backlight/[OPT3001_Backlight]
+* http://energia.nu/guide/edumkii/edumkii_opt3001_demo/[OPT3001_Demo]
+* http://energia.nu/edumkii_rgb_led_random/[RGB_LED_Random]
+* http://energia.nu/guide/edumkii/edumkii_servofromjoystcik/[ServoFromJoystick]
+* http://energia.nu/guide/edumkii/edumkii_servosweep/[ServoSweep]
+* http://energia.nu/guide/edumkii/edumkii_tmp006/[TMP006]
+
+=== Libraries and Additional Tutorials ===
+
+* http://energia.nu/guide/tutorial_zumo/[Zumo Bot]
+* Fall Detector
+* Fortune Teller (Magic 8 Ball emulator)
+* FFT
+* Sound Activated Switch
+
+=== Buy Now ===
+
+You can purchase the Educational BoosterPack MK II from these retailers.
+
+*Order the EDUBPMKII BoosterPack*
+
+* https://www.digikey.com/product-detail/en/BOOSTXL-EDUMKII/296-42630-ND/5455660[logo_dkDigi-Key]
+* https://www.mouser.com/ProductDetail/?qs=kFLL9AfgRSAA5rvM9YoStA%3d%3d[Mouser-PrimaryHorizontal]
+
+* http://www.ti.com/tool/boostxl-edumkii[Texas Instruments]
+* https://www.digikey.com/product-detail/en/BOOSTXL-EDUMKII/296-42630-ND/5455660[Dgi-Key]
+* https://www.mouser.com/ProductDetail/?qs=kFLL9AfgRSAA5rvM9YoStA%3d%3d[Mouser]
+
+image::../img/EDUBPMKIIBoosterPack.jpg[]
+image::../img/logo_dk.png[]
+image::../img/ti_stk_2c_pos_spot_jpg-300x105.jpg[]

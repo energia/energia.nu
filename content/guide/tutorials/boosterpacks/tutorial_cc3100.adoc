@@ -1,0 +1,16 @@
+== CC3100 Wi-Fi BoosterPack Tutorial ==
+
+The CC3100 is a great device for adding Wi-Fi to your microcontroller project. Use the link:/reference/wifi/[WiFi Library] to get started quickly and get your project connected to the internet.
+
+You can use the following hardware with Energia:
+
+* http://www.ti.com/tool/cc3100boost[CC3100BOOST]
+* http://www.ti.com/tool/cc3100modboost[CC3100MODBOOST]
+
+=== Pin Maps
+
+The pin maps are located on the link:/pinmaps/cc3100boost[CC3100BOOST pinmaps page].
+
+=== Getting Started Video ===
+
+{{< youtube S9qXaItbOU0 >}}
