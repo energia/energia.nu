@@ -1,7 +1,6 @@
 == String Substring Function ==
 
-The String function http://energia.nu/StringSubstring.html[`substring()`] is closely related to http://energia.nu/StringCharAt.html[`charAt()`], http://energia.nu/StringStartsWith.html[`startsWith()`] and http://energia.nu/StringEndsWith.html[`endsWith()`]. It +
-allows you to look for an instance of a particular substring within a given String.
+The String function http://energia.nu/StringSubstring.html[`substring()`] is closely related to http://energia.nu/StringCharAt.html[`charAt()`], http://energia.nu/StringStartsWith.html[`startsWith()`] and http://energia.nu/StringEndsWith.html[`endsWith()`]. It allows you to look for an instance of a particular substring within a given String.
 
 === Relevant Groundwork ===
 
@@ -25,9 +24,7 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-`substring()` with only one parameter looks for a given substring from the position given to the +
-end of the string. It expects that the substring extends all the way to the end of the String. For +
-example:
+`substring()` with only one parameter looks for a given substring from the position given to the end of the string. It expects that the substring extends all the way to the end of the String. For example:
 
 ----
   String stringOne = "Content-Type: text/html";
@@ -47,8 +44,7 @@ example:
   //is not true, because there's 1 after the htm in the String.
 ---- 
 
-`substring()` with two parameters looks for a given substring from the first parameter to the +
-second. For example:
+`substring()` with two parameters looks for a given substring from the first parameter to the second. For example:
 
 ----
   String stringOne = "Content-Type: text/html";
@@ -61,9 +57,8 @@ second. For example:
 
 This looks for the word text from positions 14 through 18 of the String.
 
-*Caution:* make sure your index values are within the String’s length or you’ll get unpredictable +
-results. This kind of error can be particularly hard to find with the second instance of `substring()` +
-if the starting position is less than the String’s length, but the ending position isn’t.
+*Caution:* make sure your index values are within the String's length or you'll get unpredictable results. This kind of error can be particularly hard to find with the second instance of `substring()` 
+if the starting position is less than the String's length, but the ending position isn't.
 
 === Code ===
 
@@ -109,7 +104,7 @@ void loop() {
 
 === Try it out ===
 
-– Use string comparison to blink an LED when strings are equal.
+* Use string comparison to blink an LED when strings are equal.
 
 === See Also ===
 

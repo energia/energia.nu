@@ -8,10 +8,7 @@ This example shows how to append strings together with different techniques.
 
 === Relevant Groundwork ===
 
-Just as you can concatenate Strings with other data objects using the String Addition Operator, +
-you can also use the `+=` operator and the `concat()` method to append things to Strings. The `+=` +
-operator and the `concat()` method work the same way, it’s just a matter of which style you prefer. +
-The two examples below illustrate both, and result in the same String:
+Just as you can concatenate Strings with other data objects using the String Addition Operator, you can also use the `+=` operator and the `concat()` method to append things to Strings. The `+=` operator and the `concat()` method work the same way, it's just a matter of which style you prefer. The two examples below illustrate both, and result in the same String:
 
 ----
   String stringOne = "A long integer: ";
@@ -29,8 +26,7 @@ or
   stringTwo.concat(123456789);
 ----
 
-In both cases, `stringOne` equals “A long integer: 123456789”. Like the `+` operator, these +
-operators are handy for assembling longer strings from a combination of data objects.
+In both cases, `stringOne` equals ''A long integer: 123456789''. Like the `+` operator, these operators are handy for assembling longer strings from a combination of data objects.
 
 === Circuit ===
 
@@ -123,7 +119,7 @@ void loop() {
 
 === Try it out ===
 
-– Append multiple strings together and print to serial.
+* Append multiple strings together and print to serial.
  
 === See Also ===
 

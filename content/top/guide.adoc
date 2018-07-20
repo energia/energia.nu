@@ -51,8 +51,8 @@ Step-by-step instructions for setting up the Energia IDE and running your first 
 * link:pin-maps/[Pin Mapping]: Complete list of all Pin Mapping images and instructions for each Energia supported hardware board.
 * link:reference/libraries/[Libraries]: Complete list of all add-on libraries supported by Energia. *Check out link:library-manager/[this tutorial] for Energia 18!*
 * https://github.com/energia/Energia/wiki/Build-Energia[Build IDE from Source]: Use the latest code base from Github to create a build of Energia.
-* link:import-energia-sketch-to-ccsv6/[Import to Code Composer Studio]: Use Energia functions and sketches in CCS version 6+, TI’s Eclipse-based IDE.
-* Import to CCS Cloud: Use Energia functions and sketches in https://dev.ti.com/[CCS Cloud], TI’s browser-based IDE.
+* link:import-energia-sketch-to-ccsv6/[Import to Code Composer Studio]: Use Energia functions and sketches in CCS version 6+, TI's Eclipse-based IDE.
+* Import to CCS Cloud: Use Energia functions and sketches in https://dev.ti.com/[CCS Cloud], TI's browser-based IDE.
 
 == Foundations ==
 This section contains explanations of some of the elements of electronics, the LaunchPad hardware, the Energia software, and the concepts behind them.
@@ -109,7 +109,7 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/basics/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
 * link:tutorials/basics/tutorial_blink/[Blink]: Turn an LED on and off.
 * link:tutorials/basics/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
-* link:tutorials/basics/tutorial_analogreadserial/[AnalogReadSerial]: Read a potentiometer, print it’s state out to the Energia Serial Monitor.
+* link:tutorials/basics/tutorial_analogreadserial/[AnalogReadSerial]: Read a potentiometer, print it's state out to the Energia Serial Monitor.
 * link:tutorials/basics/tutorial_fade/[Fade]: Demonstrates the use of analog output to fade an LED.
 * link:tutorials/basics/tutorial_readanalogvoltage/[ReadAnalogVoltage]: Reads an analog input and prints the voltage to the serial monitor.
 
@@ -136,7 +136,7 @@ Simple programs that demonstrate basic Energia commands. These are included with
 . *Communication*
 
 * link:tutorials/communication/tutorial_read_ascii_string/[ReadASCIIString]: Parse a comma-separated string of ints to fade an LED.
-* link:tutorials/communication/tutorial_ascii_table/[ASCII Table]: Demonstrates Energia’s advanced serial output functions.
+* link:tutorials/communication/tutorial_ascii_table/[ASCII Table]: Demonstrates Energia's advanced serial output functions.
 * link:tutorials/communication/tutorial_dimmer/[Dimmer]: Move the mouse to change the brightness of an LED.
 * link:tutorials/communication/tutorial_graph/[Graph]: Send data to the computer and graph it in Processing.
 * link:tutorials/communication/tutorial_physical_pixel/[Physical Pixel]: Turn a LED on and off by sending data to your LaunchPad from Processing.
@@ -151,7 +151,7 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/control_structures/tutorial_forloop/[For Loop]: Controlling multiple LEDs with a for loop.
 * link:tutorials/control_structures/tutorial_array/[Array]: A variation on the For Loop example that demonstrates how to use an array.
 * link:tutorials/control_structures/tutorial_whileloop/[While Loop]: How to use a while loop to calibrate a sensor while a button is being read.
-* link:tutorials/control_structures/tutorial_switchcase/[Switch Case]: How to choose between a discrete number of values. Equivalent to multiple If statements. This example shows how to divide a sensor’s range into a set of four bands and to take four different actions depending on which band the result is in.
+* link:tutorials/control_structures/tutorial_switchcase/[Switch Case]: How to choose between a discrete number of values. Equivalent to multiple If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
 * link:tutorials/control_structures/tutorial_switchcase2/[Switch Case 2]: A second switch-case example, showing how to take different actions based in characters received in the serial port.
 
 . *Strings*
@@ -165,7 +165,7 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/strings/tutorial_stringlengthtrim/[StringLength & StringLengthTrim]: Get and trim the length of a string.
 * link:tutorials/strings/tutorial_stringreplace/[StringReplace]: Replace individual characters in a string.
 * link:tutorials/strings/tutorial_stringstartswithendswith/[StringStartsWithEndsWith]: Check which characters/substrings a given string starts or ends with.
-* link:tutorials/strings/tutorial_stringsubstring/[StringSubstring]: Look for “phrases” within a given string.
+* link:tutorials/strings/tutorial_stringsubstring/[StringSubstring]: Look for ''phrases'' within a given string.
 
 . *MultiTasking*
 * link:tutorials/multi_tasking/tutorial_buttonevent/[ButtonEvent]: Read a button in one task and have another task wait for the button to be pressed.
@@ -189,7 +189,7 @@ Simple programs that demonstrate basic Energia commands. These are included with
 
 . *Other Tutorials*
 // * link:tutorials/other/sidekick/[Sidekick for TI LaunchPad]: Use the Seeedstudio Sidekick Basic Kit for TI LaunchPad with Energia.
-// * link:tutorials/other/sik-for-launchpad/[SIK for LaunchPad]: Use the Sparkfun Inventor’s Kit with Energia.
+// * link:tutorials/other/sik-for-launchpad/[SIK for LaunchPad]: Use the Sparkfun Inventor's Kit with Energia.
 // * link:tutorials/other/grove-starter-kit/[Grove Starter Kit for LaunchPad]: Use Grove modules to access sensors and components for prototyping.
 * link:tutorials/other/o-scope-operation/[O-Scope Operation]: Learning how to use an Tektronix Oscilloscope with MSP430 LaunchPad.
 // * LabVIEW Home: Use Energia in National Instruments LabVIEW.

@@ -1,74 +1,36 @@
 == Digital Pins ==
 
-The pins on the LaunchPad can be configured as either inputs or outputs. This document +
-explains the functioning of the pins in those modes. While the title of this document refers to +
-digital pins, it is important to note that vast majority of LaunchPad analog pins, may be +
-configured, and used, in exactly the same manner as digital pins.
+The pins on the LaunchPad can be configured as either inputs or outputs. This document explains the functioning of the pins in those modes. While the title of this document refers to digital pins, it is important to note that vast majority of LaunchPad analog pins, may be configured, and used, in exactly the same manner as digital pins.
 
-Sparkfun has a https://learn.sparkfun.com/tutorials/analog-vs-digital[great tutorial on the difference between analog and digital] if you want to know +
-more about it.
+Sparkfun has a https://learn.sparkfun.com/tutorials/analog-vs-digital[great tutorial on the difference between analog and digital] if you want to know more about it.
 
 === Properties of Pins Configured as INPUT ===
 
-LaunchPad pins default to inputs, so they don’t need to be explicitly declared as inputs with +
-`pinMode()`. Pins configured as inputs are said to be in a high-impedance state. One way of +
-explaining this is that input pins make extremely small demands on the circuit that they are +
-sampling, say equivalent to a series resistor of 100 megohm in front of the pin. This means that +
-it takes very little current to move the input pin from one state to another, and can make the +
-pins useful for such tasks as implementing a capacitive touch sensor, reading an LED as a +
-photodiode, or reading an analog sensor.
+LaunchPad pins default to inputs, so they don't need to be explicitly declared as inputs with `pinMode()`. Pins configured as inputs are said to be in a high-impedance state. One way of explaining this is that input pins make extremely small demands on the circuit that they are sampling, say equivalent to a series resistor of 100 megohm in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing a capacitive touch sensor, reading an LED as a photodiode, or reading an analog sensor.
 
-This also means however, that input pins with nothing connected to them, or with wires +
-connected to them that are not connected to other circuits, will report seemingly random +
-changes in pin state, picking up electrical noise from the environment, or capacitively coupling +
-the state of a nearby pin.
+This also means however, that input pins with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.
 
 === Properties of Pins Configured as OUTPUT ===
 
-Pins configured as `*OUTPUT*` with `pinMode()` are said to be in a low-impedance state. This +
-means that they can provide a substantial amount of current to other circuits. LaunchPad pins +
-can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) +
-of current to other devices/circuits. This makes them useful for powering LED’s and some +
-sensors but useless for driving motors and relays. Pins configured as outputs can also be +
-damaged or destroyed if short circuited to either ground or 3 volt power rails. The amount of +
-current provided by a LaunchPad pin is not enough to power many sensors, relays, or motors, +
-and some interface circuitry will be required.
+Pins configured as `*OUTPUT*` with `pinMode()` are said to be in a low-impedance state. This means that they can provide a substantial amount of current to other circuits. LaunchPad pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This makes them useful for powering LED's and some sensors but useless for driving motors and relays. Pins configured as outputs can also be damaged or destroyed if short circuited to either ground or 3 volt power rails. The amount of current provided by a LaunchPad pin is not enough to power many sensors, relays, or motors, and some interface circuitry will be required.
 
-Short circuits on LaunchPad pins, or attempting to run high current devices from them, can +
-damage or destroy the output transistors in the pin, or damage the entire TI chip. Often this will +
-result in a “dead” pin in the microcontroller but the remaining chip will still function +
-adequately. For this reason it is a good idea to connect `OUTPUT` pins to other devices with 470Ω +
-or 1k resistors, unless maximum current draw from the pins is required for a particular +
-application.
+Short circuits on LaunchPad pins, or attempting to run high current devices from them, can damage or destroy the output transistors in the pin, or damage the entire TI chip. Often this will result in a ''dead'' pin in the microcontroller but the remaining chip will still function adequately. For this reason it is a good idea to connect `OUTPUT` pins to other devices with 470Ω or 1k resistors, unless maximum current draw from the pins is required for a particular application.
 
 === Defining Digital Pins, INPUT and OUTPUT ===
 
-Digital pins can be used either as `*INPUT*` or `*OUTPUT*`. Changing a pin from `INPUT` TO +
-`OUTPUT` with `pinMode()` drastically changes the electrical behavior of the pin.
+Digital pins can be used either as `*INPUT*` or `*OUTPUT*`. Changing a pin from `INPUT` TO `OUTPUT` with `pinMode()` drastically changes the electrical behavior of the pin.
 
 === Pins Configured as Input Pullup ===
 
-LaunchPad pins can be configured as `*INPUT_PULLUP*`. Often it is useful to steer an input pin +
-to a known state if no input is present. This can be done by adding a pullup resistor (to ~3V), or +
-a pulldown resistor (resistor to ground) on the input, with 10K being a common value. There are +
-also convenient pullup resistors built into the LaunchPad that can be accessed from software. +
-These built-in pullup resistors are accessed in the following manner.
+LaunchPad pins can be configured as `*INPUT_PULLUP*`. Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pullup resistor (to ~3V), or a pulldown resistor (resistor to ground) on the input, with 10K being a common value. There are also convenient pullup resistors built into the LaunchPad that can be accessed from software. These built-in pullup resistors are accessed in the following manner.
 
 ----
 pinMode(pin, INPUT_PULLUP);           // set pin to input and enable internal pullup resistor
 ----
 
-Note that the pullup resistors provide enough current to dimly light an LED connected to a pin +
-that has been configured as an input. If LED’s in a project seem to be working, but very dimly, +
-this is likely what is going on, and the programmer has forgotten to use `pinMode()` to set the +
-pins to outputs.
+Note that the pullup resistors provide enough current to dimly light an LED connected to a pin that has been configured as an input. If LED's in a project seem to be working, but very dimly, this is likely what is going on, and the programmer has forgotten to use `pinMode()` to set the pins to outputs.
 
-Note also that the pullup resistors are controlled by the same registers (internal chip memory +
-locations) that control whether a pin is `HIGH` or `LOW`. Consequently a pin that is configured to +
-have pullup resistors turned on when the pin is an `INPUT`, will have the pin configured as `HIGH` +
-if the pin is then swtiched to an `OUTPUT` with `pinMode()`. This works in the other direction as +
-well, and an output pin that is left in a `HIGH` state will have the pullup resistors set if switched +
-to an input with `pinMode()`.
+Note also that the pullup resistors are controlled by the same registers (internal chip memory locations) that control whether a pin is `HIGH` or `LOW`. Consequently a pin that is configured to have pullup resistors turned on when the pin is an `INPUT`, will have the pin configured as `HIGH` if the pin is then swtiched to an `OUTPUT` with `pinMode()`. This works in the other direction as well, and an output pin that is left in a `HIGH` state will have the pullup resistors set if switched to an input with `pinMode()`.
 
 === Pins Configured as Input Pulldown ===
 

@@ -1,11 +1,7 @@
 == Communication Protocols ==
 
-Serial and Parallel communication is very important in electronics and software. We often need +
-to pass data between parts of a system. SPI, I2C, and UART are some popular communication +
-protocols for electronics.
+Serial and Parallel communication is very important in electronics and software. We often need to pass data between parts of a system. SPI, I2C, and UART are some popular communication protocols for electronics.
 
-To use SPI in Energia, use the http://energia.nu/reference/spi/[SPI library]. To use I2C in Energia, use the http://energia.nu/reference/wire/[Wire library]. To use +
-UART in Energia, use the http://energia.nu/reference/serial/[Serial library].
+To use SPI in Energia, use the http://energia.nu/reference/spi/[SPI library]. To use I2C in Energia, use the http://energia.nu/reference/wire/[Wire library]. To use UART in Energia, use the http://energia.nu/reference/serial/[Serial library].
 
-Sparkfun has a https://learn.sparkfun.com/tutorials/i2c[great tutorial on I2C] and a https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi[great tutorial on SPI] and a https://learn.sparkfun.com/tutorials/serial-communication[great tutorial on UART] if +
-you want to learn more about them.
+Sparkfun has a https://learn.sparkfun.com/tutorials/i2c[great tutorial on I2C] and a https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi[great tutorial on SPI] and a https://learn.sparkfun.com/tutorials/serial-communication[great tutorial on UART] if you want to learn more about them.

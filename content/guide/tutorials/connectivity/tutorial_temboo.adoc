@@ -1,24 +1,13 @@
 == Temboo Client Library ==
 
-This is a basic tutorial on how to enable Texas Instruments LaunchPad and Energia through the +
-use of Temboo! As the video describes, Temboo exposes a variety of API’s to many popular web +
-domains and services. Through these API’s, we can enable our LaunchPad with the power of the +
-cloud and do various types of cloud computing through the use of one of our SimpleLink WiFi +
-devices.
+This is a basic tutorial on how to enable Texas Instruments LaunchPad and Energia through the use of Temboo! As the video describes, Temboo exposes a variety of API's to many popular web domains and services. Through these API's, we can enable our LaunchPad with the power of the cloud and do various types of cloud computing through the use of one of our SimpleLink WiFi devices.
 
-In this example, we demonstrate the capabilities of Temboo through the use of our http://www.ti.com/tool/cc3100boost[CC3100 + 
-SimpleLink WiFi BoosterPack] paired with the new http://e2e.ti.com/blogs_/archives/b/launchyourdesign/archive/2014/12/01/product-spotlight-grove-base-boosterpack-amp-starter-kit-from-our-friends-at-seeed-studio[Grove Module BoosterPack] and an +
-http://www.ti.com/tool/msp-exp430f5529lp[MSP430F5529 LaunchPad]. Using a basic potentiometer to act as a generic sensor, we step +
-through three conditions that will trigger actions. The three actions are logging data to Google +
-Drive Spreadsheet, sending an email through a Gmail account, and sending a text message using +
-Twilio.
+In this example, we demonstrate the capabilities of Temboo through the use of our http://www.ti.com/tool/cc3100boost[CC3100 SimpleLink WiFi BoosterPack] paired with the new http://e2e.ti.com/blogs_/archives/b/launchyourdesign/archive/2014/12/01/product-spotlight-grove-base-boosterpack-amp-starter-kit-from-our-friends-at-seeed-studio[Grove Module BoosterPack] and an http://www.ti.com/tool/msp-exp430f5529lp[MSP430F5529 LaunchPad]. Using a basic potentiometer to act as a generic sensor, we step through three conditions that will trigger actions. The three actions are logging data to Google Drive Spreadsheet, sending an email through a Gmail account, and sending a text message using Twilio.
 
-https://www.twilio.com/[Twilio] has also been generous and provided TI users with a code for 6 months access for new +
-accounts.  Use the code “Twilio<3TI2014” for your free trial.
+https://www.twilio.com/[Twilio] has also been generous and provided TI users with a code for 6 months access for new accounts.  Use the code ''Twilio<3TI2014'' for your free trial.
 
 The code for this example is available here: https://github.com/ewakefield/Temboo-Demo
 
-There are places in the code that held passwords and vital information that is unique to each +
-user. Please read through the code and place your own passwords and tokens.
+There are places in the code that held passwords and vital information that is unique to each user. Please read through the code and place your own passwords and tokens.
 
 video::4eGOi9iGg6I[youtube]

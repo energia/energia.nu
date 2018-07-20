@@ -1,7 +1,6 @@
 == String StartsWith and EndsWith Functions ==
 
-The String functions http://energia.nu/StringStartsWith.html[`startsWith()`] and http://energia.nu/StringEndsWith.html[`endsWith()`] allow you to check what character or +
-substring a given String starts or ends with. They’re basically special cases of http://energia.nu/StringSubstring.html[substring].
+The String functions http://energia.nu/StringStartsWith.html[`startsWith()`] and http://energia.nu/StringEndsWith.html[`endsWith()`] allow you to check what character or substring a given String starts or ends with. They're basically special cases of http://energia.nu/StringSubstring.html[substring].
 
 === Relevant Groundwork ===
 
@@ -25,9 +24,7 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-`startsWith()` and `endsWith()` can be used to look for a particular message header, or for a single +
-character at the end of a String. They can also be used with an offset to look for a substring +
-starting at a particular position. For example:
+`startsWith()` and `endsWith()` can be used to look for a particular message header, or for a single character at the end of a String. They can also be used with an offset to look for a substring starting at a particular position. For example:
 
 ----
   stringOne = "HTTP/1.1 200 OK";
@@ -45,10 +42,7 @@ This is functionally the same as this:
   }
 ----
 
-*Caution:* If you look for a position that’s outside the range of the string,you’ll get unpredictable +
-results. For example, in the example above `stringOne.startsWith(“200 OK”, 16)` wouldn’t check +
-against the String itself, but whatever is in memory just beyond it. For best results, make sure +
-the index values you use for `startsWith` and `endsWith` are between 0 and the String’s `length()`.
+*Caution:* If you look for a position that's outside the range of the string,you'll get unpredictable results. For example, in the example above `stringOne.startsWith(''200 OK'', 16)` wouldn't check against the String itself, but whatever is in memory just beyond it. For best results, make sure the index values you use for `startsWith` and `endsWith` are between 0 and the String's `length()`.
 
 === Code ===
 
@@ -109,7 +103,7 @@ void loop() {
 
 === Try it out ===
 
-– Blink an LED if a string starts with a vowel.
+* Blink an LED if a string starts with a vowel.
 
 === See Also ===
 

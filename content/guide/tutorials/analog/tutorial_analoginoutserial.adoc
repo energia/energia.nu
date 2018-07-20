@@ -1,8 +1,6 @@
 == Analog In, Out Serial ==
 
-This example shows how to read an analog input pin, map the result to a range from 0 to 255, +
-and then use that result to set the pulsewidth modulation (PWM) of an output pin to dim or +
-brighten an LED.
+This example shows how to read an analog input pin, map the result to a range from 0 to 255, and then use that result to set the pulsewidth modulation (PWM) of an output pin to dim or brighten an LED.
 
 === Hardware Required ===
 
@@ -13,10 +11,7 @@ brighten an LED.
 
 === Relevant Groundwork ===
 
-Connect one pin from your pot to 3V, the center pin to analog channel A3 (pin 5), and the +
-remaining pin to ground. Next, connect a 220 ohm current limiting resistor to digital pin 2, with +
-an LED in series. The long, positive leg (the anode) of the LED should be connected to the +
-output from the resistor, with the shorter, negative leg (the cathode) connected to ground.
+Connect one pin from your pot to 3V, the center pin to analog channel A3 (pin 5), and the remaining pin to ground. Next, connect a 220 ohm current limiting resistor to digital pin 2, with an LED in series. The long, positive leg (the anode) of the LED should be connected to the output from the resistor, with the shorter, negative leg (the cathode) connected to ground.
 
 === Circuit ===
 
@@ -30,14 +25,9 @@ image::../img/AnalogInOutSerial_schem.png[]
 
 === Code Explanation ===
 
-In the program below, after declaring two pin assignments (analog channel A3 for your +
-potentiometer and digital pin 2 for your LED) and two variables, `sensorValue` and `outputValue`, +
-the only thing that you do will in the setup function is to begin serial communication.
+In the program below, after declaring two pin assignments (analog channel A3 for your potentiometer and digital pin 2 for your LED) and two variables, `sensorValue` and `outputValue`, the only thing that you do will in the setup function is to begin serial communication.
 
-Next, in the main loop of the code, `sensorValue` is assigned to store the raw analog value coming +
-in from the potentiometer. Because the LaunchPad has an `analogRead` resolution of 0-1023, and +
-an `analogWrite` resolution of only 0-255, this raw data from the potentiometer needs to be +
-scaled before using it to dim the LED.
+Next, in the main loop of the code, `sensorValue` is assigned to store the raw analog value coming in from the potentiometer. Because the LaunchPad has an `analogRead` resolution of 0-1023, and an `analogWrite` resolution of only 0-255, this raw data from the potentiometer needs to be scaled before using it to dim the LED.
 
 In order to scale this value, use a function called http://energia.nu/reference/map/[map()].
 
@@ -45,13 +35,9 @@ In order to scale this value, use a function called http://energia.nu/reference/
 outputValue = map(sensorValue, 0, 1023, 0, 255);
 ----
 
-`outputValue` is assigned to equal the scaled value from the potentiometer. `map()` accepts five +
-arguments: The value to be mapped, the low range and high range of the raw data, and the low +
-and high values for that data to be scaled too. In this case, the sensor data is mapped down from  + 
-its original range of 0 to 1023 to 0 to 255.
+`outputValue` is assigned to equal the scaled value from the potentiometer. `map()` accepts five arguments: The value to be mapped, the low range and high range of the raw data, and the low and high values for that data to be scaled too. In this case, the sensor data is mapped down from  its original range of 0 to 1023 to 0 to 255.
 
-The newly mapped sensor data is then output to the `analogOutPin` dimming or brightening the +
-LED as the potentiometer is turned. Finally, both the raw and scaled sensor values are sent to +
+The newly mapped sensor data is then output to the `analogOutPin` dimming or brightening the LED as the potentiometer is turned. Finally, both the raw and scaled sensor values are sent to +
 the Energia serial window in a steady stream of data.
 
 === Code ===
@@ -118,7 +104,7 @@ video::0M-W6a0MhUs[youtube]
 
 === Try it out ===
 
-– Incorporate mulitple analog signals into the program.
+* Incorporate mulitple analog signals into the program.
 
 === See Also ===
 
@@ -126,9 +112,9 @@ video::0M-W6a0MhUs[youtube]
 * http://energia.nu/reference/analogread/[analogRead()]
 * http://energia.nu/reference/analogwrite/[analogWrite()]
 * http://energia.nu/reference/serial/[serial()]
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]–read a potentiometer, print the state out to the serial monitor.
-* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]–use a potentiometer to control the blinking of an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]–use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_calibration/[Calibration]–calibrating analog sensor readings.
+* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print the state out to the serial monitor.
+* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]:use a potentiometer to control the blinking of an LED.
+* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
+* http://energia.nu/guide/tutorial_calibration/[Calibration]:calibrating analog sensor readings.
  
 

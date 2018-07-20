@@ -1,9 +1,6 @@
 == String IndexOf() and lastIndexOf() Methods ==
 
-The String object `indexOf()` method gives you the ability to search for the first instance of a +
-particular character value in a String. You can also look for the first instance of the character +
-after a given offset. The `lastIndexOf()` method lets you do the same things from the end of a +
-String.
+The String object `indexOf()` method gives you the ability to search for the first instance of a particular character value in a String. You can also look for the first instance of the character after a given offset. The `lastIndexOf()` method lets you do the same things from the end of a String.
 
 === Relevant Groundwork ===
 
@@ -12,10 +9,7 @@ String.
   int firstClosingBracket = stringOne.indexOf('>');
 ----
 
-In this case, `firstClosingBracket` equals 5, because the first `>` character is at position 5 in the +
-String (counting the first character as 0). If you want to get the second closing bracket, you can +
-use the fact that you know the position of the first one, and search from `firstClosingBracket` `+` 1 +
-as the offset, like so:
+In this case, `firstClosingBracket` equals 5, because the first `>` character is at position 5 in the String (counting the first character as 0). If you want to get the second closing bracket, you can use the fact that you know the position of the first one, and search from `firstClosingBracket` `+` 1 as the offset, like so:
 
 ----
   stringOne = "<HTML><HEAD><BODY>";
@@ -24,17 +18,14 @@ as the offset, like so:
 
 The result would be 11, the position of the closing bracket for the HEAD tag.
 
-If you want to search from the end of the String, you can use the `lastIndexOf()` method instead. +
-This function returns the position of the last occurrence of a given character.
+If you want to search from the end of the String, you can use the `lastIndexOf()` method instead. This function returns the position of the last occurrence of a given character.
 
 ----
   stringOne = "<HTML><HEAD><BODY>";
   int lastOpeningBracket = stringOne.lastIndexOf('<');
 ----
 
-In this case, `lastOpeningBracket` equals 12, the position of the `<` for the BODY tag. If you want +
-the opening bracket for the HEAD tag, it would be at `stringOne.lastIndexOf(‘<‘, +
-lastOpeningBracket -1)`, or 6.
+In this case, `lastOpeningBracket` equals 12, the position of the `<` for the BODY tag. If you want the opening bracket for the HEAD tag, it would be at `stringOne.lastIndexOf('<', lastOpeningBracket -1)`, or 6.
 
 === Hardware Required ===
 
@@ -126,7 +117,7 @@ video::BDChvLXHPnw[youtube]
 
 === Try it out ===
 
-– Turn a present tense sentance into past tense using index functions.
+* Turn a present tense sentance into past tense using index functions.
  
 === See Also ===
 

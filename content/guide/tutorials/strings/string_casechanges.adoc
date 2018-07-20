@@ -1,9 +1,6 @@
 == String Case Change Functions ==
 
-This example shows how to change the case of a string using `toUpperCase()` and `toLowerCase()` +
-functions. They work just as their names imply. `toUpperCase()` changes the whole string to +
-upper case characters, and `toLowerCase()` changes the whole String to lower case characters. +
-Only the characters A to Z or a to z are affected.
+This example shows how to change the case of a string using `toUpperCase()` and `toLowerCase()` functions. They work just as their names imply. `toUpperCase()` changes the whole string to upper case characters, and `toLowerCase()` changes the whole String to lower case characters. Only the characters A to Z or a to z are affected.
 
 === Relevant Groundwork ===
 
@@ -28,8 +25,7 @@ image::../img/../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-In the program, we first declare two strings. We then change the first string to upper case and +
-the second string to lower case.
+In the program, we first declare two strings. We then change the first string to upper case and the second string to lower case.
 
 === Code ===
 
@@ -77,7 +73,7 @@ void loop() {
 
 === Try it out ===
 
-– Change case of multiple strings and print to serial.
+* Change case of multiple strings and print to serial.
 
 === See Also ===
 

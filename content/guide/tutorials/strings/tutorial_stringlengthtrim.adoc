@@ -1,7 +1,6 @@
 == String Length() and Trim() Commands ==
 
-You can get the length of a http://energia.nu/StringObject.html[String] using the `length()` command, or eliminate extra characters +
-using the `trim()` command. This example shows you how to use both commands.
+You can get the length of a http://energia.nu/StringObject.html[String] using the `length()` command, or eliminate extra characters using the `trim()` command. This example shows you how to use both commands.
 
 === Relevant Groundwork ===
 
@@ -25,15 +24,9 @@ image::../img/Blink_schem.png[]
 
 === Code Explanation ===
 
-`length()` returns the length of a String. There are many occasions when you need this. For +
-example,if you wanted to make sure a String was less than 140 characters, to fit it in a text +
-message, refer to code example 1.
+`length()` returns the length of a String. There are many occasions when you need this. For example,if you wanted to make sure a String was less than 140 characters, to fit it in a text message, refer to code example 1.
 
-`trim()` is useful for when you know there are extraneous whitespace characters on the beginning +
-or the end of a String and you want to get rid of them. Whitespace refers to characters that take +
-space but aren’t seen. It includes the single space (ASCII 32), tab (ASCII 9), vertical tab (ASCII +
-11), form feed (ASCII 12), carriage return (ASCII 13), or newline (ASCII 10). Code example 2 +
-below shows a String with whitespace, before and after trimming.
+`trim()` is useful for when you know there are extraneous whitespace characters on the beginning or the end of a String and you want to get rid of them. Whitespace refers to characters that take space but aren't seen. It includes the single space (ASCII 32), tab (ASCII 9), vertical tab (ASCII 11), form feed (ASCII 12), carriage return (ASCII 13), or newline (ASCII 10). Code example 2 below shows a String with whitespace, before and after trimming.
 
 === Code ===
 
@@ -132,7 +125,7 @@ void loop() {
 
 === Try it out ===
 
-– Blink an LED if string length exceeds 10 characters.
+* Blink an LED if string length exceeds 10 characters.
 
 === See Also ===
 

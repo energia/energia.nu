@@ -1,9 +1,6 @@
 == Calibration ==
 
-This example demonstrates one techinque for calibrating sensor input. The LaunchPad board +
-takes sensor readings for five seconds during the startup, and tracks the highest and lowest +
-values it gets. These sensor readings during the first five seconds of the sketch execution define +
-the minimum and maximum of expected values for the readings taken during the loop.
+This example demonstrates one techinque for calibrating sensor input. The LaunchPad board takes sensor readings for five seconds during the startup, and tracks the highest and lowest values it gets. These sensor readings during the first five seconds of the sketch execution define the minimum and maximum of expected values for the readings taken during the loop.
 
 === Hardware Required ===
 
@@ -25,8 +22,7 @@ image::../img/Calibration_bb.png[]
  
 Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
 
-Connect an LED to digital pin 2 with a 220 ohm current limiting resistor. Connect a photocell to +
-3V and then to analog pin 3 with a 10K ohm resistor as a reference to ground.
+Connect an LED to digital pin 2 with a 220 ohm current limiting resistor. Connect a photocell to 3V and then to analog pin 3 with a 10K ohm resistor as a reference to ground.
 
 === Schematic ===
  
@@ -41,9 +37,7 @@ int sensorMin = 1023;        // minimum sensor value
 int sensorMax = 0;           // maximum sensor value
 ----
 
-These may seem backwards. Initially, you set the minimum high and read for anything lower +
-than that, saving it as the new minimum. Likewise, you set the maximum low and read for +
-anything higher as the new maximum, like so:
+These may seem backwards. Initially, you set the minimum high and read for anything lower than that, saving it as the new minimum. Likewise, you set the maximum low and read for anything higher as the new maximum, like so:
 
 ----
 // calibrate during the first five seconds 
@@ -62,8 +56,7 @@ while (millis() < 5000) {
 }
 ----
 
-This way, any further readings you take can be mapped to the range between this minimum +
-and maximum like so:
+This way, any further readings you take can be mapped to the range between this minimum and maximum like so:
 
 ----
 // apply the calibration to the sensor reading
@@ -72,7 +65,7 @@ sensorValue = map(sensorValue, sensorMin, sensorMax, 0, 255);
 
 === Code === 
 
-Here’s the whole program:
+Here's the whole program:
 
 ----
 /*
@@ -155,7 +148,7 @@ video::nk9vJFn2l00[youtube]
 
 === Try it out ===
 
-- Calibrate a different sensor.
+* Calibrate a different sensor.
 
 === See Also ===
 
@@ -164,9 +157,9 @@ video::nk9vJFn2l00[youtube]
 * http://energia.nu/reference/constrain/[constrain()]
 * http://energia.nu/reference/map/[map()]
 * http://energia.nu/reference/if/[If()]
-* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]–use a potentiometer to control the blinking of an LED.
-* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]–read an analog pin, map the result, and use that data to dim or brighten an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]–use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_smoothing/[Smoothing]–smooth multiple readings of an analog input.
+* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]:use a potentiometer to control the blinking of an LED.
+* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog pin, map the result, and use that data to dim or brighten an LED.
+* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
+* http://energia.nu/guide/tutorial_smoothing/[Smoothing]:smooth multiple readings of an analog input.
  
 

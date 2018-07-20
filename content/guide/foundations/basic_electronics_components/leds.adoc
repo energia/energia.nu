@@ -1,7 +1,6 @@
 == LEDs ==
 
-Light emitting diodes light up when electricity flows through them. They can be through hole or +
-surface mount. They come in a variety of colors and can even be multiple colors.
+Light emitting diodes light up when electricity flows through them. They can be through hole or surface mount. They come in a variety of colors and can even be multiple colors.
 
 Sparkfun has a https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds[great tutorial on LEDs] if you want to learn more about them.
 

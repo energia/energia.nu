@@ -14,11 +14,7 @@ This program shows how to blink a led by switching the pushbutton and check for 
 
 === Relevant Groundwork ===
 
-This example demonstrates the use of a pushbutton as a switch: each time you press the button, +
-the LED (or whatever) is turned on (if it’s off) or off (if on). It also *debounces* the input, which +
-means checking twice in a short period of time to make sure it’s definitely pressed. Without +
-debouncing, pressing the button once can appear to the code as multiple presses. `millis()` +
-function is used to keep track of the time when the button is pressed.
+This example demonstrates the use of a pushbutton as a switch: each time you press the button, the LED (or whatever) is turned on (if it's off) or off (if on). It also *debounces* the input, which means checking twice in a short period of time to make sure it's definitely pressed. Without debouncing, pressing the button once can appear to the code as multiple presses. `millis()` function is used to keep track of the time when the button is pressed.
 
 === Circuit ===
 
@@ -32,11 +28,7 @@ No external circuitry is required.
 
 [.underline]#For external push button#
 
-Connect three wires to the Launch pad board. The first two, red and black, connect to the two +
-long vertical rows on the side of the breadboard to provide access to the 3 volt supply and +
-ground. The third wire goes from digital pin p1.3 to one leg of the pushbutton. That same leg of +
-the button connects through a pull-up resistor (here 10 K Ohms) to Vcc. The other leg of the +
-button connects to the ground.
+Connect three wires to the Launch pad board. The first two, red and black, connect to the two long vertical rows on the side of the breadboard to provide access to the 3 volt supply and ground. The third wire goes from digital pin p1.3 to one leg of the pushbutton. That same leg of the button connects through a pull-up resistor (here 10 K Ohms) to Vcc. The other leg of the button connects to the ground.
 
 === Schematic ===
 
@@ -44,28 +36,25 @@ image::../img/Button_schem.png[]
 
 === Code Explanation ===
 
-In the program, pin 14, which has green LED connected to it, is set up as output in the setup +
-function.
+In the program, pin 14, which has green LED connected to it, is set up as output in the setup function.
 
 ----
 pinMode(ledPin, OUTPUT);
 ----
 
-Here the ledpin refers to the `GREEN_LED` which is set as output. The push button which is +
-connected to pin 5 is set up as input. The pull-up resistor connected to this pin is enabled.
+Here the ledpin refers to the `GREEN_LED` which is set as output. The push button which is connected to pin 5 is set up as input. The pull-up resistor connected to this pin is enabled.
 
 ----
 pinMode(buttonPin, INPUT_PULLUP);
 ----
 
-In the main loop, the state of the pushbutton is saved in the variable “reading”.
+In the main loop, the state of the pushbutton is saved in the variable ''reading''.
 
 ----
 int reading = digitalRead(buttonPin);
 ----
 
-If the state of the pushbutton has changed from its previous stored state, then the time at which +
-it was pressed is obtained with the help of `millis( )` and saved.
+If the state of the pushbutton has changed from its previous stored state, then the time at which it was pressed is obtained with the help of `millis( )` and saved.
 
 ----
 if (reading != lastButtonState) {
@@ -73,9 +62,7 @@ if (reading != lastButtonState) {
 }
 ----
 
-If the `buttonState` didn’t change for a time equal to debounce delay, then it means that it is the +
-actual current stable state of the push button and this is reflected accordingly in the output pin +
-connected to LED as well.
+If the `buttonState` didn't change for a time equal to debounce delay, then it means that it is the actual current stable state of the push button and this is reflected accordingly in the output pin connected to LED as well.
 
 ----
 if ((millis( ) - lastDebounceTime) > debounceDelay) {
@@ -151,7 +138,7 @@ video::uDPN3Es9jr8[youtube]
 
 === Try it out ===
 
-– Use the button to print something in binary to the serial monitor.
+* Use the button to print something in binary to the serial monitor.
 
 === See Also ===
 
@@ -160,8 +147,8 @@ video::uDPN3Es9jr8[youtube]
 * http://energia.nu/reference/digitalread/[digitalRead()]
 * http://energia.nu/reference/if/[if()]
 * http://energia.nu/reference/millis/[millis()]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]: The bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]: Turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]: Read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_buttonstatechange/[Button State Change]: Counting the number of button pushes.
+* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
+* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* http://energia.nu/guide/tutorial_buttonstatechange/[Button State Change]:counting the number of button pushes.
  
