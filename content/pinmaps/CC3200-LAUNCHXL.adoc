@@ -1,5 +1,5 @@
 == Guide to the CC3200 SimpleLink WiFi (CC3200-LAUNCHXL)
-
+:icons: font
 CAUTION: Analog input is limited to 1.46V on the http://www.ti.com/product/CC3200[CC3200]. Higher voltages may damage the MCU. — Reference: _§3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins_ in the http://www.ti.com/lit/ds/swas032f/swas032f.pdf[CC3200 datasheet].
 
 {{< youtube -zBxRvkA6mc >}}

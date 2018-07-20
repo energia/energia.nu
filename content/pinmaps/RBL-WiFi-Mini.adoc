@@ -1,5 +1,5 @@
 == Guide to the WiFi Mini by RedBear
-
+:icons: font
 CAUTION: Analog input is limited to 1.46V on the CC3200. Higher voltages may damage the MCU. — Reference: §3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins, CC3200 SimpleLink™ Wi-Fi® and Internet-of-Things Solution, a Single-Chip Wireless MCU (swas032f).
 
 Guide to the WiFi Mini by RedBear
