@@ -1,0 +1,232 @@
+++++
+<style>
+h1 {
+  text-align: center;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #aaa;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: #2980b9;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: #3498db;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 40em;
+}
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+</style>
+++++
+
+== Installing the LaunchPad drivers
+To use Energia you will need to have the LaunchPad drivers installed. The drivers allow your PC to “see” the LaunchPad on a serial COM port when it is connected.
+
+++++
+<div class="tab">
+  <input id="tab-one" type="radio" name="tabs">
+  <label for="tab-one">MSP-EXP432P401R LaunchPad</label>
+  <div class="tab-content">
+++++
+Energia (MT) uses a different method for building Sketches for the MSP-EXP432P401R. Because of a limitation in this method you must install Energia in a location without spaces.
+
+If you have already used the MSP-EXP432P401R LaunchPad with TI’s Code Composer Studio then you probably already have the driver installed. If not, then follow the steps below to install the driver.
+
+. Do not connect your MSP-EXP432P401R LaunchPad to your PC. If you already plugged it into your PC then unplug it before proceeding to step 2.
+. Download the LaunchPad drivers for Windows: MSP-EXP432P401R XDS110 Driver Package
+. Unzip and double click DPinst.exe for Windows 32bit or DPinst64.exe for Windows 64 bit.
+. Follow the installer instructions.
+. Connect your MSP-EXP432P401R LaunchPad to your PC. The MSP-EXP432P401R will be automatically recognized.
+. All done, you are now ready to program the MSP-EXP432P401R with Energia.
+For Windows 8 and 10 users you may need to disable your signed driver feature, follow this guide: https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8
+
+Troubleshooting (Not seeing your Serial Port in Energia? Driver not correctly installed?)
+
+* Make sure jumpers are connected on LaunchPad and you get a green power LED turning on when connected via USB
+
+* Restart Energia
+
+* Restart computer (shouldn’t be required but may help)
+
+* Right click and run DPinst.exe or DPinst64.exe as administrator
+++++
+  </div>
+</div>
+++++
+
+
+++++
+<div class="tab">
+  <input id="tab-two" type="radio" name="tabs">
+  <label for="tab-two">CC3200 LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+
+Follow the instructions on link:/guide/install/cc3200-guide/[this page] for important jumper settings and firmware upgrade instructions.
+
+. Do not connect your CC3200 LaunchPad to your PC. If you already plugged it into your PC then unplug it before proceeding to step 2.
+. Download the CC3200 Drivers for Windows: https://s3.amazonaws.com/energiaUS/files/cc3200_drivers_win.zip[CC3200 LaunchPad CDC drivers zip file for Windows 32 and 64 bit]
+. Unzip and double click DPinst.exe for Windows 32bit or DPinst64.exe for Windows 64 bit.
+. Follow the installer instructions.
+. Connect your CC3200 LaunchPad to your PC. The CC3200 will be automatically recognized.
+
+For Windows 8 and 10 users you may need to disable your signed driver feature, follow this guide: https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8
+
+Troubleshooting (Not seeing your Serial Port in Energia? Driver not correctly installed?)
+
+* Make sure jumpers are connected on LaunchPad and you get a green or red power LED turning on when connected via USB
+* Restart Energia
+* Restart computer (shouldn’t be required but may help)
+* Right click and run DPinst.exe or DPinst64.exe as administrator
+
+++++
+    </p>
+  </div>
+</div>
+++++
+
+++++
+<div class="tab">
+  <input id="tab-three" type="radio" name="tabs">
+  <label for="tab-three">MSP-EXP430G2 and MSP-EXP430FR5739 LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+If TI’s Code Composer Studio with MSP430 support is already installed on your computer then the drivers are already installed. Skip to the download step. Otherwise follow steps 1-3 below. For more details on MSP430 USB drivers and debug stack, go to http://processors.wiki.ti.com/index.php/MSP_Debug_Stack#Windows.
+
+. Download the LaunchPad drivers for Windows: https://s3.amazonaws.com/energiaUS/files/EZ430-UART.zip[LaunchPad CDC drivers zip file for Windows 32 and 64 bit]
+. Unzip and double click DPinst.exe for Windows 32bit or DPinst64.exe for Windows 64 bit.
+. Follow the installer instructions (should be one click and done)
+
+For Windows 8 and 10 users you may need to disable your signed driver feature, follow this guide: https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8
+
+Troubleshooting (Not seeing your Serial Port in Energia? Driver not correctly installed?)
+
+* Make sure jumpers are connected on LaunchPad and you get a green power LED turning on when connected via USB
+
+* Restart Energia
+
+* Restart computer (shouldn’t be required but may help)
+
+* Right click and run DPinst.exe or DPinst64.exe as administrator
+++++
+  </div>
+</div>
+++++
+
+++++
+<div class="tab">
+  <input id="tab-four" type="radio" name="tabs">
+  <label for="tab-four">MSP-EXP430F5529LP, MSP-EXP430FR4133, MSP-EXP430FR5969, and MSP-EXP430FR6989 LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+If TI’s Code Composer Studio with MSP430 support is already installed on your computer then the drivers are already installed. Skip to the download step. Otherwise follow steps 1-3 below. For more details on MSP430 USB drivers and debug stack, go to http://processors.wiki.ti.com/index.php/MSP_Debug_Stack#Windows.
+
+. Download the LaunchPad drivers for Windows: http://s3.amazonaws.com/energiaUS/files/ezFET-Lite.zip[LaunchPad CDC drivers zip file for Windows 32 and 64 bit]. Note that these driver files are different then the ones for the MSP-EXP430G2 and MSP-EXP430FR5739 LaunchPad!
+. Unzip and double click DPinst.exe for Windows 32bit or DPinst64.exe for Windows 64 bit.
+. Follow the installer instructions (should be one click and done)
+
+For Windows 8 and 10 users you may need to disable your signed driver feature, follow this guide: https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8
+
+Troubleshooting (Not seeing your Serial Port in Energia? Driver not correctly installed?)
+
+* Make sure jumpers are connected on LaunchPad and you get a green power LED turning on when connected via USB
+
+* Restart Energia
+
+* Restart computer (shouldn’t be required but may help)
+
+* Right click and run DPinst.exe or DPinst64.exe as administrator
+++++
+  </div>
+</div>
+++++
+
+++++
+<div class="tab">
+  <input id="tab-five" type="radio" name="tabs">
+  <label for="tab-five">EK-TM4C123GXL, EK-TM4C1294XL and EK-LM4F120XL LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+If TI’s Code Composer Studio with TivaC support is already installed on your computer then the drivers are already installed. Skip to the download step. Otherwise follow steps 1-3 below.
+
+. Download the LaunchPad drivers for Windows: http://s3.amazonaws.com/energiaUS/files/stellaris_icdi_drivers.zip[LaunchPad ICDI driver files for Windows 32 and 64 bit].
+
+. Unzip and double click DPinst.exe for Windows 32bit or DPinst64.exe for Windows 64 bit.
+. Follow the installer instructions (should be one click and done)
+
+For Windows 8 and 10 users you may need to disable your signed driver feature, follow this guide: https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8
+
+Troubleshooting (Not seeing your Serial Port in Energia? Driver not correctly installed?)
+
+* Make sure jumpers are connected on LaunchPad and you get a green power LED turning on when connected via USB
+
+* Restart Energia
+
+* Restart computer (shouldn’t be required but may help)
+
+* Right click and run DPinst.exe or DPinst64.exe as administrator
+++++
+  </div>
+</div>
+++++

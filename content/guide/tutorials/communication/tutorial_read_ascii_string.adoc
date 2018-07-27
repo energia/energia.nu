@@ -45,7 +45,7 @@ Serial.begin(9600);
 Also in the setup, you'll want to configure the pins as outputs:
 
 ----
-pinMode(redPin, OUTPUT);  
+pinMode(redPin, OUTPUT);
 pinMode(greenPin, OUTPUT);
 pinMode(bluePin, OUTPUT);
 ----
@@ -124,7 +124,7 @@ Once you have programmed the LaunchPad, open your Serial monitor. Make sure you 
   by Tom Igoe
   Modified 12 Apr 2013
   by Sean Alvarado
-  
+
   This example code is in the public domain.
 */
 
@@ -137,9 +137,9 @@ void setup() {
  // initialize serial:
  Serial.begin(9600);
  // make the pins outputs:
- pinMode(redPin, OUTPUT); 
- pinMode(greenPin, OUTPUT); 
- pinMode(bluePin, OUTPUT); 
+ pinMode(redPin, OUTPUT);
+ pinMode(greenPin, OUTPUT);
+ pinMode(bluePin, OUTPUT);
 
 }
 
@@ -148,22 +148,22 @@ void loop() {
 while (Serial.available() > 0) {
 
   // look for the next valid integer in the incoming serial stream:
-  int red = Serial.parseInt(); 
+  int red = Serial.parseInt();
   // do it again:
-  int green = Serial.parseInt(); 
+  int green = Serial.parseInt();
   // do it again:
-  int blue = Serial.parseInt(); 
+  int blue = Serial.parseInt();
 
   // look for the newline. That's the end of your
   // sentence:
   if (Serial.read() == '\n') {
-  // constrain the values to 0 - 255 
+  // constrain the values to 0 - 255
   // if you're using a common-cathode LED, just use "constrain(color, 0, 255);"
   red = constrain(red, 0, 255);
   green = constrain(green, 0, 255);
   blue = constrain(blue, 0, 255);
 
-  // fade the red, green, and blue legs of the LED: 
+  // fade the red, green, and blue legs of the LED:
   analogWrite(redPin, red);
   analogWrite(greenPin, green);
   analogWrite(bluePin, blue);
@@ -186,7 +186,7 @@ while (Serial.available() > 0) {
 
 === See Also ===
 
-* http://energia.nu/If.html[if()]
-* http://energia.nu/While.html[while()]
-* http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:sending multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* link:/reference/en/language/structure/control-structure/if/[if()]
+* link:/reference/en/language/structure/control-structure/while/[while()]
+* link:/reference/en/language/functions/communication/serial/[serial()]
+* link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:sending multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.

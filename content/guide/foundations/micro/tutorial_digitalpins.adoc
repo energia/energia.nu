@@ -18,14 +18,14 @@ Short circuits on LaunchPad pins, or attempting to run high current devices from
 
 === Defining Digital Pins, INPUT and OUTPUT ===
 
-Digital pins can be used either as `*INPUT*` or `*OUTPUT*`. Changing a pin from `INPUT` TO `OUTPUT` with `pinMode()` drastically changes the electrical behavior of the pin.
+Digital pins can be used either as `*INPUT*` or `*OUTPUT*`. Changing a pin from `INPUT` To `OUTPUT` with `pinMode()` drastically changes the electrical behavior of the pin.
 
 === Pins Configured as Input Pullup ===
 
 LaunchPad pins can be configured as `*INPUT_PULLUP*`. Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pullup resistor (to ~3V), or a pulldown resistor (resistor to ground) on the input, with 10K being a common value. There are also convenient pullup resistors built into the LaunchPad that can be accessed from software. These built-in pullup resistors are accessed in the following manner.
 
 ----
-pinMode(pin, INPUT_PULLUP);           // set pin to input and enable internal pullup resistor
+pinMode(pin, INPUT_PULLUP); // set pin to input and enable internal pullup resistor
 ----
 
 Note that the pullup resistors provide enough current to dimly light an LED connected to a pin that has been configured as an input. If LED's in a project seem to be working, but very dimly, this is likely what is going on, and the programmer has forgotten to use `pinMode()` to set the pins to outputs.
@@ -39,13 +39,11 @@ Pins can be configured to support pulldown resistors.
 *NOTE:* Launchpad on-board button does not support `*INPUT_PULLDOWN*` for `PinMode()`.
 
 ----
-pinMode(pin, INPUT_PULLDOWN);           // set pin to input and enable internal pulldown resistor
+pinMode(pin, INPUT_PULLDOWN); // set pin to input and enable internal pulldown resistor
 ----
 
 === See Also ===
 
-* http://energia.nu/reference/pinmode/[pinMode()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/digitalread/[digitalRead()]
- 
-
+* link:/reference/en/language/functions/digital-io/pinmode/[pinMode()]
+* link:/reference/en/language/functions/digital-io/pinmode/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/digital-io/pinmode/digitalread/[digitalRead()]

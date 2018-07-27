@@ -34,54 +34,33 @@ Examples are available in Energia under Examples > EducationalBP_MKII
 
 *Basic Examples*
 
-* http://energia.nu/guide/edumkii/edumkii_accelerometerled/[AccelerometerLED]
-* http://energia.nu/guide/edumkii/edumkii_accelerometerserial/[AccelerometerSerial]
-* http://energia.nu/guide/edumkii/edumkii_buttonsleds/[ButtonsLEDs]
-* http://energia.nu/guide/edumkii/edumkii_buzzerbirthdaytune/[BuzzerBirthdayTune]
-* http://energia.nu/guide/edumkii/edumkii_buzzerimperialmarchtune/[BuzzerImperialMarchTune]
-* http://energia.nu/guide/edumkii/edumkii_buzzerkonami/[BuzzerKonami]
-* http://energia.nu/guide/edumkii/edumkii_edubp_mkii_production_test/[EduBP_MKII_BP_Production_Test]
-* http://energia.nu/guide/edumkii/edumkii_edubp_mkii_production_test_serial/[EduBP_MKII_BP_Production_Test_Serial]
-* http://energia.nu/guide/edumkii/edumkii_gatorholebuzzer/[GatorHoleBuzzer]
-* http://energia.nu/guide/edumkii/edumkii_joystick/[Joystick]
-* http://energia.nu/guide/edumkii/edumkii_joystickdrawcolor/[JoystickDrawColor]
-* http://energia.nu/guide/edumkii/edumkii_joystickserial/[JoystickSerial]
-* http://energia.nu/guide/edumkii/edumkii_konamicontra/[KonamiContra]
-* http://energia.nu/guide/edumkii/edumkii_konamicodebuzzer/[KonamiContraBuzzer]
-* http://energia.nu/guide/edumkii/edumkii_lcd_joystick/[LCD_Joystick]
-* http://energia.nu/guide/edumkii/edumkii_lcd_lifegame/[LCD_LifeGame]
-* http://energia.nu/guide/edumkii/edumkii_lcd_screen_logos/[LCD_screen_Logos]
-* http://energia.nu/guide/edumkii/mkiiedu_lcd_screen_test/[LCD_screen_Test]
-* http://energia.nu/guide/edumkii/edumkii_led_blink_counter/[LED_Blink_Counter]
-* http://energia.nu/guide/edumkii/edumkii_microphoneinledout/[MicrophoneInLedOut]
-* http://energia.nu/guide/edumkii/edumkii_opt3001_backlight/[OPT3001_Backlight]
-* http://energia.nu/guide/edumkii/edumkii_opt3001_demo/[OPT3001_Demo]
-* http://energia.nu/edumkii_rgb_led_random/[RGB_LED_Random]
-* http://energia.nu/guide/edumkii/edumkii_servofromjoystcik/[ServoFromJoystick]
-* http://energia.nu/guide/edumkii/edumkii_servosweep/[ServoSweep]
-* http://energia.nu/guide/edumkii/edumkii_tmp006/[TMP006]
-
-=== Libraries and Additional Tutorials ===
-
-* http://energia.nu/guide/tutorial_zumo/[Zumo Bot]
-* Fall Detector
-* Fortune Teller (Magic 8 Ball emulator)
-* FFT
-* Sound Activated Switch
+* link:edumkii_examples/edumkii_accelerometerled/[AccelerometerLED]
+* link:edumkii_examples/edumkii_accelerometerserial/[AccelerometerSerial]
+* link:edumkii_examples/edumkii_buttonsleds/[ButtonsLEDs]
+* link:edumkii_examples/edumkii_buzzerbirthdaytune/[BuzzerBirthdayTune]
+* link:edumkii_examples/edumkii_buzzerimperialmarchtune/[BuzzerImperialMarchTune]
+* link:edumkii_examples/edumkii_buzzerkonami/[BuzzerKonami]
+* link:edumkii_examples/edumkii_edubp_mkii_production_test/[EduBP_MKII_BP_Production_Test]
+* link:edumkii_examples/edumkii_edubp_mkii_production_test_serial/[EduBP_MKII_BP_Production_Test_Serial]
+* link:edumkii_examples/edumkii_gatorholebuzzer/[GatorHoleBuzzer]
+* link:edumkii_examples/edumkii_joystick/[Joystick]
+* link:edumkii_examples/edumkii_joystickdrawcolor/[JoystickDrawColor]
+* link:edumkii_examples/edumkii_joystickserial/[JoystickSerial]
+* link:edumkii_examples/edumkii_konamicontra/[KonamiContra]
+* link:edumkii_examples/edumkii_konamicodebuzzer/[KonamiContraBuzzer]
+* link:edumkii_examples/edumkii_lcd_joystick/[LCD_Joystick]
+* link:edumkii_examples/edumkii_lcd_lifegame/[LCD_LifeGame]
+* link:edumkii_examples/edumkii_lcd_screen_logos/[LCD_screen_Logos]
+* link:edumkii_examples/mkiiedu_lcd_screen_test/[LCD_screen_Test]
+* link:edumkii_examples/edumkii_led_blink_counter/[LED_Blink_Counter]
+* link:edumkii_examples/edumkii_microphoneinledout/[MicrophoneInLedOut]
+* link:edumkii_examples/edumkii_opt3001_backlight/[OPT3001_Backlight]
+* link:edumkii_examples/edumkii_opt3001_demo/[OPT3001_Demo]
+* link:edumkii_examples/edumkii_rgb_led_random/[RGB_LED_Random]
+* link:edumkii_examples/edumkii_servofromjoystcik/[ServoFromJoystick]
+* link:edumkii_examples/edumkii_servosweep/[ServoSweep]
+* link:edumkii_examples/edumkii_tmp006/[TMP006]
 
 === Buy Now ===
 
-You can purchase the Educational BoosterPack MK II from these retailers.
-
-*Order the EDUBPMKII BoosterPack*
-
-* https://www.digikey.com/product-detail/en/BOOSTXL-EDUMKII/296-42630-ND/5455660[logo_dkDigi-Key]
-* https://www.mouser.com/ProductDetail/?qs=kFLL9AfgRSAA5rvM9YoStA%3d%3d[Mouser-PrimaryHorizontal]
-
-* http://www.ti.com/tool/boostxl-edumkii[Texas Instruments]
-* https://www.digikey.com/product-detail/en/BOOSTXL-EDUMKII/296-42630-ND/5455660[Dgi-Key]
-* https://www.mouser.com/ProductDetail/?qs=kFLL9AfgRSAA5rvM9YoStA%3d%3d[Mouser]
-
-image::../img/EDUBPMKIIBoosterPack.jpg[]
-image::../img/logo_dk.png[]
-image::../img/ti_stk_2c_pos_spot_jpg-300x105.jpg[]
+The Educational BoosterPack MK II can be http://www.ti.com/tool/boostxl-edumkii[purchases] the from TI.

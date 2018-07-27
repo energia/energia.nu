@@ -49,15 +49,15 @@ The Processing code is also similar to the Serial Call and Response example in w
 
   This program sends an ASCII A (byte of value 65) on startup
   and repeats that until it gets some data in.
-  Then it waits for a byte in the serial port, and 
-  sends three ASCII-encoded, comma-separated sensor values, 
-  truncated by a linefeed and carriage return, 
+  Then it waits for a byte in the serial port, and
+  sends three ASCII-encoded, comma-separated sensor values,
+  truncated by a linefeed and carriage return,
   whenever it gets a byte in.
 
   Thanks to Greg Shakar and Scott Fitzgerald for the improvements
 
   The circuit:
-  * potentiometers attached to analog inputs 0 and 1 
+  * potentiometers attached to analog inputs 0 and 1
   * pushbutton attached to digital I/O 2
 
 
@@ -91,7 +91,7 @@ void setup()
   Serial.begin(9600);
 
   pinMode(2, INPUT); // digital sensor is on digital pin 2
-  establishContact(); // send a byte to establish contact until receiver responds 
+  establishContact(); // send a byte to establish contact until receiver responds
 }
 
 void loop()
@@ -105,13 +105,13 @@ void loop()
     // read second analog input:
     secondSensor = analogRead(A1);
     // read switch, map it to 0 or 255L
-    thirdSensor = map(digitalRead(2), 0, 1, 0, 255); 
+    thirdSensor = map(digitalRead(2), 0, 1, 0, 255);
     // send sensor values:
     Serial.print(firstSensor);
     Serial.print(",");
     Serial.print(secondSensor);
     Serial.print(",");
-    Serial.println(thirdSensor); 
+    Serial.println(thirdSensor);
   }
 }
 
@@ -159,10 +159,10 @@ void draw() {
 }
 
 // serialEvent method is run automatically by the Processing applet
-// whenever the buffer reaches the byte value set in the bufferUntil() 
+// whenever the buffer reaches the byte value set in the bufferUntil()
 // method in the setup():
 
-void serialEvent(Serial myPort) { 
+void serialEvent(Serial myPort) {
   // read the serial buffer:
   String myString = myPort.readStringUntil('\n');
   // if you got any bytes other than the linefeed:
@@ -174,7 +174,7 @@ void serialEvent(Serial myPort) {
 
   // print out the values you got:
   for (int sensorNum = 0; sensorNum < sensors.length; sensorNum++) {
-    print("Sensor " + sensorNum + ": " + sensors[sensorNum] + "\t"); 
+    print("Sensor " + sensorNum + ": " + sensors[sensorNum] + "\t");
   }
   // add a linefeed after all the sensor values are printed:
   println();
@@ -196,15 +196,15 @@ void serialEvent(Serial myPort) {
 
 === See Also ===
 
-* http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Serial_Begin.html[serial.begin()]
-* http://energia.nu/Serial_Available.html[serial.available()]
-* http://energia.nu/Serial_Print.html[serial.print()]
-* http://energia.nu/AnalogRead.html[analogRead()]
-* http://energia.nu/Tutorial_Dimmer.html[Dimmer]:move the mouse to change the brightness of an LED.
-* http://energia.nu/Tutorial_Graph.html[Graph]:send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]:turn an LED on and off by sending data from Processing.
+* link:/reference/en/language/functions/communication/serial/[serial()]
+* link:/reference/en/language/functions/communication/serial/begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/available/[serial.available()]
+* link:/reference/en/language/functions/communication/serial/print/[serial.print()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
+* link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.
+* link:/guide/tutorials/communication/tutorial_physical_pixel/[Physical Pixel]:turn an LED on and off by sending data from Processing.
 * http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from an LaunchPad to the computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.
+* link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* link:/guide/tutorials/control_structures/tutorial_switchcase2/[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.

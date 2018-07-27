@@ -102,14 +102,14 @@ video::BZC2hu5Fisg[youtube]
 
 === Try it out ===
 
-* Blink the green LED. 
+* Blink the green LED.
 
 * Blink the red and green alternatively & together.
 
 === See Also ===
 
-* http://energia.nu/reference/setup/[setup()]
-* http://energia.nu/reference/loop/[loop()]
-* http://energia.nu/reference/pinmode/[pinMode()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/delay/[delay()]
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]
+* link:/reference/en/language/functions/digital-io/pinmode/[pinMode()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/time/delay/[delay()]

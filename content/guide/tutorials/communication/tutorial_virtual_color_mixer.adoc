@@ -106,14 +106,14 @@ void draw() {
   background(redValue, greenValue, blueValue);
 }
 
-void serialEvent(Serial myPort) { 
+void serialEvent(Serial myPort) {
   // get the ASCII string:
   String inString = myPort.readStringUntil('\n');
 
   if (inString != null) {
     // trim off any whitespace:
     inString = trim(inString);
-    // split the string on the commas and convert the 
+    // split the string on the commas and convert the
 	// resulting substrings into an integer array:
 	float[] colors = float(split(inString, ","));
 	// if the array has at least three elements, you know
@@ -136,12 +136,12 @@ void serialEvent(Serial myPort) {
 
 === See Also ===
 
-* http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Serial_Begin.html[serial.begin()]
-* http://energia.nu/Serial_Print.html[serial.print()]
-* http://energia.nu/If.html[if()]
-* http://energia.nu/Tutorial_Dimmer.html[Dimmer]:move the mouse to change the brightness of an LED.
-* http://energia.nu/Tutorial_Graph.html[Graph]:send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.
+* link:/reference/en/language/functions/communication/serial/[serial()]
+* link:/reference/en/language/functions/communication/serial/begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/print/[serial.print()]
+* link://reference/en/language/structure/control-structure/if/[if()]
+* link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
+* link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.
+* link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* link:/guide/tutorials/control_structures/tutorial_switchcase2/[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.

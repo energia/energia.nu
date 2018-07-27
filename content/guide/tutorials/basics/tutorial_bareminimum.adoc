@@ -52,5 +52,5 @@ video::OcQu6HoArD4[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/setup/[setup()]
-* http://energia.nu/reference/loop/[loop()]
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]

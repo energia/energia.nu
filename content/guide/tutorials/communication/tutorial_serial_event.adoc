@@ -31,11 +31,11 @@ This code demonstrates the use of the `serialEvent()` function. In this code, `s
   Serial Event example
 
   When new serial data arrives, this sketch adds it to a String.
-  When a newline is received, the loop prints the string and 
+  When a newline is received, the loop prints the string and
   clears it.
 
-  A good test for this is to try it with a GPS receiver 
-  that sends out NMEA 0183 sentences. 
+  A good test for this is to try it with a GPS receiver
+  that sends out NMEA 0183 sentences.
 
   Created 9 May 2011
   by Tom Igoe
@@ -59,7 +59,7 @@ void setup() {
 void loop() {
   // print the string when a newline arrives:
   if (stringComplete) {
-    Serial.println(inputString); 
+    Serial.println(inputString);
     // clear the string:
     inputString = "";
     stringComplete = false;
@@ -75,14 +75,14 @@ void loop() {
 void serialEvent() {
   while (Serial.available()) {
     // get the new byte:
-    char inChar = (char)Serial.read(); 
+    char inChar = (char)Serial.read();
     // add it to the inputString:
     inputString += inChar;
     // if the incoming character is a newline, set a flag
     // so the main loop can do something about it:
     if (inChar == '\n') {
     stringComplete = true;
-    } 
+    }
   }
 }
 ----
@@ -93,15 +93,15 @@ void serialEvent() {
 
 === See Also ===
 
-* http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Serial_Begin.html[serial.begin()]
-* http://energia.nu/Serial_Available.html[serial.available()]
-* http://energia.nu/Serial_Print.html[serial.print()]
-* http://energia.nu/AnalogRead.html[analogRead()]
-* http://energia.nu/Tutorial_Dimmer.html[Dimmer]:move the mouse to change the brightness of an LED.
-* http://energia.nu/Tutorial_Graph.html[Graph]:send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]:turn an LED on and off by sending data from Processing.
+* link:/reference/en/language/functions/communication/serial/[serial()]
+* link:/reference/en/language/functions/communication/serial/begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/available/[serial.available()]
+* link:/reference/en/language/functions/communication/serial/print/[serial.print()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
+* link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.
+* link:/guide/tutorials/communication/tutorial_physical_pixel/[Physical Pixel]:turn an LED on and off by sending data from Processing.
 * http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from an LaunchPad to the computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.
+* link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* link:/guide/tutorials/control_structures/tutorial_switchcase2/[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.

@@ -29,7 +29,7 @@ In the program below, after declaring two pin assignments (analog channel A3 for
 
 Next, in the main loop of the code, `sensorValue` is assigned to store the raw analog value coming in from the potentiometer. Because the LaunchPad has an `analogRead` resolution of 0-1023, and an `analogWrite` resolution of only 0-255, this raw data from the potentiometer needs to be scaled before using it to dim the LED.
 
-In order to scale this value, use a function called http://energia.nu/reference/map/[map()].
+In order to scale this value, use a function called link:/reference/en/language/functions/math/map/[map()].
 
 ----
 outputValue = map(sensorValue, 0, 1023, 0, 255);
@@ -74,27 +74,27 @@ int outputValue = 0;        // value output to the PWM (analog out)
 
 void setup() {
   // initialize serial communications at 9600 bps:
-  Serial.begin(9600); 
+  Serial.begin(9600);
 }
 
 void loop() {
   // read the analog in value:
-  sensorValue = analogRead(analogInPin);            
+  sensorValue = analogRead(analogInPin);
   // map it to the range of the analog out:
-  outputValue = map(sensorValue, 0, 1023, 0, 255);  
+  outputValue = map(sensorValue, 0, 1023, 0, 255);
   // change the analog out value:
-  analogWrite(analogOutPin, outputValue);           
+  analogWrite(analogOutPin, outputValue);
 
   // print the results to the serial monitor:
-  Serial.print("sensor = " );                       
-  Serial.print(sensorValue);      
-  Serial.print("\t output = ");      
-  Serial.println(outputValue);   
+  Serial.print("sensor = " );
+  Serial.print(sensorValue);
+  Serial.print("\t output = ");
+  Serial.println(outputValue);
 
   // wait 2 milliseconds before the next loop
   // for the analog-to-digital converter to settle
   // after the last reading:
-  delay(2);                     
+  delay(2);
 }
 ----
 
@@ -108,13 +108,11 @@ video::0M-W6a0MhUs[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/map/[map()]
-* http://energia.nu/reference/analogread/[analogRead()]
-* http://energia.nu/reference/analogwrite/[analogWrite()]
-* http://energia.nu/reference/serial/[serial()]
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print the state out to the serial monitor.
-* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]:use a potentiometer to control the blinking of an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_calibration/[Calibration]:calibrating analog sensor readings.
- 
-
+* link:/reference/en/language/functions/math/map/[map()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/reference/en/language/functions/analog-io/analogwrite/[analogWrite()]
+* link:/reference/en/language/functions/communication/serial/[Serial()]
+* link:/guide/tutorials/basics/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print the state out to the serial monitor.
+* link:/guide/tutorials/analog/tutorial_analoginput/[AnalogInput]:use a potentiometer to control the blinking of an LED.
+* link:/guide/tutorials/basics/tutorial_fade/[Fade]:use an analog input to fade an LED.
+* link:/guide/tutorials/analog/tutorial_calibration/[Calibration]:calibrating analog sensor readings.

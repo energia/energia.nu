@@ -11,7 +11,7 @@ This example demonstrates one techinque for calibrating sensor input. The Launch
 * (1) 220 ohm resistor
 * Breadboard
 * Hook-up wire
- 
+
 === Relevant Groundwork ===
 
 Analog sensor (e.g. potentiometer, light sensor) on analog input 3. LED on digital pin 2.
@@ -19,15 +19,15 @@ Analog sensor (e.g. potentiometer, light sensor) on analog input 3. LED on digit
 === Circuit ===
 
 image::../img/Calibration_bb.png[]
- 
+
 Image developed using http://fritzing.org/home/[Fritzing]. For more circuit examples, see the http://fritzing.org/projects/[Fritzing project page].
 
 Connect an LED to digital pin 2 with a 220 ohm current limiting resistor. Connect a photocell to 3V and then to analog pin 3 with a 10K ohm resistor as a reference to ground.
 
 === Schematic ===
- 
+
 image::../img/Calibration_schem.png[]
- 
+
 === Code Explanation ===
 
 Before the setup, you set initial values for the minimum and maximum like so:
@@ -40,7 +40,7 @@ int sensorMax = 0;           // maximum sensor value
 These may seem backwards. Initially, you set the minimum high and read for anything lower than that, saving it as the new minimum. Likewise, you set the maximum low and read for anything higher as the new maximum, like so:
 
 ----
-// calibrate during the first five seconds 
+// calibrate during the first five seconds
 while (millis() < 5000) {
    sensorValue = analogRead(sensorPin);
 
@@ -63,7 +63,7 @@ This way, any further readings you take can be mapped to the range between this 
 sensorValue = map(sensorValue, sensorMin, sensorMax, 0, 255);
 ----
 
-=== Code === 
+=== Code ===
 
 Here's the whole program:
 
@@ -77,7 +77,7 @@ Here's the whole program:
   attached to the sensor pin.
 
   The sensor minimum and maximum initial values may seem backwards.
-  Initially, you set the minimum high and listen for anything 
+  Initially, you set the minimum high and listen for anything
   lower, saving it as the new minimum. Likewise, you set the
   maximum low and listen for anything higher as the new maximum.
 
@@ -108,7 +108,7 @@ void setup() {
   pinMode(14, OUTPUT);
   digitalWrite(14, HIGH);
 
-  // calibrate during the first five seconds 
+  // calibrate during the first five seconds
   while (millis() < 5000) {
     sensorValue = analogRead(sensorPin);
 
@@ -152,14 +152,12 @@ video::nk9vJFn2l00[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/while/[while()]
-* http://energia.nu/reference/millis/[millis()]
-* http://energia.nu/reference/constrain/[constrain()]
-* http://energia.nu/reference/map/[map()]
-* http://energia.nu/reference/if/[If()]
-* http://energia.nu/guide/tutorial_analoginput/[AnalogInput]:use a potentiometer to control the blinking of an LED.
-* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog pin, map the result, and use that data to dim or brighten an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_smoothing/[Smoothing]:smooth multiple readings of an analog input.
- 
-
+* link:/reference/en/language/structure/control-structure/while/[while()]
+* link:/reference/en/language/functions/time/millis/[millis()]
+* link:/reference/en/language/functions/math/constrain/[constrain()]
+* link:/reference/en/language/functions/math/map/[map()]
+* link:/reference/en/language/structure/control-structure/if/[If()]
+* link:/guide/tutorials/analog/tutorial_analoginput/[AnalogInput]:use a potentiometer to control the blinking of an LED.
+* link:/guide/tutorials/analog/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog pin, map the result, and use that data to dim or brighten an LED.
+* link:/guide/tutorials/basics/tutorial_fade[Fade]:use an analog input to fade an LED.
+* link:/guide/tutorials/analog/tutorial_smoothing/[Smoothing]:smooth multiple readings of an analog input.

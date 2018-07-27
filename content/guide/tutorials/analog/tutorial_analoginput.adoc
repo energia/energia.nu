@@ -14,7 +14,7 @@ Connect three wires to the LaunchPad board. The first goes to ground from one of
 
 For this example, it is possible to use the LaunchPad board's built in LED attached to pin 2. To use an additional LED, attach its longer leg (the positive leg, or anode), to digital pin 2, and it's shorter leg (the negative leg, or cathode) to the ground (gnd) pin next to pin 2. Because of the low amount of current coming from digital pin 2, it is not necessary to use a current limiting resistor in this particular case.
 
-=== Circuit === 
+=== Circuit ===
 
 image::../img/AnalogInput_bb.png[]
 
@@ -40,9 +40,9 @@ That value, stored in `sensorValue`, is used to set a `delay()` for your blink c
 /*
   Analog Input
   Demonstrates analog input by reading an analog sensor on analog channel A3 and
-  turning on and off a light emitting diode(LED)  connected to digital pin 2. 
+  turning on and off a light emitting diode(LED)  connected to digital pin 2.
   The amount of time the LED will be on and off depends on
-  the value obtained by analogRead(). 
+  the value obtained by analogRead().
 
   The circuit:
   * Potentiometer attached to analog channel A3
@@ -52,7 +52,7 @@ That value, stored in `sensorValue`, is used to set a `delay()` for your blink c
   * LED anode (long leg) attached to digital output 2
   * LED cathode (short leg) attached to ground
 
-  * Note: MSP430 LaunchPad has a built-in LED attached 
+  * Note: MSP430 LaunchPad has a built-in LED attached
     to pin 2 on the board, the LED is optional.
 
   Created by David Cuartielles
@@ -69,20 +69,20 @@ int sensorValue = 0;  // variable to store the value coming from the sensor
 
 void setup() {
   // declare the ledPin as an OUTPUT:
-  pinMode(ledPin, OUTPUT);  
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
   // read the value from the sensor:
-  sensorValue = analogRead(sensorPin);    
+  sensorValue = analogRead(sensorPin);
   // turn the ledPin on
-  digitalWrite(ledPin, HIGH);  
+  digitalWrite(ledPin, HIGH);
   // stop the program for  milliseconds:
-  delay(sensorValue);          
-  // turn the ledPin off:        
-  digitalWrite(ledPin, LOW);   
+  delay(sensorValue);
+  // turn the ledPin off:
+  digitalWrite(ledPin, LOW);
   // stop the program for for  milliseconds:
-  delay(sensorValue);                  
+  delay(sensorValue);
 }
 ----
 
@@ -96,12 +96,11 @@ video::zVkfIMFGx14[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/pinmode/[pinMode()]
-* http://energia.nu/reference/analogread/[analogRead()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/delay/[delay()]
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state to the serial monitor.
-* http://energia.nu/guide/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog input, map its values, and then use that information to dim or brighten an LED.
-* http://energia.nu/guide/tutorial_fade/[Fade]:use an analog input to fade an LED.
-* http://energia.nu/guide/tutorial_calibration/[Calibration]:scalibrating analog sensor readings.
- 
+* link:/reference/en/language/functions/digital-io/pinmode/[pinMode()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/time/delay/[delay()]
+* link:/guide/tutorials/basics/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state to the serial monitor.
+* link:/guide/tutorials/analog/tutorial_analoginoutserial/[AnalogInOutSerial]:read an analog input, map its values, and then use that information to dim or brighten an LED.
+* link:/guide/tutorials/basics/tutorial_fade/[Fade]:use an analog input to fade an LED.
+* link:/guide/tutorials/analog/tutorial_calibration/[Calibration]:calibrating analog sensor readings.

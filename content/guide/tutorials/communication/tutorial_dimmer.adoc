@@ -77,7 +77,7 @@ void loop() {
 }
 
 
-/* 
+/*
 // Processing code for this example
 // Dimmer - sends bytes over a serial port
 // by David A. Mellis
@@ -99,7 +99,7 @@ void setup() {
   // parameter (e.g. 9600) is the speed of the communication. It
   // has to correspond to the value passed to Serial.begin() in your
   // Energia sketch.
-  port = new Serial(this, Serial.list()[0], 9600); 
+  port = new Serial(this, Serial.list()[0], 9600);
 
   // If you know the name of the port used by the Launchpad, you
   // can specify it directly like this.
@@ -121,18 +121,18 @@ void draw() {
 ----
 
 === Working Video ===
- 
+
 === Try it out ===
 
 === See Also ===
 
-* http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Serial_Read.html[serial.read()]
-* http://energia.nu/AnalogRead.html[analogRead()]
-* http://energia.nu/AnalogWrite.html[analogWrite()]
-* http://energia.nu/Tutorial_Graph.html[Graph]:send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]:turn an LED on and off by sending data from Processing.
-* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from a LaunchPad to the computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.
+* link:/reference/en/language/functions/communication/serial/[serial()]
+* link:/reference/en/language/functions/communication/serial/read/[serial.read()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/reference/en/language/functions/analog-io/analogwrite/[analogWrite()]
+* link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.
+* link:/guide/tutorials/communication/tutorial_physical_pixel/[Physical Pixel]:turn an LED on and off by sending data from Processing.
+* link:/guide/tutorials/communication/tutorial_virtual_color_mixer/[Virtual Color Mixer]:send multiple variables from a LaunchPad to the computer and read them in Processing.
+* link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* link:/guide/tutorials/control_structures/tutorial_switchcase2/[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.

@@ -1,6 +1,6 @@
 == Digital Read Serial ==
 
-This example shows you how to monitor the state of a switch by establishing http://energia.nu/reference/serial/[serial communication] between your LaunchPad and your computer over USB.
+This example shows you how to monitor the state of a switch by establishing link:/reference/en/language/functions/communication/serial/[serial communication] between your LaunchPad and your computer over USB.
 
 === Hardware Required ===
 
@@ -12,7 +12,7 @@ This example shows you how to monitor the state of a switch by establishing http
 
 === Relevant Groundwork ===
 
-Any input pin can be used to connect to an external pushbutton. To see what pins support external pushbuttons, refer to the hardware http://energia.nu/guide/pinmapping/[pin mapping guide].
+Any input pin can be used to connect to an external pushbutton. To see what pins support external pushbuttons, refer to the hardware link:/pinmaps/[pin mapping guide].
 
 [.underline]#For on-board pushbutton:#
 
@@ -140,17 +140,17 @@ video::3WDIMcMQCpE[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/setup/[setup()]
-* http://energia.nu/reference/loop/[loop()]
-* http://energia.nu/reference/pinmode/[pinMode()]
-* http://energia.nu/reference/digitalread/[digitalRead()]
-* http://energia.nu/reference/delay/[delay()]
-* http://energia.nu/reference/int/[int]
-* http://energia.nu/reference/serial/[serial]
-* http://energia.nu/guide/tutorial_digitalpins/[DigitalPins]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_fade/[Fade]:demonstrates the use of analog output to fade an LED.
-* http://energia.nu/guide/tutorial_readanalogvoltage/[ReadAnalogVoltage]:reads an analog input and prints the voltage to the serial monitor.
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]
+* link:/reference/en/language/functions/digital-io/pinmode/[pinMode()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/time/delay/[delay()]
+* link:/reference/en/language/variables/data-types/int/[int]
+* link:/reference/en/language/functions/communication/serial/[serial]
+* link:/guide/foundations/micro/tutorial_digitalpins/[DigitalPins]
+* link:/guide/tutorials/basics/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* link:/guide/tutorials/basics/tutorial_blink/[Blink]:turn an LED on and off.
+* link:/guide/tutorials/basics/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* link:/guide/tutorials/basics/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state out to the Energia Serial Monitor.
+* link:/guide/tutorials/basics/tutorial_fade/[Fade]:demonstrates the use of analog output to fade an LED.
+* link:/guide/tutorials/basics/tutorial_readanalogvoltage/[ReadAnalogVoltage]:reads an analog input and prints the voltage to the serial monitor.

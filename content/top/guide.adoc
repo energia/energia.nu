@@ -37,9 +37,9 @@ toc::[]
 ==========================
 Step-by-step instructions for setting up the Energia IDE and running your first Sketch on a Texas Instruments LaunchPad board.
 
-* link:guide_windows/[Windows]
-* link:guide_macosx/[Mac OS X]
-* link:guide_linux/[Linux]
+* link:install/windows/[Windows]
+* link:install/macos/[Mac OS X]
+* link:install/linux/[Linux]
 ==========================
 
 == Essentials ==
@@ -155,7 +155,7 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/control_structures/tutorial_switchcase2/[Switch Case 2]: A second switch-case example, showing how to take different actions based in characters received in the serial port.
 
 . *Strings*
-* link:tutorials/strings/tutorial_stringadditionoperator/[StringAdditionOperator]: Add strings together in a variety of ways.
+* link:tutorials/strings/tutorial_stringadditionoperator/[StringAdditionOperator]: [[strings]]Add strings together in a variety of ways.
 * link:tutorials/strings/tutorial_stringappendoperator/[StringAppendOperator]: Append data to strings.
 * link:tutorials/strings/string_casechanges/[StringCaseChanges]: Change the case of a string.
 * link:tutorials/strings/tutorial_stringcharacters/[StringCharacters]: Get/set the value of a specific character in a string.
@@ -197,7 +197,7 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * Olimex8x8matrix: create a scrolling marquee with an LED matrix.
 * Sharp LCD Display: display images and text on the low power LCD
 * EducationalBP: create a magic 8 ball with an accelerometer and LCD display.
-* link:tutorials/boosterpacks/boostxl-edumkii[EducationalBP MKII]: examples involving buzzer, LCD, LEDs, accelerometer, push buttons, and more
+* link:tutorials/boosterpacks/tutorial_edumkii[EducationalBP MKII]: examples involving buzzer, LCD, LEDs, accelerometer, push buttons, and more
 * CC3000: introduction to SimpleLink WiFi CC3000 BoosterPack
 * CC3100: introduction to SimpleLink WiFi CC3100 BoosterPack
 

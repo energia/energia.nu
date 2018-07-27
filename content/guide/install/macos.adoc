@@ -1,0 +1,157 @@
+++++
+<style>
+h1 {
+  text-align: center;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #aaa;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: #2980b9;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: #3498db;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 30em;
+}
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+</style>
+++++
+
+== Installing the LaunchPad drivers
+To use Energia you will need to have the LaunchPad drivers installed. The drivers allow your PC to “see” the LaunchPad on a serial COM port when it is connected.
+
+++++
+<div class="tab">
+  <input id="tab-one" type="radio" name="tabs">
+  <label for="tab-one">MSP-EXP432P401R LaunchPad</label>
+  <div class="tab-content">
+++++
+No drivers are needed for this LaunchPad :-).
+++++
+  </div>
+</div>
+++++
+
+
+++++
+<div class="tab">
+  <input id="tab-two" type="radio" name="tabs">
+  <label for="tab-two">CC3200 LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+
+Follow the instructions on link:/guide/install/cc3200-guide/[this page] for important jumper settings and firmware upgrade instructions.
+
+. Do not connect your CC3200 LaunchPad to your Mac. If you already plugged it into your Mac then unplug it before proceeding to step 2.
+. Download the CC3200 Drivers for macOS: http://s3.amazonaws.com/energiaUS/files/EnergiaFTDIDrivers2.3-signed.zip[CC3200 LaunchPad CDC drivers zip file for Mac OS X.]
+. Unzip EnergiaFTDIDrivers2.3-signed.zip.
+. Double click the EnergiaFTDIDrivers2.3-signed.pkg and follow the instructions.
+. Reboot your Mac.
+. Connect your CC3200 LaunchPad to your Mac. The CC3200 will be automatically recognized.
+
+++++
+    </p>
+  </div>
+</div>
+++++
+
+++++
+<div class="tab">
+  <input id="tab-three" type="radio" name="tabs">
+  <label for="tab-three">MSP-EXP430G2 and MSP-EXP430FR5739 LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+. Download the LaunchPad drivers for Mac OS X: http://s3.amazonaws.com/energiaUS/files/MSP430LPCDC-1.0.3b-Signed.zip[LaunchPad CDC drivers zip file for Mac OS X]. This driver has been signed and works on Mac OS X 10.x (Yosemite).
+. Unzip and double click MSP430LPCDC 1.0.3b-Signed.pkg
+. Follow the instructions in the installer.
+++++
+  </div>
+</div>
+++++
+
+++++
+<div class="tab">
+  <input id="tab-four" type="radio" name="tabs">
+  <label for="tab-four">MSP-EXP430F5529LP, MSP-EXP430FR4133, MSP-EXP430FR5969, and MSP-EXP430FR6989 LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+No drivers are needed for these LaunchPads :-).
+++++
+  </div>
+</div>
+++++
+
+++++
+<div class="tab">
+  <input id="tab-five" type="radio" name="tabs">
+  <label for="tab-five">EK-TM4C123GXL, EK-TM4C1294XL and EK-LM4F120XL LaunchPad</label>
+  <div class="tab-content">
+    <p>
+++++
+No drivers are needed for theses LaunchPads :-).
+++++
+  </div>
+</div>
+++++

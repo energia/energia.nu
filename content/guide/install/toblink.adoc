@@ -1,0 +1,52 @@
+=== Download Energia
+The most recent release of Energia can be downloaded from the link:/download/[download page].
+
+=== Starting Energia
+
+Follow the instructions below for your operating system. Once Energia has starts, an empty Sketch window will appear similar to the below image.
+
+[caption="Figure 1: ",link=../EnergiaMainWindow.png]
+image::../EnergiaMainWindow.png[EnergiaMainWindow.png,640]
+==== Windows
+:icons: font
+NOTE: Make sure that the location where you unzip and run Energia does not have spaces. The msp430 compiler will not run properly if Energia's path contains spaces. The suggested installation path is c:\.
+
+Double click Energia.exe (Windows users). Energia will start and an empty Sketch window will appear.
+
+==== macOS
+Double click Energia.app (Mac OS X users). Energia will start and an empty Sketch window will appear.
+
+==== Linux
+In a terminal cd to the directory where you have unpacked Energia. e.g. /home/username/energia-0101E00XYZ-linux64/ and run:
+
+....
+ ./energia &
+....
+
+=== Selecting the Serial Port
+Select Serial Port from the Tools menu to view the available serial ports. On windows, they will be listed as COMXXX port and usually a higher number is the LaunchPad com port. On Mac OS X they will be listed as /dev/cu.uart-XXXX. On Linux they will be listed as /dev/ttyACMxyz.
+
+[caption="Figure 1: ",link=../EnergiaSerialPort.png]
+image::../EnergiaSerialPort.png[EnergiaSerialPort.png,640]
+
+For more on configuring your Launchpad for serial communication, see Serial-Communication
+
+=== Selecting the Board
+To select the board or rather the msp430 in your LaunchPad, select Board from the Tools menu and choose the board that matched the msp430 in the LaunchPad.
+
+[caption="Figure 1: ",link=../EnergiaBoardSelect.png]
+image::../EnergiaBoardSelect.png[EnergiaBoardSelect.png,640]
+
+=== Uploading Your First Blinky Sketch
+To load the Blinky example into the editor, select Blink from the Blink from the File->Examples->1.Basics menu.
+
+[caption="Figure 1: ",link=../Blink.jpg]
+image::../Blink.jpg[Blink.jpg,640]
+
+
+To compile and upload the Sketch to the LaunchPad click the Upload button.
+
+[caption="Figure 1: ",link=../Upload.png]
+image::../Upload.png[Upload.png,640]
+
+If all is well then the green LED on your LaunchPad is happily blinking. Congratulations, you have uploaded your first Sketch. Energia includes many more examples to get you started with your electronic project. Need help? The https://forum.43oh.com/forum/119-energia/[Energia discussion forum] is hosted on https://43oh.com/[43oh.com].

@@ -47,13 +47,13 @@ It is important to note that when using Processing, you have to first flash your
   to the computer.
 
   You can use the Energia serial monitor to view the sent data, or it can
-  be read by Processing or another program capable of reading 
-  data from a serial port. The Processing code below graphs the data received 
+  be read by Processing or another program capable of reading
+  data from a serial port. The Processing code below graphs the data received
   so you can see the value of the analog input changing over time.
 
   The circuit:
-  Any analog input sensor can be attached to an analog pin.  
-  For this example, a potentiometer is attached to analog pin 3. 
+  Any analog input sensor can be attached to an analog pin.
+  For this example, a potentiometer is attached to analog pin 3.
 
   created 2006
   by David A. Mellis
@@ -65,7 +65,7 @@ It is important to note that when using Processing, you have to first flash your
   Hardware Required:
   * MSP-EXP430G2 LaunchPad
   * Potentiometer
-  
+
   This example code is in the public domain.
 
 */
@@ -78,12 +78,12 @@ void setup() {
 void loop() {
   // send the value of analog input 3:
   Serial.println(analogRead(A3));
-  // wait a bit for the analog-to-digital converter 
+  // wait a bit for the analog-to-digital converter
   // to stabilize after the last reading:
   delay(1000);
 }
 
-/* 
+/*
 // Processing code for this example
 
 // Graphing sketch
@@ -107,7 +107,7 @@ int xPos = 1; // horizontal position of the graph
 
 void setup () {
   // set the window size:
-  size(400, 300); 
+  size(400, 300);
 
   // List all the available serial ports
   println(Serial.list());
@@ -130,7 +130,7 @@ void serialEvent (Serial myPort) {
     // trim off any whitespace:
     inString = trim(inString);
     // convert to an int and map to the screen height:
-    float inByte = float(inString); 
+    float inByte = float(inString);
     inByte = map(inByte, 0, 1023, 0, height);
 
     // draw the line:
@@ -140,8 +140,8 @@ void serialEvent (Serial myPort) {
     // at the edge of the screen, go back to the beginning:
     if (xPos >= width) {
       xPos = 0;
-      background(0); 
-    } 
+      background(0);
+    }
     else {
       // increment the horizontal position:
       xPos++;
@@ -157,13 +157,13 @@ void serialEvent (Serial myPort) {
 
 === See Also ===
 
-* http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Serial_Read.html[serial.read()]
-* http://energia.nu/AnalogRead.html[analogRead()]
-* http://energia.nu/AnalogWrite.html[analogWrite()]
-* http://energia.nu/Tutorial_Dimmer.html[Dimmer]:move the mouse to change the brightness of an LED.
-* http://energia.nu/Tutorial_PhysicalPixel.html[Physical Pixel]:turn an LED on and off by sending data from Processing.
-* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from a LaunchPad to the computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based 0n characters received by the serial port.
+* link:/reference/en/language/functions/communication/serial/[serial()]
+* link:/reference/en/language/functions/communication/serial/read/[serial.read()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/reference/en/language/functions/analog-io/analogwrite/[analogWrite()]
+* link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.
+* link:/guide/tutorials/communication/tutorial_physical_pixel/[Physical Pixel]:turn an LED on and off by sending data from Processing.
+* link:/guide/tutorials/communication/tutorial_virtual_color_mixer/[Virtual Color Mixer]:send multiple variables from a LaunchPad to the computer and read them in Processing.
+* link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* link:/guide/tutorials/control_structures/tutorial_switchcase2/[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.
