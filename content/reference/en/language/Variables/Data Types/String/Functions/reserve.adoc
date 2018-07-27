@@ -31,7 +31,7 @@ string.reserve(size)
 
 [float]
 === Parameters
-`size`: unsigned int declaring the number of bytes in memory to save for String manipulation 
+`size`: unsigned int declaring the number of bytes in memory to save for String manipulation
 
 
 [float]
@@ -70,7 +70,7 @@ void setup() {
 void loop() {
  // nothing to do here
 }
- 
+
 ----
 // HOW TO USE SECTION ENDS
 
@@ -83,6 +83,6 @@ void loop() {
 === See also
 
 [role="example"]
-* #EXAMPLE# link: https://www.arduino.cc/en/Tutorial/BuiltInExamples#strings[Built-in String Tutorials]
+* #EXAMPLE# link: link:/guide/tutorials/#strings[Built-in String Tutorials]
 --
 // SEE ALSO SECTION ENDS
