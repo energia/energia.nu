@@ -95,10 +95,10 @@ The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cy
 * #LANGUAGE# link:../../zero-due-mkr-family/analogwriteresolution[analogWriteResolution()]
 
 [role="definition"]
-* #DEFINITION# http://arduino.cc/en/Tutorial/PWM[PWM^]
+* #DEFINITION# link:/guide/foundations/micro/tutorial_pwm[PWM^]
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/Blink[Blink^]
+* #EXAMPLE# link:/guide/tutorials/basics/tutorial_blink[Blink^]
 
 --
 // SEE ALSO SECTION ENDS
