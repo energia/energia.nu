@@ -12,7 +12,7 @@ If statements are conditional, which means it allows you to execute certain sect
  
 === Relevant Groundwork ===
 
-The http://energia.nu/reference/if/[`*if()*`] statement is the most basic of all programming control structures. It allows you to make something happen or not depending on whether a given condition is true or not. It looks like this:
+The link:/reference/en/language/structure/control-structure/if/[`*if()*`] statement is the most basic of all programming control structures. It allows you to make something happen or not depending on whether a given condition is true or not. It looks like this:
 
 ----
 if (someCondition) {
@@ -128,15 +128,15 @@ video::4qljV-gQJ2w[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/if/[if()]
-* http://energia.nu/reference/else/[if…else]
-* http://energia.nu/reference/analogread/[analogRead()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/serial/serial_begin/[serial.begin()]
-* http://energia.nu/reference/serial/serial_print/[serial.print()]
-* http://energia.nu/guide/tutorial_forloop/[For Loop]:control multiple LEDs with a For Loop.
-* http://energia.nu/guide/tutorial_whileloop/[While Loop]:use a While Loop to calibrate a sensor while a button is being pressed.
-* http://energia.nu/guide/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
-* http://energia.nu/guide/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
+* link:/reference/en/language/structure/control-structure/if/[if()]
+* ink:/reference/en/language/structure/control-structure/else/[if…else]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/communication/serial/serial_begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/serial_print/[serial.print()]
+* link:/guide/tutorials/control_structures/tutorial_forloop/[For Loop]:control multiple LEDs with a For Loop.
+* link:/guide/tutorials/control_structures/tutorial_whileloop/[While Loop]:use a While Loop to calibrate a sensor while a button is being pressed.
+* link:/guide/tutorials/control_structures/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
+* link:/guide/tutorials/control_structures/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
  
 

@@ -107,10 +107,10 @@ the code.
 
 === See Also ===
 
-* http://energia.nu/reference/pinmode/[pinMode()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/for/[for()]
-* http://energia.nu/reference/delay/[delay()]
-* http://energia.nu/guide/tutorials/tutorial_forloop/[For Loop]:control multiple LEDs with a For Loop.
-* http://energia.nu/guide/tutorials/tutorial_whileloop/[While Loop]:use a While Loop to calibrate a sensor while a button is being pressed.
-* http://energia.nu/guide/tutorials/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
+* link:/reference/en/language/functions/digital-io/pinmode/[pinMode()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/structure/control-structure/for/[for()]
+* link:/reference/en/language/functions/time/delay/[delay()]
+* link:/guide/tutorials/control_structures/tutorial_forloop/[For Loop]:control multiple LEDs with a For Loop.
+* link:/guide/tutorials/control_structures/tutorial_whileloop/[While Loop]:use a While Loop to calibrate a sensor while a button is being pressed.
+* link:/guide/tutorials/control_structures/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.

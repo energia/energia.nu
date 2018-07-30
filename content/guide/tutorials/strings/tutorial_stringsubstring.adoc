@@ -1,6 +1,6 @@
 == String Substring Function ==
 
-The String function http://energia.nu/StringSubstring.html[`substring()`] is closely related to http://energia.nu/StringCharAt.html[`charAt()`], http://energia.nu/StringStartsWith.html[`startsWith()`] and http://energia.nu/StringEndsWith.html[`endsWith()`]. It allows you to look for an instance of a particular substring within a given String.
+The String function link:/reference/en/language/variables/data-types/functions/substring/[`substring()`] is closely related to link:/reference/en/language/variables/data-types/functions/setchartat/[`charAt()`], link:/reference/en/language/variables/data-types/functions/startswith/[`startsWith()`] and link:/reference/en/language/variables/data-types/functions/endswith/[`endsWith()`]. It allows you to look for an instance of a particular substring within a given String.
 
 === Relevant Groundwork ===
 
@@ -108,6 +108,6 @@ void loop() {
 
 === See Also ===
 
-* http://energia.nu/Setup.html[setup()]
-* http://energia.nu/Loop.html[loop()]
-* http://energia.nu/Serial_Println.html[println()]
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]
+* link:/reference/en/language/functions/communication/serial/serial_println[serial.println()]

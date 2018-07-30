@@ -1,6 +1,6 @@
 == String StartsWith and EndsWith Functions ==
 
-The String functions http://energia.nu/StringStartsWith.html[`startsWith()`] and http://energia.nu/StringEndsWith.html[`endsWith()`] allow you to check what character or substring a given String starts or ends with. They're basically special cases of http://energia.nu/StringSubstring.html[substring].
+The String functions link:/reference/en/language/variables/data-types/functions/startswith/[`startsWith()`] and link:/reference/en/language/variables/data-types/functions/endswith[`endsWith()`] allow you to check what character or substring a given String starts or ends with. They're basically special cases of link:/reference/en/language/variables/data-types/functions/substring/[`substring()`].
 
 === Relevant Groundwork ===
 
@@ -107,6 +107,6 @@ void loop() {
 
 === See Also ===
 
-* http://energia.nu/Setup.html[setup()]
-* http://energia.nu/Loop.html[loop()]
-* http://energia.nu/Serial_Println.html[println()]
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]
+* link:/reference/en/language/functions/communication/serial/serial_println[serial.println()]

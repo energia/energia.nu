@@ -12,7 +12,7 @@ A for loop is a section of code that repeat until a conditional is met. Usually 
  
 === Relevant Groundwork ===
 
-Often you want to iterate over a series of pins and do something to each one. For instance, this example blinks 9 LEDsattached the LaunchPad by using a http://energia.nu/reference/for/[`*for()*`] loop to cycle back and forth through digital pins 2-10. The LEDS are turned on and off, in sequence, by using both the http://energia.nu/reference/digitalwrite/[`digitalWrite()`] and http://energia.nu/reference/delay/[`delay()`] functions.
+Often you want to iterate over a series of pins and do something to each one. For instance, this example blinks 9 LEDsattached the LaunchPad by using a link:/reference/en/language/structure/control-structure/for/[`*for()*`] loop to cycle back and forth through digital pins 2-10. The LEDS are turned on and off, in sequence, by using both the link:/reference/en/language/functions/digital-io/digitalwrite/[`digitalWrite()`] and link:/reference/en/language/functions/time/delay/[`delay()`] functions.
 
 We also call this example https://en.wikipedia.org/wiki/KITT[''Knight Rider''] in memory of a TV-series from the 80's where David Hasselhoff had an AI machine named KITT driving his Pontiac. The car had been augmented with plenty of LEDs in all possible sizes performing flashy effects. In particular, it had a display that scanned back and forth across a line. This example duplicates the KITT display.
 
@@ -91,11 +91,11 @@ video::q3kINZp2DJQ[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/for/[for()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/delay/[delay()]
-* http://energia.nu/guide/tutorial_whileloop/[WhileLoop]:use a While Loop to calibrate a sensor while a button is being pressed.
-* http://energia.nu/guide/tutorial_switchcase/[SwitchCase]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
-* http://energia.nu/guide/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
+* link:/reference/en/language/structure/control-structure/for/[for()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/time/delay/[delay()]
+* link:/guide/tutorials/control_structures/tutorial_whileloop/[While Loop]:use a While Loop to calibrate a sensor while a button is being pressed.
+* link:/guide/tutorials/control_structures/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
+* link:/guide/tutorials/control_structures/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
  
 
