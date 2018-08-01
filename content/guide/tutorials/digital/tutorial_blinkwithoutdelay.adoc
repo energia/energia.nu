@@ -136,11 +136,11 @@ video::Kn0zx3uH6Sk[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/setup/[setup()]
-* http://energia.nu/reference/loop/[loop()]
-* http://energia.nu/reference/millis/[millis()]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]
+* link:/reference/en/language/functions/time/millis/[millis()]
+* link:/guide/tutorials/basics/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* link:/guide/tutorials/basics/tutorial_blink/[Blink]:turn an LED on and off.
+* link:/guide/tutorials/basics/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
  
 

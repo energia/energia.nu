@@ -1,6 +1,6 @@
 == String Length() and Trim() Commands ==
 
-You can get the length of a http://energia.nu/StringObject.html[String] using the `length()` command, or eliminate extra characters using the `trim()` command. This example shows you how to use both commands.
+You can get the length of a link:/reference/en/language/variables/data-types/string/string/[String] using the `length()` command, or eliminate extra characters using the `trim()` command. This example shows you how to use both commands.
 
 === Relevant Groundwork ===
 
@@ -129,6 +129,6 @@ void loop() {
 
 === See Also ===
 
-* http://energia.nu/Setup.html[setup()]
-* http://energia.nu/Loop.html[loop()]
-* http://energia.nu/Serial_Println.html[println()]
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]
+* link:/reference/en/language/functions/communication/serial/serial_println[serial.println()]

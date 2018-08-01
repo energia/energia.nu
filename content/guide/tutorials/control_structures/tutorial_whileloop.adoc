@@ -12,7 +12,7 @@ A while loop is a section of code that will loop as long as the conditional argu
  
 === Relevant Groundwork ===
 
-Sometimes you want everything in the program to stop while a given condition is true. You can do this using a http://energia.nu/reference/while/[*while loop*]. This example shows how to use a while loop to http://energia.nu/guide/tutorial_calibration/[calibrate] the value of an analog sensor.
+Sometimes you want everything in the program to stop while a given condition is true. You can do this using a link:/reference/en/language/structure/control-structure/while/[*while loop*]. This example shows how to use a while loop to link:/guide/tutorials/analog/tutorial_calibration/[calibrate] the value of an analog sensor.
 
 In the main loop, the sketch below reads the value of a photoresistor on analog pin `A3` and uses it to fade an LED on pin 14. But while a button attached to digital pin 6 is pressed, the program runs a method called `calibrate()` that looks for the highest and lowest values of the analog sensor. When you release the button, the sketch continues with the main loop.
 
@@ -130,16 +130,16 @@ the code.
 
 === See Also ===
 
-* http://energia.nu/reference/while/[while()]
-* http://energia.nu/reference/digitalread/[digitalRead()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/analogread/[analogRead()]
-* http://energia.nu/reference/analogwrite/[analogWrite()]
-* http://energia.nu/reference/map/[map()]
-* http://energia.nu/reference/constrain/[constrain()]
-* http://energia.nu/reference/if/[if()]
-* http://energia.nu/guide/tutorial_forloop/[For Loop]:control multiple LEDs with a For Loop.
-* http://energia.nu/guide/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
-* http://energia.nu/guide/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
+* link:/reference/en/language/structure/control-structure/while/[while()]
+* link:/reference/en/language/functions/digital-io/digitalread/[digitalRead()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
+* link:/reference/en/language/functions/analog-io/analogwrite/[analogWrite()]
+* link:/reference/en/language/functions/math/map/[map()]
+* link:/reference/en/language/functions/math/constrain/[constrain()]
+* link:/reference/en/language/structure/control-structure/if/[if()]
+* link:/guide/tutorials/control_structures/tutorial_forloop/[For Loop]:control multiple LEDs with a For Loop.
+* link:/guide/tutorials/control_structures/tutorial_switchcase/[Switch Case]:choose between a number of discrete values in a manner that is the equivalent of using multiples If statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
+* link:/guide/tutorials/control_structures/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
  
 

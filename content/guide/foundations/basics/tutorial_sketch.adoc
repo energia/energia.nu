@@ -19,15 +19,15 @@ The first few lines of the http://energia.nu/guide/tutorial_blink/[Blink] sketch
 */
 ----
 
-Everything between the `/* and */` is ignored by the LaunchPad when it runs the sketch (the * at the start of each line is only there to make the comment look pretty, and isn't required). It's there for people reading the code: to explain what the program does, how it works, or why it's written the way it is. It's a good practice to comment your sketches, and to keep the comments up-to-date when you modify the code. This helps other people to learn from or modify your code.
+Everything between the /* and */ is ignored by the LaunchPad when it runs the sketch (the * at the start of each line is only there to make the comment look pretty, and isn't required). It's there for people reading the code: to explain what the program does, how it works, or why it's written the way it is. It's a good practice to comment your sketches, and to keep the comments up-to-date when you modify the code. This helps other people to learn from or modify your code.
 
-There's another style for short, single-line comments. These start with `//` and continue to the end of the line. For example, in the line:
+There's another style for short, single-line comments. These start with // and continue to the end of the line. For example, in the line:
 
 ----
 int ledPin = 14;  // LED connected to digital pin 14
 ----
 
-the message “LED connected to digital pin 14” is a comment.
+the message ''LED connected to digital pin 14'' is a comment.
 
 === Variables ===
 
@@ -46,7 +46,7 @@ void setup()
 }
 ----
 
-The first line provides information about the function, like its name, “setup”. The text before and after the name specify its return type and parameters: these will be explained later. The code between the `{` and `}` is called the _body_ of the function: what the function does.
+The first line provides information about the function, like its name, ''setup''. The text before and after the name specify its return type and parameters: these will be explained later. The code between the { and } is called the _body_ of the function: what the function does.
 
 You can _call_ a function that's already been defined (either in your sketch or as part of the http://energia.nu/[Energia language]). For example, the line `pinMode(ledPin, OUTPUT);` calls the `pinMode()` function, passing it two _parameters_: `ledPin` and `OUTPUT`. These parameters are used by the `pinMode()` function to decide which pin and mode to set.
 

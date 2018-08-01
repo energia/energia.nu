@@ -12,7 +12,7 @@ Switch statements allow mulitple choices in which sections of code to run for a 
 
 === Relevant Groundwork ===
 
-An if statement allows you to choose between two discrete options, `TRUE` or `FALSE`. When there are more than two options, you can use multiple if statements, or you can use the http://energia.nu/SwitchCase.html[*switch*] statement. Switch allows you to choose between several discrete options. This tutorial shows you how to use it to switch between four desired states of a photo resistor: really dark, dim, medium, and bright.
+An if statement allows you to choose between two discrete options, `TRUE` or `FALSE`. When there are more than two options, you can use multiple if statements, or you can use the link:/guide/tutorials/control_structures/tutorial_switchcase/[*switch*] statement. Switch allows you to choose between several discrete options. This tutorial shows you how to use it to switch between four desired states of a photo resistor: really dark, dim, medium, and bright.
 
 This program first reads the photoresistor. Then it uses the `map()` function to map its output to one of four values: 0, 1, 2, or 3. Finally, it uses the `switch()` statement to print one of four messages back to the computer depending on which of the four values is returned.
 
@@ -103,13 +103,13 @@ void loop() {
 
 === See Also ===
 
-* http://energia.nu/Serial_Begin.html[serial.begin()]
-* http://energia.nu/AnalogRead.html[analogRead()]
-* http://energia.nu/Map.html[map()]
-* http://energia.nu/Serial_Print.html[Serial.println()]
-* http://energia.nu/Tutorial_IfStatement.html[If Statement]:how to use an if statement to change output conditions based on changing input conditions.
-* http://energia.nu/Tutorial_ForLoop.html[For Loop]:controlling multiple LEDs with a for loop.
-* http://energia.nu/Tutorial_Array.html[Array]:a variation on the For Loop example that demonstrates how to use an array.
-* http://energia.nu/Tutorial_WhileLoop.html[While Loop]:how to use a while loop to calibrate a sensor while a button is being read.
+* link:/reference/en/language/functions/communication/serial/serial_begin/[serial.begin()]
+* link:/reference/en/language/functions/analog-io/analogread[analogRead()]
+* link:/reference/en/language/functions/math/map/[map()]
+* link:/reference/en/language/functions/communication/serial/serial_println/[serial.println()]
+* link:/guide/tutorials/control_structures/tutorial_ifstatement/[If Statement]:how to use an if statement to change output conditions based on changing input conditions.
+* link:/guide/tutorials/control_structures/tutorial_forloop[For Loop]:controlling multiple LEDs with a for loop.
+* link:/guide/tutorials/control_structures/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.
+* link:/guide/tutorials/control_structures/tutorial_whileloop/[While Loop]:how to use a while loop to calibrate a sensor while a button is being read.
  
 

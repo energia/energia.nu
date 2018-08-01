@@ -121,6 +121,6 @@ video::BDChvLXHPnw[youtube]
  
 === See Also ===
 
-* http://energia.nu/Setup.html[setup()]
-* http://energia.nu/Loop.html[loop()]
-* http://energia.nu/Serial_Println.html[println()]
+* link:/reference/en/language/structure/sketch/setup/[setup()]
+* link:/reference/en/language/structure/sketch/loop/[loop()]
+* link:/reference/en/language/functions/communication/serial/serial_println[serial.println()]

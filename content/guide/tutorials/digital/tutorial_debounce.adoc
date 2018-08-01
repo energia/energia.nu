@@ -142,13 +142,13 @@ video::uDPN3Es9jr8[youtube]
 
 === See Also ===
 
-* http://energia.nu/reference/pinmode/[pinMode()]
-* http://energia.nu/reference/digitalwrite/[digitalWrite()]
-* http://energia.nu/reference/digitalread/[digitalRead()]
-* http://energia.nu/reference/if/[if()]
-* http://energia.nu/reference/millis/[millis()]
-* http://energia.nu/guide/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
-* http://energia.nu/guide/tutorial_blink/[Blink]:turn an LED on and off.
-* http://energia.nu/guide/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
-* http://energia.nu/guide/tutorial_buttonstatechange/[Button State Change]:counting the number of button pushes.
+* link:/reference/en/language/functions/digital-io/pinmode/[pinMode()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/digital-io/digitalread/[digitalRead()]
+* link:/reference/en/language/structure/control-structure/if/[if()]
+* link:/reference/en/language/functions/time/millis/[millis()]
+* link:/guide/tutorials/basics/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
+* link:/guide/tutorials/basics/tutorial_blink/[Blink]:turn an LED on and off.
+* link:/guide/tutorials/basics/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
+* link:/guide/tutorials/digital/tutorial_buttonstatechange/[Button State Change]:counting the number of button pushes.
  

@@ -172,9 +172,9 @@ Paste in the following code:
 
 === See Also ===
 
-* http://energia.nu/reference/array/[array()]
-* http://energia.nu/reference/for/[for()]
-* http://energia.nu/reference/tone/[tone()]
-* http://energia.nu/guide/tutorial_tone/[Tone]: play a melody with a piezo speaker.
-* http://energia.nu/guide/tutorial_tone2/[Pitch follower]: play a pitch on a piezo speaker depending on an analog input.
-* http://energia.nu/guide/tutorial_tone4/[Tone 4]: play tones on multiple speakers sequentially.
+* link:/reference/en/language/variables/data-types/string/array/[array()]
+* link:/reference/en/language/structure/control-struture/for/[for()]
+* link:/reference/en/language/functions/advanced-io/tone/[tone()]
+* link:/guide/tutorials/digital/tutorial_tone/[Tone]: play a melody with a piezo speaker.
+* link:/guide/tutorials/digital/tutorial_tone2/[Pitch follower]: play a pitch on a piezo speaker depending on an analog input.
+* link:/guide/tutorials/digital/tutorial_tone4/[Tone 4]: play tones on multiple speakers sequentially.
