@@ -1,0 +1,56 @@
+== Energia Build Process
+=== Overview
+A number of things have to happen for your Energia code to get onto the LaunchPad board. First, the Energia environment performs some small transformations to make sure that the code is correct C or C++ (two common programming languages). It then gets passed to a compiler, which turns the human readable code into machine readable instructions (or object files). Then, your code gets combined with (linked against), the standard Energia libraries that provide basic functions like digitalWrite() or Serial.print(). The result is a single Intel hex file, which contains the specific bytes that need to be written to the program memory of the chip on the LaunchPad. This file is then uploaded to the board: transmitted over the USB or serial connection via the bootloader already on the chip or with external programming hardware.
+
+
+
+=== Multi-file sketches
+A sketch can contain multiple files (tabs). To manage them, click on the right-facing arrow just above the scroll bar near the top of the environment. Tabs have one of four extensions: no extension, .c, .cpp, or .h (if you provide any other extension, the period will be converted to an underscore). When your sketch is compiled, all tabs with no extension are concatenated together to form the “main sketch file”. Tabs with .c or .cpp extensions are compiled separately. To use tabs with a .h extension, you need to #include it (using “double quotes” not <angle brackets>).
+
+
+
+=== Transformations to the main sketch file
+The Energia environment performs a few transformations to your main sketch file (the concatenation of all the tabs in the sketch without extensions) before passing it to the compiler.
+
+First, #include “Energia.h” is added to the top of your sketch. This header file includes all the definitions needed for the standard Energia core.
+
+Next, the environment searches for function definitions within your main sketch file and creates declarations (prototypes) for them. These are inserted after any comments or pre-processor statements (#includes or #defines), but before any other statements (including type declarations). This means that if you want to use a custom type as a function argument, you should declare it within a separate header file. Also, this generation isn’t perfect: it won’t create prototypes for functions that have default argument values, or which are declared within a namespace or class.
+
+Finally, the contents of the current target’s main.cxx file are appended to the bottom of your sketch.
+
+
+=== Targets
+The Energia environment supports multiple target boards with different chips, CPU speeds, etc. These are defined in a board preferences file. Relevant variables include:
+
+`<BOARD>.name`: the name to display in the Boards menu
+
+`<BOARD>.build.mcu`: the microcontroller on the board.
+
+`<BOARD>.f_cpu`: the clock speed at which the microcontroller operates.
+
+`<BOARD>.core`: which sub-directory of the hardware/cores/ directory to link sketches against (normally “energia”).
+
+Also useful is this setting in the main preferences.txt file:
+
+build.verbose: whether or not to print debugging messages while building a sketch (e.g. “false”). If true, will print the complete command line of each external command executed as part of the build process.
+
+Note: build.extension is unused – the main sketch file is always treated as a .cpp file.
+
+
+
+=== Build process
+Sketches are compiled by MSPGCC or arm-gcc.
+
+The include path includes the sketch’s directory, the target directory, as well as any library directories which contain a header file which is included by the main sketch file.
+
+When you verify a sketch, it is built in a temporary directory in the system temp directory (e.g. /tmp on the Mac).
+
+The .c and .cpp files of the target are compiled and output with .o extensions to this directory, as is the main sketch file and any other .c or .cpp files in the sketch and any .c or .cpp files in any libraries which are #included in the sketch.
+
+These .o files are then linked together into a static library and the main sketch file is linked against this library. Only the parts of the library needed for your sketch are included in the final .hex file, reducing the size of most sketches.
+
+The .hex file is the final output of the compilation which is then uploaded to the board. During a “Verify” the .hex file is written to /tmp (on Mac and Linux) or \Documents and Settings\<USER>\Local Settings\Temp (on Windows).
+
+
+=== Upload process
+Sketches are uploaded by DSLite, the same tool CCS Cloud uses to debug / upload from the cloud editor.

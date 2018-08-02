@@ -1,0 +1,13 @@
+== Energia Preferences
+Some preferences can be controlled from the Preferences dialog within the Energia environment. Access it from the File menu in Windows or Linux, or the Energia menu on the Mac.
+
+Other preferences must be changed in the preferences.txt file. This file’s location is displayed in the preferences dialog. It should be:
+
+* /Users/<USERNAME>/Library/Energia15/preferences.txt (Mac)
+* c:\Documents and Settings\<USERNAME>\Application Data\Energia15\preferences.txt (Windows XP)
+* c:\Users\<USERNAME>\AppData\Roaming\Energia15\preferences.txt (Windows Vista)
+* ~/.energia15/preferences.txt (Linux)
+
+Only edit the file when Energia is not running – otherwise your changes will be overwritten when Energia exits.
+
+The definitions that determine the contents of the Board menu are found in boards.txt in the hardware/ sub-directory of the Energia application directory. The definitions for the Burn Bootloader menu are in the programmers.txt file in the same directory. To create a new board or programmer definition, copy an existing one, change the prefix used in the preference keys, and alter the values to fit your hardware. Note that only certain board configurations are supported.
