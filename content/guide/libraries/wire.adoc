@@ -1,0 +1,78 @@
+++++
+<style>
+.container {
+    width: 960px;
+    position: relative;
+    margin: 0;
+    z-index:1;
+
+}
+
+.ulist {
+    line-height: 0.5;
+    font-size: 16;
+}
+
+#first {
+    width: 210px;
+    float: left;
+    position: fixed;
+    border-right: 1px dotted lightgray;
+
+}
+
+#second {
+    width: 740px;
+    float: right;
+    overflow: hidden;
+}
+</style>
+
+<div class='container'>
+    <div id="first">
+++++
+
+Functions
+
+* link:../wire/wire_begin[begin()]
+* link:../wire/wire_requestfrom[requestFrom()]
+* link:../wire/wire_begintransmission[beginTransmission()]
+* link:../wire/wire_endtransmission[endTransmission()]
+* link:../wire/wire_write[write()]
+* link:../wire/wire_available[available()]
+* link:../wire/wire_read[read()]
+* link:../wire/wire_onreceive[onReceive()]
+* link:../wire/wire_onrequest[onRequest()]
+++++
+    </div>
+    <div id="second">
+++++
+
+## Wire Library (I2C)
+
+### Overview
+
+This library allows you to communicate with I2C / TWI devices. The library inherits from the Stream functions, making it consistent with other read/write libraries. I2C is a two wire interface using the SDA (Serial Data Line) and SCL (Serial Clock Line) pins to communicate over the serial bus. I2C uses a multi-master/multi-slave model where the master generates the clock and initiates communication with the slaves. A slave receives the clock and responds when addressed by the master. I2C is a common interface between a microcontroller and peripherals like sensors and displays.
+
+Some LaunchPad's support multiple Wire interfaces on different pins. These can be addressed by WireX where X is a number. For example, the MSP432 LaunchPad supports Wire and Wire1. Wire is on pins 9 and 10 where Wire1 is on pins 14 and 15. Please see the pinmap for each LaunchPad for details about the availability of additional instances of Wire and the pins associated with it.
+
+:icons: font
+NOTE: There are both 7- and 8-bit versions of I2C addresses. 7 bits identify the device, and
+the eighth bit determines if it's being written to or read from. The
+Wire library uses 7 bit addresses throughout. If you have a datasheet or
+sample code that uses 8 bit address, you'll want to drop the low bit
+(i.e. shift the value one bit to the right), yielding an address between
+0 and 127.
+
+### Applications
+
+I2C is common in segment LCDs and different types of sensors. I2C is
+lower speed than some other protocols but is still very effective in
+communicating with multiple devices on one bus. Popular alternative
+protocols are link:/guide/libraries/spi/[SPI] and
+link:/reference/en/language/functions/communication/serial/[UART]
+
+++++
+    </div>
+</div>
+++++

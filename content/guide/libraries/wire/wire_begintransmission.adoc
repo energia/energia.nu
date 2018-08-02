@@ -1,0 +1,16 @@
+## Wire.beginTransmission(address)
+
+
+### Description
+
+Begin a transmission to the I2C slave device with the given address. Subsequently, queue bytes for transmission with the `link:../wire_write[write()]` function and transmit them by calling `link:../wire_endtransmission[endTransmission()]`
+
+### Parameters
+
+`address`: the 7-bit address of the device to transmit to
+
+### Returns
+
+None
+
+link:../../wire[Wire Library]

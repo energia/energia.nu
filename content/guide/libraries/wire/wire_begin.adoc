@@ -1,0 +1,18 @@
+## Wire.begin(address)
+
+
+### Description
+
+Initiate the Wire library and join the I2C
+bus as a master or slave. This should normally be called only once.
+
+### Parameters
+
+`address`: the 7-bit slave address (optional); if not specified, join the
+bus as a master.
+
+### Returns
+
+None
+
+link:../../wire[Wire Library]

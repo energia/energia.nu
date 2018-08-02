@@ -1,0 +1,17 @@
+## Wire.onRequest(handler)
+
+### Description
+
+Register a function to be called when a master requests data from this
+slave device.
+
+### Parameters
+
+handler: the function to be called, takes no parameters and returns
+nothing, e.g.: `void myHandler()`
+
+### Returns
+
+None
+
+link:../../wire[Wire Library]

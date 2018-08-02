@@ -1,0 +1,31 @@
+## Wire.endTransmission()
+
+### Description
+
+Ends a transmission to a slave device that was begun by
+`link:../wire_begintransmission[beginTransmission()]` and transmits the bytes that were queued by `link:../wire_write[write()]`. `endTransmission()` accepts a boolean argument changing its behavior for compatibility with certain I2C devices. If true, `endTransmission()` sends a stop message after transmission, releasing the I2C bus. If false, `endTransmission()` sends a restart message after transmission. The bus will not be released, which prevents another master device from transmitting between messages. This allows one master device to send multiple transmissions while in control. The default value is true.
+
+### Syntax
+
+[source,arduino]
+----
+`Wire.endTransmission()`
+`Wire.endTransmission(stop)`
+----
+
+### Parameters
+
+`stop` : boolean. true will send a stop message, releasing the bus after
+transmission. false will send a restart, keeping the connection active.
+
+### Returns
+
+`byte`, which indicates the status of the transmission:
+
+-   0:success
+-   1:data too long to fit in transmit buffer
+-   2:received NACK on transmit of address
+-   3:received NACK on transmit of data
+-   4:other error
+
+link:../../wire[Wire Library]

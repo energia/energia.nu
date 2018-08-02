@@ -1,0 +1,18 @@
+## Wire.onReceive(handler)
+
+### Description
+
+Registers a function to be called when a slave device receives a
+transmission from a master.
+
+### Parameters
+
+handler: the function to be called when the slave receives data; this
+should take a single int parameter (the number of bytes read from the
+master) and return nothing, e.g.: `void myHandler(int numBytes)`
+
+### Returns
+
+None
+
+link:../../wire[Wire Library]
