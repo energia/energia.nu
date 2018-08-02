@@ -1,0 +1,24 @@
+## SPI.end()
+
+
+### Description
+
+Disables the SPI bus (leaving pin modes unchanged). If you specified a different slave select pin when `link:../spi_begin[SPI.begin]` was called, you can pass that as a parameter.
+
+### Syntax
+
+[source,arduino]
+----
+SPI.end()
+SPI.end(slaveSelectPin)
+----
+
+### Parameters
+
+`slaveSelectPin`: slave device SS pin
+
+### Returns
+
+None
+
+link:../../spi[SPI Library]

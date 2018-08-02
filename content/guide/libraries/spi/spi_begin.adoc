@@ -1,0 +1,27 @@
+## SPI.begin()
+
+### Description
+
+Initializes the SPI bus by setting SCK, MOSI, and SS to outputs, pulling
+SCK and MOSI low, and SS high. The default slave select (SS) pin is 2 in
+Energia but can be changed by passing a parameter for the new slave
+select.
+
+### Syntax
+
+[source,arduino]
+----
+SPI.begin()
+SPI.begin(slaveSelectPin)
+----
+
+### Parameters
+
+
+`slaveSelectPin`:   slave device SS pin
+
+### Returns
+
+None
+
+link:../../spi[SPI Library]

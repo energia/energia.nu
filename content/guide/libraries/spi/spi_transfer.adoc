@@ -1,0 +1,36 @@
+## SPI.transfer()
+
+### Description
+
+Transfers one byte over the SPI bus, both sending and receiving. If you
+specify one of the  Slave Select (SS) pin in the call to SPI.transfer(),
+the specified pin is activated (pulled low) before the transfer occurs
+and deactivated (pulled high) when the transfer is finished. SPI_LAST
+parameter is the default. SPI_CONTINUE is not supported in Energia. The
+last byte to be transferred should be accompanied by the SPI_LAST
+parameter. By default, if you don't specify a third parameter, SPI_LAST
+is used. When a transfer is complete with SPI_LAST, the slave select
+pin returns inactive (high).
+
+### Syntax
+
+[source,arduino]
+----
+SPI.transfer(val)
+SPI.transfer(slaveSelectPin, val)
+SPI.transfer(slaveSelectPin, val, transferMode)
+----
+
+### Parameters
+
+* `val`: the value to transfer
+* `slaveSelectPin`: slave device SS pin
+* `transferMode`:
+** `SPI_LAST`: *default if not specified* the SS pin returns to high after one byte has been transferred.
+** `SPI_CONTINUE`: the SS pin stays low until transfer is called without `transferMode` or with `SPI_LAST`
+
+### Returns
+
+The byte read from the bus.
+
+link:../../spi[SPI Library]

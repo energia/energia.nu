@@ -1,0 +1,28 @@
+## SPI.setDataMode()
+
+### Description
+
+Sets the SPI data mode: that is, clock polarity and phase. See the http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus[Wikipedia article on SPI] for details.
+
+### Syntax
+
+[source,arduino]
+----
+SPI.setDataMode(mode)
+SPI.setDataMode(slaveSelectPin, mode)
+----
+
+### Parameters
+
+* `mode` the SPI mode of the device connected which is one of the following:
+** `SPI_MODE0`
+** `SPI_MODE1`
+** `SPI_MODE2`
+** `SPI_MODE3`
+* `slaveSelectPin` (optional) slave device SS pin
+
+### Returns
+
+None
+
+link:../../spi[SPI Library]

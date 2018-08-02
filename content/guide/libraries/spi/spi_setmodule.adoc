@@ -1,0 +1,19 @@
+## SPI.setModule()
+
+
+### Description
+
+Sets the SPI SSI module that is being used.
+
+### Syntax
+
+[source,arduino]
+----
+SPI.setModule(SSIModule);
+----
+
+### Parameters
+
+`SSIModule`
+
+link:../../spi[SPI Library]

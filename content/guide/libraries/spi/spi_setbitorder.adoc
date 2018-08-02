@@ -1,0 +1,26 @@
+## SPI.setBitOrder()
+
+
+### Description
+
+Sets the order of the bits shifted out of and into the SPI bus, either
+`LSBFIRST` (least-significant bit first) or `MSBFIRST` (most-significant bit
+first). `MSBFIRST` is the default.
+
+### Syntax
+
+[source,arduino]
+----
+SPI.setBitOrder(order)
+SPI.setBitOrder(slaveSelectPin, order)
+----
+
+### Parameters
+
+order: either `LSBFIRST` or `MSBFIRST`
+
+### Returns
+
+None
+
+link:../../spi[SPI Library]
