@@ -2,7 +2,7 @@
 :icons: font
 NOTE: This BoosterPack has been discontinued and is increasingly hard to find. Please check out the Educational BoosterPack MKII.
 
-Energia supports the Educational BoosterPack made by Circuitco (no longer offering support). The BoosterPack includes basic electronic components to demo a variety of use cases with your LaunchPad. Perfect for students, beginners to electronics, and newcomers to microcontollers.  This hardware is a companion for the book “Getting Started with the MSP430 LaunchPad” available on Amazon and other retailers. You can find the code examples HERE.
+Energia supports the Educational BoosterPack made by Circuitco (no longer offering support). The BoosterPack includes basic electronic components to demo a variety of use cases with your LaunchPad. Perfect for students, beginners to electronics, and newcomers to microcontollers.  This hardware is a companion for the book "Getting Started with the MSP430 LaunchPad" available on Amazon and other retailers. You can find the code examples HERE.
 
 You can find the Circuitco Product Page HERE and the support wiki HERE
 

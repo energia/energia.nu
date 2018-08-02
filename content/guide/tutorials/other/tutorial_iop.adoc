@@ -32,7 +32,7 @@ Here is the list of materials we will need for this endeavor. Most can be ordere
 
 * 1x https://www.seeedstudio.com/Grove-TemperatureHumidity-Sensor-Pro-p-838.html[Grove Temperature & Humidity Sensor]: Seeedstudio 14.90 + s&h
 
-* 7x https://www.olimex.com/Products/MSP430/Booster/MOD-LED8x8/open-source-hardware[Olimex 8×8 LED Matrix] (MOD-LED8x8): Mouser $9.13 + s&h
+* 7x https://www.olimex.com/Products/MSP430/Booster/MOD-LED8x8/open-source-hardware[Olimex 8x8 LED Matrix] (MOD-LED8x8): Mouser $9.13 + s&h
 
 * 2x https://www.adafruit.com/product/1138?length=1[NeoPixel Digital RGB LED Strip]: Adafruit $24.95 + s&h
 
@@ -99,7 +99,7 @@ On the software side, we will use the https://github.com/ILAMtitan/WS2811Driver[
 
 === LED Matrix Display subsystem ===
 
-For a nice way to display text that can be seen from far away, we can add an LED sign to the front and back facade of the machine.  This has a number of benefits because it is cheaper than an LCD screen, we can create a large display that can be seen and read at distance, and it is not too complicated to program. There are definitely cases where an LCD screen makes more sense and provides a better user experience, but for this machine, an LED Matrix will be more than enough. Using Velcro so we can dismount and replace as needed, we attach https://www.mouser.com/ProductDetail/Olimex-Ltd/MOD-LED8x8/?qs=C3feHhap9PoNUml2%252bPTREA%3D%3D[Olimex 8×8 LED] Matrices to the front and wrap hookup wire around to the interior.  It's actually a perfect fit and mounts very cleanly.  For our machine we were able to mount 7 8×8 LED sections across the top and very easily wire it to the LaunchPad inside.
+For a nice way to display text that can be seen from far away, we can add an LED sign to the front and back facade of the machine.  This has a number of benefits because it is cheaper than an LCD screen, we can create a large display that can be seen and read at distance, and it is not too complicated to program. There are definitely cases where an LCD screen makes more sense and provides a better user experience, but for this machine, an LED Matrix will be more than enough. Using Velcro so we can dismount and replace as needed, we attach https://www.mouser.com/ProductDetail/Olimex-Ltd/MOD-LED8x8/?qs=C3feHhap9PoNUml2%252bPTREA%3D%3D[Olimex 8x8 LED] Matrices to the front and wrap hookup wire around to the interior.  It's actually a perfect fit and mounts very cleanly.  For our machine we were able to mount 7 8x8 LED sections across the top and very easily wire it to the LaunchPad inside.
 
 The matrices we used have 5 pins: GND, DATA, LATCH, CLK, VCC. We use the 3.3V VCC from our LaunchPad to power the modules.
 

@@ -5,54 +5,54 @@ Software written using Energia are called sketches. These sketches are written i
 
 NB: Versions of the IDE prior to 1.0 saved sketches with the extension .pde. It is possible to open these files with version 1.0, you will be prompted to save the sketch with the .ino extension on save.
 
-image:img/verify.png[title=Verify] *_Verify_* +
+image:../img/verify.png[title=Verify] *_Verify_* +
 Checks your code for errors.
 
-image:img/upload.png[title=Upload] *_Upload_* +
-Compiles your code and uploads it to the Energia I/O board. See uploading below for details.Note: If you are using an external programmer, you can hold down the “shift” key on your computer when using this icon. The text will change to “Upload using Programmer”
+image:../img/upload.png[title=Upload] *_Upload_* +
+Compiles your code and uploads it to the Energia I/O board. See uploading below for details.Note: If you are using an external programmer, you can hold down the "shift" key on your computer when using this icon. The text will change to "Upload using Programmer"
 
-image:img/new.png[title=New] *_New_* +
+image:../img/new.png[title=New] *_New_* +
 Creates a new sketch.
 
-image:img/open.png[title=Open] *_Open_* +
-Presents a menu of all the sketches in your sketchbook. Clicking one will open it within the current window.Note: due to a bug in Java, this menu doesn’t scroll; if you need to open a sketch late in the list, use the File | Sketchbook menu instead.
+image:../img/open.png[title=Open] *_Open_* +
+Presents a menu of all the sketches in your sketchbook. Clicking one will open it within the current window.Note: due to a bug in Java, this menu doesn't scroll; if you need to open a sketch late in the list, use the File | Sketchbook menu instead.
 
-image:img/save.png[title=Save] *_Save_* +
+image:../img/save.png[title=Save] *_Save_* +
 Saves your sketch.
 
-image:img/monitor.png[title=Serial Monitor] *_Serial Monitor_* +
+image:../img/monitor.png[title=Serial Monitor] *_Serial Monitor_* +
 Opens the serial monitor.
 Additional commands are found within the five menus: File, Edit, Sketch, Tools, Help. The menus are context sensitive which means only those items relevant to the work currently being carried out are available.
 
 === Edit ===
-Copy for Forum 
+Copy for Forum
 Copies the code of your sketch to the clipboard in a form suitable for posting to the forum, complete with syntax coloring.
-Copy as HTML 
+Copy as HTML
 Copies the code of your sketch to the clipboard as HTML, suitable for embedding in web pages.
 
 === Sketch ===
-Verify/Compile 
+Verify/Compile
 Checks your sketch for errors.
-Show Sketch Folder 
+Show Sketch Folder
 Opens the current sketch folder.
-Add File… 
+Add File...
 Adds a source file to the sketch (it will be copied from its current location). The new file appears in a new tab in the sketch window. Files can be removed from the sketch using the tab menu.
-Import Library 
+Import Library
 Adds a library to your sketch by inserting #include statements at the code of your code. For more details, see libraries below.
 
 === Tools ===
-Auto Format 
+Auto Format
 This formats your code nicely: i.e. indents it so that opening and closing curly braces line up, and that the statements instead curly braces are indented more.
-Archive Sketch 
+Archive Sketch
 Archives a copy of the current sketch in .zip format. The archive is placed in the same directory as the sketch.
-Serial Monitor 
+Serial Monitor
 Open the Serial Monitor.
-Board 
-Select the board that you’re using. See below for descriptions of the various boards.
-Serial Port 
+Board
+Select the board that you're using. See below for descriptions of the various boards.
+Serial Port
 This menu contains all the serial devices (real or virtual) on your machine. It should automatically refresh every time you open the top-level tools menu.
-Programmer 
-For selecting a harware programmer when programming a board or chip and not using the onboard USB-serial connection. Normally you won’t need this.
+Programmer
+For selecting a harware programmer when programming a board or chip and not using the onboard USB-serial connection. Normally you won't need this.
 
 === Sketchbook ===
 The Energia environment uses the concept of a sketchbook: a standard place to store your programs (or sketches). The sketches in your sketchbook can be opened from the File > Sketchbook menu or from the Open button on the toolbar. The first time you run Energia, it will automatically create a directory for your sketchbook. You can view or change the location of the sketchbook location from with the Preferences dialog.
@@ -61,9 +61,9 @@ The Energia environment uses the concept of a sketchbook: a standard place to st
 Allows you to manage sketches with more than one file (each of which appears in its own tab). These can be normal Energia code files (no extension), C files (.c extension), C++ files (.cpp), or header files (.h).
 
 === Uploading ===
-Before uploading your sketch, you need to select the correct items from the Tools > Board and Tools > Serial Port menus. The boards are described below. On the Mac, the serial port is probably something like/dev/tty.usbmodem241 or /dev/tty.USA19QW1b1P1.1 (for a serial board connected with a Keyspan USB-to-Serial adapter). On Windows, it’s probably COM1 or COM2 (for a serial board) or COM4, COM5, COM7, or higher (for a USB board) – to find out, you look for USB serial device in the ports section of the Windows Device Manager. On Linux, it should be /dev/ttyUSB0, /dev/ttyUSB1 or similar.
+Before uploading your sketch, you need to select the correct items from the Tools > Board and Tools > Serial Port menus. The boards are described below. On the Mac, the serial port is probably something like/dev/tty.usbmodem241 or /dev/tty.USA19QW1b1P1.1 (for a serial board connected with a Keyspan USB-to-Serial adapter). On Windows, it's probably COM1 or COM2 (for a serial board) or COM4, COM5, COM7, or higher (for a USB board) - to find out, you look for USB serial device in the ports section of the Windows Device Manager. On Linux, it should be /dev/ttyUSB0, /dev/ttyUSB1 or similar.
 
-Once you’ve selected the correct serial port and board, press the upload button in the toolbar or select the Upload item from the File menu. Current LaunchPad boards will reset automatically and begin the upload. The Energia environment will display a message when the upload is complete, or show an error.
+Once you've selected the correct serial port and board, press the upload button in the toolbar or select the Upload item from the File menu. Current LaunchPad boards will reset automatically and begin the upload. The Energia environment will display a message when the upload is complete, or show an error.
 
 === Libraries ===
 Libraries provide extra functionality for use in sketches, e.g. working with hardware or manipulating data. To use a library in a sketch, select it from the Sketch > Import Library menu. This will insert one or more #include statements at the top of the sketch and compile the library with your sketch. Because libraries are uploaded to the board with your sketch, they increase the amount of space it takes up. If a sketch no longer needs a library, simply delete its #include statements from the top of your code.
@@ -73,15 +73,15 @@ There is a list of libraries in the reference. Some libraries are included with 
 To write your own library, see this tutorial.
 
 === Third-Party Hardware ===
-Support for third-party hardware can be added to the hardware directory of your sketchbook directory. Platforms installed there may include board definitions (which appear in the board menu), core libraries, bootloaders, and programmer definitions. To install, create the hardware directory, then unzip the third-party platform into its own sub-directory. (Don’t use “energia” as the sub-directory name or you’ll override the built-in Energia platform.) To uninstall, simply delete its directory.
+Support for third-party hardware can be added to the hardware directory of your sketchbook directory. Platforms installed there may include board definitions (which appear in the board menu), core libraries, bootloaders, and programmer definitions. To install, create the hardware directory, then unzip the third-party platform into its own sub-directory. (Don't use "energia" as the sub-directory name or you'll override the built-in Energia platform.) To uninstall, simply delete its directory.
 
 === Serial Monitor ===
-Displays serial data being sent from the LaunchPad board (USB or serial board). To send data to the board, enter text and click on the “send” button or press enter. Choose the baud rate from the drop-down that matches the rate passed to Serial.begin in your sketch. Note that on Mac or Linux, the LaunchPad board will reset (rerun your sketch from the beginning) when you connect with the serial monitor.
+Displays serial data being sent from the LaunchPad board (USB or serial board). To send data to the board, enter text and click on the "send" button or press enter. Choose the baud rate from the drop-down that matches the rate passed to Serial.begin in your sketch. Note that on Mac or Linux, the LaunchPad board will reset (rerun your sketch from the beginning) when you connect with the serial monitor.
 
 === Preferences ===
 Some preferences can be set in the preferences dialog (found under the Energia menu on the Mac, or File on Windows and Linux). The rest can be found in the preferences file, whose location is shown in the preference dialog.
 
 === Boards ===
-The board selection has two effects: it sets the parameters (e.g. CPU speed and baud rate) used when compiling and uploading sketches; and sets and the file and fuse settings used by the burn bootloader command. Some of the board definitions differ only in the latter, so even if you’ve been uploading successfully with a particular selection you’ll want to check it before burning the bootloader.
+The board selection has two effects: it sets the parameters (e.g. CPU speed and baud rate) used when compiling and uploading sketches; and sets and the file and fuse settings used by the burn bootloader command. Some of the board definitions differ only in the latter, so even if you've been uploading successfully with a particular selection you'll want to check it before burning the bootloader.
 
 For instructions on installing support for other boards, see third-party hardware above.

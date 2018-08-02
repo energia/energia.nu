@@ -11,16 +11,16 @@ image::../jumper.png[jumper settings,400]
 Click the image above to enlarge.
 
 == FTDI Troubleshooting
-FTDI can be a little tricky sometimes. You might run into an issue where you LaunchPad doesn’t want to program anymore even though your hardware setup is correct and you’ve properly reset the board. You may get an error message inside of Energia at compile time like “FAILED ACK”.  One thing you can try is to clean out your FTDI files using the FT Clean utility http://www.ftdichip.com/Support/Knowledgebase/index.html?ftcleanutility.htm. This may help get your development back on track.
+FTDI can be a little tricky sometimes. You might run into an issue where you LaunchPad doesn't want to program anymore even though your hardware setup is correct and you've properly reset the board. You may get an error message inside of Energia at compile time like "FAILED ACK".  One thing you can try is to clean out your FTDI files using the FT Clean utility http://www.ftdichip.com/Support/Knowledgebase/index.html?ftcleanutility.htm. This may help get your development back on track.
 
 == Known Issues
-*“Open operation failed” during Sketch Upload*
+*"Open operation failed" during Sketch Upload*
 
-Out of box, the CC3200 LaunchPad comes loaded with a demo software. For this demo application quite a few files are stored in the external serial flash. This flash is also used to store the firmware (binary Sketch in Energia terms). If the Sketch is larger than the space available, the upload with fail with “Open operation failed”. To make space for larger Sketches, you can format the flash using UniFlash. This is the same utility as used in the topic below “Upgrading the CC32000 Firmware”. Before upgrading the firmware, it is advised to format the flash. This can simply be done by clicking the button “Format”. The Flash size is “1MB” and make sure that “Secure” and “Alert” are not checked. Follow the steps in “Upgrading the CC3200 Firmware” below up to step 6. Format the flash and then proceed with step 6 to upgrade the CC3200 firmware.
+Out of box, the CC3200 LaunchPad comes loaded with a demo software. For this demo application quite a few files are stored in the external serial flash. This flash is also used to store the firmware (binary Sketch in Energia terms). If the Sketch is larger than the space available, the upload with fail with "Open operation failed". To make space for larger Sketches, you can format the flash using UniFlash. This is the same utility as used in the topic below "Upgrading the CC32000 Firmware". Before upgrading the firmware, it is advised to format the flash. This can simply be done by clicking the button "Format". The Flash size is "1MB" and make sure that "Secure" and "Alert" are not checked. Follow the steps in "Upgrading the CC3200 Firmware" below up to step 6. Format the flash and then proceed with step 6 to upgrade the CC3200 firmware.
 
 [[anchor-1]]
 == Upgrading the CC3200 Firmware
-There have been reports that WiFi Sketches run just fine without upgrading the firmware on the CC3200, we do recommend to do so since there might be LaunchPad’s shipped with firmware that is incompatible with the WiFi driver shipped in Energia. Below is a brief description of the procedure.
+There have been reports that WiFi Sketches run just fine without upgrading the firmware on the CC3200, we do recommend to do so since there might be LaunchPad's shipped with firmware that is incompatible with the WiFi driver shipped in Energia. Below is a brief description of the procedure.
 
 This is the part where you need to jump through some hoops. Unfortunately this can only be done on windows. This will be done from the Energia IDE in a future release of Energia.
 
@@ -29,11 +29,11 @@ Please follow the link:/guide/install/windows/[windows driver installation] firs
 . Get the CC3200SDK-SERVICEPACK from this page: http://www.ti.com/tool/cc3200sdk. Run the installer and you should have something in c:\TI\ called service pack.
 . Get UNIFLASH-SIMPLELINK from this page: http://www.ti.com/tool/uniflash. Install and it should again end up in c:\TI.
 . Run Uniflash
-. Make sure that under “CC31x Flash Setup and Control” you select the right COM Port and that the SOP2 jumper is installed.
-. Select “New Configuration” from the File menu and click OK
-. Select “Service Pack Update” from the Operation menu
+. Make sure that under "CC31x Flash Setup and Control" you select the right COM Port and that the SOP2 jumper is installed.
+. Select "New Configuration" from the File menu and click OK
+. Select "Service Pack Update" from the Operation menu
 . Browse to the directory where you installed the service pack (under step 1) and select servicepack.bin. Probably called something c:\TI\xxx_servicePack_xxx\
-. It will immediately start the update. One thing that is totally not obvious is that in the small little console window below the main window, it will right after it start the upgrade say “—- please restart the device —” which means press the reset button.
+. It will immediately start the update. One thing that is totally not obvious is that in the small little console window below the main window, it will right after it start the upgrade say "-- please restart the device -" which means press the reset button.
 . It will take a while for the process to complete but ones it does you are good to go and hopefully do not have to jump through these hoops again.
 
 If you get stuck on the above then there is also a more elaborate set of instructions included in this document from TI: http://www.ti.com/lit/pdf/swru376

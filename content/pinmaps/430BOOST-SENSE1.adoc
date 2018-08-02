@@ -2,7 +2,7 @@
 :icons: font
 NOTE: The 430BOOST-SENSE1 has been discontinued and is no longer available for purchase.
 
-Energia supports the Capacitive Touch BoosterPack made by Texas Instruments. The BoosterPack let’s you quickly incorporate touch elements into your LaunchPad projects.  This BoosterPack utilizes the capacitive touch I/Os found on certain MSP430 LaunchPads so it won’t work on all LaunchPads. Check out the tool folder (http://www.ti.com/tool/430boost-sense1) for more information. You can find the Energia library HERE.
+Energia supports the Capacitive Touch BoosterPack made by Texas Instruments. The BoosterPack let's you quickly incorporate touch elements into your LaunchPad projects.  This BoosterPack utilizes the capacitive touch I/Os found on certain MSP430 LaunchPads so it won't work on all LaunchPads. Check out the tool folder (http://www.ti.com/tool/430boost-sense1) for more information. You can find the Energia library HERE.
 
 ==== Pin Map
 [caption="Figure 1: ",link=../img/430BOOST-SENSE1.jpg]

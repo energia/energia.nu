@@ -35,7 +35,7 @@ toc::[]
 ++++
 == Pin Naming
 
-Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depending on the LaunchPad) of the BoosterPack header pins as identifiers in their software.  Because these numbers are consistent between all Launchpads, this help to ensure the portability of the user’s software.  Some LaunchPads also support the use of GPIO or Port numbers such as “P1_3”.  These names are not recommended for use and will be deprecated in the future.  New LaunchPads that are added to Energia will not support pin names based on GPIO or Port numbers.
+Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depending on the LaunchPad) of the BoosterPack header pins as identifiers in their software.  Because these numbers are consistent between all Launchpads, this help to ensure the portability of the user's software.  Some LaunchPads also support the use of GPIO or Port numbers such as "P1_3".  These names are not recommended for use and will be deprecated in the future.  New LaunchPads that are added to Energia will not support pin names based on GPIO or Port numbers.
 
 == Pins Standard
 
@@ -74,7 +74,7 @@ Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depend
 
 === 32-bit Tiva C
 * link:ek-tm4c123gxl[TM4C123 LaunchPad (EK-TM4C123GXL)]
-* link:ek-lm4f120xl[Stellaris LaunchPad (EK-LM4F120XL)] — NRND xref:anchor-1[*]
+* link:ek-lm4f120xl[Stellaris LaunchPad (EK-LM4F120XL)] - NRND xref:anchor-1[*]
 * link:ek-tm4c1294xl[TM4C129 Connected LaunchPad (EK-TM4C1294XL)]
 
 == BoosterPacks
@@ -91,7 +91,7 @@ Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depend
 
 === Multi-sensors
 * link:boostxl-edumkii[Educational BoosterPack MK II (BOOSTXL-EDUMKII)]
-* link:boost-edu[Educational BoosterPack MK I (BP-EDUC-01)] — NRNDxref:anchor-1[*]
+* link:boost-edu[Educational BoosterPack MK I (BP-EDUC-01)] - NRNDxref:anchor-1[*]
 * link:boostxl-sensors[Sensors BoosterPack (BOOSTXL-SENSORS)]
 * link:boost-grove[Grove Base BoosterPack (BOOST-GROVE)]
 
@@ -100,7 +100,7 @@ Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depend
 * link:430boost-sense1[Capacitive Touch BoosterPack (430BOOST-SENSE1)]
 * link:boostxl-audio[Audio BoosterPack (BOOSTXL-AUDIO)]
 * link:boostxl-batpakmkii[Fuel Tank Battery MK-II Battery BoosterPack (BOOSTXL-BATPAKMKII)]
-* link:boostxl-batpak[Fuel Tank BoosterPack (BOOSTXL-BATTPACK)] — NRNDxref:anchor-1[*]
+* link:boostxl-batpak[Fuel Tank BoosterPack (BOOSTXL-BATTPACK)] - NRNDxref:anchor-1[*]
 
 [[anchor-1]]
 *NRND = Not Recommended for New Design

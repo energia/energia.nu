@@ -1,5 +1,5 @@
 === Guide to the CC2650 SimpleLink BLE BoosterPack (BOOSTXL-CC2650MA)
-Energia supports the http://www.ti.com/tool/BOOSTXL-CC2650MA[BOOSTXL-CC2650MA]. The BoosterPack let’s you quickly incorporate Bluetooth into your LaunchPad projects. The BLE libraries are included in the Energia release.
+Energia supports the http://www.ti.com/tool/BOOSTXL-CC2650MA[BOOSTXL-CC2650MA]. The BoosterPack let's you quickly incorporate Bluetooth into your LaunchPad projects. The BLE libraries are included in the Energia release.
 
 This hardware is open source! Get the http://www.ti.com/tool/BOOSTXL-CC2650MA[BOOSTXL-CC2650MA] Design Files from TI.
 
@@ -23,9 +23,9 @@ The firmware on your BoosterPack might not be the right one. If you are experien
 * Once installed, find the image simple_np_cc2650bp_uart_pm_xsbl.hex
 * Plug the LP into your computer.
 * Launch Smart RF Flash Programmer 2.
-* The CC2650 should show up in the left pane titled “Connected Devices”
-* Right click the CC2650 and select connect. The status bar should say “Success!” when finished connecting.
-* On the “Main” tab, in the “Flash Image” field select single and then browse to the simple_np_cc2650bp_uart_pm_xsbl.hex image.
-* Still on the main tab, under the header “Actions” check “Erase”, “Program” and “Verify”.
+* The CC2650 should show up in the left pane titled "Connected Devices"
+* Right click the CC2650 and select connect. The status bar should say "Success!" when finished connecting.
+* On the "Main" tab, in the "Flash Image" field select single and then browse to the simple_np_cc2650bp_uart_pm_xsbl.hex image.
+* Still on the main tab, under the header "Actions" check "Erase", "Program" and "Verify".
 * Then click the Green Arrow image on the right bottom to program the image.
 * Remove the ribbon cable, replace the JTAG headers and reseat the BoosterPack. You are now good to go to run the Sketch/App.

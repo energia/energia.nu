@@ -1,5 +1,5 @@
 === Guide to the Sharp&reg; Memory Display BoosterPack
-Energia supports the Sharp® Memory LCD BoosterPack made by Texas Instruments. The BoosterPack let’s you quickly add a low power LCD option into your LaunchPad projects. Check out the http://www.ti.com/tool/430BOOST-SHARP96[430BOOST-SHARP96] tool folder for more information.
+Energia supports the Sharp(R) Memory LCD BoosterPack made by Texas Instruments. The BoosterPack let's you quickly add a low power LCD option into your LaunchPad projects. Check out the http://www.ti.com/tool/430BOOST-SHARP96[430BOOST-SHARP96] tool folder for more information.
 
 === Pin Map
 [caption="Figure 1: ",link=../img/430BOOST-SHARP96.jpg]

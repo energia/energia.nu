@@ -51,7 +51,7 @@ Finally, you need to print this information to your serial window as. You can do
 Serial.println(voltage);
 ----
 
-Now, when you open your Serial Monitor in the Energia development environment (by clicking the button directly to the right of the ''Upload'' button in the header of the program), you should see a steady stream of numbers ranging from 0.0–3.0. As you turn the pot, the values will change, corresponding to the voltage coming into pin A3.
+Now, when you open your Serial Monitor in the Energia development environment (by clicking the button directly to the right of the ''Upload'' button in the header of the program), you should see a steady stream of numbers ranging from 0.0-3.0. As you turn the pot, the values will change, corresponding to the voltage coming into pin A3.
 
 === Code ===
 

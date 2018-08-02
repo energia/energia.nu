@@ -1,12 +1,12 @@
 == Guide to the CC3200 SimpleLink WiFi (CC3200-LAUNCHXL)
 :icons: font
-CAUTION: Analog input is limited to 1.46V on the http://www.ti.com/product/CC3200[CC3200]. Higher voltages may damage the MCU. — Reference: _§3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins_ in the http://www.ti.com/lit/ds/swas032f/swas032f.pdf[CC3200 datasheet].
+CAUTION: Analog input is limited to 1.46V on the http://www.ti.com/product/CC3200[CC3200]. Higher voltages may damage the MCU. - Reference: _SS3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins_ in the http://www.ti.com/lit/ds/swas032f/swas032f.pdf[CC3200 datasheet].
 
 {{< youtube -zBxRvkA6mc >}}
 
 The http://www.ti.com/tool/CC3200-LAUNCHXL[CC3200-LAUNCHXL] has on board Wi-Fi to easily add a wireless connection to the internet. Use the Energia WiFi library to get online quickly and easily.  You can also make use of many community contributed libraries that utilize the WiFi library APIs.
 :icons: font
-NOTE: NOTE ON VARIATIONS: There is also another board called the http://www.ti.com/tool/CC3200MODLAUNCHXL[CC3200MODLAUNCHXL] which works exactly the same but uses the module version of the CC3200. It is more expensive, so it’s usually better to use the http://www.ti.com/tool/CC3200-LAUNCHXL[CC3200-LAUNCHXL] for evaluation purposes unless you need to test the module version.
+NOTE: NOTE ON VARIATIONS: There is also another board called the http://www.ti.com/tool/CC3200MODLAUNCHXL[CC3200MODLAUNCHXL] which works exactly the same but uses the module version of the CC3200. It is more expensive, so it's usually better to use the http://www.ti.com/tool/CC3200-LAUNCHXL[CC3200-LAUNCHXL] for evaluation purposes unless you need to test the module version.
 
 This hardware is open source! Get the http://www.ti.com/lit/zip/swrc289[design files] from TI.
 
@@ -19,7 +19,7 @@ image::../img/CC3200-LAUNCHXL.jpg[CC3200-LAUNCHXL,800]
 
 === Installing the drivers
 ==========================
-Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/product/CC3200[CC3200] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/product/CC3200[CC3200] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
 * link:/guide/guide_windows/[Windows]

@@ -6,11 +6,11 @@ The http://www.ti.com/tool/EK-TM4C1294XL[EK-TM4C1294XL] and http://www.ti.com/to
 
 This hardware is open source! Get the design files from TI for the http://www.ti.com/lit/zip/spmr241[EK-TM4C1294XL] and http://www.ti.com/lit/zip/spmr242[EK-TM4C129EXL].
 
-Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/lit/zip/spmr241[EK-TM4C1294XL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/lit/zip/spmr241[EK-TM4C1294XL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 
 === Installing the drivers
 ==========================
-Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/EK-TM4C1294XL[EK-TM4C1294XL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/EK-TM4C1294XL[EK-TM4C1294XL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
 * link:/guide/guide_windows/[Windows]
@@ -21,16 +21,16 @@ If you have not already done so, follow the instructions for your operating syst
 === Pin Map
 The following diagram shows the complete pin map for the Connected LaunchPad for Energia. Click on the image to view the full size image.
 
-==== LaunchPads LM4F TM4C — Pins Maps 13-34
+==== LaunchPads LM4F TM4C - Pins Maps 13-34
 [caption="Figure 1: ",link=../img/EK-TM4C1294XL-FRONT.jpg]
 image::../img/EK-TM4C1294XL-FRONT.jpg[EK-TM4C1294XL-BACK,800]
 
-==== LaunchPads LM4F TM4C — Pins Maps 14-35
+==== LaunchPads LM4F TM4C - Pins Maps 14-35
 
 [caption="Figure 1: ",link=../img/EK-TM4C1294XL-BACK.jpg]
 image::../img/EK-TM4C1294XL-BACK.jpg[EK-TM4C1294XL-BACK,800]
 
-==== LaunchPads LM4F TM4C — Pins Maps 15-36
+==== LaunchPads LM4F TM4C - Pins Maps 15-36
 
 [caption="Figure 1: ",link=../img/EK-TM4C1294XL-X11.jpg]
 image::../img/EK-TM4C1294XL-X11.jpg[EK-TM4C1294XL-X11,800]
@@ -43,9 +43,9 @@ Getting Started Video
 If for some reason you need to update the MAC address of your LaunchPad you can follow the procedure below.
 
 * Download and install the http://www.ti.com/tool/LMFLASHPROGRAMMER["LM Flash Programmer"].
-* Launch “LM Flash Programmer” and click on the tab “Other Utilities”.
-* Under “User Register Programming” section select “MAC Address Mode”.
-* Click on the button “Get Current MAC Address” to read the current value. It should be all F.
+* Launch "LM Flash Programmer" and click on the tab "Other Utilities".
+* Under "User Register Programming" section select "MAC Address Mode".
+* Click on the button "Get Current MAC Address" to read the current value. It should be all F.
 * Enter the intended MAC Address. Format FF:FF:FF:FF in hex. It is recommended to use a label that has this value and stick it on the board and only use the address for this board.
-* Check the option “Commit MAC Address” to store the entered value in the registers.
-* Click on the button “Program MAC Address” to store the address.
+* Check the option "Commit MAC Address" to store the entered value in the registers.
+* Click on the button "Program MAC Address" to store the address.

@@ -9,7 +9,7 @@ using Energia.
 LaunchPad & Energia:* Start creating complete systems that react intelligently to real world +
 activity for the TI LaunchPad Development Ecosystem. This BoosterPack is jam packed with +
 functionality in an easy to use game pad form factor. This BoosterPack was developed with +
-Energia in mind – example software & libraries are available.
+Energia in mind - example software & libraries are available.
 
 *The BoosterPack features full compatibility with the 40-pin BoosterPack pin out +
 standard:* Since this BoosterPack adheres to the BoosterPack standard, it will work with any of +

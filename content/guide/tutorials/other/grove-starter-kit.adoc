@@ -1,6 +1,6 @@
 == Grove Starter Kit for TI LaunchPad ==
 
-The Grove Starter Kit for TI LaunchPad™ is a great starting point for rapidly prototyping a sensor application using Energia.
+The Grove Starter Kit for TI LaunchPadTM is a great starting point for rapidly prototyping a sensor application using Energia.
 
 video::vQcKQQAFMIM[youtube]
 

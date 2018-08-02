@@ -52,7 +52,7 @@ void loop()
     delay(300); 
     digitalWrite(RGB_BLUE_LED, LOW); 
     delay(300);
-  }// when we’re done with the for-loop, exit the loop and continue the sketch
+  }// when we're done with the for-loop, exit the loop and continue the sketch
   while(1);// once we blinked the LED the desired amount of times, we get stuck in this empty while loop
 }
 ----

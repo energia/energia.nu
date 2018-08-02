@@ -44,7 +44,7 @@ digitalWrite(P0, LOW);
 
 Pins can also be addressed by their alternative names. LED0, LED1, LED2, LED3, MISO, MOSI, PUSH1 and other names in the pin mapping below can be used.
 
- LEDS     SPI     I²C     SCI/UART     BUTTON
+ LEDS     SPI     I^2C     SCI/UART     BUTTON
  LED0     SCK     SDA     RX           PUSH1
  LED1     MOSI    SCL     TX
  LED2     MISO
@@ -92,8 +92,8 @@ The S4 switch is used to determine if SCI is connected. When on, the board can s
 
 |===
 |S4 |Switch
-|OFF |P28 – J1.3/ P29 – J1.4
-|ON |P28 – J1.3 – SCI_RX/ P29 – J1.4 – SCI_TX
+|OFF |P28 - J1.3/ P29 - J1.4
+|ON |P28 - J1.3 - SCI_RX/ P29 - J1.4 - SCI_TX
 |===
 
 === Jumpers

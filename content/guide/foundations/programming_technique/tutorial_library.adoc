@@ -241,7 +241,7 @@ dot     KEYWORD2
 
 Each line has the name of the keyword, followed by a tab (not spaces), followed by the kind of keyword. Classes should be KEYWORD1 and are colored orange; functions should be KEYWORD2 and will be brown. You'll have to restart the Energia environment to get it to recognize the new keywords.
 
-It's also nice to provide people with an example sketch that uses your library. To do this, create an *examples* directory inside the *Morse* directory. Then, move or copy the directory containing the sketch (let's call it *SOS*) we wrote above into the examples directory. (You can find the sketch using the *Sketch > Show Sketch Folder* command.) If you restart the Energia environment (this is the last time, I promise)–you'll see a *Library-Morse* item inside the *File > Sketchbook > Examples* menu containing your example. You might want to add some comments that better explain how to use your library.
+It's also nice to provide people with an example sketch that uses your library. To do this, create an *examples* directory inside the *Morse* directory. Then, move or copy the directory containing the sketch (let's call it *SOS*) we wrote above into the examples directory. (You can find the sketch using the *Sketch > Show Sketch Folder* command.) If you restart the Energia environment (this is the last time, I promise)-you'll see a *Library-Morse* item inside the *File > Sketchbook > Examples* menu containing your example. You might want to add some comments that better explain how to use your library.
 
 If you'd like to check out the complete library (with keywords and example), you can download it from the official libraries page.
 

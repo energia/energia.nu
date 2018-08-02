@@ -8,7 +8,7 @@ There is no Energia library yet to support this BoosterPack.
 
 === Pins Map
 :icons: font
-NOTE: The main signals (MIC Power, MIC Output, AMP On and Audio PMW) offer two options, a primary and alternate, with the corresponding 0 Ω shunts.
+NOTE: The main signals (MIC Power, MIC Output, AMP On and Audio PMW) offer two options, a primary and alternate, with the corresponding 0 Ohm shunts.
 
 [caption="Figure 1: ",link=../img/BOOSTXL-AUDIO.jpg]
 image::../img/BOOSTXL-AUDIO.jpg[BOOSTXL-AUDIO,800]

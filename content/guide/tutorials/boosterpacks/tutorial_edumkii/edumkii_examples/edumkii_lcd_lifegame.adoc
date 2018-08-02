@@ -23,7 +23,7 @@ None. This basic example just uses your LaunchPad and BoosterPack only.
 /// @mainpage	LifeGame
 ///
 /// @details	Description of the project
-/// @n 		    Based on Life_Game_Colour.pde Jul 12, 2012 © Rei VILO, 2010-2012
+/// @n 		    Based on Life_Game_Colour.pde Jul 12, 2012 (c) Rei VILO, 2010-2012
 /// @n
 /// @n @a		Developed with [embedXcode+](http://embedXcode.weebly.com)
 ///

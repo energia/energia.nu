@@ -1,10 +1,10 @@
 == Guide to the CC3100 SimpleLink Wi-Fi BoosterPack
-Energia supports the CC3100 BoosterPack. The BoosterPack let’s you quickly incorporate Wi-Fi into your LaunchPad projects.  Check out the tool folder (http://www.ti.com/tool/cc3100boost) for more information.  The WiFi libraries are included in the Energia release.
+Energia supports the CC3100 BoosterPack. The BoosterPack let's you quickly incorporate Wi-Fi into your LaunchPad projects.  Check out the tool folder (http://www.ti.com/tool/cc3100boost) for more information.  The WiFi libraries are included in the Energia release.
 
 This hardware is open source! Get the design files of the http://www.ti.com/lit/zip/swrc324[CC3100BOOST] from TI.
 
 :icons: font
-CAUTION: On some LaunchPads (MSP-EXP430FR4133, MSP-EXP430FR6989) not enough current gets sourced to the BoosterPack from the LaunchPad. To fix this, change the J8 Jumper to ‘LDO’ position instead of ‘MCU’ position. This should fix it. The use of the external power USB cable is not necessary in most use cases.
+CAUTION: On some LaunchPads (MSP-EXP430FR4133, MSP-EXP430FR6989) not enough current gets sourced to the BoosterPack from the LaunchPad. To fix this, change the J8 Jumper to 'LDO' position instead of 'MCU' position. This should fix it. The use of the external power USB cable is not necessary in most use cases.
 
 === Pin Map
 
@@ -36,11 +36,11 @@ This is the part where you need to jump through some hoops. Unfortunately this c
 . Get the CC3100SDK-SERVICEPACK from this page: http://www.ti.com/tool/cc3100sdk. You can also use Service Pack 1.0.0.10.0 that can be downloaded HERE.  Run the installer and you should have something in c:\TI\ called service pack.
 . Get UNIFLASH-SIMPLELINK from this page: http://www.ti.com/tool/uniflash. Install and it should again end up in c:\TI.
 . Run Uniflash
-. Make sure that under “CC31x Flash Setup and Control” you select the right COM Port (There are 4 COM Ports when using the CC31XXEMUBOOST, it should be the 3rd COM port option which is the UART)
-. Select “New Configuration” from the File menu and click OK
-. Select “Service Pack Update” from the Operation menu
+. Make sure that under "CC31x Flash Setup and Control" you select the right COM Port (There are 4 COM Ports when using the CC31XXEMUBOOST, it should be the 3rd COM port option which is the UART)
+. Select "New Configuration" from the File menu and click OK
+. Select "Service Pack Update" from the Operation menu
 . Browse to the directory where you installed the service pack (under step 1) and select servicepack.bin. Probably called something c:\TI\xxx_servicePack_xxx\
-. It will immediately start the update. One thing that is totally not obvious is that in the small little console window below the main window, it will right after it start the upgrade say “—- please restart the device —” which means press the reset button (SW2 on the BoosterPack).
+. It will immediately start the update. One thing that is totally not obvious is that in the small little console window below the main window, it will right after it start the upgrade say "-- please restart the device -" which means press the reset button (SW2 on the BoosterPack).
 . It will take a while for the process to complete but once it does you are good to go and hopefully do not have to jump through these hoops again.
 
 If you get stuck on the above then there is also a more elaborate set of instructions included in this document from TI: http://www.ti.com/lit/pdf/swru376

@@ -6,7 +6,7 @@ In this example we will install the core required by the MSP432P401R. The first 
 
 image::/guide/img/boards_manager1.png[Boards Manager]
 
-The Boards Manager will open and you will see a list of available LaunchPad families, with the included boards in each family. Locate the LaunchPad family containing the board you need (in our case it’s the ''Energia MSP432 boards'' family). Select the family and click on install.
+The Boards Manager will open and you will see a list of available LaunchPad families, with the included boards in each family. Locate the LaunchPad family containing the board you need (in our case it's the ''Energia MSP432 boards'' family). Select the family and click on install.
 
 image::/guide/img/boards_manager2.png[Boards Manager]
 

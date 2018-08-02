@@ -2,15 +2,15 @@
 
 {{< youtube -DBy5ds3MYc >}}
 
-The http://www.ti.com/tool/EK-TM4C123GXL[EK-TM4C123GXL] LaunchPad is a very capable board with a 32-bit 80MHz ARM Cortex-M4F processor. It has many peripherals so it’s possible to do some pretty high performance applications. It also has a very bright RGB LED.
+The http://www.ti.com/tool/EK-TM4C123GXL[EK-TM4C123GXL] LaunchPad is a very capable board with a 32-bit 80MHz ARM Cortex-M4F processor. It has many peripherals so it's possible to do some pretty high performance applications. It also has a very bright RGB LED.
 
 This hardware is open source! Get the PADS design files from TI: HERE
 
-Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/EK-TM4C123GXL[EK-TM4C123GXL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/EK-TM4C123GXL[EK-TM4C123GXL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 
 === Installing the drivers
 ==========================
-Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/EK-TM4C123GXL[EK-TM4C123GXL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/EK-TM4C123GXL[EK-TM4C123GXL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
 * link:/guide/guide_windows/[Windows]
@@ -21,7 +21,7 @@ If you have not already done so, follow the instructions for your operating syst
 === Pin Map
 Below is the pin map for the EK-TM4C123GXL LaunchPad. Click on the images to enlarge.
 
-==== LaunchPads LM4F TM4C — Pins Maps 11-32
+==== LaunchPads LM4F TM4C - Pins Maps 11-32
 
 [caption="Figure 1: ",link=../img/EK-TM4C123GXL.jpg]
 image::../img/EK-TM4C123GXL.jpg[EK-TM4C123GXL,800]
@@ -29,7 +29,7 @@ image::../img/EK-TM4C123GXL.jpg[EK-TM4C123GXL,800]
 [caption="Figure 1: ",link=../img/EK-TM4C123GXL-BACK.jpg]
 image::../img/EK-TM4C123GXL-BACK.jpg[EK-TM4C123GXL,800]
 
-==== LaunchPads LM4F TM4C — Pins Maps 12-33
+==== LaunchPads LM4F TM4C - Pins Maps 12-33
 
 === Getting Started Video
 

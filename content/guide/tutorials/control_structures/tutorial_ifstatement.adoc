@@ -129,7 +129,7 @@ video::4qljV-gQJ2w[youtube]
 === See Also ===
 
 * link:/reference/en/language/structure/control-structure/if/[if()]
-* ink:/reference/en/language/structure/control-structure/else/[if…else]
+* ink:/reference/en/language/structure/control-structure/else/[if...else]
 * link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
 * link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
 * link:/reference/en/language/functions/communication/serial/serial_begin/[serial.begin()]

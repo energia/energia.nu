@@ -14,11 +14,11 @@ The following diagram shows the complete pin map for the http://www.ti.com/produ
 [caption="Figure 1: ",link=../img/MSP-EXP432E401Y.jpg]
 image::../img/MSP-EXP432E401Y.jpg[MSP-EXP432E401Y,800]
 
-Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430P401R under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430P401R under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 
 === Installing the drivers
 ==========================
-Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/MSP-EXP432E401Y[MSP-EXP432E401Y] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/MSP-EXP432E401Y[MSP-EXP432E401Y] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
 * link:/guide/guide_windows/[Windows]

@@ -3,7 +3,7 @@ Energia supports the MSP-EXP430FR5739 Experimenter Board with MSP430FR5739. Comm
 
 This board has an accelerometer and EM headers.
 
-Drivers may or may not be required in order to start using this Experimenter Board. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430fr5739 under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don’t see a selectable serial port, you likely have a driver issue.
+Drivers may or may not be required in order to start using this Experimenter Board. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430fr5739 under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 
 === Installing the drivers
 ==========================

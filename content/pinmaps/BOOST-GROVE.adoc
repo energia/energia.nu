@@ -2,7 +2,7 @@
 Utilize the Grove ecosystem from Seeedstudio using the https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html[Grove BoosterPack] and Energia. You can use this BoosterPack and pair with over 100+ different https://www.seeedstudio.com/category/Grove-c-1003.html[Grove modules]. You can also use the https://www.seeedstudio.com/Grove-Starter-Kit-for-LaunchPad-p-2178.html[Grove Starter Kit] for LaunchPad to get a nice kit of pre-selected modules.
 
 === Pin Map
-Grove BoosterPack (on top) — Pins Map
+Grove BoosterPack (on top) - Pins Map
 
 [caption="Figure 1: ",link=../img/GroveBoosterPack.jpg]
 image::../img/GroveBoosterPack.jpg[GroveBoosterPack,800]

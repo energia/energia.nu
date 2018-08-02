@@ -1,6 +1,6 @@
 == Guide to the RBLCC3200 by RedBearLab
 :icons: font
-CAUTION: Analog input is limited to 1.46V on the CC3200. Higher voltages may damage the MCU. — Reference: §3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins, CC3200 SimpleLink™ Wi-Fi® and Internet-of-Things Solution, a Single-Chip Wireless MCU (swas032f).
+CAUTION: Analog input is limited to 1.46V on the CC3200. Higher voltages may damage the MCU. - Reference: SS3.2 Drive Strength and Reset States for Analog-Digital Multiplexed Pins, CC3200 SimpleLinkTM Wi-Fi(R) and Internet-of-Things Solution, a Single-Chip Wireless MCU (swas032f).
 
 The RBLCC3200 is an Arduino Uno R3 form factor development kit with on board Wi-Fi to easily add a wireless connection to the internet. Use the Energia WiFi library to get online quickly and easily.  You can also make use of many community contributed libraries that utilize the WiFi library APIs. Please go to www.redbearlab.com/cc3200 to learn more and see the full spec.  You can also check out the WiFi Mini board supported in Energia!
 
