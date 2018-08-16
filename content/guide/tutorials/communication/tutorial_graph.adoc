@@ -9,7 +9,7 @@ This example shows you how to send a byte of data from the MSP430 LaunchPad to a
 
 === Relevant Groundwork ===
 
-We can connect analog sensors to the MSP430 through the 8 analog read pins. You can view the pin mapping http://energia.nu/PinMapping.html[here] for the mapping for the particular MSP430 device you are using on the LaunchPad. The Launchpad will read the analog signal coming from the device and send it to the analog to digital converter in the microcontroller. We can read these digital values in the Serial Monitor in Energia.
+We can connect analog sensors to the MSP430 through the 8 analog read pins. You can view the pin mapping link://pinmapping/[here] for the mapping for the particular MSP430 device you are using on the LaunchPad. The Launchpad will read the analog signal coming from the device and send it to the analog to digital converter in the microcontroller. We can read these digital values in the Serial Monitor in Energia.
 
 Connect a potentiometer or other analog sensor to analog input 3.
 

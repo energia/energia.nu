@@ -1,6 +1,6 @@
 == ReadASCIIString ==
 
-This sketch uses the http://energia.nu/Serial_ParseInt.html[`Serial.parseInt()`] function to locate values separated by a non-alphanumeric character. Often people use a comma to indicate different pieces of information (this format is commonly referred to as comma-separated-values), but other characters like a space or a period will work too. The values are parsed into ints and used to determine the color of a RGB LED. You'll use the serial monitor to send strings like "5,220,70" to the LaunchPad to change the lights.
+This sketch uses the link:/reference/en/language/functions/communication/serial/parseInt/[`Serial.parseInt()`] function to locate values separated by a non-alphanumeric character. Often people use a comma to indicate different pieces of information (this format is commonly referred to as comma-separated-values), but other characters like a space or a period will work too. The values are parsed into ints and used to determine the color of a RGB LED. You'll use the serial monitor to send strings like "5,220,70" to the LaunchPad to change the lights.
 
 === Hardware Required ===
 
@@ -50,13 +50,13 @@ pinMode(greenPin, OUTPUT);
 pinMode(bluePin, OUTPUT);
 ----
 
-In the http://energia.nu/Loop.html[`loop()`], check to see if there is any data in the serial buffer. By making this a http://energia.nu/While.html[`while()`] statement, it will run as long as there is information waiting to be read:
+In the link:/reference/en/language/structure/sketch/loop/[`loop()`], check to see if there is any data in the serial buffer. By making this a link:/reference/en/language/structure/control-structure/while/[`while()`] statement, it will run as long as there is information waiting to be read:
 
 ----
 while (Serial.available() > 0) {
 ----
 
-Next, declare some local variables for storing the serial information. This will be the brightness of the LEDs. Using http://energia.nu/Serial_ParseInt.html[`Serial.parseInt()`] to separate the data by commas, read the information into your variables:
+Next, declare some local variables for storing the serial information. This will be the brightness of the LEDs. Using link:/reference/en/language/functions/communication/serial/parseInt/[`Serial.parseInt()`] to separate the data by commas, read the information into your variables:
 
 ----
 int red = Serial.parseInt();
@@ -70,7 +70,7 @@ Once you've read the data into your variables, check for the new line character 
 if (Serial.read() == '\n') {
 ----
 
-Using http://energia.nu/Constrain.html[`constrain()`], you can keep the values in an acceptable range for PWM control. This way, if the value was outside the range of what PWM can send, it will be limited to a valid number. By subtracting this value from 255 you will be formatting the value to use with a common anode LED. As explained above, these LEDs will illuminate when there is a voltage difference between the anode and the pin connected to the LaunchPad:
+Using link:/reference/en/language/functions/math/constrain/[`constrain()`], you can keep the values in an acceptable range for PWM control. This way, if the value was outside the range of what PWM can send, it will be limited to a valid number. By subtracting this value from 255 you will be formatting the value to use with a common anode LED. As explained above, these LEDs will illuminate when there is a voltage difference between the anode and the pin connected to the LaunchPad:
 
 ----
 red = 255 - constrain(red, 0, 255);

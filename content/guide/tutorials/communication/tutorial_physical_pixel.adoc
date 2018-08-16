@@ -27,9 +27,9 @@ image::../img/PhysicalPixel_schem.png[]
 
 The LaunchPad will look for ASCII characters that will be sent from the Energia Serial Monitor in order to turn an LED on the LaunchPad board on (High) or off (Low). When an 'H' is written in the Serial Monitor, the LED will turn on, when an 'L' is written into the monitor, the LED will turn off. We begin by initializing a constant (in this code `ledPin`) to the value of 14 or the pin associated with the Green LED on the LaunchPad board. We also need a new variable called `incomingByte` that will save the ASCII character read by the Serial Monitor.
 
-In the `setup()` section, we initialize http://energia.nu/Serial.html[Serial] communication and set the pin associated to the Green LED (Pin 14) as an output.
+In the `setup()` section, we initialize link:/reference/en/language/functions/communication/serial/[Serial] communication and set the pin associated to the Green LED (Pin 14) as an output.
 
-In the `loop()` section, the http://energia.nu/Serial_Available.html[`Serial.available()`] will look for characters read from the Serial Monitor. This is inside an if statement that will continuously run while the Serial is available. We set our variable `incomingByte` to what is being read from the Serial Monitor. There are 2 if statements that follow. The first controls what will happen when an 'H' is read in the Serial Monitor. If an 'H' is received, it will set the Green LED High using the `digitalWrite()` function. The second if statement controls what happens when an 'L' is received. Very similar to the previous statement, only difference is when 'L' is seen, the LED goes Low.
+In the `loop()` section, link:/reference/en/language/functions/communication/serial/available/[`Serial.available()`] will look for characters read from the Serial Monitor. This is inside an if statement that will continuously run while the Serial is available. We set our variable `incomingByte` to what is being read from the Serial Monitor. There are 2 if statements that follow. The first controls what will happen when an 'H' is read in the Serial Monitor. If an 'H' is received, it will set the Green LED High using the `digitalWrite()` function. The second if statement controls what happens when an 'L' is received. Very similar to the previous statement, only difference is when 'L' is seen, the LED goes Low.
 
 *Processing*
 
@@ -168,12 +168,12 @@ void draw() {
 
 === See Also ===
 
-* http://energia.nu/Serial.html[serial()]
-* http://energia.nu/Serial_Read.html[serial.read()]
-* http://energia.nu/If.html[if()]
-* http://energia.nu/Tutorial_Dimmer.html[Dimmer]:move the mouse to change the brightness of an LED.
-* http://energia.nu/Tutorial_Graph.html[Graph]:send data to the computer and graph it in Processing.
-* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from a LaunchPad to the computer and read them in Processing.
-* http://energia.nu/Tutorial_SerialCallResponse.html[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
-* http://energia.nu/Tutorial_SerialCallResponseASCII.html[Serial Call and Response ASCII]:send multiple variables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
-* http://energia.nu/Tutorial_SwitchCase2.html[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.
+* link:/reference/en/language/functions/communication/serial/[serial()]
+* link:/reference/en/language/functions/communication/serial/read/[serial.read()]
+* link:/reference/en/language/structure/control-structure/if/[if()]
+* link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
+* link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.
+* link:/guide/tutorials/communication/tutorial_virtual_color_mixer/[Virtual Color Mixer]:send multiple variables from a LaunchPad to the computer and read them in Processing.
+* link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
+* link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:send multiple variables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+* link:/guide/tutorials/communication/tutorial_switch_case2/[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.

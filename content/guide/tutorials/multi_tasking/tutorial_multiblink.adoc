@@ -16,7 +16,7 @@ Only your LaunchPad Board is needed for this example.
 
 === Code Explanation ===
 
-This multitasking example is based on the basic http://energia.nu/guide/tutorial_blink/[Blink Example], but adds multitasking functionality to blink multiple LEDs at different rates.  Each tab in the sketch is a different task with their own setup and loop functions. All the setup and loop functions must have matching name pairs for the ROTS compiler to recognize them as tasks.
+This multitasking example is based on the basic link:/guide/tutorials/basics/tutorial_blink/[Blink Example], but adds multitasking functionality to blink multiple LEDs at different rates.  Each tab in the sketch is a different task with their own setup and loop functions. All the setup and loop functions must have matching name pairs for the ROTS compiler to recognize them as tasks.
 
 ----
 void setupBlueLed(), void loopBlueLed()

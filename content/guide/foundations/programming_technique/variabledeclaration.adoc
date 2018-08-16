@@ -15,7 +15,7 @@ Programmers should consider the size of the numbers they wish to store in choosi
 
 === Variable Scope ===
 
-Another important choice that programmers face is where to declare variables. The specific place that variables are declared influences how various functions in a program will _see_ the variable. This is called variable http://energia.nu/reference/scope/[scope].
+Another important choice that programmers face is where to declare variables. The specific place that variables are declared influences how various functions in a program will _see_ the variable. This is called variable link:/reference/en/language/variables/variable-scope-&-qualifiers/scope/[scope].
 
 === Initializing Variables ===
 
@@ -79,18 +79,18 @@ You can name a variable any word that is not already one of the keywords in Ener
 
 === Some variable types ===
 
-* http://energia.nu/reference/char/[char]
-* http://energia.nu/reference/byte/[byte]
-* http://energia.nu/reference/int/[int]
-* http://energia.nu/reference/unsignedint/[unsigned int]
-* http://energia.nu/reference/long/[long]
-* http://energia.nu/reference/unsignedlong/[unsigned long]
-* http://energia.nu/reference/float/[float]
-* http://energia.nu/reference/double/[double]
+* link:/reference/en/language/variables/data-types/char/[char]
+* link:/reference/en/language/variables/data-types/byte/[byte]
+* link:/reference/en/language/variables/data-types/int/[int]
+* link:/reference/en/language/variables/data-types/unsignedint/[unsigned int]
+* link:/reference/en/language/variables/data-types/long/[long]
+* link:/reference/en/language/variables/data-types/unsignedlong/[unsigned long]
+* link:/reference/en/language/variables/data-types/float/[float]
+* link:/reference/en/language/variables/data-types/double/[double]
 
 === Variable Scope ===
 
-* http://energia.nu/reference/scope/[Variable Scope]
+* link:/reference/en/language/variables/variable-scope-&-qualifiers/scope/[Variable Scope]
  
 === See also ===
 

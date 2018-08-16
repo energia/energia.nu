@@ -26,7 +26,7 @@ image::../img/AnalogWrite_schem.png[]
 
 === Code Explanation ===
 
-In the `setup()` function of the code below, a http://energia.nu/reference/for/[`for()`] loop is used to assign digital pins 4, 9, 10, 12, 13, 14, 19 of the LaunchPad as outputs.
+In the `setup()` function of the code below, a link:/reference/en/language/structure/control-structure/for/[`for()`] loop is used to assign digital pins 4, 9, 10, 12, 13, 14, 19 of the LaunchPad as outputs.
 
 Next, in the `loop()` function of the program below, a trio of nested `for()` loops are used.
 

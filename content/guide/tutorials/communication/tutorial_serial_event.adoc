@@ -101,7 +101,7 @@ void serialEvent() {
 * link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
 * link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.
 * link:/guide/tutorials/communication/tutorial_physical_pixel/[Physical Pixel]:turn an LED on and off by sending data from Processing.
-* http://energia.nu/Tutorial_VirtualColorMixer.html[Virtual Color Mixer]:send multiple variables from an LaunchPad to the computer and read them in Processing.
+* link:/guide/tutorials/communication/tutorial_virtual_color_mixer/[Virtual Color Mixer]:send multiple variables from an LaunchPad to the computer and read them in Processing.
 * link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
 * link:/guide/tutorials/communication/tutorial_serial_call_response_ascii/[Serial Call and Response ASCII]:send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
 * link:/guide/tutorials/control_structures/tutorial_switchcase2/[Serial Input (Switch (case) Statement)]:how to take different actions based on characters received by the serial port.
