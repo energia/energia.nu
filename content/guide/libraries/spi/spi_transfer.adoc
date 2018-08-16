@@ -3,10 +3,10 @@
 ### Description
 
 Transfers one byte over the SPI bus, both sending and receiving. If you
-specify one of the  Slave Select (SS) pin in the call to SPI.transfer(),
+specify one of the  Slave Select (SS) pin in the call to SPI.transfer(),
 the specified pin is activated (pulled low) before the transfer occurs
 and deactivated (pulled high) when the transfer is finished. SPI_LAST
-parameter is the default. SPI_CONTINUE is not supported in Energia. The
+parameter is the default. SPI_CONTINUE is not supported in Energia. The
 last byte to be transferred should be accompanied by the SPI_LAST
 parameter. By default, if you don't specify a third parameter, SPI_LAST
 is used. When a transfer is complete with SPI_LAST, the slave select

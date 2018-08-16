@@ -8,9 +8,8 @@
 
 }
 
-.ulist {
-    line-height: 0.5;
-    font-size: 16;
+.ulist li {
+  margin: -0.5em;
 }
 
 #first {
@@ -52,12 +51,12 @@ Functions
 
 ### Overview
 
-This library allows you to communicate with I2C / TWI devices. The library inherits from the Stream functions, making it consistent with other read/write libraries. I2C is a two wire interface using the SDA (Serial Data Line) and SCL (Serial Clock Line) pins to communicate over the serial bus. I2C uses a multi-master/multi-slave model where the master generates the clock and initiates communication with the slaves. A slave receives the clock and responds when addressed by the master. I2C is a common interface between a microcontroller and peripherals like sensors and displays.
+This library allows you to communicate with I2C / TWI devices. The library inherits from the Stream functions, making it consistent with other read/write libraries. I2C is a two wire interface using the SDA (Serial Data Line) and SCL (Serial Clock Line) pins to communicate over the serial bus. I2C uses a multi-master/multi-slave model where the master generates the clock and initiates communication with the slaves. A slave receives the clock and responds when addressed by the master. I2C is a common interface between a microcontroller and peripherals like sensors and displays.
 
 Some LaunchPad's support multiple Wire interfaces on different pins. These can be addressed by WireX where X is a number. For example, the MSP432 LaunchPad supports Wire and Wire1. Wire is on pins 9 and 10 where Wire1 is on pins 14 and 15. Please see the pinmap for each LaunchPad for details about the availability of additional instances of Wire and the pins associated with it.
 
 :icons: font
-NOTE: There are both 7- and 8-bit versions of I2C addresses. 7 bits identify the device, and
+NOTE: There are both 7- and 8-bit versions of I2C addresses. 7 bits identify the device, and
 the eighth bit determines if it's being written to or read from. The
 Wire library uses 7 bit addresses throughout. If you have a datasheet or
 sample code that uses 8 bit address, you'll want to drop the low bit

@@ -49,7 +49,7 @@ Functions
 
 
 This library allows you to communicate with SPI devices, with the
-Energia target board as the master device.
+Energia target board as the master device.
 
 ### A Brief Introduction to the Serial Peripheral Interface (SPI)
 

@@ -11,13 +11,13 @@ Standardizing code fragments into functions has several advantages:
 * This also reduces chances for errors in modification, if the code needs to be changed.
 * Functions make the whole sketch smaller and more compact because sections of code are reused many times.
 * They make it easier to reuse code in other programs by making it more modular, and as a nice side effect, using functions also often makes the code more readable.
- 
+
 
 There are two required functions in an Energia sketch, `setup()` and `loop()`. Other functions must be created outside the brackets of those two functions. As an example, we will create a simple function to multiply two numbers.
 
 === Example ===
 
-image::FuncAnatomy.png[]
+image::../FuncAnatomy.png[]
 
 To ''call'' our simple multiply function, we pass it parameters of the datatype that it is expecting:
 

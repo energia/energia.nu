@@ -7,4 +7,4 @@ https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard
 A breadboard is a workspace that has electrical connections. Each row is electrically connected to each point on the row. To make new connections, you use wires to connect rows to each other. There are larger columns on the side that are called power rails. These are for your VCC (power) and GND (ground) signals. You can use these to easily connect any rows to VCC or GND.
 
 
-image::Sidekick_Breadboard_Internal_Connections.jpg[450,450]
+image::../Sidekick_Breadboard_Internal_Connections.jpg[450,450]

@@ -4,38 +4,6 @@ This is a port of the Sparkfun Inventor's Kit examples adapted for Energia and T
 
 This port is based on version 3.1 of SIK. You can purchase the components you need from the wishlist or by purchasing the complete kit: https://www.sparkfun.com/wish_lists/73858[SIK V3.1 Wishlist]. The Sparkfun RedBoard is not required to run the examples with Energia and LaunchPad, but you may want it for your miscellaneous hardware collection.  The http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Kits/SFE-SIK-RedBoard-Guide-Version3.0-Online.pdf[SIK Guidebook], carrying case, and breadboard holder are also not required, but may be useful. You can find the original code examples on the Sparkfun GitHub: https://github.com/sparkfun/SIK-Guide-Code[HERE].
 
-http://energia.nu/guide/sik-for-launchpad/circuit1/[Circuit 1: Blinking an LED]
+You can also refer to this http://s3.amazonaws.com/energiaUS/files/SIK_Guide_Book.pdf[SIK_Guide_Book] PDF.
 
-http://energia.nu/guide/sik-for-launchpad/circuit2/[Circuit 2: Reading a Potentiometer]
-
-Circuit 3: Driving an RGB LED
-
-http://energia.nu/guide/sik-for-launchpad/circuit4/[Circuit 4: Driving Multiple LEDs]
-
-Circuit 5: Push Buttons
-
-Circuit 6: Reading a Photo Resistor
-
-Circuit 7: Reading a Temperature Sensor
-
-Circuit 8: Driving a Servo Motor
-
-Circuit 9: Using a Flex Sensor
-
-Circuit 10: Reading a Soft Potentiometer
-
-Circuit 11: Using a Piezo Element  (Buzzer)
-
-Circuit 12: Spinning a Motor
-
-Circuit 13: Relays
-
-Circuit 14: Shift Register
-
-Circuit 15: LCD
-
- 
-
-You can also refer to this http://energia.nu/wordpress/wp-content/uploads/2014/09/SIK_Guide_Book.pdf[SIK_Guide_Book] PDF.
-
-http://energia.nu/guide/[Getting Started Home] || http://energia.nu/reference/libraries/[Libraries Home]
+link:/guide/libraries/[Libraries Home]
