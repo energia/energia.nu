@@ -1,0 +1,73 @@
+*WiFiServer*.available()
+------------------------
+
+#### Description
+
+Gets a client that is connected to the server and has data available for
+reading. The connection persists when the returned client object goes
+out of scope; you can close it by calling *client*.stop(). available()
+inherits from the
+[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+utility class.
+
+#### Syntax
+
+*server*.available()
+
+#### Parameters
+
+None
+
+#### Returns
+
+a Client object; if no Client has data available for reading, this
+object will evaluate to false in an if-statement
+
+#### Example
+
+    #include <SPI.h>
+    #include <WiFi.h>
+
+    char ssid[] = "Network";          //  your network SSID (name) 
+    char pass[] = "myPassword";   // your network password
+    int status = WL_IDLE_STATUS;
+
+    WiFiServer server(80);
+
+    void setup() {
+      // initialize serial:
+      Serial.begin(9600);
+      Serial.println("Attempting to connect to WPA network...");
+      Serial.print("SSID: ");
+      Serial.println(ssid);
+
+      status = WiFi.begin(ssid, pass);
+      if ( status != WL_CONNECTED) { 
+        Serial.println("Couldn't get a wifi connection");
+        while(true);
+      } 
+      else {
+        server.begin();
+        Serial.print("Connected to wifi. My address:");
+        IPAddress myAddress = WiFi.localIP();
+        Serial.println(myAddress);
+
+      }
+    }
+
+    void loop() {
+      // listen for incoming clients
+      WiFiClient client = server.available();
+      if (client) {
+
+        if (client.connected()) {
+          Serial.println("Connected to client");
+        }
+
+        // close the connection:
+        client.stop();
+      }
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

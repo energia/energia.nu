@@ -1,0 +1,59 @@
+<span class="wikiword">ble.setAdvertName()</span>
+-------------------------------------------------
+
+#### Description
+
+Sets the advertised name of the device. This is what is displayed when
+scanning for Bluetooth devices on a laptop or cell phone.
+
+#### Syntax
+
+ble.setAdvertName(advertName); // [char
+array](http://energia.nu/reference/string/) or string literal
+ble.setAdvertName(&advertName); // [String
+object](http://energia.nu/reference/stringobject/)
+
+#### Parameters
+
+**advertName**: Either a [char
+array](http://energia.nu/reference/string/) or a pointer to a [String
+object](http://energia.nu/reference/stringobject/).
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/)
+
+#### Example (string literal)
+
+    #include <BLE.h>
+
+    void setup() {
+      ble.begin();
+      ble.setAdvertName("Energia BLE");
+      ble.startAdvert();
+    }
+
+#### Example ([char array](http://energia.nu/reference/string/))
+
+    #include <BLE.h>
+    char advertName[] = "Energia BLE";
+    void setup() {
+      ble.begin();
+      ble.setAdvertName(advertName);
+      ble.startAdvert();
+    }
+
+#### Example ([String object](http://energia.nu/reference/stringobject/))
+
+    #include <BLE.h>
+    String advertName = String("Energia BLE");
+    void setup() {
+      ble.begin();
+      ble.setAdvertName(advertName);
+      ble.startAdvert();
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

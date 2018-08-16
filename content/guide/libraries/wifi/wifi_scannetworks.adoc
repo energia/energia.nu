@@ -1,0 +1,56 @@
+<span class="wikiword">WiFi</span>.scanNetworks()
+-------------------------------------------------
+
+#### Description
+
+Scans for available <span class="wikiword">WiFi</span> networks and
+returns the discovered number
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.scanNetworks();\
+
+#### Parameters
+
+none
+
+#### Returns
+
+byte : number of discovered networks
+
+#### Example
+
+    #include <SPI.h>
+    #include <WiFi.h>
+
+    char ssid[] = "yourNetwork";     // the name of your network
+    int status = WL_IDLE_STATUS;     // the Wifi radio's status
+
+    byte mac[6];                     // the MAC address of your Wifi shield
+
+
+    void setup()
+    {
+     Serial.begin(9600);
+
+     status = WiFi.begin(ssid);
+
+     if ( status != WL_CONNECTED) { 
+        Serial.println("Couldn't get a wifi connection");
+        while(true);
+      } 
+      // if you are connected, print your MAC address:
+      else {
+
+      Serial.println("** Scan Networks **");
+      byte numSsid = WiFi.scanNetworks();
+
+      Serial.print("SSID List:");
+      Serial.println(numSsid);
+      }
+    }
+
+    void loop () {}
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

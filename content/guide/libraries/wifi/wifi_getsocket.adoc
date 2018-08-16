@@ -1,0 +1,22 @@
+<span class="wikiword">WiFi</span>.getSocket()
+----------------------------------------------
+
+#### Description
+
+gets the first socket available
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.getSocket();\
+
+#### Parameters
+
+none
+
+#### Returns
+
+int : the first socket available\
+\
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

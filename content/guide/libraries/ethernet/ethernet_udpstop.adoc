@@ -1,0 +1,22 @@
+*EthernetUDP*.stop()
+--------------------
+
+#### Description
+
+Disconnect from the server. Release any resource being used during the
+UDP session.
+
+#### Syntax
+
+*<span class="wikiword">EthernetUDP</span>*.stop()
+
+#### Parameters
+
+none
+
+#### Returns
+
+none
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

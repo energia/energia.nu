@@ -1,0 +1,48 @@
+<span class="wikiword">WiFi</span>.begin()
+------------------------------------------
+
+#### Description
+
+Initializes the <span class="wikiword">WiFi</span> library's network
+settings and provides the current status.
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.begin(); <span
+class="wikiword">WiFi</span>.begin(ssid); <span
+class="wikiword">WiFi</span>.begin(ssid, pass); <span
+class="wikiword">WiFi</span>.begin(ssid, keyIndex, key);
+
+#### Parameters
+
+**ssid**: the SSID (Service Set Identifier) is the name of the <span
+class="wikiword">WiFi</span> network you want to connect to.
+**keyIndex**: WEP encrypted networks can hold up to 4 different keys.
+This identifies which key you are going to use. **key**: a hexadecimal
+string used as a security code for WEP encrypted networks. **pass**: WPA
+encrypted networks use a password in the form of a string for security.
+
+#### Returns
+
+-   WL\_CONNECTED when connected to a network
+-   WL\_IDLE\_STATUS when not connected to a network, but powered on
+
+#### Example
+
+    #include <WiFi.h>
+
+    //SSID of your network 
+    char ssid[] = "yourNetwork";
+    //password of your WPA Network 
+    char pass[] = "secretPassword";
+
+    void setup()
+    {
+     WiFi.begin(ssid, pass);
+    }
+
+    void loop () {}
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink} || [WiFi
+Library](http://energia.nu/reference/wifi/ "WiFi")

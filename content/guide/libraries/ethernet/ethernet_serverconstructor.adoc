@@ -1,0 +1,11 @@
+Server
+------
+
+#### Description
+
+Server is the base class for all Ethernet server based calls. It is not
+called directly, but invoked whenever you use a function that relies on
+it.
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

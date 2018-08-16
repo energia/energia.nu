@@ -1,0 +1,77 @@
+<span class="wikiword">BLE\_Advert\_Settings</span>
+---------------------------------------------------
+
+#### Description
+
+The data type used to set advertising behavior.
+
+#### Syntax
+
+    BLE_Advert_Settings advertSettings =
+    {
+      advertMode,
+      timeout,
+      interval,
+      connectedBehavior
+    };
+
+#### Parameters
+
+**advertMode**: Sets the advertisement mode.
+
+-   BLE\_ADV\_MODE\_NONCONN: Nonconnectable undirected advertisements.
+-   BLE\_ADV\_MODE\_CONN: Connectable undirected advertisements.
+-   BLE\_ADV\_MODE\_SCANNABLE: This mode compensates for the small size
+    of advertisement packets. A BLE central device can respond with a
+    scan request packet to advertisements from a peripheral in
+    this mode. The peripheral must listen for these scan request
+    packets, which uses more power than the other two modes. Upon
+    receiving a scan request, the peripheral sends extra data to the
+    central device. This essentially doubles the amount of data that can
+    be advertised at the expense of higher power consumption.
+
+**timeout**: How long to advertise for in milliseconds. 0 for
+indefinitely. **interval**: Advertising Interval (interval \* 0.625 ms).
+0 for 100ms default **connectedBehavior**: The advertising behavior
+during and after connections.
+
+-   BLE\_ADV\_STOP\_ON\_CONN: Advertising is disabled during connection
+    and will not start after.
+-   BLE\_ADV\_RESTART\_ON\_CONN\_EST: Advertising will continue with
+    non-connectable advertising when connection is established. There
+    are separate GAP parameters for setting the connected
+    advertising interval.
+-   BLE\_ADV\_RESTART\_ON\_CONN\_TERM: Advertising will restart with
+    connectable advertising when a connection is terminated.
+
+ 
+
+#### Example
+
+Indefinite nonconnectable (e.g. for a simple beacon) advertisement every
+900ms. Note that the last member, the connected behavior, of
+advertSettings has no effect because this is nonconnectable advertising.
+
+    #include <BLE.h>
+
+    BLE_Advert_Settings advertSettings =
+    {
+      BLE_ADV_MODE_NONCONN,
+      0,
+      1440, // 1440*0.625ms = 900ms
+      BLE_ADV_RESTART_ON_CONN_EST
+    }
+
+    void setup() {
+      ble.begin();
+      ble.startAdvert(&advertSettings);
+    }
+
+    void loop() {
+      ble.handleEvents();
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

@@ -1,0 +1,61 @@
+*EthernetUDP*.write()
+---------------------
+
+#### Description
+
+Writes UDP data to the remote connection. Must be wrapped between
+[beginPacket](http://energia.nu/reference/ethernet/ethernet_udpbeginpacket/ "Ethernet_UDPBeginPacket"){.wikilink}()
+and
+[endPacket](http://energia.nu/reference/ethernet/ethernet_udpendpacket/ "Ethernet_UDPEndPacket"){.wikilink}().
+beginPacket() initializes the packet of data, it is not sent until
+endPacket() is called.
+
+#### Syntax
+
+UDP.write(message); UDP.write(buffer, size);
+
+#### Parameters
+
+**message**: the outgoing message (char) **buffer**: an array to send as
+a series of bytes (byte or char) **size**: the length of the buffer
+
+#### Returns
+
+byte : returns the number of characters sent. This does not have to be
+read
+
+#### Example
+
+    #include <SPI.h>     
+    #include <Ethernet.h>
+    #include <EthernetUdp.h>
+
+    // Enter a MAC address and IP address for your controller below.
+    // The IP address will be dependent on your local network:
+
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+
+    IPAddress ip(192, 168, 1, 177);
+
+    unsigned int localPort = 8888;      // local port to listen on
+
+    // An EthernetUDP instance to let us send and receive packets over UDP
+    EthernetUDP Udp;
+
+
+    void setup() {
+
+      // start the Ethernet and UDP:
+      Ethernet.begin(mac,ip);
+      Udp.begin(localPort);
+    }
+
+    void loop() {
+
+      Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
+      Udp.write("hello");
+      Udp.endPacket();
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

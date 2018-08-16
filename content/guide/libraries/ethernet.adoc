@@ -1,0 +1,189 @@
+++++
+<style>
+.container {
+    width: 960px;
+    position: relative;
+    margin: 0;
+    z-index:1;
+
+}
+
+.ulist li {
+  margin: -0.5em;
+}
+
+#first {
+    width: 210px;
+    float: left;
+    /* position: fixed; */
+    border-right: 1px dotted lightgray;
+
+}
+
+#second {
+    width: 740px;
+    float: right;
+    overflow: hidden;
+}
+</style>
+
+<div class='container'>
+    <div id="first">
+++++
+
+.Ethernet class
+* link:../ethernet/ethernet_begin[begin()]
+* link:../ethernet/ethernet_localip[localIp()]
+* link:../ethernet/ethernet_maintain[maintain()]
+
+.IPAddress class
+* link:../ethernet/ethernet_ipaddress[begin()]
+
+.Server class
+* link:../ethernet/ethernet_serverconstructor[Server()]
+* link:../ethernet/ethernet_ethernetserver[EthernetServer()]
+* link:../ethernet/ethernet_serverbegin[begin()]
+* link:../ethernet/ethernet_serverwrite[write()]
+* link:../ethernet/ethernet_serverprint[print()]
+* link:../ethernet/ethernet_serverprintln[println()]
+
+.Client class
+* link:../ethernet/ethernet_clientconstructor[Client()]
+* link:../ethernet/ethernet_ethernetclient[EthernetClient()]
+* link:../ethernet/ethernet_ifethernetclient[if(EthernetClient)]
+* link:../ethernet/ethernet_clientconnected[connected()]
+* link:../ethernet/ethernet_clientconnect[connect()]
+* link:../ethernet/ethernet_clientwrite[write()]
+* link:../ethernet/ethernet_serverprint[print()]
+* link:../ethernet/ethernet_serverprintln[println()]
+* link:../ethernet/ethernet_clientavailable[available()]
+* link:../ethernet/ethernet_clientread[read()]
+* link:../ethernet/ethernet_clientflush[flush()]
+* link:../ethernet/ethernet_clientstop[stop()]
+
+.EthernetUDP
+* link:../spi/spi_begin[begin()]
+* link:../spi/spi_end[end()]
+* link:../spi/spi_setbitorder[setBitOrder()]
+* link:../spi/spi_setclockdivider[setClockDivider()]
+* link:../spi/spi_setdatamode[setDataMode()]
+* link:../spi/spi_transfer[transfer()]
+* link:../spi/spi_setmodule[setModule()]
+
+++++
+    </div>
+    <div id="second">
+++++
+
+## Ethernet library
+
+
+With the TM4C1294 Connected LaunchPad (EK-TM4C1294XL) this Ethernet
+library allows to you connect to the internet. It can serve as either a
+server accepting connections or a client making connections to a server.
+Multiple server or client connections are supported so that you can
+access the board with multiple clients when in server mode or make
+multiple connections to a single or multiple servers when in client
+mode. This library includes several examples that show how to use the
+library in both client and server mode as well as how to configure the
+IP address settings for either static or DHCP mode.
+
+### Ethernet class
+
+The Ethernet class initializes the ethernet library and network
+settings.
+
+* link:../ethernet/ethernet_begin[begin()]
+* link:../ethernet/ethernet_localip[localIP()]
+* link:../ethernet/ethernet_maintain[maintain()]
+
+
+
+### IPAddress class
+
+The IPAddress class works with local and remote IP addressing.
+
+* link:../ethernet/ethernet_ipaddress[IPAddress()]
+
+
+
+### Server class
+
+The Server class can be used to create servers to which clients can
+connect. Once connected, server and client can send data to and receive
+data from each other.
+
+* link:../ethernet/ethernet_serverconstructor[Server]
+* link:../ethernet/ethernet_ethernetserver[EthernetServer()]
+* link:../ethernet/ethernet_serverbegin[begin()]
+* link:../ethernet/ethernet_serveravailable[available()]
+* link:../ethernet/ethernet_serverwrite[write()]
+* link:../ethernet/ethernet_serverprint[print()]
+* link:../ethernet/ethernet_serverprintln[println()]
+
+
+### Client class
+
+The Client class can be used to create clients that can then connect to
+servers. Once connected the client and server can send and receive data
+to each other.
+
+* link:../ethernet/ethernet_clientconstructor[Client]
+* link:../ethernet/ethernet_ethernetclient[EthernetClient]
+* link:../ethernet/ethernet_ifethernetclient[if(EthernetClient)]
+* link:../ethernet/ethernet[ethernet_clientconnected()]
+* link:../ethernet/ethernet_clientconnect[connect()]
+* link:../ethernet/ethernet_clientwrite[write()]
+* link:../ethernet/ethernet_clientprint[print()]
+* link:../ethernet/ethernet_clientprintln[println()]
+* link:../ethernet/ethernet_clientavailable[available()]
+* link:../ethernet/ethernet_clientread[read()]
+* link:../ethernet/ethernet_clientflush[flush()]
+* link:../ethernet/ethernet_clientstop[stop()]
+
+
+### EthernetUDP
+
+The Ethernet UDP class enables UDP message
+to be sent and received.
+
+* link:../ethernet/ethernet_udpbegin[begin()]
+* link:../ethernet/ethernet_udpread[read()]
+* link:../ethernet/ethernet_udpwrite[write()]
+* link:../ethernet/ethernet_udpbeginpacket[beginPacket()]
+* link:../ethernet/ethernet_udpendpacket[endPacket()]
+* link:../ethernet/ethernet_udpparsepacket[parsePacket()]
+* link:../ethernet/ethernet_udpavailable[available()]
+* link:../ethernet/ethernet_udpstop[stop()]
+* link:../ethernet/ethernet_udpremoteip[remoteIP()]
+* link:../ethernet/ethernet_udpremoteport[remotePort()]
+
+### Examples
+
+* http://arduino.cc/en/Tutorial/ChatServer[ChatServer]:
+    set up a simple chat server.
+* http://arduino.cc/en/Tutorial/WebClient[WebClient]:
+    make a HTTP request.
+* http://arduino.cc/en/Tutorial/WebClientRepeating[WebClientRepeating]:
+    Make repeated HTTP requests.
+* http://arduino.cc/en/Tutorial/WebServer[WebServer]:
+    host a simple HTML page that displays analog sensor values.
+* http://arduino.cc/en/Tutorial/BarometricPressureWebServer[BarometricPressureWebServer]:
+    outputs the values from a barometric pressure sensor as a web page.
+* http://arduino.cc/en/Tutorial/UDPSendReceiveString[UDPSendReceiveString]:
+    Send and receive text strings via UDP.
+* http://arduino.cc/en/Tutorial/UdpNtpClient[UdpNtpClient]:
+    Query a Network Time Protocol (NTP) server using UDP.
+* http://arduino.cc/en/Tutorial/DnsWebClient[DnsWebClient]:
+    DNS and DHCP-based Web client.
+* http://arduino.cc/en/Tutorial/DhcpChatServer[DhcpChatServer]:
+    A simple DHCP Chat Server
+* http://arduino.cc/en/Tutorial/DhcpAddressPrinter[DhcpAddressPrinter]:
+    Get an IP address via DHCP and print it out
+* http://arduino.cc/en/Tutorial/TelnetClient[TelnetClient]:
+    A simple Telnet client
+
+++++
+    </div>
+</div>
+++++

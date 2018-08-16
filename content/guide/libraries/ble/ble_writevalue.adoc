@@ -1,0 +1,96 @@
+<span class="wikiword">ble.writeValue()</span>
+----------------------------------------------
+
+#### Description
+
+Writes to a characteristic value. This handles validation, notifications
+and indications, and other necessary bookkeeping. The data type of the
+characteristic is set to the type of the variable passed as `value`. Use
+this to initialize the characteristics after calling
+[`ble.addService()`](http://energia.nu/reference/ble/ble-addservice/).
+
+#### Syntax
+
+`ble.writeValue(&bleChar, value);`
+
+#### Parameters
+
+**&bleChar**: A pointer to a
+[BLE\_Char](http://energia.nu/reference/ble/ble-addservice/ble_char/).
+**value**: The value to write. The following types are supported:
+`bool, char, unsigned char, int, unsigned int, long, unsigned long, float, double, uint8_t*, char*, String`
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/)
+
+#### Example
+
+    #include <BLE.h>
+
+    char char1Value = 0;
+    int char2Value = 0;
+    long char3Value = 0;
+    String char4Value = String("Hello, world!");
+
+    BLE_Char char1 =
+    {
+      {0xF1, 0xFF},
+      BLE_READABLE | BLE_WRITABLE,
+      "Characteristic 1"
+    };
+
+    BLE_Char char2 =
+    {
+      {0xF2, 0xFF},
+      BLE_READABLE,
+      "Characteristic 2"
+    };
+
+    BLE_Char char3 =
+    {
+      {0xF3, 0xFF},
+      BLE_WRITABLE,
+      "Characteristic 3"
+    };
+
+    BLE_Char char4 =
+    {
+      {0xF4, 0xFF},
+      BLE_NOTIFIABLE,
+      "Characteristic 4"
+    };
+
+    BLE_Char *simpleServiceChars[] = {&char1, &char2, &char3, &char4};
+
+    BLE_Service simpleService =
+    {
+      {0xF0, 0xFF},
+      4, simpleServiceChars
+    };
+
+    void setup() {
+      ble.begin();
+      ble.addService(&simpleService);
+      ble.writeValue(&char1, char1Value);
+      ble.writeValue(&char2, char2Value);
+      ble.writeValue(&char3, char3Value);
+      ble.writeValue(&char4, char4Value);
+      ble.setAdvertName("Simple Profile");
+      ble.startAdvert();
+    }
+
+    void loop() {
+      ble.handleEvents();
+      // Increment the value of characteristic 1 every second
+      if (millis() % 1000 == 0)
+      {
+        char1Value++;
+        ble.writeValue(&char1, char1Value);
+      }
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

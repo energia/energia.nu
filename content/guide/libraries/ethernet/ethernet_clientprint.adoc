@@ -1,0 +1,28 @@
+*EthernetClient*.print()
+------------------------
+
+#### Description
+
+Print data to the server that a client is connected to. Prints numbers
+as a sequence of digits, each an ASCII character (e.g. the number 123 is
+sent as the three characters '1', '2', '3').
+
+#### Syntax
+
+*client*.print(data)\
+*client*.print(data, BASE)
+
+#### Parameters
+
+data: the data to print (char, byte, int, long, or string)
+
+BASE (optional): the base in which to print numbers: DEC for decimal
+(base 10), OCT for octal (base 8), HEX for hexadecimal (base 16).\
+
+#### Returns
+
+byte: returns the number of bytes written, though reading that number is
+optional
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

@@ -1,0 +1,53 @@
+<span class="wikiword">WiFi</span>.localIP()
+--------------------------------------------
+
+#### Description
+
+Gets the <span class="wikiword">WiFi</span> shield's IP address
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.localIP();\
+
+#### Parameters
+
+none
+
+#### Returns
+
+the IP address of the shield
+
+#### Example
+
+    #include <WiFi.h>
+
+    char ssid[] = "yourNetwork";      //SSID of your network
+
+    int status = WL_IDLE_STATUS;     // the Wifi radio's status
+
+    IPAddress ip;                    // the IP address of your shield
+
+    void setup()
+    {
+     // initialize serial:
+     Serial.begin(9600);
+
+     WiFi.begin(ssid);
+
+      if ( status != WL_CONNECTED) { 
+        Serial.println("Couldn't get a wifi connection");
+        while(true);
+      } 
+      // if you are connected, print out info about the connection:
+      else {
+     //print the local IP address
+      ip = WiFi.localIP();
+      Serial.println(ip);
+
+      }
+    }
+
+    void loop () {}
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

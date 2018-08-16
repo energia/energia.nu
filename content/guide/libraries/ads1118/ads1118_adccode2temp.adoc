@@ -1,0 +1,26 @@
+ADS.ADCcode2temp(int code)
+--------------------------
+
+### Description
+
+This function is used to convert ADC result codes to temperature.
+Converted temperature range is 0 to 500 Celsius degrees. Type K
+thermocouple is used. ADC input range is +/-256mV. 16bits. so 1 LSB =
+7.8125uV. The coefficient of code to temperature is 1 degree = 40/7.8125
+LSBs. Because of nonlinearity of thermocouple. Different coefficients
+are used in different temperature ranges.
+
+### Syntax
+
+-   ADS.ADCcode2temp(code);
+
+ 
+
+### Parameters
+
+code - code read from ADC  
+
+### Returns
+
+temperature from code   [Reference
+Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")

@@ -1,0 +1,75 @@
+<span class="wikiword">ble.startAdvert()</span>
+-----------------------------------------------
+
+#### Description
+
+Starts advertising over BLE. This optionally takes a parameter of type
+[BLE\_Advert\_Settings](http://energia.nu/reference/ble/ble-startadvert/ble_advert_settings/). These
+settings do not actually determine what is sent over the air, so this
+function is independent of
+[`ble.setAdvertName()`](http://energia.nu/reference/ble/ble-setadvertname/)
+and
+[`ble.setAdvertData()`](http://energia.nu/reference/ble/ble-setadvertdata/)
+(for advanced BLE users).
+
+#### Syntax
+
+ble.startAdvert(); ble.startAdvert(&advertSettings);
+
+#### Parameters
+
+**&advertSettings**: Pointer to an instance of
+[BLE\_Advert\_Settings](http://energia.nu/reference/ble/ble-startadvert/ble_advert_settings/).
+If not provided, indefinite connectable advertising with a 100ms
+interval that stops during connection and restarts afterwards will be
+used.
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/)
+
+#### Example (default settings)
+
+Indefinite connectable advertising every 100ms that restarts on
+connection termination.
+
+    #include <BLE.h>
+
+    void setup() {
+      ble.begin();
+      ble.startAdvert();
+    }
+
+    void loop() {
+      ble.handleEvents();
+    }
+
+#### Example (custom settings)
+
+Indefinite nonconnectable (e.g. for a simple beacon) advertisement every
+900ms. Note that the last member, the connected behavior, of
+advertSettings has no effect because this is nonconnectable advertising.
+
+    #include <BLE.h>
+
+    BLE_Advert_Settings advertSettings =
+    {
+      BLE_ADV_MODE_NONCONN,
+      0,
+      1440, // 1440*0.625ms = 900ms
+      BLE_ADV_RESTART_ON_CONN_EST
+    }
+
+    void setup() {
+      ble.begin();
+      ble.startAdvert(&advertSettings);
+    }
+
+    void loop() {
+      ble.handleEvents();
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

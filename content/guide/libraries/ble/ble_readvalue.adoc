@@ -1,0 +1,119 @@
+ble.readValue()
+---------------
+
+#### Description
+
+Reads a characteristic value. Functions cannot be overloaded by return
+type, so the type is part of the function name. Except for uint8\_t
+arrays, char arrays, and String objects, these functions check to make
+sure the number of stored bytes matches the size of the requested type.
+`readValue_uint8_t()` takes a pointer to an integer to store the buffer
+length as an extra parameter, and along with `readValue_charArr()` and
+`readValue_String()`, it returns a pointer to the data. All the rest
+simply return the value. Both `readValue_uint8_t()` and
+`readValue_charArr()` actually return the arrays used internally, so the
+returned arrays should not be modified. Create a copy if the data is
+going to be modified or persist because a write by the client can modify
+or free the arrays.
+
+#### Syntax
+
+`ble.readValue_bool(&bleChar);` `ble.readValue_char(&bleChar);`
+`ble.readValue_uchar(&bleChar);` `ble.readValue_int(&bleChar);`
+`ble.readValue_uint(&bleChar);` `ble.readValue_long(&bleChar);`
+`ble.readValue_ulong(&bleChar);` `ble.readValue_float(&bleChar);`
+`ble.readValue_double(&bleChar);`
+`ble.readValue_uint8_t(&bleChar, &len);`
+`ble.readValue_charArr(&bleChar);` `ble.readValue_String(&bleChar);`
+
+#### Parameters
+
+**&bleChar**: A pointer to the
+[BLE\_Char](http://energia.nu/reference/ble/ble-addservice/ble_char/) to
+read. **&len**: A pointer to an integer for reading a byte array only.
+All other types either have a known size or are null-terminated.
+
+#### Returns
+
+Either the stored characteristic value or a pointer to the data.
+
+#### Example
+
+    #include <BLE.h>
+
+    char char1Value = 0;
+    int char2Value = 0;
+    long char3Value = 0;
+    String char4Value = String("Hello, world!");
+
+    BLE_Char char1 =
+    {
+      {0xF1, 0xFF},
+      BLE_READABLE | BLE_WRITABLE,
+      "Characteristic 1"
+    };
+
+    BLE_Char char2 =
+    {
+      {0xF2, 0xFF},
+      BLE_READABLE,
+      "Characteristic 2"
+    };
+
+    BLE_Char char3 =
+    {
+      {0xF3, 0xFF},
+      BLE_WRITABLE,
+      "Characteristic 3"
+    };
+
+    BLE_Char char4 =
+    {
+      {0xF4, 0xFF},
+      BLE_NOTIFIABLE,
+      "Characteristic 4"
+    };
+
+    BLE_Char *simpleServiceChars[] = {&char1, &char2, &char3, &char4};
+
+    BLE_Service simpleService =
+    {
+      {0xF0, 0xFF},
+      4, simpleServiceChars
+    };
+
+    void setup() {
+      Serial.begin(115200);
+      ble.begin();
+      ble.addService(&simpleService);
+      ble.writeValue(&char1, char1Value);
+      ble.writeValue(&char2, char2Value);
+      ble.writeValue(&char3, char3Value);
+      ble.writeValue(&char4, char4Value);
+      ble.setAdvertName("Simple Profile");
+      ble.startAdvert();
+    }
+
+    void loop() {
+      ble.handleEvents();
+      // Print the values every second to see changes by the client.
+      if (millis() % 1000 == 0)
+      {
+        Serial.print("char1:");
+        Serial.println(ble.readValue_char(&char1));
+        Serial.print("char2:");
+        Serial.println(ble.readValue_int(&char2));
+        Serial.print("char3:");
+        Serial.println(ble.readValue_long(&char3));
+        Serial.print("char4:");
+        Serial.println(ble.readValue_String(&char4));
+        Serial.println("===================");
+      }
+    }
+
+#### 
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

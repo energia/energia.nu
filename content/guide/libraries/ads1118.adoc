@@ -1,0 +1,89 @@
+ADS1118 Thermocouple BoosterPack
+--------------------------------
+
+<div id="functiontable"
+style="background-color: #ffd777; width: 180px; margin-right: 20px; padding: 5px; float: left;">
+
+#### Functions
+
+-   [begin()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118_begin/ "ADS1118_begin")
+-   [begin(mode)](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118_beginmode/ "ADS1118_beginMode")
+-   [writeSPI()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-writespi/ "ads1118 - writeSPI")
+-   [ADSread()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-adsread/ "ads1118 - ADSread")
+-   [ADCcode2temp()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-adccode2temp/ "ads1118-adccode2temp")
+-   [localCompensation()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-localcompensation/ "ads1118-localCompensation")
+-   [readCelcius()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-readcelcius/ "ads1118-readCelcius")
+-   [readFarenheit()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-readfarenheit/ "ads1118-readFarenheit")
+
+</div>
+
+### Overview
+
+This guide will help you get started with the ADS1118 Thermocouple
+BoosterPack using your LaunchPad enabled in Energia. The ADS1118 is a
+precision analog-to-digital converter (ADC). It can perform up to 860
+samples per second (SPS) and has an onboard programmable gain amplifier
+(PGA) that allows input ranges from m +/-256 mV to +/-6.144 V. The ADS1118
+Booster Pack showcases a Type K Thermocouple. A thermocouple consists of
+two conductors of different materials that produce a voltage in the
+vicinity of the point where the two conductors are in contact. Type K is
+the most common general purpose thermocouple with a sensitivity of
+approximately 41 uV/^0C. A type K thermocouple is inexpensive, and a wide
+variety of probes are available in the -200^0C to +1250^0C (-330^0F to
++2460^0F) range. This library exposes this functionality and allows the
+user to interact with it and enable the ADS1118 Thermocouple in a
+variety of applications. You can visit the following link to buy and
+gather more information on the ADS1118
+BoosterPack. <http://www.ti.com/tool/430boost-ads1118>.
+Click [here](https://github.com/ewakefield/ADS1118) to go download this
+library.
+
+### Hardware Configuration
+
+In order to get started with our ADS1118 BoosterPack, simply connect the
+ADS1118 BoosterPack to the LaunchPad of your choice. Next, connect the
+thermocouple to your BoosterPack to the appropriate plug on your
+BoosterPack. Once everything is connected and any other BoosterPacks you
+want to interact with are stacked appropriately, plug your LaunchPad
+into your computer. This should provide power to the LCD screen and the
+backlight will light up. Now you are ready to start interacting with the
+ADS1118 BoosterPack!
+
+### Software Configuration
+
+To get started with our ADS1118 BoosterPack, first you must open
+Energia. The first step is to include the ADS1118 Library.
+
+-   \#include &lt;ADS1118.h&gt;
+
+Then next, we need to instantiate an instance of our ADS1118 Library.
+For example type the following before the setup or loop functions in
+Energia:
+
+-   ADS1118 ADS;
+
+Once an instance of the ADS1118 Library has been created, you can start
+using the functions detailed in the library. Below is an example program
+that will read the temperature from the ADS1118 in Fahrenheit and print
+it to a Serial port.
+
+### Example:
+
+    #include <ADS1118.h>
+
+    ADS1118 ADS;
+
+    void setup() {
+            Serial.begin(9600); // starts serial comm at 9600 baud
+        ADS.begin();
+            noTone(2);       //ensures no tone coming from ADS BoosterPack
+    }
+
+    void loop() {
+            //prints temp in farenheit every 100ms
+            Serial.println(ADS.readFarenheit());
+            delay(100);
+    }
+
+  [Reference Home](http://energia.nu/reference/ "Reference") ||
+[Libraries Home](http://energia.nu/reference/libraries/ "Libraries")

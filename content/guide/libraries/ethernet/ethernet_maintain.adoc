@@ -1,0 +1,25 @@
+Ethernet.maintain()
+-------------------
+
+#### Description
+
+Allows for the renewal of DHCP leases. When assigned an IP address via
+DHCP, ethernet devices are given a lease on the address for an amount of
+time. With Ethernet.maintain(), it is possible to request a renewal from
+the DHCP server. Depending on the server's configuration, you may
+receive the same address, a new one, or none at all.
+
+#### Syntax
+
+Ethernet.maintain();
+
+#### Parameters
+
+none
+
+#### Returns
+
+byte: 0: nothing happened 1: renew failed 2: renew success 3: rebind
+fail 4: rebind success [Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink} || [Ethernet
+Library](http://energia.nu/reference/ethernet/ "Ethernet")

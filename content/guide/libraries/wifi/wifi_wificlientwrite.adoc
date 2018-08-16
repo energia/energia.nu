@@ -1,0 +1,22 @@
+*WiFiClient*.write()
+--------------------
+
+#### Description
+
+Write data to the server the client is connected to.
+
+#### Syntax
+
+*client*.write(data)
+
+#### Parameters
+
+data: the byte or char to write
+
+#### Returns
+
+byte: the number of characters written. it is not necessary to read this
+value.
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

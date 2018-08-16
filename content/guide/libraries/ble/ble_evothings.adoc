@@ -1,0 +1,25 @@
+<span class="wikiword">BLE with made Easy with Energia and Evothings</span>
+---------------------------------------------------------------------------
+
+Evothings Studio is a mobile application enabler for the industrial
+Internet of Things (IoT). Together with Energia and the CC2650
+BoosterPack it enables you to easily develop a mobile app to control
+your Energia based application over Bluetooth Low Energy. Below are the
+instructions for how to get started with Evothings and the
+BLEInputOutput Sketch. The example applications will allow you to
+control LED's, GPIO pins and read buttons presses.
+
+### Ingredients
+
+-   Evothings Studio for MacOS, Windows or Linux: Download it
+    [here](https://evothings.com/download/)
+-   iOS or Android device with Bluetooth 4.0 (Blue Tooth Low
+    Energy, BLE)
+-   Evothings viewer App. Get it through the [iOS
+    AppStore](https://itunes.apple.com/us/app/evothings-viewer/id1029452707?mt=8)
+    or the [Google play
+    store](https://play.google.com/store/apps/details?id=com.evothings.evothingsviewer&hl=en).
+-   [Energia 18](http://energia.nu/download) (aka 1.6.10E18) or later
+-   [MSP432 LaunchPad](http://www.ti.com/tool/MSP-EXP432P401R)
+-   [CC2650 BoosterPack](http://www.ti.com/tool/LAUNCHXL-CC2650)
+

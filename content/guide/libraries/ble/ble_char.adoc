@@ -1,0 +1,98 @@
+<span class="wikiword">BLE\_Char</span>
+---------------------------------------
+
+#### Description
+
+The data type used to declare a characteristic. All characteristic
+values are initialized to a single byte of data with a value of 0. Read
+and write a characteristic value
+using [`ble.readValue()`](http://energia.nu/reference/ble/ble-readvalue/)
+and
+[`ble.writeValue()`](http://energia.nu/reference/ble/ble-writevalue/) after
+[`ble.addService()`](http://energia.nu/reference/ble/ble-addservice/)
+has been called on a service containing the characteristic. Note that a
+characteristic can only be part of a single service.
+
+#### Syntax
+
+    BLE_Char char =
+    {
+      UUID,
+      properties,
+      charDesc
+    };
+
+#### Parameters
+
+**UUID**: The 2 or 16 byte identifier for the service. 2 byte UUID's are
+reserved for officially adopted services. For creating a 16 byte UUID
+for custom services, see this
+[reference](http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#UUID).
+**properties**: A bitwise OR of the desired characteristic properties.
+
+-   BLE\_READABLE: The client can read the characteristic value.
+-   BLE\_WRITABLE\_NORSP: The client can write the characteristic value
+    without needing confirmation of the write.
+-   BLE\_WRITABLE: The client can write the characteristic and require a
+    confirmation of the write.
+-   BLE\_NOTIFIABLE: The client can request to receive notifications of
+    server-side writes to the characteristic value. The notifications
+    contain the written value, and the client does not need to respond.
+-   BLE\_INDICATABLE: The client can request to receive indications of
+    server-side writes to the characteristic value. The
+    indications contain the written value, and the client must confirm
+    that it received the indication.
+
+**charDesc**: Optional. A [char array
+string](http://energia.nu/reference/string/) that describes the
+characteristic value.
+
+#### Example
+
+    #include <BLE.h>
+
+    char char1Value = 0;
+    int char2Value = 0;
+    long char3Value = 0;
+    String char4Value = String("Hello, world!");
+
+    BLE_Char char1 =
+    {
+     {0xF1, 0xFF},
+     BLE_READABLE | BLE_WRITABLE,
+     "Characteristic 1"
+    };
+
+    BLE_Char char2 =
+    {
+     {0xF2, 0xFF},
+     BLE_READABLE,
+     "Characteristic 2"
+    };
+
+    BLE_Char char3 =
+    {
+     {0xF3, 0xFF},
+     BLE_WRITABLE,
+     "Characteristic 3"
+    };
+
+    BLE_Char char4 =
+    {
+     {0xF4, 0xFF},
+     BLE_NOTIFIABLE,
+     "Characteristic 4"
+    };
+
+    BLE_Char *simpleServiceChars[] = {&char1, &char2, &char3, &char4};
+
+    BLE_Service simpleService =
+    {
+     {0xF0, 0xFF},
+     4, simpleServiceChars
+    };
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

@@ -1,0 +1,40 @@
+ADS.begin(unsigned int mode)
+----------------------------
+
+### Description
+
+Configures the ADS1118 to the mode that is defined in the argument of
+the function. "mode" should be passed as either a '0' or a '1'. 'o' will
+set the ADS1118 to convert the voltage of the integrated temperature
+sensor and '1' will set the ADS1118 is set to convert the voltage of the
+thermocouple. The ADS1118 communicates over SPI, so this function also
+begins the SPI communication that allows the LaunchPad and ADS1118
+BoosterPack to communicate.
+
+### Syntax
+
+-   ADS.begin(0); //sets to mode 0
+-   ADS.begin(1); //sets to mode 1
+
+ 
+
+### Parameters
+
+mode - an unsigned int that should pass either a '0' or a '1'  
+
+### Returns
+
+None.  
+
+### Example:
+
+    ADS1118 ADS;
+
+    void setup() {
+        ADS.begin(0);
+    }
+
+    void loop() {}
+
+  [Reference
+Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")

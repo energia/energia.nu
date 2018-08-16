@@ -1,0 +1,34 @@
+ADS.begin()
+-----------
+
+### Description
+
+Configures the ADS1118 to the default mode where it will convert the
+voltage of an integrated temperature sensor. The ADS1118 communicates
+over SPI, so this function also begins the SPI communication that allows
+the LaunchPad and ADS1118 BoosterPack to communicate.
+
+### Syntax
+
+ADS.begin();  
+
+### Parameters
+
+None.  
+
+### Returns
+
+None.  
+
+### Example:
+
+    ADS1118 ADS;
+
+    void setup() {
+        ADS.begin();
+    }
+
+    void loop() {}
+
+  [Reference
+Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")

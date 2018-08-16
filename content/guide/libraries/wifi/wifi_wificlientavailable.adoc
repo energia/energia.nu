@@ -1,0 +1,83 @@
+*WiFiClient*.available()
+------------------------
+
+#### Description
+
+Returns the number of bytes available for reading (that is, the amount
+of data that has been written to the client by the server it is
+connected to). available() inherits from the
+[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+utility class.
+
+#### Syntax
+
+*client*.available()
+
+#### Parameters
+
+none
+
+#### Returns
+
+The number of bytes available.
+
+#### Example
+
+    #include <SPI.h>
+    #include <WiFi.h>
+
+    char ssid[] = "myNetwork";          //  your network SSID (name) 
+    char pass[] = "myPassword";   // your network password
+
+    int status = WL_IDLE_STATUS;
+    char servername[]="google.com";  // Google
+
+    WiFiClient client;
+
+    void setup() {
+      Serial.begin(9600);
+      Serial.println("Attempting to connect to WPA network...");
+      Serial.print("SSID: ");
+      Serial.println(ssid);
+
+      status = WiFi.begin(ssid, pass);
+      if ( status != WL_CONNECTED) { 
+        Serial.println("Couldn't get a wifi connection");
+        // don't do anything else:
+        while(true);
+      } 
+      else {
+        Serial.println("Connected to wifi");
+        Serial.println("\nStarting connection...");
+        // if you get a connection, report back via serial:
+        if (client.connect(servername, 80)) {
+          Serial.println("connected");
+          // Make a HTTP request:
+          client.println("GET /search?q=arduino HTTP/1.0");
+          client.println();
+        }
+      }
+    }
+
+    void loop() {
+      // if there are incoming bytes available 
+      // from the server, read them and print them:
+      if (client.available()) {
+        char c = client.read();
+        Serial.print(c);
+      }
+
+      // if the server's disconnected, stop the client:
+      if (!client.connected()) {
+        Serial.println();
+        Serial.println("disconnecting.");
+        client.stop();
+
+        // do nothing forevermore:
+        for(;;)
+          ;
+      }
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

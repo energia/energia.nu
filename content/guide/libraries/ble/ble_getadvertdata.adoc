@@ -1,0 +1,35 @@
+ble.getAdvertData()
+-------------------
+
+#### Description
+
+Gets the advertisement data used for one of the three advertisement data
+types if it was previously set by the user. Primarily useful for freeing
+user-defined data. If the user statically declared this array, the
+returned array will not be freeable.
+
+#### Syntax
+
+`ble.getAdvertData(advertType);`
+
+#### Parameters
+
+**advertType**: The type of advertisement payload to get.
+
+-   `BLE_ADV_DATA_NOTCONN`
+-   `BLE_ADV_DATA_CONN`
+-   `BLE_ADV_DATA_SCANRSP`
+
+ 
+
+#### Returns
+
+A pointer to the array of advertisement data. NULL if the user did not
+set the data for this advertisement type.
+
+#### 
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

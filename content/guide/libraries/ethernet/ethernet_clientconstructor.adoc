@@ -1,0 +1,11 @@
+Client
+------
+
+#### Description
+
+Client is the base class for all Ethernet client based calls. It is not
+called directly, but invoked whenever you use a function that relies on
+it.
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

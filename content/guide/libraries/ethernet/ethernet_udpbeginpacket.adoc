@@ -1,0 +1,52 @@
+*EthernetUDP*.beginPacket()
+---------------------------
+
+#### Description
+
+Starts a connection to write UDP data to the remote connection
+
+#### Syntax
+
+UDP.beginPacket(remoteIP, remotePort);\
+
+#### Parameters
+
+**remoteIP**: the IP address of the remote connection (4 bytes)\
+**remotePort**: the port of the remote connection (int)\
+
+#### Returns
+
+None
+
+#### Example
+
+    #include <SPI.h>    
+    #include <Ethernet.h>
+    #include <EthernetUdp.h>
+
+    // Enter a MAC address and IP address for your controller below.
+    // The IP address will be dependent on your local network:
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+    IPAddress ip(192, 168, 1, 177);
+
+    unsigned int localPort = 8888;      // local port to listen on
+
+    // An EthernetUDP instance to let us send and receive packets over UDP
+    EthernetUDP Udp;
+
+    void setup() {
+      // start the Ethernet and UDP:
+      Ethernet.begin(mac,ip);
+      Udp.begin(localPort);
+
+    }
+
+    void loop() {
+
+      Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
+      Udp.write("hello");
+      Udp.endPacket();
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

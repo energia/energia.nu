@@ -1,0 +1,50 @@
+<span class="wikiword">ble.setLogLevel()</span>
+-----------------------------------------------
+
+#### Description
+
+Sets what type of information should be logged to the Energia serial
+monitor.
+
+#### Syntax
+
+ble.setLogLevel(newLogLevel);
+
+#### Parameters
+
+**newLogLevel**: A [bitwise OR](http://energia.nu/reference/bitwiseand/)
+of the different types of desired logging information.
+
+-   BLE\_LOG\_NONE: Log nothing. This is the default level when this
+    function is not called.
+-   BLE\_LOG\_ERRORS: Log whenever an internal function call or message
+    from the NP returns an error code.
+-   BLE\_LOG\_RPCS: Log remote procedure calls (RPC's), which are
+    essentially commands or requests sent from the AP to the NP.
+-   BLE\_LOG\_REC\_MSGS: Log messages received by the AP from the NP.
+    These are mostly confirmations that a requested action occurred, or
+    notifications of some event happening.
+-   BLE\_LOG\_MSGS: Log both BLE\_LOG\_RPCS and BLE\_LOG\_MSGS.
+-   BLE\_LOG\_CHARACTERISTICS: Log reads and writes of BLE
+    characteristics by both the AP and the wirelessly connected client.
+-   BLE\_LOG\_ALL: Logs all above information.
+
+ 
+
+#### Returns
+
+Nothing
+
+#### Example
+
+    #include "BLE.h"
+
+    void setup() {
+      ble.setLogLevel(BLE_LOG_ALL);
+      ble.begin();
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

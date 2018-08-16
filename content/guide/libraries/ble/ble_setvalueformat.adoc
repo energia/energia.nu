@@ -1,0 +1,31 @@
+<span class="wikiword">ble.setValueFormat()</span>
+--------------------------------------------------
+
+#### Description
+
+Sets the optional characteristic presentation format descriptor. This is
+not required for most characteristics, but may be required by certain
+adopted characteristics or by a custom use case. For integer value
+formats, the actual value is equal to `storedValue*(10^valueExponent)`
+
+#### Syntax
+
+ble.setLogLevel(&bleChar, valueFormat); ble.setLogLevel(&bleChar,
+valueFormat, valueExponent);
+
+#### Parameters
+
+**&bleChar**: A pointer to a
+[BLE\_Char](http://energia.nu/reference/ble/ble-addservice/ble_char/).
+**valueFormat**: An unsigned integer specifying the data type of the
+characteristic value.
+[Here](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.descriptor.gatt.characteristic_presentation_format.xml)
+is a list from the official Bluetooth SIG website. **valueExponent**: A
+signed 8 bit integer only required for integer value formats.
+
+#### Returns
+
+Nothing [Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

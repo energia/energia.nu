@@ -1,0 +1,27 @@
+EasyLink Sub-1 GHz communication library
+----------------------------------------
+
+Supported Board: LAUNCHXL-CC1310
+
+#### EasyLink class
+
+The EasyLink class wraps the [CC1310 RF/EasyLink
+driver](http://www.ti.com/tool/cc13xx-sw) into a high level easy to use
+C++ class. The following API's are supported:
+
+-   [EasyLink()](http://energia.nu/reference/easylink/easylink-easylink/)
+-   [begin()](http://energia.nu/reference/easylink/easylink-begin/)
+-   [transmit()](http://energia.nu/reference/easylink/easylink-transmit/)
+-   [receive()](http://energia.nu/reference/easylink/easylink-receive/)
+-   [beginTransmission()](http://energia.nu/reference/easylink/easylink-begintransmission/)
+-   [endTransmission()](http://energia.nu/reference/easylink/easylink-endtransmission/)
+-   [available()](http://energia.nu/reference/easylink/easylink-available/)
+-   [peek()](http://energia.nu/reference/easylink/easylink-peek/)
+-   [read()](http://energia.nu/reference/easylink/easylink-read/)
+-   [flush()](http://energia.nu/reference/easylink/easylink-flush/)
+-   [write()](http://energia.nu/reference/easylink/easylink-write/)
+-   [version()](http://energia.nu/reference/easylink/easylink-version/)
+
+  [Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink} || [Libraries
+Home](http://energia.nu/guide/libraries/ "Libraries")

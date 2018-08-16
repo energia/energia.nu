@@ -1,0 +1,51 @@
+<span class="wikiword">WiFi</span>.RSSI()
+-----------------------------------------
+
+#### Description
+
+Gets the signal strength of the connection to the router
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.RSSI();\
+<span class="wikiword">WiFi</span>.RSSI(wifiAccessPoint);\
+
+#### Parameters
+
+wifiAccessPoint: specifies from which network to get the information
+
+#### Returns
+
+long : the current RSSI /Received Signal Strength in dBm
+
+#### Example
+
+    #include <SPI.h>
+    #include <WiFi.h>
+
+    //SSID of your network 
+    char ssid[] = "yourNetwork";
+    //password of your WPA Network 
+    char pass[] = "secretPassword";
+
+    void setup()
+    {
+     WiFi.begin(ssid, pass);
+
+      if (WiFi.status() != WL_CONNECTED) { 
+        Serial.println("Couldn't get a wifi connection");
+        while(true);
+      } 
+      // if you are connected, print out info about the connection:
+      else {
+       // print the received signal strength:
+      long rssi = WiFi.RSSI();
+      Serial.print("RSSI:");
+      Serial.println(rssi);
+      }
+    }
+
+    void loop () {}
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

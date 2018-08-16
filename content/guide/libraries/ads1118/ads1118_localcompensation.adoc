@@ -1,0 +1,24 @@
+ADS.localCompensation(int local\_code)
+--------------------------------------
+
+### Description
+
+This function transforms internal temperature sensor code to
+compensation code, which is added to the thermocouple code. Local\_code
+is the first 14 bits of the 16 bits data register. The compensation
+range of local temperature is 0 to 125 degrees Celsius.
+
+### Syntax
+
+-   ADS.localCompsensation(code);
+
+ 
+
+### Parameters
+
+local\_code - local code read from ADC  
+
+### Returns
+
+compensation codes   [Reference
+Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")

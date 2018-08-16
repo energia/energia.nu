@@ -1,0 +1,21 @@
+<span class="wikiword">ble.isConnected()</span>
+-----------------------------------------------
+
+#### Description
+
+Returns whether a BLE client is connected to the NP.
+
+#### Syntax
+
+ble.isConnected();
+
+#### Parameters
+
+Nothing
+
+#### Returns
+
+bool indicating whether a BLE client is connected to the NP. [Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

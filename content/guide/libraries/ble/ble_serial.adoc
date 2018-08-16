@@ -1,0 +1,58 @@
+<span class="wikiword">ble.serial()</span>
+------------------------------------------
+
+#### Description
+
+Initializes the serial service. The BLE serial service implements the
+[Stream interface](http://energia.nu/reference/stream/) like
+the [hardware (USB) serial
+library](http://energia.nu/reference/serial/) does, so it's used in the
+same manner. Note that an equivalent of
+[Serial.begin()](http://energia.nu/reference/serial/serial_begin/) and
+[Serial.end()](http://energia.nu/reference/serial/serial_end/) are not
+needed or provided for BLE serial. If serial has not been enabled
+or there is no device connected with BLE, calls that read data will
+behave as if there is no data to read, and calls that write data will
+succeed, but nothing will transmit.
+
+#### Syntax
+
+<span class="wikiword">ble.serial();</span>
+
+#### Parameters
+
+Nothing
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/)
+
+#### Example
+
+    #include <BLE.h>
+
+    void setup() {
+      Serial.begin(115200);
+      ble.begin();
+      ble.serial();
+      ble.setAdvertName("Energia Serial");
+      ble.startAdvert();
+    }
+
+    void loop() {
+      ble.handleEvents();
+      if (Serial.available())
+      {
+        ble.print(Serial.readString());
+      }
+      if (ble.available())
+      {
+        /* All the Serial functions are available with BLE serial. */
+        Serial.println(ble.readString());
+      }
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

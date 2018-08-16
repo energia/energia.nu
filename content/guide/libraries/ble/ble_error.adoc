@@ -1,0 +1,29 @@
+<span class="wikiword">ble.error</span>
+---------------------------------------
+
+Many functions provide status and error information, either returning
+`BLE_SUCCESS` or `BLE_CHECK_ERROR`, in which case the variable
+`ble.error` can be checked for the specific error. This is done for
+consistency because not all error-causing events return directly to the
+main sketch. Functions used to get data may set `ble.error` even though
+they are not able to return `BLE_SUCCESS` or `BLE_CHECK_ERROR`. The
+possible errors are listed here:
+
+-   0x00: BLE\_SUCCESS
+-   0x83: BLE\_FAILURE
+-   0x84: BLE\_INVALID\_PARAMETERS
+-   0x8A: BLE\_ALREADY\_ADVERTISING
+-   0x8B: BLE\_NOT\_ADVERTISING
+-   0x92: BLE\_NOT\_CONNECTED
+-   0x50: BLE\_INVALID\_HANDLE
+-   0x51: BLE\_UNDEFINED\_VALUE
+-   0x52: BLE\_NOT\_IMPLEMENTED
+-   0x53: BLE\_TIMEOUT
+-   0x54: BLE\_CHECK\_ERROR
+
+  If the offending function encapsulates many commands (e.g. HCI
+commands), the user can check `ble.opcode` for the specific command
+parameter. This is not set by most functions. [Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

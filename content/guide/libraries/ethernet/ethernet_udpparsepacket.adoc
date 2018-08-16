@@ -1,0 +1,59 @@
+*EthernetUDP*.parsePacket()
+---------------------------
+
+#### Description
+
+Checks for the presence of a UDP packet, and reports the size.
+parsePacket() must be called before reading the buffer with
+[UDP.read()](http://energia.nu/reference/ethernet/ethernet_udpread/ "Ethernet_UDPRead"){.wikilink}.
+
+#### Syntax
+
+UDP.parsePacket();
+
+#### Parameters
+
+None
+
+#### Returns
+
+int: the size of a received UDP packet
+
+#### Example
+
+    #include <SPI.h>         
+    #include <Ethernet.h>  
+    #include <EthernetUdp.h>          // UDP library from: bjoern@cs.stanford.edu 12/30/2008
+
+
+    // Enter a MAC address and IP address for your controller below.
+    // The IP address will be dependent on your local network:
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+    IPAddress ip(192, 168, 1, 177);
+
+    unsigned int localPort = 8888;      // local port to listen on
+
+    // An EthernetUDP instance to let us send and receive packets over UDP
+    EthernetUDP Udp;
+
+    void setup() {
+      // start the Ethernet and UDP:
+      Ethernet.begin(mac,ip);
+      Udp.begin(localPort);
+
+      Serial.begin(9600);
+    }
+
+    void loop() {
+      // if there's data available, read a packet
+      int packetSize = Udp.parsePacket();
+      if(packetSize)
+      {
+        Serial.print("Received packet of size ");
+        Serial.println(packetSize);
+      }
+      delay(10);
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

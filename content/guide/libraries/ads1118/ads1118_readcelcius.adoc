@@ -1,0 +1,40 @@
+ADS.readCelcius()
+-----------------
+
+### Description
+
+This function simplifies the process of gather temperature data from the
+ADS1118 BoosterPack. Here you can just call the function and it will
+return the value of the temperature recorded while accounting for both
+the local temperature and the termocouple.
+
+### Syntax
+
+-   temp = ADS.readCelcius();
+
+ 
+
+### Parameters
+
+none  
+
+### Returns
+
+Temperature in Celcius.  
+
+### Example:
+
+    ADS1118 ADS;
+
+    void setup() {
+        ADS.begin();
+            Serial.begin(9600);
+    }
+
+    void loop() {
+            Serial.print("Temp in C = " );
+            Serial.println(ADS.readCelcius());
+    }
+
+  [Reference
+Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")

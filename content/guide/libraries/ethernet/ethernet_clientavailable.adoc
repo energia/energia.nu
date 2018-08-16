@@ -1,0 +1,70 @@
+*EthernetClient*.available()
+----------------------------
+
+#### Description
+
+Returns the number of bytes available for reading (that is, the amount
+of data that has been written to the client by the server it is
+connected to). available() inherits from the
+[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+utility class.
+
+#### Syntax
+
+*client*.available()
+
+#### Parameters
+
+none
+
+#### Returns
+
+The number of bytes available.
+
+#### Example
+
+    #include <Ethernet.h>
+    #include <SPI.h>
+
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+    byte ip[] = { 10, 0, 0, 177 };
+    byte server[] = { 64, 233, 187, 99 }; // Google
+
+    EthernetClient client;
+
+    void setup()
+    {
+      Ethernet.begin(mac, ip);
+      Serial.begin(9600);
+
+      delay(1000);
+
+      Serial.println("connecting...");
+
+      if (client.connect(server, 80)) {
+        Serial.println("connected");
+        client.println("GET /search?q=arduino HTTP/1.0");
+        client.println();
+      } else {
+        Serial.println("connection failed");
+      }
+    }
+
+    void loop()
+    {
+      if (client.available()) {
+        char c = client.read();
+        Serial.print(c);
+      }
+
+      if (!client.connected()) {
+        Serial.println();
+        Serial.println("disconnecting.");
+        client.stop();
+        for(;;)
+          ;
+      }
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

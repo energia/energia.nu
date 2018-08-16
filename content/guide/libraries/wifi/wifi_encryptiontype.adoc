@@ -1,0 +1,57 @@
+<span class="wikiword">WiFi</span>.encryptionType()
+---------------------------------------------------
+
+#### Description
+
+Gets the encryption type of the current network
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.encryptionType();\
+<span class="wikiword">WiFi</span>.encryptionType(wifiAccessPoint);\
+
+#### Parameters
+
+wifiAccessPoint: specifies which network to get information from\
+
+#### Returns
+
+byte : value represents the type of encryption
+
+-   TKIP (WPA) = 2
+-   WEP = 5
+-   CCMP (WPA) = 4
+-   NONE = 7
+-   AUTO = 8
+
+#### Example
+
+    #include <SPI.h>
+    #include <WiFi.h>
+
+    //SSID of your network 
+    char ssid[] = "yourNetwork";
+    //password of your WPA Network 
+    char pass[] = "secretPassword";
+
+    void setup()
+    {
+     WiFi.begin(ssid, pass);
+
+      if ( status != WL_CONNECTED) { 
+        Serial.println("Couldn't get a wifi connection");
+        while(true);
+      } 
+      // if you are connected, print out info about the connection:
+      else {
+       // print the encryption type:
+      byte encryption = WiFi.encryptionType();
+      Serial.print("Encryption Type:");
+      Serial.println(encryption,HEX);
+      }
+    }
+
+    void loop () {}
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

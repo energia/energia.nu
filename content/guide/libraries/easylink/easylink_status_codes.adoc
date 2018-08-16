@@ -1,0 +1,17 @@
+<span class="wikiword">EasyLink Status Codes</span>
+---------------------------------------------------
+
+    typedef enum
+    {
+        EasyLink_Status_Success         = 0, ///Success
+        EasyLink_Status_Config_Error    = 1, ///Configuration error
+        EasyLink_Status_Param_Error     = 2, ///Param error
+        EasyLink_Status_Mem_Error       = 3, ///Memory Error
+        EasyLink_Status_Cmd_Error       = 4, ///Memory Error
+        EasyLink_Status_Tx_Error        = 5, ///Tx Error
+        EasyLink_Status_Rx_Error        = 6, ///Rx Error
+        EasyLink_Status_Rx_Timeout      = 7, ///Rx Error
+        EasyLink_Status_Rx_Buffer_Error = 8, ///Rx Buffer Error
+        EasyLink_Status_Busy_Error      = 9, ///Busy Error
+        EasyLink_Status_Aborted         = 10 ///Cmd stopped or aborted
+    } EasyLink_Status;

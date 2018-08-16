@@ -1,0 +1,82 @@
+BLE Input Output
+----------------
+
+This app serves as an advanced demo to show the user how to create and
+interact with BLE services. This app achieves most of the same
+functionality as the SerialOverBLE app, but with less encapsulation. BLE
+Input Output is an excellent starting point for users who are looking to
+define their own services (custom or adopted), and start to use advanced
+features such as security.
+
+#### How it works
+
+This example uses employs two BLE Services. Services (and their
+underlying characteristics) are the vehicle for data transfer over BLE.
+For more information about BLE Services and Characteristics, please
+refer to the [SimpleLink Academy Custom Services
+Module](http://software-dl.ti.com/lprf/simplelink_academy/modules/ble_01_custom_profile/ble_01_custom_profile.html).
+The BLE Input Output sketch aims to communicate user input from the
+MSP432 LaunchPad to a smart phone in the form of button presses.
+Similarly, it takes output from the smart phone and displays it in the
+form of the tri color LEDs. To do so, we must create two services, the
+button service, and the LED service.
+
+#### Creating a BLE Service
+
+Using the BLE Energia library, you can create a service like the
+simpleButtonService below:
+` /* BLE LED Service is made up of LED Chars */ BLE_Char *simpleButtonServiceChars[] = {&button1Char, &button2Char};`
+/\* LED Service Declaration \*/ BLE\_Service simpleButtonService = {
+{0x00, 0xFF}, 2, simpleButtonServiceChars };
+
+#### Creating a BLE Characteristic
+
+Next, you can create the characteristics of the service as below:
+` BLE_Char led1Char = { {0xF1, 0xFF}, /* 16 bit BLE UUID = 0xFFF1 */ BLE_AUTHEN | BLE_WRITABLE| BLE_READABLE, /* BLE Properties */ "LED 1" /* User Description */ };`
+Notice that each characteristic has its own UUID, Properties, and User
+description. These are some of the building blocks of a BLE
+characteristic.
+
+#### Making it secure
+
+Security is a major concern for IoT devices. In this example we have
+decided to make characteristic secure by adding the following tag to its
+properties `BLE_AUTHEN`. This means that only authenticated users can
+access this characteristic. You'll notice that when you try to read from
+this characteristic, your smartphone will ask you to pair with the
+device. What this means is that the CC2650MODA device is entering a
+secure connection with your phone. The BLE Energia library utilizes the
+latest in BLE security features (4.2 Secure Connections Pairing with
+Numeric Comparison to be exact). To read more about BLE 4.2 security,
+please see this blog post BLE 4.2 Security with TI. Follow along below
+to learn how to securely pair your smart phone with the BLE Energia
+library *Note: In order to complete the security process, you will need
+to open the Energia Serial Monitor.*
+
+1.  Open the Eneriga Serial Monitor
+2.  Scan for and connect to the BLE Input Output sample app
+    running Energia. It will advertise as BLE I/O Demo
+3.  Once connected, attempt to read from LED 1 Char. This characteristic
+    requires authentication
+4.  You will notice a pop up on your smart phone asking to pair, don't
+    click this just yet, but make note of the number listed on
+    the popup.
+5.  Look at the ouput of the Energia serial monitor, it will ask you to
+    compare the number listed on your smart phone with the one on the
+    serial monitor.
+    1.  Press Button1 (left button on MSP432 LP) if they are equal,
+        button2(left button on MSP432 LP) if they aren't.
+
+6.  Then press pair on your phone.
+7.  You will now be able to control LED1.
+
+[![serial\_monitor\_pairing](http://energia.nu/wordpress/wp-content/uploads/2016/11/serial_monitor_pairing.png){.aligncenter
+.size-full .wp-image-5460 width="300"
+height="113"}](http://energia.nu/wordpress/wp-content/uploads/2016/11/serial_monitor_pairing.png)[![num\_comparison\_iphone](http://energia.nu/wordpress/wp-content/uploads/2016/11/num_comparison_iphone-169x300.png){.aligncenter
+.wp-image-5461 .size-medium width="169"
+height="300"}](http://energia.nu/wordpress/wp-content/uploads/2016/11/num_comparison_iphone.png)
+ 
+
+#### Running the Demo
+
+TBD    

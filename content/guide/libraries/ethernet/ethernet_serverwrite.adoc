@@ -1,0 +1,68 @@
+*EthernetServer*.write()
+------------------------
+
+#### Description
+
+Write data to all the clients connected to a server. This data is sent
+as a byte or series of bytes.
+
+#### Syntax
+
+*server*.write(val)\
+*server*.write(buf, len)
+
+#### Parameters
+
+**val**: a value to send as a single byte (byte or char)
+
+**buf**: an array to send as a series of bytes (byte or char)
+
+**len**: the length of the buffer
+
+#### Returns
+
+byte\
+write() returns the number of bytes written. It is not necessary to read
+this.
+
+#### Example
+
+    #include <SPI.h>
+    #include <Ethernet.h>
+
+    // network configuration.  gateway and subnet are optional.
+
+     // the media access control (ethernet hardware) address for the shield:
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };  
+    //the IP address for the shield:
+    byte ip[] = { 10, 0, 0, 177 };    
+    // the router's gateway address:
+    byte gateway[] = { 10, 0, 0, 1 };
+    // the subnet:
+    byte subnet[] = { 255, 255, 0, 0 };
+
+    // telnet defaults to port 23
+    EthernetServer server = EthernetServer(23);
+
+    void setup()
+    {
+      // initialize the ethernet device
+      Ethernet.begin(mac, ip, gateway, subnet);
+
+      // start listening for clients
+      server.begin();
+    }
+
+    void loop()
+    {
+      // if an incoming client connects, there will be bytes available to read:
+      EthernetClient client = server.available();
+      if (client == true) {
+        // read bytes from the incoming client and write them back
+        // to any clients connected to the server:
+        server.write(client.read());
+      }
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

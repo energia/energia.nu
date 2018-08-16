@@ -1,0 +1,90 @@
+<span class="wikiword">WiFi</span>.config()
+-------------------------------------------
+
+#### Description
+
+`WiFi.config()` allows you to configure a static IP address as well as
+change the DNS, gateway, and subnet addresses on the <span
+class="wikiword">WiFi</span> hardware. Unlike `WiFi.begin()` which
+automatically configures the <span class="wikiword">WiFi</span> hardware
+to use DHCP, `WiFi.config()` allows you to manually set the network
+address of the hardware. Calling `WiFi.config()` before `WiFi.begin()`
+forces `begin()` to configure the <span class="wikiword">WiFi</span>
+hardware with the network addresses specified in `config()`. You can
+call `WiFi.config()` after `WiFi.begin()`, but the hardware will
+initialize with `begin()` in the default DHCP mode. Once the `config()`
+method is called, it will change the network address as requested.
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.config(ip); <span
+class="wikiword">WiFi</span>.config(ip, dns); <span
+class="wikiword">WiFi</span>.config(ip, dns, gateway); <span
+class="wikiword">WiFi</span>.config(ip, dns, gateway, subnet);
+
+#### Parameters
+
+**ip**: the IP address of the device (array of 4 bytes) **dns**: the
+address for a DNS server. **gateway**: the IP address of the network
+gateway (array of 4 bytes). optional: defaults to the device IP address
+with the last octet set to 1 **subnet**: the subnet mask of the network
+(array of 4 bytes). optional: defaults to 255.255.255.0
+
+#### Returns
+
+Nothing
+
+#### Example
+
+This example shows how to set the static IP address, 192.168.0.177, of
+the LAN network to the <span class="wikiword">WiFi</span> hardware:
+
+    #include <SPI.h>
+    #include <WiFi.h>
+
+    // the IP address for the hardware:
+    IPAddress ip(192, 168, 0, 177);    
+
+    char ssid[] = "yourNetwork";    // your network SSID (name) 
+    char pass[] = "secretPassword"; // your network password (use for WPA, or use as key for WEP)
+
+    int status = WL_IDLE_STATUS;
+
+    void setup()
+    {  
+      // Initialize serial and wait for port to open:
+      Serial.begin(9600); 
+      while (!Serial) {
+        ; // wait for serial port to connect. Needed for Leonardo only
+      }
+
+      // check for the presence of the shield:
+      if (WiFi.status() == WL_NO_SHIELD) {
+        Serial.println("WiFi shield not present"); 
+        while(true);  // don't continue
+      } 
+
+      WiFi.config(ip);
+
+      // attempt to connect to Wifi network:
+      while ( status != WL_CONNECTED) { 
+        Serial.print("Attempting to connect to SSID: ");
+        Serial.println(ssid);
+        // Connect to WPA/WPA2 network. Change this line if using open or WEP network:    
+        status = WiFi.begin(ssid, pass);
+
+        // wait 10 seconds for connection:
+        delay(10000);
+      }
+
+      // print your WiFi hardware's IP address:
+      Serial.print("IP Address: ");
+      Serial.println(WiFi.localIP()); 
+    }
+
+    void loop () {}
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[WiFi
+Library](http://energia.nu/reference/wifi/ "WiFi")

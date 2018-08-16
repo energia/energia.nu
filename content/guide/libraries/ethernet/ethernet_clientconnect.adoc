@@ -1,0 +1,80 @@
+*EthernetClient*.connect()
+--------------------------
+
+#### Description
+
+Connects to a specified IP address and port. The return value indicates
+success or failure. Also supports DNS lookups when using a domain name.
+
+#### Syntax
+
+*client*.connect()\
+*client*.connect(ip, port)\
+*client*.connect(URL, port)
+
+#### Parameters
+
+ip: the IP address that the client will connect to (array of 4 bytes)
+
+URL: the domain name the client will connect to (string,
+ex.:"arduino.cc")
+
+port: the port that the client will connect to (int)
+
+#### Returns
+
+Returns an int (1,-1,-2,-3,-4) indicating connection status :
+
+-   SUCCESS 1
+-   TIMED\_OUT -1
+-   INVALID\_SERVER -2
+-   TRUNCATED -3
+-   INVALID\_RESPONSE -4
+
+#### Example
+
+    #include <Ethernet.h>
+    #include <SPI.h>
+
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+    byte ip[] = { 10, 0, 0, 177 };
+    byte server[] = { 64, 233, 187, 99 }; // Google
+
+    EthernetClient client;
+
+    void setup()
+    {
+      Ethernet.begin(mac, ip);
+      Serial.begin(9600);
+
+      delay(1000);
+
+      Serial.println("connecting...");
+
+      if (client.connect(server, 80)) {
+        Serial.println("connected");
+        client.println("GET /search?q=arduino HTTP/1.0");
+        client.println();
+      } else {
+        Serial.println("connection failed");
+      }
+    }
+
+    void loop()
+    {
+      if (client.available()) {
+        char c = client.read();
+        Serial.print(c);
+      }
+
+      if (!client.connected()) {
+        Serial.println();
+        Serial.println("disconnecting.");
+        client.stop();
+        for(;;)
+          ;
+      }
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

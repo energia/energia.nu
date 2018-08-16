@@ -1,0 +1,24 @@
+<span class="wikiword">ble.handleEvents()</span>
+------------------------------------------------
+
+#### Description
+
+Encapsulates event handling that must occur in the user task. Must be
+called in the [`loop`](http://energia.nu/reference/loop/) function of
+the Energia sketch. This is necessary because calls that communicate
+with the NP cannot be called from within the communication task.
+
+#### Syntax
+
+ble.handleEvents();
+
+#### Parameters
+
+Nothing
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/) [Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

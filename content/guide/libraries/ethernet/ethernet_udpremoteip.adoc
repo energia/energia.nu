@@ -1,0 +1,65 @@
+*EthernetUDP*.remoteIP()
+------------------------
+
+#### Description
+
+Gets the IP address of the remote connection. This function must be
+called after
+[UDP.parsePacket()](http://energia.nu/reference/ethernet/ethernet_udpparsepacket/ "Ethernet_UDPParsePacket"){.wikilink}.
+
+#### Syntax
+
+UDP.remoteIP();
+
+#### Parameters
+
+None
+
+#### Returns
+
+4 bytes : the IP address of the remote connection
+
+#### Example
+
+    #include <SPI.h>        
+    #include <Ethernet.h>
+    #include <EthernetUdp.h>
+
+    // Enter a MAC address and IP address for your controller below.
+    // The IP address will be dependent on your local network:
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+    IPAddress ip(192, 168, 1, 177);
+
+    unsigned int localPort = 8888;      // local port to listen on
+
+    // An EthernetUDP instance to let us send and receive packets over UDP
+    EthernetUDP Udp;
+
+    void setup() {
+      // start the Ethernet and UDP:
+      Ethernet.begin(mac,ip);
+      Udp.begin(localPort);
+    }
+
+    void loop() {
+
+      int packetSize = Udp.parsePacket();
+      if(packetSize)
+      {
+        Serial.print("Received packet of size ");
+        Serial.println(packetSize);
+        Serial.print("From IP : ");
+
+        IPAddress remote = Udp.remoteIP();
+        //print out the remote connection's IP address
+        Serial.print(remote);
+
+        Serial.print(" on port : ");
+        //print out the remote connection's port
+        Serial.println(Udp.remotePort());
+      }
+
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

@@ -1,0 +1,31 @@
+*EthernetServer*.println()
+--------------------------
+
+#### Description
+
+Print data, followed by a newline, to all the clients connected to a
+server. Prints numbers as a sequence of digits, each an ASCII character
+(e.g. the number 123 is sent as the three characters '1', '2', '3').
+
+#### Syntax
+
+*server*.println()\
+*server*.println(data)\
+*server*.println(data, BASE)
+
+#### Parameters
+
+data (optional): the data to print (char, byte, int, long, or string)
+
+BASE (optional): the base in which to print numbers: BIN for binary
+(base 2), DEC for decimal (base 10), OCT for octal (base 8), HEX for
+hexadecimal (base 16).
+
+#### Returns
+
+byte\
+println() will return the number of bytes written, though reading that
+number is optional
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

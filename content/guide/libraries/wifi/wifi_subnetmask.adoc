@@ -1,0 +1,57 @@
+<span class="wikiword">WiFi</span>.subnetMask()
+-----------------------------------------------
+
+#### Description
+
+Gets the <span class="wikiword">WiFi hardware's</span> subnet mask
+
+#### Syntax
+
+<span class="wikiword">WiFi</span>.subnet();
+
+#### Parameters
+
+none
+
+#### Returns
+
+the subnet mask of the hardware
+
+#### Example
+
+    #include <WiFi.h>
+    int status = WL_IDLE_STATUS;     // the Wifi radio's status
+
+    //SSID of your network 
+    char ssid[] = "yourNetwork";
+    //password of your WPA Network 
+    char pass[] = "secretPassword";
+
+    IPAddress ip;
+    IPAddress subnet;
+    IPAddress gateway;
+
+    void setup()
+    {
+      WiFi.begin(ssid, pass);
+
+      if ( status != WL_CONNECTED) { 
+        Serial.println("Couldn't get a wifi connection");
+        while(true);
+      } 
+      // if you are connected, print out info about the connection:
+      else {
+
+        // print your subnet mask:
+        subnet = WiFi.subnetMask();
+        Serial.print("NETMASK: ");
+        Serial.println();
+
+      }
+    }
+
+    void loop () {
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

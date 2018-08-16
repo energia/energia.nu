@@ -1,0 +1,18 @@
+<span class="wikiword">WiFiUDP</span>
+-------------------------------------
+
+#### Description
+
+Creates a named instance of the <span class="wikiword">WiFi</span> UDP
+class that can send and receive UDP messages.
+
+#### Syntax
+
+<span class="wikiword">WiFiUDP</span>
+
+#### Parameters
+
+none
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

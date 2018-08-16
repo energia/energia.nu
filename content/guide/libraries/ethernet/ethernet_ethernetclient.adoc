@@ -1,0 +1,66 @@
+<span class="wikiword">EthernetClient</span>()
+----------------------------------------------
+
+#### Description
+
+Creates a client which can connect to a specified internet IP address
+and port (defined in the
+[client.connect()](http://energia.nu/reference/ethernet/ethernet_clientconnect/ "Ethernet_ClientConnect"){.wikilink}
+function).
+
+#### Syntax
+
+<span class="wikiword">EthernetClient</span>()
+
+#### Parameters
+
+None
+
+#### Example
+
+    #include <Ethernet.h>
+    #include <SPI.h>
+
+
+    byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+    byte ip[] = { 10, 0, 0, 177 };
+    byte server[] = { 64, 233, 187, 99 }; // Google
+
+    EthernetClient client;
+
+    void setup()
+    {
+      Ethernet.begin(mac, ip);
+      Serial.begin(9600);
+
+      delay(1000);
+
+      Serial.println("connecting...");
+
+      if (client.connect(server, 80)) {
+        Serial.println("connected");
+        client.println("GET /search?q=arduino HTTP/1.0");
+        client.println();
+      } else {
+        Serial.println("connection failed");
+      }
+    }
+
+    void loop()
+    {
+      if (client.available()) {
+        char c = client.read();
+        Serial.print(c);
+      }
+
+      if (!client.connected()) {
+        Serial.println();
+        Serial.println("disconnecting.");
+        client.stop();
+        for(;;)
+          ;
+      }
+    }
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

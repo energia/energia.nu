@@ -1,0 +1,62 @@
+<span class="wikiword">ble.setAdvertData()</span>
+-------------------------------------------------
+
+#### Description
+
+Sets the payload for one of the three advertisement packet
+types: advertisements when not in a connection, advertisements when in a
+connection, and scan responses. If the connected advertisement data is
+not set, the nonconnected advertisement data will be used. See the
+Bluetooth specification for details on the payload structure.
+
+#### Syntax
+
+`ble.setAdvertData(advertType, len, advertData);`
+
+#### Parameters
+
+**advertType**: The type of advertisement payload to set.
+
+-   `BLE_ADV_DATA_NOTCONN`
+-   `BLE_ADV_DATA_CONN`
+-   `BLE_ADV_DATA_SCANRSP`
+
+  **len**: The number of bytes in `advertData`. **advertData**: A
+pointer to a `uint8_t` array.
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/)
+
+#### Example
+
+This example demonstrates setting the nonconnected advertising data with
+its default value.
+
+    #include <BLE.h>
+
+    static uint8_t defNotConnAD[] =
+    {
+     0x02, // length of this data
+     SAP_GAP_ADTYPE_FLAGS,
+     SAP_GAP_ADTYPE_FLAGS_GENERAL | SAP_GAP_ADTYPE_FLAGS_BREDR_NOT_SUPPORTED,
+
+     // Manufacturer specific advertising data
+     0x06,
+     0xFF, //GAP_ADTYPE_MANUFACTURER_SPECIFIC,
+     LO_UINT16(TI_COMPANY_ID),
+     HI_UINT16(TI_COMPANY_ID),
+     TI_ST_DEVICE_ID,
+     TI_ST_KEY_DATA_ID,
+     0x00 // Key state
+    };
+    void setup() {
+      ble.begin();
+      ble.setAdvertData(defNotConnAD);
+      ble.startAdvert();
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

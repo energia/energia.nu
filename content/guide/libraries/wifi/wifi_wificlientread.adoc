@@ -1,0 +1,22 @@
+*WiFiClient*.read()
+-------------------
+
+Read the next byte received from the server the client is connected to
+(after the last call to read()). read() inherits from the
+[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+utility class.
+
+#### Syntax
+
+*client*.read()
+
+#### Parameters
+
+none
+
+#### Returns
+
+The next byte (or character), or -1 if none is available.
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

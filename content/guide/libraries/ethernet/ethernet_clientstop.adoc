@@ -1,0 +1,21 @@
+*EthernetClient*.stop()
+-----------------------
+
+#### Description
+
+Disconnect from the server.
+
+#### Syntax
+
+*client*.stop()
+
+#### Parameters
+
+none
+
+#### Returns
+
+none
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

@@ -1,0 +1,25 @@
+WiFiUDP.beginPacket()
+---------------------
+
+#### Description
+
+Starts a connection to write UDP data to the remote connection
+
+#### Syntax
+
+WiFiUDP.beginPacket(hostName, port); WiFiUDP.beginPacket(hostIp, port);
+
+#### Parameters
+
+**hostName**: the address of the remote host. It accepts a character
+string or an <span class="wikiword">IPAddress</span>\
+**hostIp**: the IP address of the remote connection (4 bytes)\
+**port**: the port of the remote connection (int)\
+
+#### Returns
+
+1: if successful 0: if there was a problem with the supplied IP address
+or port
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

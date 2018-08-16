@@ -1,0 +1,11 @@
+Server
+------
+
+#### Description
+
+Server is the base class for all <span class="wikiword">WiFi</span>
+server based calls. It is not called directly, but invoked whenever you
+use a function that relies on it.
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

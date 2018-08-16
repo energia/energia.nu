@@ -1,0 +1,42 @@
+<span class="wikiword">ble.useBonding()</span>
+----------------------------------------------
+
+#### Description
+
+Enables or disables bonding.
+
+#### Syntax
+
+`ble.useBonding(bonding);`
+
+#### Parameters
+
+**bonding**: bool indicating whether or not to use bonding.
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/)
+
+#### Example
+
+An MSP432 connected to the Energia serial monitor has display and yes/no
+(buttons) capabilities.
+
+    #include <BLE.h>
+
+    void setup() {
+      Serial.begin(115200);
+      ble.begin();
+      ble.setPairingMode(BLE_SECURITY_WAIT_FOR_REQUEST);
+      ble.setIoCapabilities(BLE_DISPLAY_YES_NO);
+      ble.useBonding(true);
+    }
+
+    void loop() {
+      ble.handleEvents();
+    }
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

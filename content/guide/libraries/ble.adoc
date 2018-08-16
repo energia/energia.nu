@@ -1,0 +1,151 @@
+BLE library
+-----------
+
+This library enables Energia users to quickly add BLE communication to
+their LaunchPad project. The Energia BLE library is designed to
+communicate with a CC2650MODA BoosterPack configured as a network
+processor. The BLE library is built on the power of Energia MT (TI-RTOS)
+and the SAP lib which ensures that both devices are in the lowest power
+state at all times. Peripheral and Broadcaster roles are supported by
+the library, making it easy to connect your device to a smartphone or
+PC. This page will document the Energia BLE library APIs as well as an
+in-depth look at the two supported examples. *Note: A common naming
+convention among dual MCU wireless designs is to refer to the processor
+that runs the user application (i.e. Energia on MSP432) as the
+application processor (AP) and the processor that runs the wireless
+stack (i.e. TI BLE Stack on CC2650MODA) as the network processor (NP).
+We will adopt this convention throughout this documentation.* Supported
+Devices: MSP432
+
+#### Connecting the boards
+
+The AP and NP must frequently interact to exchange commands and status
+information related to the BLE connection and user data transfer. This
+interaction is achieved through a four wire interface that is based on
+the UART communication. The additional two wires are handshaking lines
+that are required to ensure that both devices are awake and ready to
+receive messages before starting a transaction. This helps ensure that
+your Energia designs are consuming the lowest power possible. Please see
+the table below for the pins used in this interface. *Note: The pins
+below are required by the BLE Energia Library for proper operation.
+These pins may not be used by the user application or otherwise
+electrically loaded.*
+[![lpbpstack](http://energia.nu/wordpress/wp-content/uploads/2016/07/LPBPstack.jpg){.wp-image-5400
+.size-full .aligncenter width="450"
+height="600"}](http://energia.nu/wordpress/wp-content/uploads/2016/07/LPBPstack.jpg)[![ble\_energia\_pinout](http://energia.nu/wordpress/wp-content/uploads/2016/07/ble_energia_pinout.png){.wp-image-5399
+.size-full .aligncenter width="625"
+height="152"}](http://energia.nu/wordpress/wp-content/uploads/2016/07/ble_energia_pinout.png)
+
+#### Sample Applications
+
+The Energia BLE library ships with two sample applications:
+
+-   [SerialOverBLE](http://energia.nu/reference/ble/serialoverblesampleapp/)
+-   [BLEInputOutput](http://energia.nu/reference/ble/bleinputoutputsampleapp/)
+
+  These sample applications demonstrate the capabilities of the BLE
+Energia library and should provide a foundation for user development
+using the library.
+
+#### BLE class
+
+The BLE class initializes the communication layer with the NP and
+provides an interface for the Energia sketch to configure it. Basic BLE
+functionality is controlled by the following:
+
+-   [begin()](http://energia.nu/reference/ble/ble-begin/)
+-   [setLogLevel()](http://energia.nu/reference/ble/ble-setloglevel/)
+-   [handleEvents()](http://energia.nu/reference/ble/ble-handleevents/)
+-   [terminateConn()](http://energia.nu/reference/ble/ble-terminateconn/)
+-   [end()](http://energia.nu/reference/ble/ble-end/)
+-   [isConnected()](http://energia.nu/reference/ble/ble-isconnected/)
+-   [isAdvertising()](http://energia.nu/reference/ble/ble-isadvertising/)
+-   [addService()](http://energia.nu/reference/ble/ble-addservice/)
+-   [startAdvert()](http://energia.nu/reference/ble/ble-startadvert/)
+-   [stopAdvert()](http://energia.nu/reference/ble/ble-stopadvert/)
+-   [setAdvertName()](http://energia.nu/reference/ble/ble-setadvertname/)
+-   [writeValue()](http://energia.nu/reference/ble/ble-writevalue/)
+-   [readValue\_&lt;type&gt;()](http://energia.nu/reference/ble/ble-readvalue/)
+
+ 
+
+#### Defining BLE Services and Characteristics
+
+Bluetooth data is organized into a hierarchy of services and
+characteristics. Services are a collection of related characteristics.
+The built-in serial service, for example, contains two characeristics
+for transmitting and receiving data. Two primers that are worth reading
+can be found in [Texas
+Instruments](http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#Custom_Profile.2FService)
+and
+[Adafruit](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt#services-and-characteristics)
+tutorials. Most of the details are abstracted with the data types
+[`BLE_Char`](http://energia.nu/reference/ble/ble-addservice/ble_char/)
+and
+[`BLE_Service`](http://energia.nu/reference/ble/ble-addservice/ble_service/).
+Add a service to the NP with
+[ble.addService()](http://energia.nu/reference/ble/ble-addservice/).
+[]()
+
+#### Error Handling
+
+Many functions provide status and error information, either returning
+`BLE_SUCCESS` or `BLE_CHECK_ERROR`, in which case the variable
+[`ble.error`](http://energia.nu/?page_id=5190&preview=true) can be
+checked for the specific error.
+
+#### Security
+
+-   [setPairingMode()](http://energia.nu/reference/ble/ble-setpairingmode/)
+-   [setIoCapabilities()](http://energia.nu/reference/ble/ble-setiocapabilities/)
+-   [useBonding()](http://energia.nu/reference/ble/ble-usebonding/)
+-   [eraseAllBonds()](http://energia.nu/reference/ble/ble-eraseallbonds/)
+-   [replaceLruBond()](http://energia.nu/reference/ble/ble-replacelrubond/)
+-   [sendSecurityRequest()](http://energia.nu/reference/ble/ble-sendsecurityrequest/)
+-   [setWhiteListPolicy()](http://energia.nu/reference/ble/ble-usewhitelistpolicy/)
+
+ 
+
+#### Advanced Parameters and Commands
+
+-   setGattParam()
+-   getGattParam()
+-   setGapParam()
+-   getGapParam()
+-   hciCommand()
+-   setConnParams()
+-   setMinConnInt()
+-   setMaxConnInt()
+-   setRespLatency()
+-   setBleTimeout()
+-   [getAdvertData()](http://energia.nu/reference/ble/ble-getadvertdata/)
+-   [setValueFormat()](http://energia.nu/reference/ble/ble-setvalueformat/)
+
+ 
+
+#### Going Further
+
+If you are interested in learning more about the internals of the BLE
+Energia Library or would like to move to C programming with the MSP432
+and CC2650MODA combo, please see the [SNP + SAP SimpleLink Academy
+Module](http://software-dl.ti.com/lprf/simplelink_academy/modules/ble_snp_sap_intro/ble_snp_sap_intro.html) for
+more information. For additional information on the CC2650MODA
+BoosterPack or BLE, visit the support page from TI: [Embedded
+BLE](http://www.ti.com/lsds/ti/wireless_connectivity/bluetooth_bluetooth-ble/simplelink-ulp-ble.page)
+
+#### Flashing the CC2650MODA BoosterPack
+
+The Energia BLE Library depends on the CC2650MODA BoosterPack running a
+Simple Network Processor image from the TI BLE SDK. You can obtain these
+images for the CC2650MODA from the following links. Select the link that
+corresponds to your operating system.
+
+-   [Windows](http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.exe&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files)
+-   [Mac
+    OSX](http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.app.zip&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files)
+-   [Linux](http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.run&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files)
+
+    *Note: The Mac installer comes as a zip file, you will need to unzip
+it before running.* [Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink} || [Libraries
+Home](http://energia.nu/guide/libraries/ "Libraries")

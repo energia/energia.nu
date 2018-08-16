@@ -1,0 +1,25 @@
+<span class="wikiword">ble.eraseAllBonds()</span>
+-------------------------------------------------
+
+#### Description
+
+Erase all bonds saved in the network processor.
+
+#### Syntax
+
+`ble.eraseAllBonds();`
+
+#### Parameters
+
+None
+
+#### Returns
+
+[Status code](http://energia.nu/reference/ble/ble-error/)
+
+#### 
+
+[Reference
+Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
+style="color: #202020;"> || </span>[BLE
+Library](http://energia.nu/reference/ble/ "WiFi")

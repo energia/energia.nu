@@ -1,0 +1,32 @@
+read()
+------
+
+ 
+
+#### Description
+
+ 
+
+#### Syntax
+
+ 
+
+#### Parameters
+
+ 
+
+#### Returns
+
+See the [EasyLink Status
+Codes](http://energia.nu/reference/easylink/easylink-status-codes/)
+reference page.
+
+<div>
+
+[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
+[EasyLink Library](http://energia.nu/reference/easylink/ "EasyLink")
+<div>
+
+</div>
+
+</div>

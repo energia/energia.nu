@@ -1,0 +1,27 @@
+ADS.ADSread(unsigned int mode)
+------------------------------
+
+### Description
+
+ADSread works by reading the ADC result and proceeds to start a new
+conversion. The function uses the writeSPI library to communicate. if
+the mode is set to 1, the configuration is set to convert the voltage of
+the thermocouple. Otherwise, when mode is set to 0, the ADS is in
+temperature sensor mode where it converts the voltage of the integrated
+temperature sensor.
+
+### Syntax
+
+-   ADS.ADSread(value, 0); //sets to mode 0
+-   ADS.ADSread(value, 1); //sets to mode 1
+
+ 
+
+### Parameters
+
+mode - an int that should pass either a '0' or a '1'  
+
+### Returns
+
+result of the last conversion   [Reference
+Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")
