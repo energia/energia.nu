@@ -1,132 +1,213 @@
-<span class="wikiword">WiFi</span> library
-------------------------------------------
+++++
+<style>
+.container {
+    width: 960px;
+    position: relative;
+    margin: 0;
+    z-index:1;
+
+}
+
+.ulist li {
+  margin: -0.5em;
+}
+
+#first {
+    width: 210px;
+    float: left;
+    /* position: fixed; */
+    border-right: 1px dotted lightgray;
+
+}
+
+#second {
+    width: 740px;
+    float: right;
+    overflow: hidden;
+}
+</style>
+
+<div class='container'>
+    <div id="first">
+++++
+
+.WiFi class
+* link:../wifi/wifi_begin[begin()]
+* link:../wifi/wifi_disconnect[disconnect()]
+* link:../wifi/wifi_config[config()]
+* link:../wifi/wifi_setdns[setDNS()]
+* link:../wifi/wifi_ssid[SSID()]
+* link:../wifi/wifi_bssid[BSSID()]
+* link:../wifi/wifi_rssi[RSSI()]
+* link:../wifi/wifi_encryptiontype[encryptionType()]
+* link:../wifi/wifi_scannetworks[scanNetworks()]
+* link:../wifi/wifi_getsocket[getSocket()]
+* link:../wifi/wifi_macaddress[macAddress()]
+
+.IPAddress class
+* link:../wifi/wifi_localip[localIP()]
+* link:../wifi/wifi_subnetmas/[subnetMask()]
+* link:../wifi/wifi_gatewayip[gatewayIP()]
+
+.Server class
+* link:../wifi/wifi_serverconstructor[Server]
+* link:../wifi/wifi_wifiserver[WiFiServer()]
+* link:../wifi/wifi_wifiserverbegin[begin()]
+* link:../wifi/wifi_wifiserveravailable[available()]
+* link:../wifi/wifi_wifiserverwrite[write()]
+* link:../wifi/wifi_wifiserverprint[print()]
+* link:../wifi/wifi_wifiserverprintln[println()]
+
+.Client class
+* link:../wifi/wifi_clientconstructor[Client]
+* link:../wifi/wifi_wificlient[WiFiClient()]
+* link:../wifi/wifi_wificlientconnected[connected()]
+* link:../wifi/wifi_wificlientconnect[connect()]
+* link:../wifi/wifi_wificlientwrite[write()]
+* link:../wifi/wifi_wificlientprint[print()]
+* link:../wifi/wifi_wificlientprintln[println()]
+* link:../wifi/wifi_wificlientavailable[available()]
+* link:../wifi/wifi_wificlientread[read()]
+* link:../wifi/wifi_wificlientflush[flush()]
+* link:../wifi/wifi_wificlientstop[stop()]
+
+.UDP class
+* link:../wifi/wifi_wifiudpconstructor[WiFiUDP]
+* link:../wifi/wifi_wifiudbpbegin[begin()]
+* link:../wifi/wifi_wifiudpavailable[available()]
+* link:../wifi/wifi_wifiudpbeginpacket[beginPacket()]
+* link:../wifi/wifi_wifiudpendpacket[endPacket()]
+* link:../wifi/wifi_wifiudpwrite[write()]
+* link:../wifi/wifi_wifiparsepacket[parsePacket()]
+* link:../wifi/wifi_wifiudppeek[peek()]
+* link:../wifi/wifi_wifiudpread[read()]
+* link:../wifi/wifi_wifiudpflush[flush()]
+* link:../wifi/wifi_wifiudpstop[stop()]
+* link:../wifi/wifi_wifiudpremoteip[remoteIP()]
+* link:../wifi/wifi_wifiudpremoteport[remotePort()]
+
+++++
+    </div>
+    <div id="second">
+++++
+
+## WiFi library
 
 Simplelink WiFi enabled boards can use the WiFi library to connect to
 the internet. It can serve as either a server accepting incoming
 connections or a client making outgoing ones. The library supports WEP
-and <span class="wikiword">WPA2</span> Personal encryption, but not
-<span class="wikiword">WPA2</span> Enterprise. Supported Devices:
-CC3100, CC3200 Energia communicates with the <span
-class="wikiword">WiFi</span> network processor using the SPI bus. The
-<span class="wikiword">WiFi</span> library is very similar to the
-[Ethernet](http://energia.nu/reference/ethernet/ "Ethernet"){.wikilink}
+and WPA2 Personal encryption, but not WPA2 Enterprise. Supported Devices:
+CC3100, CC3200 Energia communicates with the WiFi network processor using the SPI bus. The
+WiFi library is very similar to the [Ethernet](http://energia.nu/reference/ethernet/ "Ethernet")
 library, and many of the function calls are the same. For additional
 information on Simplink WiFi, visit the support page from TI: [Embedded
 WiFi ](http://www.ti.com/lsds/ti/wireless_connectivity/embedded_wi-fi/overview.page)
 
-#### <span class="wikiword">WiFi</span> class
+### WiFi class
 
-The <span class="wikiword">WiFi</span> class initializes the ethernet
-library and network settings.
+The WiFi class initializes the ethernet library and network settings.
 
--   [begin()](http://energia.nu/reference/wifi/wifi_begin/ "WiFi_Begin"){.wikilink}
--   [disconnect()](http://energia.nu/reference/wifi/wifi_disconnect/ "WiFi_Disconnect"){.wikilink}
--   [config()](http://energia.nu/reference/wifi/wifi_config/ "WiFi_Config"){.wikilink}
--   [setDNS()](http://energia.nu/reference/wifi/wifi_setdns/ "WiFi_SetDNS"){.wikilink}
--   [SSID()](http://energia.nu/reference/wifi/wifi_ssid/ "WiFi_SSID"){.wikilink}
--   [BSSID()](http://energia.nu/reference/wifi/wifi_bssid/ "WiFi_BSSID"){.wikilink}
--   [RSSI()](http://energia.nu/reference/wifi/wifi_rssi/ "WiFi_RSSI"){.wikilink}
--   [encryptionType()](http://energia.nu/reference/wifi/wifi_encryptiontype/ "WiFi_EncryptionType"){.wikilink}
--   [scanNetworks()](http://energia.nu/reference/wifi/wifi_scannetworks/ "WiFi_ScanNetworks"){.wikilink}
--   [getSocket()](http://energia.nu/reference/wifi/wifi_getsocket/ "WiFi_GetSocket"){.wikilink}
--   [macAddress()](http://energia.nu/reference/wifi/wifi_macaddress/ "WiFi_MACAddress"){.wikilink}
-
+* link:../wifi/wifi_begin[begin()]
+* link:../wifi/wifi_disconnect[disconnect()]
+* link:../wifi/wifi_config[config()]
+* link:../wifi/wifi_setdns[setDNS()]
+* link:../wifi/wifi_ssid[SSID()]
+* link:../wifi/wifi_bssid[BSSID()]
+* link:../wifi/wifi_rssi[RSSI()]
+* link:../wifi/wifi_encryptiontype[encryptionType()]
+* link:../wifi/wifi_scannetworks[scanNetworks()]
+* link:../wifi/wifi_getsocket[getSocket()]
+* link:../wifi/wifi_macaddress[macAddress()]
  
+### IPAddress class
 
-#### <span class="wikiword">IPAddress</span> class
+The IPAddress class provides information about the network configuration.
 
-The <span class="wikiword">IPAddress</span> class provides information
-about the network configuration.
+* link:../wifi/wifi_localip[localIP()]
+* link:../wifi/wifi_subnetmas/[subnetMask()]
+* link:../wifi/wifi_gatewayip[gatewayIP()]
 
--   [localIP()](http://energia.nu/reference/wifi/wifi_localip/ "WiFi_LocalIP"){.wikilink}
--   [subnetMask()](http://energia.nu/reference/wifi/wifi_subnetmask/ "WiFi_SubnetMask"){.wikilink}
--   [gatewayIP()](http://energia.nu/reference/wifi/wifi_gatewayip/ "WiFi_GatewayIP"){.wikilink}
-
- 
-
-#### Server class
+### Server class
 
 The Server class creates servers which can send data to and receive data
 from connected clients (programs running on other computers or devices).
 
--   [Server](http://energia.nu/reference/wifi/wifi_serverconstructor/ "WiFi_ServerConstructor"){.wikilink}
--   [WiFiServer()](http://energia.nu/reference/wifi/wifi_wifiserver/ "WiFi_WiFiServer"){.wikilink}
--   [begin()](http://energia.nu/reference/wifi/wifi_wifiserverbegin/ "WiFi_WiFiServerBegin"){.wikilink}
--   [available()](http://energia.nu/reference/wifi/wifi_wifiserveravailable/ "WiFi_WiFiServerAvailable"){.wikilink}
--   [write()](http://energia.nu/reference/wifi/wifi_wifiserverwrite/ "WiFi_WiFiServerWrite"){.wikilink}
--   [print()](http://energia.nu/reference/wifi/wifi_wifiserverprint/ "WiFi_WiFiServerPrint"){.wikilink}
--   [println()](http://energia.nu/reference/wifi/wifi_wifiserverprintln/ "WiFi_WiFiServerPrintln"){.wikilink}
+* link:../wifi/wifi_serverconstructor[Server]
+* link:../wifi/wifi_wifiserver[WiFiServer()]
+* link:../wifi/wifi_wifiserverbegin[begin()]
+* link:../wifi/wifi_wifiserveravailable[available()]
+* link:../wifi/wifi_wifiserverwrite[write()]
+* link:../wifi/wifi_wifiserverprint[print()]
+* link:../wifi/wifi_wifiserverprintln[println()]
 
- 
-
-#### Client class
+### Client class
 
 The client class creates clients that can connect to servers and send
 and receive data.
 
--   [Client](http://energia.nu/reference/wifi/wifi_clientconstructor/ "WiFi_ClientConstructor"){.wikilink}
--   [WiFiClient()](http://energia.nu/reference/wifi/wifi_wificlient/ "WiFi_WiFiClient"){.wikilink}
--   [connected()](http://energia.nu/reference/wifi/wifi_wificlientconnected/ "WiFi_WiFiClientConnected"){.wikilink}
--   [connect()](http://energia.nu/reference/wifi/wifi_wificlientconnect/ "WiFi_WiFiClientConnect"){.wikilink}
--   [write()](http://energia.nu/reference/wifi/wifi_wificlientwrite/ "WiFi_WiFiClientWrite"){.wikilink}
--   [print()](http://energia.nu/reference/wifi/wifi_wificlientprint/ "WiFi_WiFiClientPrint"){.wikilink}
--   [println()](http://energia.nu/reference/wifi/wifi_wificlientprintln/ "WiFi_WiFiClientPrintln"){.wikilink}
--   [available()](http://energia.nu/reference/wifi/wifi_wificlientavailable/ "WiFi_WiFiClientAvailable"){.wikilink}
--   [read()](http://energia.nu/reference/wifi/wifi_wificlientread/ "WiFi_WiFiClientRead"){.wikilink}
--   [flush()](http://energia.nu/reference/wifi/wifi_wificlientflush/ "WiFi_WiFiClientFlush"){.wikilink}
--   [stop()](http://energia.nu/reference/wifi/wifi_wificlientstop/ "WiFi_WiFiClientStop"){.wikilink}
+* link:../wifi/wifi_clientconstructor[Client]
+* link:../wifi/wifi_wificlient[WiFiClient()]
+* link:../wifi/wifi_wificlientconnected[connected()]
+* link:../wifi/wifi_wificlientconnect[connect()]
+* link:../wifi/wifi_wificlientwrite[write()]
+* link:../wifi/wifi_wificlientprint[print()]
+* link:../wifi/wifi_wificlientprintln[println()]
+* link:../wifi/wifi_wificlientavailable[available()]
+* link:../wifi/wifi_wificlientread[read()]
+* link:../wifi/wifi_wificlientflush[flush()]
+* link:../wifi/wifi_wificlientstop[stop()]
 
- 
-
-#### UDP class
+### UDP class
 
 The UDP class enables UDP message to be sent and received.
 
--   [WiFiUDP](http://energia.nu/reference/wifi/wifi_wifiudpconstructor/ "WiFi_WiFiUDPConstructor"){.wikilink}
--   [begin()](http://energia.nu/reference/wifi/wifi_wifiudbpbegin/ "WiFi_WiFiUDBPBegin"){.wikilink}
--   [available()](http://energia.nu/reference/wifi/wifi_wifiudpavailable/ "WiFi_WiFiUDPAvailable"){.wikilink}
--   [beginPacket()](http://energia.nu/reference/wifi/wifi_wifiudpbeginpacket/ "WiFi_WiFiUDPBeginPacket"){.wikilink}
--   [endPacket()](http://energia.nu/reference/wifi/wifi_wifiudpendpacket/ "WiFi_WiFiUDPEndPacket"){.wikilink}
--   [write()](http://energia.nu/reference/wifi/wifi_wifiudpwrite/ "WiFi_WiFiUDPWrite"){.wikilink}
--   [parsePacket()](http://energia.nu/reference/wifi/wifi_wifiparsepacket/ "WiFi_WiFiParsePacket"){.wikilink}
--   [peek()](http://energia.nu/reference/wifi/wifi_wifiudppeek/ "WiFi_WiFiUDPPeek"){.wikilink}
--   [read()](http://energia.nu/reference/wifi/wifi_wifiudpread/ "WiFi_WiFiUDPRead"){.wikilink}
--   [flush()](http://energia.nu/reference/wifi/wifi_wifiudpflush/ "WiFi_WiFiUDPFlush"){.wikilink}
--   [stop()](http://energia.nu/reference/wifi/wifi_wifiudpstop/ "WiFi_WiFiUDPStop"){.wikilink}
--   [remoteIP()](http://energia.nu/reference/wifi/wifi_wifiudpremoteip/ "WiFi_WiFiUDPRemoteIP"){.wikilink}
--   [remotePort()](http://energia.nu/reference/wifi/wifi_wifiudpremoteport/ "WiFi_WiFiUDPRemotePort"){.wikilink}
+* link:../wifi/wifi_wifiudpconstructor[WiFiUDP]
+* link:../wifi/wifi_wifiudbpbegin[begin()]
+* link:../wifi/wifi_wifiudpavailable[available()]
+* link:../wifi/wifi_wifiudpbeginpacket[beginPacket()]
+* link:../wifi/wifi_wifiudpendpacket[endPacket()]
+* link:../wifi/wifi_wifiudpwrite[write()]
+* link:../wifi/wifi_wifiparsepacket[parsePacket()]
+* link:../wifi/wifi_wifiudppeek[peek()]
+* link:../wifi/wifi_wifiudpread[read()]
+* link:../wifi/wifi_wifiudpflush[flush()]
+* link:../wifi/wifi_wifiudpstop[stop()]
+* link:../wifi/wifi_wifiudpremoteip[remoteIP()]
+* link:../wifi/wifi_wifiudpremoteport[remotePort()]
 
- 
+### Examples
 
-#### Examples
-
--   [ConnectNoEncryption](http://arduino.cc/en/Tutorial/ConnectNoEncryption){.wikilink}
+-   [ConnectNoEncryption](http://arduino.cc/en/Tutorial/ConnectNoEncryption)
     : Demonstrates how to connect to an open network
--   [ConnectWithWEP](http://arduino.cc/en/Tutorial/ConnectWithWEP){.wikilink}
+-   [ConnectWithWEP](http://arduino.cc/en/Tutorial/ConnectWithWEP)
     : Demonstrates how to connect to a network that is encrypted with
     WEP
--   [ConnectWithWPA](http://arduino.cc/en/Tutorial/ConnectWithWPA){.wikilink}
+-   [ConnectWithWPA](http://arduino.cc/en/Tutorial/ConnectWithWPA)
     : Demonstrates how to connect to a network that is encrypted with
-    <span class="wikiword">WPA2</span> Personal
--   [ScanNetworks](http://arduino.cc/en/Tutorial/ScanNetworks){.wikilink}
-    : Displays all <span class="wikiword">WiFi</span> networks in range
--   [WiFiChatServer](http://arduino.cc/en/Tutorial/WiFiChatServer){.wikilink}
+    WPA2Personal
+-   [ScanNetworks](http://arduino.cc/en/Tutorial/ScanNetworks)
+    : Displays all WiFi networks in range
+-   [WiFiChatServer](http://arduino.cc/en/Tutorial/WiFiChatServer)
     : Set up a simple chat server
--   [WiFiXivelyClient](http://arduino.cc/en/Tutorial/WiFiXivelyClient){.wikilink}
+-   [WiFiXivelyClient](http://arduino.cc/en/Tutorial/WiFiXivelyClient)
     : connect to xively.com, a free datalogging site
--   [WiFiXivelyClientString](http://arduino.cc/en/Tutorial/WiFiXivelyClientString){.wikilink}:
-    send strings to xively.com
--   [WiFiWebClient](http://arduino.cc/en/Tutorial/WiFiWebClient){.wikilink}
+-   [WiFiXivelyClientString](http://arduino.cc/en/Tutorial/WiFiXivelyClientString)
+    :send strings to xively.com
+-   [WiFiWebClient](http://arduino.cc/en/Tutorial/WiFiWebClient)
     : Connect to a remote webserver
--   [WiFiWebClientRepeating](http://arduino.cc/en/Tutorial/WiFiWebClientRepeating){.wikilink}
+-   [WiFiWebClientRepeating](http://arduino.cc/en/Tutorial/WiFiWebClientRepeating)
     : Make repeated HTTP calls to a webserver
--   [WiFiWebServer](http://arduino.cc/en/Tutorial/WiFiWebServer){.wikilink}
-    : Serve a webpage from the <span class="wikiword">WiFi</span> shield
--   [WiFiSendReceiveUDPString](http://arduino.cc/en/Tutorial/WiFiSendReceiveUDPString){.wikilink}
+-   [WiFiWebServer](http://arduino.cc/en/Tutorial/WiFiWebServer)
+    : Serve a webpage from the WiFi shield
+-   [WiFiSendReceiveUDPString](http://arduino.cc/en/Tutorial/WiFiSendReceiveUDPString)
     : Send and receive a UDP string
--   [UdpNTPClient](http://arduino.cc/en/Tutorial/UdpNTPClient){.wikilink}
+-   [UdpNTPClient](http://arduino.cc/en/Tutorial/UdpNTPClient)
     : Query a Network Time Protocol (NTP) server using UDP
 
-  [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [Libraries
-Home](http://energia.nu/guide/libraries/ "Libraries")  
+[Reference Home](http://energia.nu/reference/ "Reference") || 
+[Libraries Home](http://energia.nu/guide/libraries/ "Libraries")  
+
+++++
+    </div>
+</div>
+++++

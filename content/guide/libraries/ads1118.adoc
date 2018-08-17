@@ -1,21 +1,68 @@
-ADS1118 Thermocouple BoosterPack
---------------------------------
+++++
+<style>
+.container {
+    width: 960px;
+    position: relative;
+    margin: 0;
+    z-index:1;
+
+}
+
+.ulist li {
+  margin: -0.5em;
+}
+
+#first {
+    width: 210px;
+    float: left;
+    /* position: fixed; */
+    border-right: 1px dotted lightgray;
+
+}
+
+#second {
+    width: 740px;
+    float: right;
+    overflow: hidden;
+}
+</style>
+
+<div class='container'>
+    <div id="first">
+++++
+
+.Functions
+
+* link:../ads1118-thermocouple-boosterpack/ads1118_begin[begin()]
+* link:../ads1118-thermocouple-boosterpack/ads1118_beginmode[begin(mode)]
+* link:../ads1118-thermocouple-boosterpack/ads1118-writespi[writeSPI()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-adsread[ADSread()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-adccode2temp[ADCcode2temp()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-localcompensation[localCompensation()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-readcelcius[readCelcius()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-readfarenheit[readFarenheit()]
+
+
+++++
+    </div>
+    <div id="second">
+++++
+
+## ADS1118 Thermocouple BoosterPack
 
 <div id="functiontable"
 style="background-color: #ffd777; width: 180px; margin-right: 20px; padding: 5px; float: left;">
 
-#### Functions
+### Functions
 
--   [begin()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118_begin/ "ADS1118_begin")
--   [begin(mode)](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118_beginmode/ "ADS1118_beginMode")
--   [writeSPI()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-writespi/ "ads1118 - writeSPI")
--   [ADSread()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-adsread/ "ads1118 - ADSread")
--   [ADCcode2temp()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-adccode2temp/ "ads1118-adccode2temp")
--   [localCompensation()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-localcompensation/ "ads1118-localCompensation")
--   [readCelcius()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-readcelcius/ "ads1118-readCelcius")
--   [readFarenheit()](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ads1118-readfarenheit/ "ads1118-readFarenheit")
-
-</div>
+* link:../ads1118-thermocouple-boosterpack/ads1118_begin[begin()]
+* link:../ads1118-thermocouple-boosterpack/ads1118_beginmode[begin(mode)]
+* link:../ads1118-thermocouple-boosterpack/ads1118-writespi[writeSPI()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-adsread[ADSread()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-adccode2temp[ADCcode2temp()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-localcompensation[localCompensation()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-readcelcius[readCelcius()]
+* link:../ads1118-thermocouple-boosterpack/ads1118-readfarenheit[readFarenheit()]
 
 ### Overview
 
@@ -85,5 +132,11 @@ it to a Serial port.
             delay(100);
     }
 
-  [Reference Home](http://energia.nu/reference/ "Reference") ||
+[Reference Home](http://energia.nu/reference/ "Reference") ||
 [Libraries Home](http://energia.nu/reference/libraries/ "Libraries")
+
+
+++++
+    </div>
+</div>
+++++

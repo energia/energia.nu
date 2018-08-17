@@ -1,27 +1,84 @@
-EasyLink Sub-1 GHz communication library
-----------------------------------------
+
+++++
+<style>
+.container {
+    width: 960px;
+    position: relative;
+    margin: 0;
+    z-index:1;
+
+}
+
+.ulist li {
+  margin: -0.5em;
+}
+
+#first {
+    width: 210px;
+    float: left;
+    /* position: fixed; */
+    border-right: 1px dotted lightgray;
+
+}
+
+#second {
+    width: 740px;
+    float: right;
+    overflow: hidden;
+}
+</style>
+
+<div class='container'>
+    <div id="first">
+++++
+
+.EasyLink class
+* link:../easylink/easylink-easylink[EasyLink()]
+* link:../easylink/easylink-begin[begin()]
+* link:../easylink/easylink-transmit[transmit()]
+* link:../easylink/easylink-receive[receive()]
+* link:../easylink/easylink-begintransmission[beginTransmission()]
+* link:../easylink/easylink-endtransmission[endTransmission()]
+* link:../easylink/easylink-available[available()]
+* link:../easylink/easylink-peek[peek()]
+* link:../easylink/easylink-read[read()]
+* link:../easylink/easylink-flush[flush()]
+* link:../easylink/easylink-write[write()]
+* link:../easylink/easylink-version[version()]
+
+++++
+    </div>
+    <div id="second">
+++++
+
+## EasyLink Sub-1 GHz communication library
 
 Supported Board: LAUNCHXL-CC1310
 
-#### EasyLink class
+### EasyLink class
 
 The EasyLink class wraps the [CC1310 RF/EasyLink
 driver](http://www.ti.com/tool/cc13xx-sw) into a high level easy to use
 C++ class. The following API's are supported:
 
--   [EasyLink()](http://energia.nu/reference/easylink/easylink-easylink/)
--   [begin()](http://energia.nu/reference/easylink/easylink-begin/)
--   [transmit()](http://energia.nu/reference/easylink/easylink-transmit/)
--   [receive()](http://energia.nu/reference/easylink/easylink-receive/)
--   [beginTransmission()](http://energia.nu/reference/easylink/easylink-begintransmission/)
--   [endTransmission()](http://energia.nu/reference/easylink/easylink-endtransmission/)
--   [available()](http://energia.nu/reference/easylink/easylink-available/)
--   [peek()](http://energia.nu/reference/easylink/easylink-peek/)
--   [read()](http://energia.nu/reference/easylink/easylink-read/)
--   [flush()](http://energia.nu/reference/easylink/easylink-flush/)
--   [write()](http://energia.nu/reference/easylink/easylink-write/)
--   [version()](http://energia.nu/reference/easylink/easylink-version/)
+* link:../easylink/easylink-easylink[EasyLink()]
+* link:../easylink/easylink-begin[begin()]
+* link:../easylink/easylink-transmit[transmit()]
+* link:../easylink/easylink-receive[receive()]
+* link:../easylink/easylink-begintransmission[beginTransmission()]
+* link:../easylink/easylink-endtransmission[endTransmission()]
+* link:../easylink/easylink-available[available()]
+* link:../easylink/easylink-peek[peek()]
+* link:../easylink/easylink-read[read()]
+* link:../easylink/easylink-flush[flush()]
+* link:../easylink/easylink-write[write()]
+* link:../easylink/easylink-version[version()]
 
-  [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [Libraries
-Home](http://energia.nu/guide/libraries/ "Libraries")
+
+[Reference Home](http://energia.nu/reference/ "Reference") || 
+[Libraries Home](http://energia.nu/guide/libraries/ "Libraries")
+
+++++
+    </div>
+</div>
+++++
