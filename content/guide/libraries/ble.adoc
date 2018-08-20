@@ -44,7 +44,7 @@
 * link:../ble/ble-stopadvert[stopAdvert()]
 * link:../ble/ble-setadvertname[setAdvertName()]
 * link:../ble/ble-writevalue[writeValue()]
-* link:../ble/ble-readvalue[readValue\_&lt;type&gt;()]
+* link:../ble/ble-readvalue[readValue\_<type>;()]
 
 .Security
 * link:../ble/ble-setpairingmode[setPairingMode()]
@@ -143,7 +143,7 @@ functionality is controlled by the following:
 * link:../ble/ble-stopadvert[stopAdvert()]
 * link:../ble/ble-setadvertname[setAdvertName()]
 * link:../ble/ble-writevalue[writeValue()]
-* link:../ble/ble-readvalue[readValue\_&lt;type&gt;()]
+* link:../ble/ble-readvalue[readValue\_<type>;()]
 
  
 

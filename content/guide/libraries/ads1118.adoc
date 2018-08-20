@@ -50,8 +50,7 @@
 
 ## ADS1118 Thermocouple BoosterPack
 
-<div id="functiontable"
-style="background-color: #ffd777; width: 180px; margin-right: 20px; padding: 5px; float: left;">
+
 
 ### Functions
 
