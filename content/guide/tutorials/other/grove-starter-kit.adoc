@@ -71,27 +71,27 @@ video::P4eyB4CA-r8[youtube]
 
 image::Grove_PluggedIN.jpg[]
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Base_BoosterPack[Grove Base BoosterPack] 
+1x http://wiki.seeedstudio.com/Grove_Base_BoosterPack/[Grove Base BoosterPack] 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Buzzer#With_TI_LaunchPad[Grove Buzzer] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-Buzzer/#play-with-ti-launchpad[Grove Buzzer] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Relay#With_TI_LaunchPad[Grove Relay] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-Relay/#play-with-ti-launchpad[Grove Relay] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_4-Digit_Display#With_TI_LaunchPad[Grove 4-Digit-Display] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-4-Digit_Display/#play-with-ti-launchpad[Grove 4-Digit-Display] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger#With_TI_LaunchPad[Grove Ultrasonic Range Sensor] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/[Grove Ultrasonic Range Sensor] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor#With_TI_LaunchPad[Grove PIR Motion Sensor] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/[Grove PIR Motion Sensor] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Light_Sensor#With_TI_LaunchPad[Grove Light Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Light_Sensor/[Grove Light Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Sound_Sensor#With_TI_LaunchPad[Grove Sound Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Sound_Sensor/[Grove Sound Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Moisture_Sensor#With_TI_LaunchPad[Grove Moisture Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Moisture_Sensor/#play-with-ti-launchpad[Grove Moisture Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove-_Temperature_and_Humidity_Sensor#With_TI_LaunchPad[Grove Temperature Humidity Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/[Grove Temperature Humidity Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Rotary_Angle_Sensor#With_TI_LaunchPad[Grove Rotary Angle Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/#play-with-ti-launchpad[Grove Rotary Angle Sensor] (Analog) 
 
 Grove Cables 
 
