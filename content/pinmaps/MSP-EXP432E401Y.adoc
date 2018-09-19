@@ -21,7 +21,7 @@ Drivers may or may not be required in order to start using this LaunchPad. Downl
 Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/MSP-EXP432E401Y[MSP-EXP432E401Y] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
-* link:/guide/guide_windows/[Windows]
-* link:/guide/guide_macosx/[Mac OS X]
-* link:/guide/guide_linux/[Linux]
+* link:/guide/install/windows/[Windows]
+* link:/guide/install/macos/[Mac OS X]
+* link:/guide/install/linux/[Linux]
 ==========================
