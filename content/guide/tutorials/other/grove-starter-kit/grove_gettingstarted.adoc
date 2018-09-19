@@ -1,0 +1,23 @@
+== Example 01: Grove Getting Started ==
+
+Test your LaunchPad by running the Blink Example. File > Examples > Basic > Blink
+
+
+==== Hardware Required ====
+
+* TI LaunchPad
+ 
+
+==== Schematic ====
+
+None. This basic example just uses your LaunchPad only.
+
+==== Code ====
+
+Find the latest and greatest code example link:https://github.com/Seeed-Studio/LaunchPad_Kit[HERE] on GitHub.
+
+[source,c]
+----
+include::content/guide/tutorials/other/grove-starter-kit/code/grove_gettingstarted.ino[]
+----
+

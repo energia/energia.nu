@@ -1,0 +1,10 @@
+== Example 09: Taking Care of Your Plants (Moisture Sensor) ==
+==== Code ====
+
+Find the latest and greatest code example link:https://github.com/Seeed-Studio/LaunchPad_Kit[HERE] on GitHub.
+
+[source,c]
+----
+include::content/guide/tutorials/other/grove-starter-kit/code/grove_takingcareofyourplants.ino[]
+----
+

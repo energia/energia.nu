@@ -21,9 +21,9 @@ Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18
 .Installation Guide
 Step-by-step instructions for setting up the Energia IDE and running your first Sketch on a Texas Instruments LaunchPad board.
 
-* http://energia.nu/guide/guide_windows/[Windows]
-* http://energia.nu/guide/guide_macosx/[Mac OS X]
-* http://energia.nu/guide/guide_linux/[Linux]
+* http://energia.nu/guide/install/windows/[Windows]
+* http://energia.nu/guide/install/macosx/[Mac OS X]
+* http://energia.nu/guide/install/linux/[Linux]
 ==========================
 
 == Previous Releases ==

@@ -31,27 +31,27 @@ Download the sample code folder here: www.energia.nu/grovekitcode Find all the l
 
 *Basic Examples*
 
->> http://energia.nu/guide/grove-starter-kit/grove_gettingstarted/[Example 01: Getting Started] : (Blinking LED)
+>> link:grove_gettingstarted/[Example 01: Getting Started] : (Blinking LED)
 
->> http://energia.nu/guide/grove-starter-kit/grove_playingmusic/[Example 02: Playing Music] : (Buzzer)
+>> link:grove_playingmusic/[Example 02: Playing Music] : (Buzzer)
 
->> http://energia.nu/guide/grove-starter-kit/grove_controltheelectric/[Example 03: Control the Electric] : (Relays)
+>> link:grove_controltheelectric/[Example 03: Control the Electric] : (Relays)
 
->> http://energia.nu/guide/grove-starter-kit/grove_display/[Example 04: Display] : (4 Digital Display)
+>> link:grove_display/[Example 04: Display] : (4 Digital Display)
 
->> http://energia.nu/guide/grove-starter-kit/grove_potentiometer/[Example 05: Potentiometer] : (Rotary Angle Sensor)
+>> link:grove_potentiometer/[Example 05: Potentiometer] : (Rotary Angle Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_sensingthelight/[Example 06: Sensing the Light] : (Light Sensor)
+>> link:grove_sensingthelight/[Example 06: Sensing the Light] : (Light Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_hearing/[Example 07: Hearing] : (Sound Sensor)
+>> link:grove_hearing/[Example 07: Hearing] : (Sound Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_isanybodythere/[Example 08: Is Anybody There] : (PIR Sensor)
+>> link:grove_isanybodythere/[Example 08: Is Anybody There] : (PIR Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_takingcareofyourplants/[Example 09: Taking care of your plants] : (Moisture Sensor)
+>> link:grove_takingcareofyourplants/[Example 09: Taking care of your plants] : (Moisture Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_sensingthedistance/[Example 10: Sensing the Distance] : (Ultrasonic Ranger Sensor)
+>> link:grove_sensingthedistance/[Example 10: Sensing the Distance] : (Ultrasonic Ranger Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_feelingtheenvironment/[Example 11: Feeling the Environment] : (Temperature Humidity Sensor)
+>> link:grove_feelingtheenvironment/[Example 11: Feeling the Environment] : (Temperature Humidity Sensor)
 
 *Advanced Examples*
 
@@ -71,27 +71,27 @@ video::P4eyB4CA-r8[youtube]
 
 image::Grove_PluggedIN.jpg[]
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Base_BoosterPack[Grove Base BoosterPack] 
+1x http://wiki.seeedstudio.com/Grove_Base_BoosterPack/[Grove Base BoosterPack] 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Buzzer#With_TI_LaunchPad[Grove Buzzer] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-Buzzer/#play-with-ti-launchpad[Grove Buzzer] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Relay#With_TI_LaunchPad[Grove Relay] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-Relay/#play-with-ti-launchpad[Grove Relay] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_4-Digit_Display#With_TI_LaunchPad[Grove 4-Digit-Display] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-4-Digit_Display/#play-with-ti-launchpad[Grove 4-Digit-Display] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger#With_TI_LaunchPad[Grove Ultrasonic Range Sensor] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/[Grove Ultrasonic Range Sensor] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor#With_TI_LaunchPad[Grove PIR Motion Sensor] (Digital) 
+1x http://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/[Grove PIR Motion Sensor] (Digital) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Light_Sensor#With_TI_LaunchPad[Grove Light Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Light_Sensor/[Grove Light Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Sound_Sensor#With_TI_LaunchPad[Grove Sound Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Sound_Sensor/[Grove Sound Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Moisture_Sensor#With_TI_LaunchPad[Grove Moisture Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Moisture_Sensor/#play-with-ti-launchpad[Grove Moisture Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove-_Temperature_and_Humidity_Sensor#With_TI_LaunchPad[Grove Temperature Humidity Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/[Grove Temperature Humidity Sensor] (Analog) 
 
-1x http://wiki.seeedstudio.com/wiki/Grove_Rotary_Angle_Sensor#With_TI_LaunchPad[Grove Rotary Angle Sensor] (Analog) 
+1x http://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/#play-with-ti-launchpad[Grove Rotary Angle Sensor] (Analog) 
 
 Grove Cables 
 
@@ -137,16 +137,9 @@ image::GROVE_STARTERKIT.jpg[]
 
 https://www.seeedstudio.com/Grove-Starter-Kit-for-LaunchPad-p-2178.html[Seeed Studio] 
 
-https://www.makershed.com/collections/electronics[MakerShed] 
-
 https://www.digikey.com/product-detail/en/110020004/1597-1213-ND/5487542[Digi-Key] 
 
 https://www.mouser.com/ProductDetail/Seeed-Studio/110020004/?qs=sGAEpiMZZMvNM%2fd3q5fCVyka4GSgYXIgp7kLFnrNsHQ%3d[Mouser Electronics] 
-
-https://www.jameco.com/webapp/wcs/stores/servlet/Product_10001_10001_2219381_-1[Jameco] 
-
-https://www.eio.com/p-47902-seeedstudio-110020004-grove-starter-kit-for-launchpad.aspx[EIO (Electronic Inventory Online)] 
-
 
 http://www.nkcelectronics.com/Grove-Starter-Kit-for-LaunchPad_p_468.html[NKC Electronics Intertex Electronics] 
 
@@ -155,6 +148,5 @@ http://www.intertexelectronics.com/Grove-Starter-Kit-for-LaunchPad-Includes-11-s
 image::ORDER_Seeed.png[]
 image::maker-logo.png[]
 image::ORDER_jameco.png[]
-image::ORDER_eio.png[]
 image::ORDER_nkcelectronics.png[]
 image::ORDER_intertex.png[]
