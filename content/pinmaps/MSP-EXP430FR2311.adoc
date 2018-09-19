@@ -6,7 +6,7 @@ The MSP-EXP430FR2311 features 4 KB of FRAM (Ferroelectric Random Access Memory),
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
 * link:/guide/install/windows/[Windows]
-* link:/guide/install/macosx/[Mac OS X]
+* link:/guide/install/macos/[Mac OS X]
 * link:/guide/install/linux/[Linux]
 ==========================
 

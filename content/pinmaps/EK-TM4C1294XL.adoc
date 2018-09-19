@@ -14,7 +14,7 @@ Drivers may or may not be required in order to start using this LaunchPad. link:
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
 * link:/guide/install/windows/[Windows]
-* link:/guide/install/macosx/[Mac OS X]
+* link:/guide/install/macos/[Mac OS X]
 * link:/guide/install/linux/[Linux]
 ==========================
 
