@@ -23,7 +23,7 @@ Step-by-step instructions for setting up the Energia IDE and running your first 
 
 * http://energia.nu/guide/install/windows/[Windows]
 * http://energia.nu/guide/install/macosx/[Mac OS X]
-* http://energia.nu/guide/guide_linux/[Linux]
+* http://energia.nu/guide/install/linux/[Linux]
 ==========================
 
 == Previous Releases ==

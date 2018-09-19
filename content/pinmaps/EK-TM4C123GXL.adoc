@@ -15,7 +15,7 @@ If you have not already done so, follow the instructions for your operating syst
 
 * link:/guide/install/windows/[Windows]
 * link:/guide/install/macosx/[Mac OS X]
-* link:/guide/guide_linux/[Linux]
+* link:/guide/install/linux/[Linux]
 ==========================
 
 === Pin Map
