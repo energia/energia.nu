@@ -12,7 +12,7 @@ Drivers are often, but not always, required for this LaunchPad. You can find the
 ==========================
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
-* link:/guide/guide_windows/[Windows]
+* link:/guide/install/windows/[Windows]
 * link:/guide/guide_macosx/[Mac OS X]
 * link:/guide/guide_linux/[Linux]
 ==========================

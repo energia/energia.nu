@@ -19,7 +19,7 @@ image::../img/CC3200-LAUNCHXL.jpg[CC3220SF-LAUNCHXL,800]
 Drivers may or may not be required in order to start using this LaunchPad. link:/download[Download] and open Energia on your system. Connect your LaunchPad to your computer over USB. Select http://www.ti.com/tool/CC3220SF-LAUNCHXL[CC3220SF-LAUNCHXL] or http://www.ti.com/tool/CC3220S-LAUNCHXL[CC3220S-LAUNCHXL] under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
 If you have not already done so, follow the instructions for your operating system to install the drivers here:
 
-* link:/guide/guide_windows/[Windows]
+* link:/guide/install/windows/[Windows]
 * link:/guide/guide_macosx/[Mac OS X]
 * link:/guide/guide_linux/[Linux]
 ==========================
