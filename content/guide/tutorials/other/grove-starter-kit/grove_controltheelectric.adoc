@@ -1,0 +1,11 @@
+== Example 03: Control the Electric ==
+
+==== Code ====
+
+Find the latest and greatest code example link:https://github.com/Seeed-Studio/LaunchPad_Kit[HERE] on GitHub.
+
+[source,c]
+----
+include::content/guide/tutorials/other/grove-starter-kit/code/grove_controltheelectric.ino[]
+----
+

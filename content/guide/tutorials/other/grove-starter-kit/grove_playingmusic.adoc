@@ -1,0 +1,19 @@
+== Example 02: Playing Music (Buzzer) ==
+
+==== Hardware Required ====
+
+* TI LaunchPad
+* Grove Base BoosterPack
+* Grove Buzzer
+* 1x Grove Cables
+ 
+
+==== Code ====
+
+Find the latest and greatest code example link:https://github.com/Seeed-Studio/LaunchPad_Kit[HERE] on GitHub.
+
+[source,c]
+----
+include::content/guide/tutorials/other/grove-starter-kit/code/grove_playingmusic.ino[]
+----
+
