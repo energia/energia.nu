@@ -1,0 +1,31 @@
+== Example: 555 Timer (IC and Switch) ==
+
+In this circuit we will be incorporating a 555 timer to make a delay timer.
+
+=== Hardware Required ===
+* TI LaunchPad (optional, can use an external power supply like a battery)
+* Breadboard
+* 555 Timer (TLC555CP or NE555P)
+* 14x Jumper Wires
+* 1x 10K ohm resistor
+* 1x 1K ohm resistor
+* 1x 330 ohm resistor
+* 1x 1M ohm resistor
+* 1x 0.01uF capacitor
+* 1x 2.2uF capacitor
+* 1x LED
+* 1x Transistor
+ 
+=== Relevant Groundwork ===
+
+This circuit will be extra special because it will require minimal power and can last a long time on battery power. To make it easier to use the sidekick we will power the circuit from the LaunchPad connected to USB, but it’s important to note that the microcontroller is doing nothing except supplying power to the circuit.  This circuit is purely analog, so no code will be required.
+
+A timer can be used in an analog circuit to help trigger events at certain intervals.
+
+When the button is pressed, it supplies power to pin 8 of the timer. The button only switches on the timer, and does not trigger it. Therefore, we need to add a 10uF capacitor to pass an initial low state through a 1K resistor to trigger the timer on pin 2, after which a 10K resistor maintains pin 2 at a high state.
+
+The timer is wired in a mono-stable mode to emit a single delay pulse. The pulse from pin 3 goes to the transistor. The the transistor closes, it will power pin 8 of the timer. The transistor is powering the timer and will continue to do so after the button is released because the output pulse from the timer is still running the transistor. The timer and the transistor are sustaining each other until the output pulse from the timer ends. When the timer is off, the circuit consumes no power.
+
+In this simple circuit we will just turn on an LED with the transistor so we can see the state change.
+
+You can adjust the duration of the 555 timer by choosing different values for the capacitors. Search for “calculate 555 duration” to find out how to adjust the timing to your liking.

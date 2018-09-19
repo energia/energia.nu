@@ -1,0 +1,52 @@
+== Example 04: Shift Register 2 (IC and Display) ==
+
+Use the shift register and the segment display at the same time.
+
+=== Hardware Required ===
+
+* TI LaunchPad
+* Breadboard
+* Shift Register (SN74HC595)
+* 7 Segment Display
+* 4x Red LED
+* 4x Green LED
+* 19x Jumper Wires
+* 8x 330 ohm resistor (optional)
+
+ 
+=== Relevant Groundwork ===
+
+In this example we will use a shift register to increase our number of output pins so that we can use LEDs and the 7 Segment Display together. We will use the shift register for the LEDs like in Example 4 and we will use the LaunchPad pins for the display like we did in Example 10. This will let us display a number that can correspond to an individual LED, an LED mode, or something else like a base ten place holder for counting up to larger numbers.
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_shiftregister2.ino[]
+----
+
+=== Programming Challenge ===
+
+Can you get the LED patterns to correspond to a number mode on the display?
+
+Can you make a counter that can count up to 100? How about 1000? Is it possible to count up even higher?
+
+=== Troubleshooting ===
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+Not working?
+
+*Double check your chip is not plugged in backwards. Use the u-shaped notch as a reference point for the top.
+
+LED not lighting up?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the LED pins. There is very little chance that your LED is broken, but we can verify by blinking a different LED with the same code.
+* Make sure your pins are properly connected, if they are not the LED will not light up properly. The GND pin of the LED should be connected to the GND pin of the LaunchPad.
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

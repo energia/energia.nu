@@ -1,0 +1,77 @@
+=== Example 04: Shift Register (Integrated Circuit) ===
+
+Learn how to use a shift register to convert serial data to parallel data.
+
+=== Hardware Required ===
+
+* TI LaunchPad
+* Breadboard BoosterPack
+* Breadboard
+* Shift Register (SN74HC595)
+* 4x Red LED
+* 4x Green LED
+* 9x Jumper Wires
+* 8x 330 ohm resistor (optional)
+
+ 
+=== Relevant Groundwork ===
+
+In this example we will use a shift register, a serial to parallel converter, to let us gain more output pins and explore the concept of shifting bits. Bits are the most basic unit of information in electronics. A bit is binary so it contains two values (On/Off, High/Low, 1/0, True/False, etc.). You can link multiple shift registers together to create a large amount of outputs. We will clock data in and then latch it until 8 bits of data have been shifted out.
+
+The shift register is an integrated circuit (IC) which are often called “chips” because of their familiar packaging. You can think of an IC as a much smaller version of a circuit that you could build on your breadboard. ICs help us perform complex analog or digital operations in a small space. That’s how we are able to shrink computers from taking up a whole room to nicely fitting in our pockets and back packs.  Not all ICs are the same, in fact they are all quite different. Some, like the microcontroller on your LaunchPad, are very capable and complex, while others like your shift register are relatively simple. One IC might cost a few dollars while another might cost a few cents depending on what functions they can do.
+
+This shift register is very good because it has a DIP package, which means it is breadboard friendly! You can plug in the legs directly to your breadboard along the spine.  If you look for ICs to add to your collection later, make sure they are DIP if you want to use them easily with your breadboard.
+
+How do we know how the shift register works?  We will use an important guide called a datasheet. A datasheet is provided by the manufacturer of the component. It is the instruction manual. For this shift register SN74HC595, the manufacturer is Texas Instruments and the datasheet is here: http://www.ti.com/lit/ds/symlink/sn74hc595.pdf.  You can find datasheets on the product page of most electronic components. If you can’t find it, search around using the part number and “datasheet” keyword.
+
+Your LaunchPad also has a datasheet for the processor that is on board. If you want to learn a lot about how your LaunchPad works, you can study the datasheet!  Electrical Engineers need to study datasheets for their components so they can build systems correctly.  With Energia, we get spoiled because we don’t always have to read a datasheet to get things working quickly. This is convenient but proper engineering requires knowledge of every aspect of your system, so datasheet knowledge is a must.
+
+In this example we will make a binary counter using LEDs. The code will let us count up to 256 in binary. Search the internet and learn more about binary counting if it doesn’t make sense how the LEDs are lighting up.
+Circuit & Schematic
+
+With Breadboard BoosterPack
+
+image::../img/SidekickExample04-BB_bb2.png[800,600]
+
+With LaunchPad
+
+image::../img/SidekickExample04_bb.png[800,600]
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_shiftregister.ino[]
+----
+
+
+Programming Challenge
+
+Can you get the LEDs to light up in sequences? Check Example 3 for a reminder on different patterns.
+
+Can you control a 7 Segment Display with the Shift Register? Check Example 10 to learn about the 7 Segment Display.
+Troubleshooting
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+ 
+
+Not working?
+
+* Double check your chip is not plugged in backwards. Use the u-shaped notch as a reference point for the top.
+
+ 
+
+LED not lighting up?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the LED pins. There is very little chance that your LED is broken, but we can verify by blinking a different LED with the same code.
+* Make sure your pins are properly connected, if they are not the LED will not light up properly. The GND pin of the LED should be connected to the GND pin of the LaunchPad.
+
+ 
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

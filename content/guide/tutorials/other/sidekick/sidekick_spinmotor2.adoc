@@ -1,0 +1,42 @@
+== Example: Spin the Motor 2 (Motor Driver) ==
+
+Learn how to use a H-bridge motor driver to help us spin a small DC motor.
+
+=== Hardware Required ===
+
+* TI LaunchPad
+* Breadboard
+* SN754410 Half H-Bridge motor driver (SN754410NE)
+* DC Motor
+* Diode
+* 4x Jumper Wires
+* 10K ohm resistor
+
+ 
+=== Relevant Groundwork ===
+
+In this example we will use a motor driver to spin a DC motor. What is the advantage of a motor driver? We should already know that we don’t want to drive a motor directly from a microcontroller pin, because we risk damage to the pin. This means we need either a transistor, MOSFET, or motor driver. A motor driver is nice because we can drive 2 motors with the same IC, which is good for many simple robotics applications.
+
+==== Code ====
+
+Coming Soon
+
+=== Programming Challenge === 
+
+How fast can you spin the motor? Can you make the motor go slower?
+
+=== Troubleshooting === 
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+
+Motor not spinning?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the pins.
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

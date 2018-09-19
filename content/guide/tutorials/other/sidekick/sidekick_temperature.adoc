@@ -1,0 +1,73 @@
+== Example 09: Temperature (Thermistor and Temp Sensor) ==
+
+Learn how to measure temperature using different sensors.
+
+== Hardware Required == 
+
+* TI LaunchPad
+* Breadboard BoosterPack
+* Breadboard
+* Thermistor
+* LM19 Temperature Sensor
+* 6x Jumper Wires
+* 10K resistor
+
+ 
+== Relevant Groundwork ==
+
+In this example we will learn more about sensors. In some of the previous examples we have used components as basic sensors. Sensors are components that can sense the physical world. One common attribute of the physical world that we would like to keep track of is temperature. If things get too hot or too cold it can be bad. We can use formulas to calculate the temperature of an object or environment based on changes in resistance of the sensor.
+
+We are also going to learn how to use serial communication. The LaunchPad can talk to your computer with a protocol called UART. We can pass lines of text (called strings) between the computer and the LaunchPad via the USB cable. In the example, we are going to read messages from the LaunchPad about the data of the temp sensors.  In Energia there is a tool called the Serial Monitor, which is the magnifying glass in the upper right corner. When you open the tool, you will get a window called a terminal. Here, if your Serial Port is correctly selected and your bit rate is properly set, you can see messages from the LaunchPad. The messages are ones that you program using the Serial library. Using the Serial library APIs, we can print text that can tell us values of variables, clues to where we are in the program, and many other useful things.
+
+In this circuit we will use a thermistor and an analog temperature together and compare the results. A thermistor is a variable resistor that changes with temperature. This can be good enough to measure temperature in a lot of products but often we need to be more precise. For better results, there are all sort of analog temperature sensors available that are purpose built to measure temperature with accuracy. The temperature sensor we will use is the basic, but effective LM19 from Texas Instruments. You can find the datasheet here: http://www.ti.com/lit/ds/symlink/lm19.pdf.
+Circuit & Schematic
+
+With Breadboard BoosterPack
+
+image::../img/SidekickExample09-BB_bb.png[800,600]
+
+
+With LaunchPad
+
+image::../img/SidekickExample09_bb.png[800,600]
+
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_temperature.ino[]
+----
+
+=== Programming Challenge === 
+
+Can you change how the temperature text is displayed in the Serial monitor? Use the Serial.print() and Serial.println() functions to clean up the output.
+
+=== Troubleshooting ===
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+
+Nothing is happening?
+
+* You need to open the Serial Monitor in the Energia IDE to see the program running. Click the magnifying glass icon in the upper right corner or go to Tools > Serial Monitor.
+
+ 
+
+Nothing showing on the Serial Monitor? Weird character are showing on the Serial Monitor?
+
+* Make sure you have the correct Serial Port for UART selected.
+* Make sure you have the right baud rate selected in the Serial Monitor. Should be 9600 for this example.
+
+ 
+
+Temperature value is wrong? Temperature sensor getting very hot?
+
+* Check that your temperature sensor pins are correct. You may have put it in backwards.
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

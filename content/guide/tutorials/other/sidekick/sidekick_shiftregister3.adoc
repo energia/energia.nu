@@ -1,0 +1,53 @@
+=== Example: Shift Register 3 (IC) === 
+
+Chain several shift registers together to create many outputs. We will add a second shift register, doubling the number of output pins while still using the same number of pins from the LaunchPad.
+
+== Hardware Required ==
+
+* TI LaunchPad
+* Breadboard
+* 2x Shift Register (SN74HC595)
+* 4x Red LED
+* 4x Green LED
+* 1x 7 Segment Display
+* 18x Jumper Wires
+* 16x 330 ohm resistor (optional)
+
+ 
+== Relevant Groundwork ==
+
+In a complex project you may run out of pins on your microcontroller and need to extend it with shift registers. This example is based on the 74HC595, referred in the datasheet as an “8-bit serial-in, serial or parallel-out shift register with output latches; 3-state.” In other words, you can use it to control 8 outputs at a time while only taking up a few pins on your microcontroller. You can link multiple registers together to extend your output even more.
+
+How this all works is through something called “synchronous serial communication,” i.e. you can pulse one pin up and down thereby communicating a data byte to the register bit by bit. It’s by pulsing second pin, the clock pin, that you delineate between bits. This is in contrast to using the “asynchronous serial communication” of the Serial.begin() function which relies on the sender and the receiver to be set independently to an agreed upon specified data rate. Once the whole byte is transmitted to the register the HIGH or LOW messages held in each bit get parceled out to each of the individual output pins. This is the “parallel output” part, having all the pins do what you want them to do all at once.
+
+The “serial output” part of this component comes from its extra pin which can pass the serial information received from the microcontroller out again unchanged. This means you can transmit 16 bits in a row (2 bytes) and the first 8 will flow through the first register into the second register and be expressed there. You can learn to do that from the second example.
+
+“3 states” refers to the fact that you can set the output pins as either high, low or “high impedance.” Unlike the HIGH and LOW states, you can”t set pins to their high impedance state individually. You can only set the whole chip together. This is a pretty specialized thing to do — Think of an LED array that might need to be controlled by completely different microcontrollers depending on a specific mode setting built into your project. Neither example takes advantage of this feature and you won”t usually need to worry about getting a chip that has it.
+Circuit
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_shiftregister3.ino[]
+----
+
+=== Programming Challenge ===
+
+Can you make different LED modes and display the mode on the segment display?
+
+=== Troubleshooting ===
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+ 
+
+Motor not spinning?
+* Make sure you properly uploaded the code and that you properly named your variables for the pins.
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

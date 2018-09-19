@@ -1,0 +1,59 @@
+== Example 00: Blinking LED (Output) ==
+
+Blink is the most basic Energia example. It is how we know our hardware and software environment is correctly set up.
+
+
+=== Hardware Required ===
+
+* TI LaunchPad
+ 
+
+=== Relevant Groundwork ===
+
+Before we start building circuits, we want to make sure our microcontroller is properly setup. A microcontroller is a tiny computer that lives on an integrated circuit (ICs for short, also called “chips”). The microcontroller will act as the brain in many of our circuits. If the brain doesn’t work, then the body won’t either. Another way to say it, if our microcontroller is incorrectly set up for development, then the circuits won’t behave properly. Luckily this is a very simple process. You will need a TI LaunchPad. A LaunchPad is a microcontroller development kit. Engineers will use development kits like the LaunchPads to start building a product or solution and then once they are satisfied with the results they will migrate to a custom board that they can design themselves for smaller size and reduced cost. Even when learning electronics and building simple circuits, a development kit can make it much easier to write software and have repeatable results. Often the manufacturer of a dev kit will have code examples that can be used to begin testing the hardware.
+
+You will also need to install Energia IDE if you have not done so. You can download it at www.energia.nu/download. The instructions for installation on your Windows PC, Mac, or Linux computer can be found on the download page or in the Getting Stated Guide page.  Energia is where we will write our code.  This code will get transferred from our computer to the LaunchPad with the USB cable. This is called flashing the device. Connect your USB cable to your LaunchPad and computer if you have not done so.
+
+Once you have Energia running you will want to get access to the Sidekick code examples.  Your version of Energia IDE may have the examples in the File > Examples folder. If not, you can download them from www.energia.nu/sidekickcode.  Unzip the folder into your Documents -> Energia folder and it will appear in your File > Sketchbook folder. You may need to restart Energia if it is already running.
+
+In this example we want to make sure our LED (light emitting diode) on the LaunchPad can blink when we tell it. This is a classic example for electronics engineering. When learning software, many people print “Hello World” in their programming language as their first program. Blinking an LED is the “Hello World” of Electronics!
+
+In the code you will see comments to help explain what is happening.  A single line comment uses double backslash “//” and a comment block (multiple line comment) uses “/*” at the beginning and “*/” at the end. Comments are great to write notes to yourself as a programmer, but to also explain things to people who are reading your code in the future.
+
+If we exclude the comments, the code in this program (called a sketch in Energia) is pretty short. We will set our LED pin as an OUTPUT because LEDs output light and then will write HIGH (HIGH = 1 in Binary) and LOW (LOW = 0 in Binary) to our LED pin. In between we will delay for 1000 milliseconds or 1 second. A delay() will pause your microcontroller for the given length of time. This is done because your microcontoller has a clock and the MCU will cycle through until the time passes. You can also use sleep() which is effectively the same but your microcontroller will go into a lower power hibernation mode, which is often better.
+
+Load the code and run it on your LaunchPad. If you are blinking, you are ready to proceed to the next example. If not make sure you properly installed the drivers for your LaunchPad, unplug and replug your LaunchPad from your computer, and re-upload the example code.
+
+=== Circuit & Schematic ===
+
+None. Just use your LaunchPad!
+
+=== Code ===
+
+Find the latest and greatest code example link:https://github.com/Seeed-Studio/LaunchPad_Kit[HERE] on GitHub.
+
+[source,c]
+----
+include::content/guide/tutorials/other/grove-starter-kit/code/grove_controltheelectric.ino[]
+----
+
+
+=== Programming Challenge ===
+
+Change the blinking time! Can you make it blink faster? Slower?
+
+=== Troubleshooting ===
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+ 
+
+LED not lighting up?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the LED pins. There is very little chance that your LED is broken, but we can verify by blinking a different LED with the same code. Every LaunchPad will have a RED_LED variable. Some have a GREEN_LED variable or other to represent the on board LEDs. Check the Energia Pin Maps to see what LEDs are available and what their names are in Energia.
+ 
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!
