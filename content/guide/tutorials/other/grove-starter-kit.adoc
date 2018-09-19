@@ -31,27 +31,27 @@ Download the sample code folder here: www.energia.nu/grovekitcode Find all the l
 
 *Basic Examples*
 
->> http://energia.nu/guide/grove-starter-kit/grove_gettingstarted/[Example 01: Getting Started] : (Blinking LED)
+>> link:grove_gettingstarted/[Example 01: Getting Started] : (Blinking LED)
 
->> http://energia.nu/guide/grove-starter-kit/grove_playingmusic/[Example 02: Playing Music] : (Buzzer)
+>> link:grove_playingmusic/[Example 02: Playing Music] : (Buzzer)
 
->> http://energia.nu/guide/grove-starter-kit/grove_controltheelectric/[Example 03: Control the Electric] : (Relays)
+>> link:grove_controltheelectric/[Example 03: Control the Electric] : (Relays)
 
->> http://energia.nu/guide/grove-starter-kit/grove_display/[Example 04: Display] : (4 Digital Display)
+>> link:grove_display/[Example 04: Display] : (4 Digital Display)
 
->> http://energia.nu/guide/grove-starter-kit/grove_potentiometer/[Example 05: Potentiometer] : (Rotary Angle Sensor)
+>> link:grove_potentiometer/[Example 05: Potentiometer] : (Rotary Angle Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_sensingthelight/[Example 06: Sensing the Light] : (Light Sensor)
+>> link:grove_sensingthelight/[Example 06: Sensing the Light] : (Light Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_hearing/[Example 07: Hearing] : (Sound Sensor)
+>> link:grove_hearing/[Example 07: Hearing] : (Sound Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_isanybodythere/[Example 08: Is Anybody There] : (PIR Sensor)
+>> link:grove_isanybodythere/[Example 08: Is Anybody There] : (PIR Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_takingcareofyourplants/[Example 09: Taking care of your plants] : (Moisture Sensor)
+>> link:grove_takingcareofyourplants/[Example 09: Taking care of your plants] : (Moisture Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_sensingthedistance/[Example 10: Sensing the Distance] : (Ultrasonic Ranger Sensor)
+>> link:grove_sensingthedistance/[Example 10: Sensing the Distance] : (Ultrasonic Ranger Sensor)
 
->> http://energia.nu/guide/grove-starter-kit/grove_feelingtheenvironment/[Example 11: Feeling the Environment] : (Temperature Humidity Sensor)
+>> link:grove_feelingtheenvironment/[Example 11: Feeling the Environment] : (Temperature Humidity Sensor)
 
 *Advanced Examples*
 
