@@ -18,13 +18,14 @@ In the `setup()` function, we will define the LED as an output using `pinMode()`
 
 In each loop tab, we will toggle the LED with `digitalWrite` (high or low depending on whether we want to turn the LED on or off) and different `delay()` values so the LEDs toggle at different rates.
 
-Tab 1
+=== Tab 1
 
+[source,arduino]
 ----
 #define LED BLUE_LED
-void setup() { 
+void setup() {
  // initialize the digital pin as an output.
- pinMode(LED, OUTPUT); 
+ pinMode(LED, OUTPUT);
 }
 void loop() {
  digitalWrite(LED, HIGH); //turn the LED on by making the voltage HIGH
@@ -34,37 +35,38 @@ void loop() {
 }
 ----
 
-Tab 2
+=== Tab 2
 
+[source,arduino]
 ----
 #define LED GREEN_LED
-void setupGreenLed() { 
+void setupGreenLed() {
  // initialize the digital pin as an output.
- pinMode(LED, OUTPUT); 
+ pinMode(LED, OUTPUT);
 }
 void loopGreenLed() {
- digitalWrite(LED, HIGH); // turn the LED on 
+ digitalWrite(LED, HIGH); // turn the LED on
  delay(500);  // wait for half a second
- digitalWrite(LED, LOW); // turn the LED off 
+ digitalWrite(LED, LOW); // turn the LED off
  delay(500); // wait for half a second
 }
 ----
 
-Tab 3
+=== Tab 3
 
+[source,arduino]
 ----
 #define LED RED_LED
-void setupRedLed() { 
+void setupRedLed() {
  // initialize the digital pin as an output.
- pinMode(LED, OUTPUT); 
+ pinMode(LED, OUTPUT);
 }
-void loopRedLed() { 
-digitalWrite(LED, HIGH); // turn the LED on 
+void loopRedLed() {
+digitalWrite(LED, HIGH); // turn the LED on
  delay(1000); // wait for 1/10 second
- digitalWrite(LED, LOW); // turn the LED off 
+ digitalWrite(LED, LOW); // turn the LED off
  delay(1000); // wait for 1/10 second
 }
 ----
 
 This example can be found in Energia MT under File -> Examples -> MultiTasking -> MultiBlink
-

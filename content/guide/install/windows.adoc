@@ -90,7 +90,7 @@ Energia (MT) uses a different method for building Sketches for the MSP-EXP432P40
 If you have already used the MSP-EXP432P401R LaunchPad with TI's Code Composer Studio then you probably already have the driver installed. If not, then follow the steps below to install the driver.
 
 . Do not connect your MSP-EXP432P401R LaunchPad to your PC. If you already plugged it into your PC then unplug it before proceeding to step 2.
-. Download the LaunchPad drivers for Windows: MSP-EXP432P401R XDS110 Driver Package
+. Download the LaunchPad drivers for Windows: http://s3.amazonaws.com/energiaUS/files/xds110_drivers.zip[MSP-EXP432P401R XDS110 Driver Package]
 . Unzip and double click DPinst.exe for Windows 32bit or DPinst64.exe for Windows 64 bit.
 . Follow the installer instructions.
 . Connect your MSP-EXP432P401R LaunchPad to your PC. The MSP-EXP432P401R will be automatically recognized.

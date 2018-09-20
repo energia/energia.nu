@@ -21,6 +21,7 @@ image::../FuncAnatomy.png[]
 
 To ''call'' our simple multiply function, we pass it parameters of the datatype that it is expecting:
 
+[source,arduino]
 ----
 void loop{
 int i = 2;
@@ -35,6 +36,7 @@ Our function needs to be _declared_ outside any other function, so `myMultiplyFu
 
 The entire sketch would then look like this:
 
+[source,arduino]
 ----
 void setup(){
   Serial.begin(9600);
@@ -61,6 +63,7 @@ int myMultiplyFunction(int x, int y){
 
 This function will read a sensor five times with `analogRead()` and calculate the average of five readings. It then scales the data to 8 bits (0-255), and inverts it, returning the inverted result.
 
+[source,arduino]
 ----
 int ReadSens_and_Condition(){
   int i;
@@ -79,6 +82,7 @@ int ReadSens_and_Condition(){
 
 To call our function we just assign it to a variable.
 
+[source,arduino]
 ----
 int sens;
 

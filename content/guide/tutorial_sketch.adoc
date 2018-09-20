@@ -7,10 +7,11 @@ A sketch is the name that Energia uses for a program. It's the unit of code that
 === Comments ===
 The first few lines of the Blink sketch are a comment:
 
+[source,arduino]
 ----
 /*
 *  Blink
-*  The basic Energia Example. 
+*  The basic Energia Example.
 *  Turns on an LED on for one second, then off for one second, repeatedly.
 *  Pin 6 has an LED connected on MSP430 boards, has a name 'RED_LED' in the code.
 */
@@ -20,6 +21,7 @@ Everything between the `/* and */` is ignored by the LaunchPad when it runs the 
 
 There's another style for short, single-line comments. These start with `//` and continue to the end of the line. For example, in the line:
 
+[source,arduino]
 ----
 int ledPin = 14;  // LED connected to digital pin 14
 ----
@@ -34,6 +36,7 @@ Often, however, the value of a variable will change while the sketch runs. For e
 Functions
 A function (otherwise known as a procedure or sub-routine) is a named piece of code that can be used from elsewhere in a sketch. For example, here's the definition of the `setup()` function from the Blink example:
 
+[source,arduino]
 ----
 void setup()
 {

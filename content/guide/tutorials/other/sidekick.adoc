@@ -1,3 +1,8 @@
++++
+aliases = [
+    "/sidekick/",
+]
++++
 == Sidekick for TI LaunchPad ==
 
 video::iuAYQKBJkhM[youtube]
@@ -12,7 +17,7 @@ Sidekick includes loose components, wires, and a breadboard to compliment your L
 
 === Examples ===
 
-Download the example code at http://energia.nu/wordpress/wp-content/uploads/2015/11/Sidekick_LaunchPad.zip[www.energia.nu/sidekickcode]. It will also be available in the Energia code examples for version 18+. 
+Download the example code at http://energia.nu/wordpress/wp-content/uploads/2015/11/Sidekick_LaunchPad.zip[www.energia.nu/sidekickcode]. It will also be available in the Energia code examples for version 18+.
 The code is also available on the example pages below for copy and paste into your sketches
 
 === Basic Examples ===
@@ -75,63 +80,63 @@ The code is also available on the example pages below for copy and paste into yo
 
 === Components ===
 
-1x 400 Tie-Point Breadboard 
+1x 400 Tie-Point Breadboard
 
-1x Breadboard Adapter BoosterPack 
+1x Breadboard Adapter BoosterPack
 
-5x Green LED 
+5x Green LED
 
-5x Red LED 
+5x Red LED
 
-1x RGB Common Anode LED 
+1x RGB Common Anode LED
 
-10x Ceramic Capacitor 10nF 
+10x Ceramic Capacitor 10nF
 
-10x Ceramic Capacitor 100nF 
+10x Ceramic Capacitor 100nF
 
-5x Aluminum Capacitor 100uF 
+5x Aluminum Capacitor 100uF
 
-10x Resistor 330 ohm 
+10x Resistor 330 ohm
 
-10x Resistor 1K ohm 
+10x Resistor 1K ohm
 
-10x Resistor 10K ohm 
+10x Resistor 10K ohm
 
-1x Tilt Switch 
+1x Tilt Switch
 
-1x Thermistor 
+1x Thermistor
 
-1x Photoresistor (photocell) 
+1x Photoresistor (photocell)
 
-1x Diode (1N4004) 
+1x Diode (1N4004)
 
-1x Piezo Buzzer 
+1x Piezo Buzzer
 
-5x Button 
+5x Button
 
-5x Switch 
+5x Switch
 
-2x Potentiometer with knob 
+2x Potentiometer with knob
 
-1x Small DC Motor 
+1x Small DC Motor
 
-1x 7 Segment Single Digit Display (http://www.kingbrightusa.com/error/baditem.asp[SA39-11SRWA] - http://energia.nu/wordpress/wp-content/uploads/2015/07/SevenSegmentDS.pdf[datasheet]) 
+1x 7 Segment Single Digit Display (http://www.kingbrightusa.com/error/baditem.asp[SA39-11SRWA] - http://energia.nu/wordpress/wp-content/uploads/2015/07/SevenSegmentDS.pdf[datasheet])
 
-1x 8-bit Shift Register (http://www.ti.com/product/SN74HC595[SN74HC595N] - http://www.ti.com/lit/ds/symlink/sn74hc595.pdf[datasheet]) 
+1x 8-bit Shift Register (http://www.ti.com/product/SN74HC595[SN74HC595N] - http://www.ti.com/lit/ds/symlink/sn74hc595.pdf[datasheet])
 
-1x NPN Transistor (http://www.ti.com/product/LP395[LP395Z/NOPB] - http://www.ti.com/lit/ds/symlink/lp395.pdf[datasheet]) 
+1x NPN Transistor (http://www.ti.com/product/LP395[LP395Z/NOPB] - http://www.ti.com/lit/ds/symlink/lp395.pdf[datasheet])
 
-1x NPN Transistor (2N2222 - datasheet) 
+1x NPN Transistor (2N2222 - datasheet)
 
-1x Analog Temperature Sensor (http://www.ti.com/product/LM19[LM19CIZ/NOPB] - http://www.ti.com/lit/ds/symlink/lm19.pdf[datasheet]) 
+1x Analog Temperature Sensor (http://www.ti.com/product/LM19[LM19CIZ/NOPB] - http://www.ti.com/lit/ds/symlink/lm19.pdf[datasheet])
 
-5x Jumper Wire Long 
+5x Jumper Wire Long
 
-20x Jumper Wire Short 
+20x Jumper Wire Short
 
-1x Sidekick Quick Start Guide 
+1x Sidekick Quick Start Guide
 
-1x Sidekick Manual 
+1x Sidekick Manual
 
 
 === Buy Now ===
@@ -148,5 +153,3 @@ image::../img/SEEED-logo1-W280.jpg[]
 image::../img/logo.png[]
 
 *Sidekick*   http://energia.nu/guide/sidekick/#examples[Examples] | http://energia.nu/guide/sidekick/#components[Components List] | http://energia.nu/guide/sidekick/#buy[Buy Now]
-
- 
