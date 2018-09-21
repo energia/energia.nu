@@ -208,9 +208,9 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/other/o-scope-operation/[O-Scope Operation]: Learning how to use an Tektronix Oscilloscope with MSP430 LaunchPad.
 * LabVIEW Home: Use Energia in National Instruments LabVIEW.
 * Processing: Create GUIs and visual representations of Energia data using Processing IDE.
-* link:learn/[Energia.nu/learn]: Full workshops on Energia material.
-* link:tutorials/other/tutorials/basics/tutorial_iop/[IoP Machine]: Learn how to create an internet connected popcorn machine.
-* link:tutorials/basics/tutorial_energytrace/[Energy Trace]: Learn how to measure energy consumption in your Energia system.
+* link:/guide/tutorials/other/learn/[Energia.nu/learn]: Full workshops on Energia material.
+* link:/guide/tutorials/other/tutorial_iop/[IoP Machine]: Learn how to create an internet connected popcorn machine.
+* link:/guide/tutorials/other/tutorial_energytrace/[Energy Trace]: Learn how to measure energy consumption in your Energia system.
 
 ++++
     </div>
