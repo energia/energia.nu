@@ -1,6 +1,6 @@
 == String StartsWith and EndsWith Functions ==
 
-The String functions link:/reference/en/language/variables/data-types/functions/startswith/[`startsWith()`] and link:/reference/en/language/variables/data-types/functions/endswith[`endsWith()`] allow you to check what character or substring a given String starts or ends with. They're basically special cases of link:/reference/en/language/variables/data-types/functions/substring/[`substring()`].
+The String functions link:/reference/en/language/variables/data-types/string/functions/startswith/[`startsWith()`] and link:/reference/en/language/variables/data-types/string/functions/endswith/[`endsWith()`] allow you to check what character or substring a given String starts or ends with. They're basically special cases of link:/reference/en/language/variables/data-types/string/functions/substring/[`substring()`].
 
 === Relevant Groundwork ===
 

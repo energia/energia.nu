@@ -125,8 +125,8 @@ video::vg5P3tjMTP0[youtube]
 * link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
 * link:/reference/en/language/functions/digital-io/digitalread/[digitalRead()]
 * link:/reference/en/language/functions/time/delay/[delay()]
-* link:/reference/en/language/variables/data-types/strings/int/[int]
-* link:/reference/en/language/functions/communication/stream/serial/[serial]
+* link:/reference/en/language/variables/data-types/int/[int]
+* link:/reference/en/language/functions/communication/serial/[serial]
 * link:/guide/foundations/micro/tutorial_digitalpins/[DigitalPins]
 * link:/guide/tutorials/basics/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
 * link:/guide/tutorials/basics/tutorial_blink/[Blink]:turn an LED on and off.

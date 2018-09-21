@@ -45,5 +45,5 @@ pinMode(pin, INPUT_PULLDOWN); // set pin to input and enable internal pulldown r
 === See Also ===
 
 * link:/reference/en/language/functions/digital-io/pinmode/[pinMode()]
-* link:/reference/en/language/functions/digital-io/pinmode/digitalwrite/[digitalWrite()]
-* link:/reference/en/language/functions/digital-io/pinmode/digitalread/[digitalRead()]
+* link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
+* link:/reference/en/language/functions/digital-io/digitalread/[digitalRead()]

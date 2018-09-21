@@ -112,12 +112,12 @@ video::DYf982c-Ia4[youtube]
 * link:/reference/en/language/structure/sketch/setup/[setup()]
 * link:/reference/en/language/structure/sketch/loop/[loop()]
 * link:/reference/en/language/functions/analog-io/[analogRead()]
-* link:/reference/en/language/Variables/data-types/int/[int]
+* link:/reference/en/language/variables/data-types/int/[int]
 * link:/reference/en/language/functions/communication/serial/[serial]
-* link:/reference/en/language/Variables/data-types/float/[float]
+* link:/reference/en/language/variables/data-types/float/[float]
 * link:/guide/tutorials/basics/tutorial_bareminimum/[BareMinimum]:the bare minimum of code needed to start an Energia sketch.
 * link:/guide/tutorials/basics/tutorial_blink/[Blink]:turn an LED on and off.
 * link:/guide/tutorials/basics/tutorial_digitalreadserial/[DigitalReadSerial]:read a switch, print the state out to the Energia Serial Monitor.
-* link:/tutorials/basics/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state out to the Energia Serial Monitor.
+* link:/guide/tutorials/basics/tutorial_analogreadserial/[AnalogReadSerial]:read a potentiometer, print it's state out to the Energia Serial Monitor.
 * link:/guide/tutorials/basics/tutorial_fade/[Fade]:demonstrates the use of analog output to fade an LED.
 * link:/guide/tutorials/basics/tutorial_readanalogvoltage/[ReadAnalogVoltage]:reads an analog input and prints the voltage to the serial monitor.
