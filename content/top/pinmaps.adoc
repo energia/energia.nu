@@ -41,7 +41,7 @@ Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depend
 
 === 16-bit MSP430
 * link:msp-exp430g2[MSP430G2 LaunchPad (MSP-EXP430G2)]
-* link:msp-exp430g2et[MSP430G2ET LaunchPad (MSP-EXP430G2ET)]
+* MSP430G2ET LaunchPad (MSP-EXP430G2ET)
 * link:msp-exp430f5529[MSP430F5529 LaunchPad (MSP-EXP430F5529LP)]
 * link:msp-exp430fr2311[MSP430FR2311 LaunchPad (MSP-EXP430FR2311)]
 * link:msp-exp430fr5739[MSP430FR5739 LaunchPad (MSP-EXP430FR5739)]
