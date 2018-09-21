@@ -1,0 +1,19 @@
+== find() ==
+=== Description ===
+Serial.find() reads data from the serial buffer until the target string of given length is found. The function returns true if target string is found, false if it times out. find() inherits from the Stream utility class
+
+ 
+
+=== Syntax ===
+Serial.find(target)
+
+ 
+
+=== Parameters ===
+target : the string to search for (char)
+
+ 
+
+=== Returns ===
+boolean
+

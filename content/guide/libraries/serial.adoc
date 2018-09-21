@@ -1,0 +1,95 @@
+++++
+<style>
+.container {
+    width: 960px;
+    position: relative;
+    margin: 0;
+    z-index:1;
+
+}
+
+.ulist li {
+  margin: -0.5em;
+}
+
+#first {
+    width: 210px;
+    float: left;
+    position: fixed;
+    border-right: 1px dotted lightgray;
+
+}
+
+#second {
+    width: 740px;
+    float: right;
+    overflow: hidden;
+}
+</style>
+
+<div class='container'>
+    <div id="first">
+++++
+
+Functions
+
+* link:../serial/serial_available[available()]
+* link:../serial/serial_begin[begin()]
+* link:../serial/serial_end[end()]
+* link:../serial/serial_find[find()]
+* link:../serial/serial_finduntil[findUntil()]
+* link:../serial/serial_flush[flush()]
+* link:../serial/serial_parseint[parseInt()]
+* link:../serial/serial_peek[peek()]
+* link:../serial/serial_print[print()]
+* link:../serial/serial_println[println()]
+* link:../serial/serial_read[read()]
+* link:../serial/serial_readbytes[readBytes()]
+* link:../serial/serial_readbytesuntil[readBytesUntil()]
+* link:../serial/serial_settimeout[setTimeout()]
+* link:../serial/serial_write[write()]
+++++
+    </div>
+    <div id="second">
+++++
+== Serial Library (UART) ==
+This guide will help you get started with serial communication on your Launchpad under Energia. UART (Universal Asynchronous Receiver and Transmitter) is a simple form of data transmission between a PC and microncontroller or microcontroller and peripheral. It is a low speed, bi-directional protocol that requires a minimum of two pins and a common ground line for data communication. There is an RX (receive) and TX (transmit) line that corresponds to the opposite TX and RX lines of the device that is being communicated with.  Often times when using Energia you will use UART to print debug messages to your serial monitor.
+
+There are two types of UART that can be enabled: Hardware and Software. Hardware UART will improve performance versus a software UART and will be easier to work with using the Serial Library.
+
+Depending on your hardware you may have more than one pair of UART pins. By default, you can use “Serial” when using UART. You can use additional UART pins by calling “Serial1, Serial2, …” etc.
+
+=== MSP430G2 Hardware Configuration ===
+There are several versions of the Launchpad in the wild, and as each package ships with two different MSPs, the array of configurations can be bewildering to the user new to the Launchpad platform or new to microcontroller programming in general. The latest Launchpad, (v1.5) ships with a http://www.ti.com/product/msp430g2553[MSP430G2553] seated in the DIP socket, as pictured in figure 1.
+
+image::/guide/libraries/serial/img/M430G2553.jpg[]
+
+Figure 1: MSP430 chip with hardware UART.It is ultimately the chip in the socket that determines the availability of hardware Serial, as all versions of the launchpad board can be reconfigured to support MSP430 chips with a hardware UART if you have them on hand. `The other chip that ships in the Launchpad v1.5 box is an` http://www.ti.com/product/msp430g2452[MSP430G2452]`, which does not have an onboard hardware UART. Therefore, even if you have Launchpad v1.5 it is advisable to check that you have the right chip inserted before proceeding`
+
+If your Launchpad is version 1.4 or earlier, the chips that it shipped with have no hardware UART and thus, no hardware configuration is necessary, but you must use the SoftwareSerial library included in Energia to communicate over the serial port. Unfortunately, software serial communication will use more CPU cycles than the hardware option. With that in mind, if you are coming from the Arduino world, it might be worth the cost to obtain a 1.5 or later Launchpad or a replacement MSP430 such as the MSP430G2553. `If you have a chip such as the` http://www.ti.com/product/msp430g2553[MSP430G2553] `with hardware UART and would like to use a revision 1.4 or earlier launchpad, see the guide below`
+
+If your Launchpad is version 1.5 it will be labeled “MSP-EXP430G2” with the text “Rev 1.5” in smaller type immediately below, as pictured. In order to enable the Hardware UART on the launchpad, you must manually change the jumper positions on header J3 to match those pictured in figure 2, by rotating them 90 degrees from the position they shipped in. A diagram is silkscreened on the board for clarity.
+
+image::/guide/libraries/serial/img/Launchpad.jpg[]
+
+Figure 2: Launchpad Revision 1.5 with jumpers set for hardware UART
+The Launchpad 1.5 ships with the jumpers in their default position (software UART only) to mimic the behavior of earlier revisions of the Launchpad. By rotating the jumpers, you can use the Energia Serial Library normally.
+
+=== Software Configuration ===
+=== Hardware UART ===
+For hardware UART users, the configuration is extremely simple — it behaves exactly the same as on the Arduino platform. It is noteworthy however, that the onboard Launchpad USB to serial bridge is limited to 9600 baud, as opposed to the higher baud rates available on recent Arduino boards like as the Uno
+
+image::/guide/libraries/serial/img/EnergiaHardwareSerial.png[]
+Figure 3: Screenshot of Energia code using the hardware UART.
+
+=== Software UART ===
+Information to be added.
+
+=== Hardware UART on Launchpad 1.4 ===
+If you have a Launchpad of v1.4 (versions that have no ‘Rev x.x’ printed below the ‘MSP-EXP430G2’ label are pre 1.5) is is possible to use hardware UART by replacing the MSP430 with a newer model, such as the MSP430G2553 and then cross connecting the serial pins in header J3.
+
+
+++++
+    </div>
+</div>
+++++

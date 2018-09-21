@@ -1,0 +1,22 @@
+== flush() ==
+=== Description ===
+Flushes the buffer of incoming serial data. Any call to link:../serial_read[Serial.read()] or link:../serial_available[Serial.available()] will return only data received after all the most recent call to Serial.flush().
+
+Serial.flush() waits for outgoing data to transmit before clearing the buffer contents.
+
+flush() inherits from the link:stream[Stream] utility class.
+
+ 
+
+=== Syntax ===
+Serial.flush()
+
+ 
+
+=== Parameters ===
+none
+
+ 
+
+=== Returns ===
+nothing
