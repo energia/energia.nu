@@ -3,13 +3,13 @@
 
 ### Description
 
-Used by the master to request bytes from a slave device. The bytes may then be retrieved with the `link:../wire_available[available()] and `link:../wire_read[read()] functions. `requestFrom()`` accepts a boolean argument changing its behavior for compatibility with certain I2C devices. If true, requestFrom() sends a stop message after the request, releasing the I2C bus. If false, `requestFrom()` sends a restart message after the request. The bus will not be released, which prevents another master device from requesting between messages. This allows one master device to send multiple requests while in control. The default value is true.
+Used by the master to request bytes from a slave device. The bytes may then be retrieved with the link:../wire_available[available()] and link:../wire_read[read()] functions. `requestFrom()` accepts a boolean argument changing its behavior for compatibility with certain I2C devices. If true, requestFrom() sends a stop message after the request, releasing the I2C bus. If false, `requestFrom()` sends a restart message after the request. The bus will not be released, which prevents another master device from requesting between messages. This allows one master device to send multiple requests while in control. The default value is true.
 
 ### Syntax
 [source,arduino]
 ----
-`Wire.requestFrom(address, quantity)`
-`Wire.requestFrom(address, quantity, stop)`
+Wire.requestFrom(address, quantity)
+Wire.requestFrom(address, quantity, stop)
 ----
 
 ### Parameters

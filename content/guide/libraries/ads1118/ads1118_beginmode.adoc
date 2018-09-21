@@ -35,6 +35,3 @@ None.
     }
 
     void loop() {}
-
-  [Reference
-Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")

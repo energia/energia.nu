@@ -3,7 +3,7 @@
 
 ### Description
 
-Begin a transmission to the I2C slave device with the given address. Subsequently, queue bytes for transmission with the `link:../wire_write[write()]` function and transmit them by calling `link:../wire_endtransmission[endTransmission()]`
+Begin a transmission to the I2C slave device with the given address. Subsequently, queue bytes for transmission with the link:../wire_write[write()] function and transmit them by calling link:../wire_endtransmission[endTransmission()]
 
 ### Parameters
 

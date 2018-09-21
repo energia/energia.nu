@@ -1,4 +1,4 @@
-ADS.localCompensation(int local\_code)
+ADS.localCompensation(int local_code)
 --------------------------------------
 
 ### Description
@@ -16,9 +16,8 @@ range of local temperature is 0 to 125 degrees Celsius.
 
 ### Parameters
 
-local\_code - local code read from ADC  
+local_code - local code read from ADC  
 
 ### Returns
 
-compensation codes   [Reference
-Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")
+compensation codes

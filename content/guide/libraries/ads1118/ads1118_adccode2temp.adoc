@@ -14,13 +14,10 @@ are used in different temperature ranges.
 
 -   ADS.ADCcode2temp(code);
 
- 
-
 ### Parameters
 
 code - code read from ADC  
 
 ### Returns
 
-temperature from code   [Reference
-Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")
+temperature from code
