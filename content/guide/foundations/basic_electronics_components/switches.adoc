@@ -2,5 +2,5 @@
 
 A switch will change how electricity flows through the switch.
 
-Sparkfun has a https://learn.sparkfun.com/tutorials/switch-basicshttp://[great tutorial on switches] if you want to know more about them.
+Sparkfun has a https://learn.sparkfun.com/tutorials/switch-basics[great tutorial on switches] if you want to know more about them.
 

@@ -1,0 +1,18 @@
+== end() ==
+=== Description ===
+Disables serial communication, allowing the RX and TX pins to be used for general input and output. To re-enable serial communication, call link:../serial_begin[Serial.begin()].
+
+ 
+
+=== Syntax ===
+Serial.end()
+
+ 
+
+=== Parameters ===
+none
+
+ 
+
+=== Returns ===
+nothing

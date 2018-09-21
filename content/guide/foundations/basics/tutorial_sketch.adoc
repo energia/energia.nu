@@ -52,7 +52,7 @@ You can _call_ a function that's already been defined (either in your sketch or 
 
 === pinMode(), digitalWrite(), and delay() ===
 
-The `pinMode()` function configures a pin as either an input or an output. To use it, you pass it the number of the pin to configure and the constant `INPUT` or `OUTPUT`. When configured as an input, a pin can detect the state of a sensor like a pushbutton; this is discussed in a http://energia.nu/guide/tutorials/basics/[later tutorial]. As an output, it can drive an actuator like an LED.
+The `pinMode()` function configures a pin as either an input or an output. To use it, you pass it the number of the pin to configure and the constant `INPUT` or `OUTPUT`. When configured as an input, a pin can detect the state of a sensor like a pushbutton; this is discussed in a http://energia.nu/guide/tutorials/basics/tutorial_digitalreadserial[later tutorial]. As an output, it can drive an actuator like an LED.
 
 The `digitalWrite()` functions outputs a value on a pin. For example, the line:
 

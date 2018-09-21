@@ -1,0 +1,45 @@
+== available() ==
+=== Description ===
+Get the number of bytes (characters) available for reading from the serial port. This is data that’s already arrived and stored in the serial receive buffer (which holds 128 bytes). available() inherits from the link:stream[Stream] utility class.
+
+ 
+
+=== Syntax ===
+Serial.available()
+
+ 
+
+=== Parameters ===
+none
+
+ 
+
+=== Returns ===
+the number of bytes available to read
+
+ 
+
+=== Example ===
+[source,arduino]
+----
+int incomingByte = 0;   // for incoming serial data
+
+void setup() {
+        Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps
+}
+
+void loop() {
+
+        // send data only when you receive data:
+        if (Serial.available() > 0) {
+                // read the incoming byte:
+                incomingByte = Serial.read();
+
+                // say what you got:
+                Serial.print("I received: ");
+                Serial.println(incomingByte, DEC);
+        }
+}
+----
+
+link:../../serial[Serial Library]
