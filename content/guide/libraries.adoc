@@ -26,8 +26,8 @@ These libraries are included in the official release of Energia. Learn how to ma
 * link:/reference/en/language/functions/communication/serial[Serial] &#8211; UART communication abstraction
 * Servo &#8211; Control a servo motor using this library
 * Software Serial &#8211; Software UART library
-* http://energia.nu/reference/spi/[SPI] &#8211; SPI communication abstraction
-* http://energia.nu/reference/stream/[Stream] &#8211; Parent library for many communication libraries like Serial
+* link:/guide/libraries/spi/[SPI] &#8211; SPI communication abstraction
+* link:/reference/en/language/functions/communication/stream[Stream] &#8211; Parent library for many communication libraries like Serial
 * Stepper &#8211; Control a stepper motor
 * https://www.temboo.com/hardware/ti/getting-started[Temboo] &#8211; Harness data from hundreds of web services using Temboo APIs
 * USBSerial &#8211; Multi-instance USB serial library
