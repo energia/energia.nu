@@ -22,5 +22,5 @@ puts 32 bytes into SRAM (each character takes a byte). This might not seem like 
 If you run out of SRAM, your program may fail in unexpected ways; it will appear to upload successfully, but not run, or run strangely. To check if this is happening, you can try commenting out or shortening the strings or other data structures in your sketch (without changing the code). If it then runs successfully, you're probably running out of SRAM. There are a few things you can do to address this problem:
 
 * If your sketch talks to a program running on a (desktop/laptop) computer, you can try shifting data or calculations to the computer, reducing the load on the LaunchPad.
-* If you have lookup tables or other large arrays, use the smallest data type necessary to store the values you need; for example, an link:/reference/en/language/variables/data-types/string/int/[int] takes up two bytes, while a link:/reference/en/language/variables/data-types/string/byte/[byte] uses only one (but can store a smaller range of values).
+* If you have lookup tables or other large arrays, use the smallest data type necessary to store the values you need; for example, an link:/reference/en/language/variables/data-types/int/[int] takes up two bytes, while a link:/reference/en/language/variables/data-types/byte/[byte] uses only one (but can store a smaller range of values).
  

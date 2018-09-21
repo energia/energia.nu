@@ -1,22 +1,17 @@
-*WiFiUDP*.peek()
-----------------
+== WiFiUDP.peek() ==
 
-Read a byte from the file without advancing to the next one. That is,
-successive calls to peek() will return the same value, as will the next
-call to read(). This function inherited from the Stream class. See the
-[Stream class](http://energia.nu/reference/stream/ "Stream"){.wikilink}
-main page for more information.
+Read a byte from the file without advancing to the next one. That is, successive calls to peek() will return the same value, as will the next call to read(). This function inherited from the Stream class. See the http://energia.nu/reference/stream/[Stream class] main page for more information.
 
-#### Syntax
+=== Syntax ===
 
 *WiFiUDP*.peek()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
-b: the next byte or character -1: if none is available [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")
+b: the next byte or character 
+
+-1: if none is available

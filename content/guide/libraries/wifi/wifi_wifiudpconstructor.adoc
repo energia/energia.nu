@@ -1,18 +1,13 @@
-<span class="wikiword">WiFiUDP</span>
--------------------------------------
+== WiFiUDP ==
 
-#### Description
+=== Description ===
 
-Creates a named instance of the <span class="wikiword">WiFi</span> UDP
-class that can send and receive UDP messages.
+Creates a named instance of the WiFi UDP class that can send and receive UDP messages.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFiUDP</span>
+WiFiUDP
 
-#### Parameters
+=== Parameters ===
 
 none
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

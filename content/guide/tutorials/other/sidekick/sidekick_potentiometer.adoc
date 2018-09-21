@@ -1,0 +1,81 @@
+== Example 06: Potentiometer (Variable Resistor) ==
+
+Learn how to use a potentiometer for variable resistance.
+
+=== Hardware Required ===
+
+* TI LaunchPad
+* Breadboard BoosterPack
+* Breadboard
+* Potentiometer
+* 5x Jumper Wires
+* Buzzer
+
+ 
+=== Relevant Groundwork ===
+
+In this example, we will turn on the LED and make a tone with the buzzer when the potentiometer is turned clockwise past a threshold, and we will turn off the LED and buzzer when the potentiometer is turned counter-clockwise past a threshold. The LED and buzzer give us a visual and audio indication of when the potentiometer has been rotated. The code to perform this function is shown below.
+
+A potentiometer is a rotation sensor that is used for things like dials and knobs in electronic systems.  They are simply mechanical resistors that changes resistance when given a tactile input. To the microcontroller, it sees the voltage change between 0 to VCC (3.3V) with the middle position being around 1.5-1.7V. To read the value of the potentiometer, we use the command analogRead(). The analogRead() function allows users to read the integer value of the selected pin (in our case, it will be set by the position of the potentiometer). The syntax to read the pin using the analogRead() function is: analogRead(pin). In the parenthesis, pin represents the name of the pin you want to read from. This will be the pin connected to the potentiometer in our example circuit. The analogRead() function will return a value between 0 and 1024, depending on the position of the potentiometer.
+
+In the real world, many electronics can be controlled by potentiometers (volume knobs, stovetop knobs, etc). In this example, we utilized the analogRead() function to read the analog value on pin 2 (which is connected to the potentiometer). We have used the Red LED as a tool to show that the software works correctly and is reading the value correctly from the potentiometer.
+Circuit & Schematic
+
+With Breadboard BoosterPack
+
+image::../img/SidekickExample06-BB_bb.png[800,600]
+
+
+With LaunchPad
+
+image::../img/SidekickExample06_bb.png[800,600]
+
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_potentiometer.ino[]
+----
+
+
+=== Programming Challenge ===
+
+* Can you make the LED change brightness when the potentiometer is turned? Make sure to hook the LED to a PWM pin.
+
+* Can you make the LED blink faster or slower based on the potentiometer? Hint: Save the analogRead() value to a variable and use it as your delay time.
+
+=== Troubleshooting ===
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+ 
+
+Potentiometer feels backward?
+
+* The direction of the pot is based on how the VCC and GND wires are hooked up. If you want to switch the direction, you can either flip the potentiometer in place or swap the GND and VCC wires. This is called swapping the polarity.
+
+ 
+
+LED not lighting up?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the LED pins. There is very little chance that your RGB LED is broken, but we can verify by blinking a different LED with the same code.
+* Make sure your pins are properly connected, if they are not the LED will not light up properly. The GND pin of the LED should be connected to the GND pin of the LaunchPad.
+* Hit the reset button, sometimes this is needed for the LaunchPad to run the newly uploaded program.
+
+ 
+
+Buzzer not buzzing?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the buzzer pin.
+* Make sure your pins are properly connected, if they are not the buzzer will not make sounds properly.
+* Hit the reset button, sometimes this is needed for the LaunchPad to run the newly uploaded program.
+
+ 
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

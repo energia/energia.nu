@@ -1,23 +1,22 @@
-<span class="wikiword">WiFi</span>.macAddress()
------------------------------------------------
+== WiFi.macAddress() ==
 
-#### Description
+=== Description ===
 
-Gets the MAC Address of your <span class="wikiword">WiFi</span> shield
+Gets the MAC Address of your WiFi shield
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.macAddress(mac);\
+WiFi.macAddress(mac);
 
-#### Parameters
+=== Parameters ===
 
 mac: a 6 byte array to hold the MAC address
 
-#### Returns
+=== Returns ===
 
 byte array : 6 bytes representing the MAC address of your shield
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -57,6 +56,3 @@ byte array : 6 bytes representing the MAC address of your shield
     }
 
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

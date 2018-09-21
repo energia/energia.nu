@@ -22,7 +22,7 @@ Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18
 Step-by-step instructions for setting up the Energia IDE and running your first Sketch on a Texas Instruments LaunchPad board.
 
 * http://energia.nu/guide/install/windows/[Windows]
-* http://energia.nu/guide/install/macosx/[Mac OS X]
+* http://energia.nu/guide/install/macos/[Mac OS X]
 * http://energia.nu/guide/install/linux/[Linux]
 ==========================
 
@@ -100,7 +100,7 @@ http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-macosx.dmg[ene
 
 http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-windows.zip[energia-0101E0011-windows.zip]:Windows: Binary release version 0101E0011 (12/17/2013). 
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-linux.tgzi[energia-0101E0011-linux.tgz]:Linux 32-bit: Binary release version 0101E0011 (12/17/2013). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-linux.tgz[energia-0101E0011-linux.tgz]:Linux 32-bit: Binary release version 0101E0011 (12/17/2013). 
 
 http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-linux64.tgz[energia-0101E0011-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (12/17/2013). 
 
@@ -118,11 +118,11 @@ http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-linux64.tgz[en
 
 *Release 0101E0009* 
 
-http://energia.nu/downloads/downloadv2.php?file=energia-0101E0009-macosx.dmg[energia-0101E0009-macosx.dmg]:Mac OS X: Binary release version 0101E0009 (12/06/2012). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-macosx.dmg[energia-0101E0009-macosx.dmg]:Mac OS X: Binary release version 0101E0009 (12/06/2012). 
 
-http://energia.nu/downloads/downloadv2.php?file=energia-0101E0009-windows.zip[energia-0101E0009-windows.zip]:Windows: Binary release version 0101E0009 (12/06/2012). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-windows.zip[energia-0101E0009-windows.zip]:Windows: Binary release version 0101E0009 (12/06/2012). 
 
-http://energia.nu/downloads/downloadv2.php?file=energia-0101E0009-linux.tgz[energia-0101E0009-linux.tgz]:Linux: Binary release version 0101E0009 (12/06/2012). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-linux.tgz[energia-0101E0009-linux.tgz]:Linux: Binary release version 0101E0009 (12/06/2012). 
 
 
 == Community Contributed Alternatives ==

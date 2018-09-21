@@ -1,0 +1,53 @@
+== Example: Spin the Servo (Servo Control) ==
+
+Learn how to use a servo to create motion.
+
+=== Hardware Required ===
+
+* TI LaunchPad
+* Breadboard
+* Servo
+* 3x Jumper Wires
+
+ 
+=== Relevant Groundwork ===
+
+In this example we will use a servo, which can be more useful than motors in some projects and also easier to control. A servo has a small gearbox and some electronics inside so that we can control it directly from a LaunchPad without the assistance of a transistor or motor driver. Think of it as built in and ready to move. A standard servo can move from 0 to 180 degrees, but there are also continuous rotation servos available that let you do full rotations. Double check which kind of servo you have or want to buy. The continuous rotation servos are more popular and fun but sometimes more expensive.
+
+We will use the Servo library to help us control the servo. Make sure the Servo.h is included in your sketch (#include <servo.h>).
+
+A typical servo has 3 wire connections. Simply hook up the servo to GND (black wire), VCC (red wire), and a PWM pin (remaining wire).
+
+=== Circuit ===
+
+image::../img/example_servo_bb.png[800,600]
+
+
+==== Code ====
+
+Find the latest and greatest code example link:https://github.com/Seeed-Studio/LaunchPad_Kit[HERE] on GitHub.
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_spinservo.ino[]
+----
+
+=== Programming Challenge === 
+
+How fast can you spin the servo? Can you make the servo go slower?
+
+=== Troubleshooting === 
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+Servo not moving?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the pins.
+* Make sure you properly connected the servo. If you do not you could risk damage. If you have connected your servo incorrectly while powered up and you are experiencing problems it is possible it is broken, but try to run some sample code to verify, because it could still be a software issue.
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

@@ -37,15 +37,11 @@ toc::[]
 
 Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depending on the LaunchPad) of the BoosterPack header pins as identifiers in their software.  Because these numbers are consistent between all Launchpads, this help to ensure the portability of the user's software.  Some LaunchPads also support the use of GPIO or Port numbers such as "P1_3".  These names are not recommended for use and will be deprecated in the future.  New LaunchPads that are added to Energia will not support pin names based on GPIO or Port numbers.
 
-== Pins Standard
-
-* http://energia.nu/pin-maps/guide_standardboosterpack/[Pins Standard for LaunchPads and BoosterPack]
-
 == LaunchPads
 
 === 16-bit MSP430
 * link:msp-exp430g2[MSP430G2 LaunchPad (MSP-EXP430G2)]
-* link:msp-exp430g2et[MSP430G2ET LaunchPad (MSP-EXP430G2ET)]
+* MSP430G2ET LaunchPad (MSP-EXP430G2ET)
 * link:msp-exp430f5529[MSP430F5529 LaunchPad (MSP-EXP430F5529LP)]
 * link:msp-exp430fr2311[MSP430FR2311 LaunchPad (MSP-EXP430FR2311)]
 * link:msp-exp430fr5739[MSP430FR5739 LaunchPad (MSP-EXP430FR5739)]

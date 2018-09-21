@@ -1,22 +1,19 @@
-WiFiUDP.endPacket()
--------------------
+== WiFiUDP.endPacket() ==
 
-#### Description
+=== Description ===
 
-Called after writing UDP data to the remote connection. It finishes off
-the packet and send it.
+Called after writing UDP data to the remote connection. It finishes off the packet and send it.
 
-#### Syntax
+=== Syntax ===
 
 WiFiUDP.endPacket();
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
-1: if the packet was sent successfully 0: if there was an error
+1: if the packet was sent successfully
 
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")
+0: if there was an error

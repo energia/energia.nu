@@ -1,29 +1,30 @@
-<span class="wikiword">WiFi</span>.setDNS()
--------------------------------------------
+== WiFi.setDNS() ==
 
-#### Description
+=== Description ===
 
 `WiFi.setDNS()` allows you to configure the DNS (Domain Name System)
 server.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.setDNS(dns\_server1) <span
-class="wikiword">WiFi</span>.setDNS(dns\_server1, dns\_server2)
+WiFi.setDNS(dns_server1)
 
-#### Parameters
+WiFi.setDNS(dns_server1, dns_server2)
 
-**dns\_server1**: the IP address of the primary DNS server
-**dns\_server2**: the IP address of the secondary DNS server
+=== Parameters ===
 
-#### Returns
+**dns_server1**: the IP address of the primary DNS server
+
+**dns_server2**: the IP address of the secondary DNS server
+
+=== Returns ===
 
 Nothing
 
-#### Example
+=== Example ===
 
 This example shows how to set the Google DNS (8.8.8.8). You can set it
-as an object <span class="wikiword">IPAddress</span>.
+as an object IPAddress.
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -68,6 +69,3 @@ as an object <span class="wikiword">IPAddress</span>.
 
     void loop () {
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference") || [WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")

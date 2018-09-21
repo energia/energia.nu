@@ -51,7 +51,7 @@ Step-by-step instructions for setting up the Energia IDE and running your first 
 * link:../pinmaps/[Pin Mapping]: Complete list of all Pin Mapping images and instructions for each Energia supported hardware board.
 * link:reference/libraries/[Libraries]: Complete list of all add-on libraries supported by Energia. *Check out link:library-manager/[this tutorial] for Energia 18!*
 * https://github.com/energia/Energia/wiki/Build-Energia[Build IDE from Source]: Use the latest code base from Github to create a build of Energia.
-* link:import-energia-sketch-to-ccsv6/[Import to Code Composer Studio]: Use Energia functions and sketches in CCS version 6+, TI's Eclipse-based IDE.
+* Import to Code Composer Studio: Use Energia functions and sketches in CCS version 6+, TI's Eclipse-based IDE.
 * Import to CCS Cloud: Use Energia functions and sketches in https://dev.ti.com/[CCS Cloud], TI's browser-based IDE.
 
 == Foundations ==
@@ -208,9 +208,9 @@ Simple programs that demonstrate basic Energia commands. These are included with
 * link:tutorials/other/o-scope-operation/[O-Scope Operation]: Learning how to use an Tektronix Oscilloscope with MSP430 LaunchPad.
 * LabVIEW Home: Use Energia in National Instruments LabVIEW.
 * Processing: Create GUIs and visual representations of Energia data using Processing IDE.
-* link:learn/[Energia.nu/learn]: Full workshops on Energia material.
-* link:tutorials/other/tutorials/basics/tutorial_iop/[IoP Machine]: Learn how to create an internet connected popcorn machine.
-* link:tutorials/basics/tutorial_energytrace/[Energy Trace]: Learn how to measure energy consumption in your Energia system.
+* link:/guide/tutorials/other/learn/[Energia.nu/learn]: Full workshops on Energia material.
+* link:/guide/tutorials/other/tutorial_iop/[IoP Machine]: Learn how to create an internet connected popcorn machine.
+* link:/guide/tutorials/other/tutorial_energytrace/[Energy Trace]: Learn how to measure energy consumption in your Energia system.
 
 ++++
     </div>

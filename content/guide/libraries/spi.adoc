@@ -90,10 +90,10 @@ phase according to this table:
 
   ------------ --------------------------- ------------------------
   **Mode**     **Clock Polarity (CPOL)**   **Clock Phase (CPHA)**
-  SPI\_MODE0   0                           0
-  SPI\_MODE1   0                           1
-  SPI\_MODE2   1                           0
-  SPI\_MODE3   1                           1
+  SPI_MODE0   0                           0
+  SPI_MODE1   0                           1
+  SPI_MODE2   1                           0
+  SPI_MODE3   1                           1
   ------------ --------------------------- ------------------------
 
 The `SPI.setDataMode()` function lets you set the mode to control clock

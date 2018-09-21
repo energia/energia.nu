@@ -1,6 +1,6 @@
 == String Length() and Trim() Commands ==
 
-You can get the length of a link:/reference/en/language/variables/data-types/string/string/[String] using the `length()` command, or eliminate extra characters using the `trim()` command. This example shows you how to use both commands.
+You can get the length of a link:/reference/en/language/variables/data-types/string/[String] using the `length()` command, or eliminate extra characters using the `trim()` command. This example shows you how to use both commands.
 
 === Relevant Groundwork ===
 

@@ -33,14 +33,14 @@
 
 .Functions
 
-* link:../ads1118-thermocouple-boosterpack/ads1118_begin[begin()]
-* link:../ads1118-thermocouple-boosterpack/ads1118_beginmode[begin(mode)]
-* link:../ads1118-thermocouple-boosterpack/ads1118-writespi[writeSPI()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-adsread[ADSread()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-adccode2temp[ADCcode2temp()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-localcompensation[localCompensation()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-readcelcius[readCelcius()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-readfarenheit[readFarenheit()]
+* link:ads1118_begin[begin()]
+* link:ads1118_beginmode[begin(mode)]
+* link:ads1118_writespi[writeSPI()]
+* link:ads1118_adsread[ADSread()]
+* link:ads1118_adccode2temp[ADCcode2temp()]
+* link:ads1118_localcompensation[localCompensation()]
+* link:ads1118_readcelcius[readCelcius()]
+* link:ads1118_readfarenheit[readFarenheit()]
 
 
 ++++
@@ -54,14 +54,14 @@
 
 ### Functions
 
-* link:../ads1118-thermocouple-boosterpack/ads1118_begin[begin()]
-* link:../ads1118-thermocouple-boosterpack/ads1118_beginmode[begin(mode)]
-* link:../ads1118-thermocouple-boosterpack/ads1118-writespi[writeSPI()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-adsread[ADSread()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-adccode2temp[ADCcode2temp()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-localcompensation[localCompensation()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-readcelcius[readCelcius()]
-* link:../ads1118-thermocouple-boosterpack/ads1118-readfarenheit[readFarenheit()]
+* link:ads1118_begin[begin()]
+* link:ads1118_beginmode[begin(mode)]
+* link:ads1118_writespi[writeSPI()]
+* link:ads1118_adsread[ADSread()]
+* link:ads1118_adccode2temp[ADCcode2temp()]
+* link:ads1118_localcompensation[localCompensation()]
+* link:ads1118_readcelcius[readCelcius()]
+* link:ads1118_readfarenheit[readFarenheit()]
 
 ### Overview
 
@@ -81,7 +81,7 @@ user to interact with it and enable the ADS1118 Thermocouple in a
 variety of applications. You can visit the following link to buy and
 gather more information on the ADS1118
 BoosterPack. <http://www.ti.com/tool/430boost-ads1118>.
-Click [here](https://github.com/ewakefield/ADS1118) to go download this
+Click https://github.com/ewakefield/ADS1118[here] to go download this
 library.
 
 ### Hardware Configuration
@@ -100,7 +100,7 @@ ADS1118 BoosterPack!
 To get started with our ADS1118 BoosterPack, first you must open
 Energia. The first step is to include the ADS1118 Library.
 
--   \#include &lt;ADS1118.h&gt;
+-   #include <ADS1118.h>
 
 Then next, we need to instantiate an instance of our ADS1118 Library.
 For example type the following before the setup or loop functions in
@@ -130,11 +130,6 @@ it to a Serial port.
             Serial.println(ADS.readFarenheit());
             delay(100);
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference") ||
-[Libraries Home](http://energia.nu/reference/libraries/ "Libraries")
-
-
 ++++
     </div>
 </div>

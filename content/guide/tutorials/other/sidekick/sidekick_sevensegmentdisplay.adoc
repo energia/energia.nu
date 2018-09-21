@@ -1,0 +1,62 @@
+== Example 10: 7 Segment Display (Digital Display) ==
+
+Learn how to display numbers and letters using a 7 segment display.
+
+== Hardware Required ==
+
+* TI LaunchPad
+* Breadboard BoosterPack
+* Breadboard
+* 7 Segment Display
+* 9x Jumper Wires
+* 8x 330 ohm resistors (optional)
+
+ 
+== Relevant Groundwork ==
+
+We will use a special LED array called a seven segment display to allow us to create numbers and letters. This is useful for giving us a visual display of something happening in the circuit. With this type of display we can show a number or letter. With more of these displays we could display a larger digit number or a word. The segments are normally labeled A-G as seen in the diagram below. We will use this orientation in our code.
+
+image::../img/segmentlabel.jpg[]
+
+
+By flipping segments on in a certain pattern, we can form visible numbers.  Displaying human readable information is often an important feature of an electronic system. Electronics can deliver data that humans can then act upon.
+
+This is the last basic example for the Sidekick. You have learned a lot about inputs, outputs, basic components, and controlling a system. You can continue with the advanced examples that may require additional components or you can review the Energia guide examples. If you did not complete the programming challenges for each exercise, you can go back and do them to improve your confidence with programming. To make more exciting projects, you can use BoosterPacks to add more capabilities to your LaunchPad.
+Circuit & Schematic
+
+With Breadboard BoosterPack
+
+image::../img/SidekickExample10-BB_bb.png[800,600]
+
+With LaunchPad
+
+image::../img/SidekickExample10_bb.png[800,600]
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_sevensegmentdisplay.ino[]
+----
+
+== Programming Challenge ==
+
+Can you display your name or a message on the segment display? Print out one letter at a time.
+
+== Troubleshooting ==
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+Display not lighting up?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the LED pins.
+* Make sure your pins are properly connected, if they are not the Segment Display will not light up properly. The VCC pin of the LED should be connected to the VCC pin of the LaunchPad.
+
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!
+

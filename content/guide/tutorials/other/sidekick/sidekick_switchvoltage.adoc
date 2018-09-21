@@ -1,0 +1,79 @@
+== Example 08B: Switch Voltage (Transistor) ==
+
+Learn how to use a transistor to help us switch a higher voltage or current.
+
+This example can use the 3.3V or 5v rail of the LaunchPad. It is more simple than Example 08 and works with 20 pin LaunchPads, but it is not as exciting. If you have already done Example 08 successfully, you can skip to the next example. You can also use this example as a test if you think you may have damaged your transistor.
+
+=== Hardware Required ===
+
+* TI LaunchPad
+* Breadboard BoosterPack
+* Breadboard
+* 1x Red LED
+* 1x Transistor (LP395 or 2N2222)
+* 330 ohm resistor (optional)
+* 3x Jumper Wires
+
+ 
+=== Relevant Groundwork ===
+
+A microcontroller can be very useful for controlling small things like LEDs and measuring analog data but when it comes to things that might draw a lot of power, such as spinning a motor, it needs some extra help. One useful component we can add is a transistor. A transistor is an electronic switch that makes it possible for a low voltage DC signal like the GPIO pins on the LaunchPad to control a higher voltage signal. Transistors can be NPN or PNP, which designates the source of current. NPN (sinking) needs current and PNP (sourcing) supplies current. The transistors included in the sidekick are NPN. There are three pins on a basic NPN transistor: the emitter, the base, and the collector. The collector will collect current from a power source, so this means it will be connected to VCC of the higher voltage circuit. The emitter is emitting the electricity when the circuit is shorted so it will be connected to GND. The base is the pin that will control the switch and this will be hooked up to your signal pin on the LaunchPad. For extra protection, you can use a resistor between the base and the LaunchPad pin, just like an LED. Below is a labeled diagram of how a transistor is typically drawn in a schematic.
+
+image::../img/npn.png[]
+
+There is usually some math required to figure out what kind of resistor you need for the voltage you want to use. This math is based off of Ohm’s Law that says voltage in a circuit is equal to current times resistance (V=IR). For the example, you won’t need to worry about the calculations, but if you wanted to build your own circuit you may need to run through calculations to find the proper values for the components to work.
+
+CAUTION: The transistor can get VERY hot when powered on or connected incorrectly. Do not touch or yank the transistor until it is cool to the touch. There is a chance that you can burn out your transistor, so make sure you set up the circuit exactly as shown.
+
+Next you can build the circuit. Connect the GND of the LaunchPad to the emitter pin of the transistor. Connect Pin 19 of the LaunchPad to the base pin of the transistor. You can use a resistor between the base pin and the LaunchPad if you like.  Connect the shorter leg of the LED to the collector pin of the transistor. Connect the longer leg of the LED to VCC  or 5V pin of the LaunchPad. You can use an optional resistor between the LED and LaunchPad pins.
+
+Note: There are different types of transistors that ship with the Sidekick. The LP395 has a 100mA current limiter but can work perfectly for switching an LED. The 2N2222 transistor is a typical transistor and will also work.
+
+We can still use the code from Example 8 in this example. Instead of the motor pin, the code will now be our LED pin. It will also work in this circuit.
+Circuit & Schematic
+
+With Breadboard BoosterPack
+
+image::../img/SidekickExample08B-BB_bb.png[800,600]
+
+With LaunchPad
+
+image::../img/SidekickExample08B_bb.png[800,600]
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_switchvoltage.ino[]
+----
+
+Programming Challenge
+
+Can you change the duration of the motor? Can you change the speed of the motor?
+
+=== Troubleshooting ===
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset. This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+ 
+
+Motor not spinning?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the pins.
+* Your motor will probably need 5V or more to spin. If your LaunchPad does not have a 5V rail, you may need to hook up an external power supply like 4 AA or AAA batteries.
+* The motor may have too much current at the beginning so you may need to give the motor a kickstart with your finger to get it going. Some transistors can handle this better than others.
+* It’s possible you may have burned out your transistor by accident if you plugged it in wrong. Any NPN transistor can be used to make this circuit if you need to get a replacement. A common one is 2N2222 or the TIP31.
+* Try rebuilding the circuit from scratch and make sure your connections are correct.
+* If you’ve done all you can with no luck, move on to the next example. Motor control can be a tricky thing to debug.
+
+Motor constantly spinning?
+
+You may have plugged the transistor backwards. Turn it 180 degrees and see if it works. You should see the motor turn off and on.
+
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

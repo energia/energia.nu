@@ -2,8 +2,8 @@
 
 ### Description
 
-Returns the number of bytes available for retrieval with `link:../wire_read[read()]`.
-This should be called on a master device after a call to `link:../wire_requestfrom[requestFrom()]` or on a slave inside the `link:../wire_onreceive[onReceive()]` handler. `link:../wire_available[available()]` inherits from the
+Returns the number of bytes available for retrieval with link:../wire_read[read()].
+This should be called on a master device after a call to link:../wire_requestfrom[requestFrom()] or on a slave inside the link:../wire_onreceive[onReceive()] handler. link:../wire_available[available()] inherits from the
 link:/reference/en/language/functions/communication/stream/[Stream] utility class.
 
 ### Parameters

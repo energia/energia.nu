@@ -1,20 +1,20 @@
-<span class="wikiword">WiFi</span>.encryptionType()
----------------------------------------------------
+== WiFi.encryptionType() ==
 
-#### Description
+=== Description ===
 
 Gets the encryption type of the current network
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.encryptionType();\
-<span class="wikiword">WiFi</span>.encryptionType(wifiAccessPoint);\
+WiFi.encryptionType();
 
-#### Parameters
+WiFi.encryptionType(wifiAccessPoint);
+
+=== Parameters ===
 
 wifiAccessPoint: specifies which network to get information from\
 
-#### Returns
+=== Returns ===
 
 byte : value represents the type of encryption
 
@@ -24,7 +24,7 @@ byte : value represents the type of encryption
 -   NONE = 7
 -   AUTO = 8
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -52,6 +52,3 @@ byte : value represents the type of encryption
     }
 
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

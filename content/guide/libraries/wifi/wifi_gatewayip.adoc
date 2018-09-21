@@ -1,24 +1,23 @@
-<span class="wikiword">WiFi</span>.gatewayIP()
-----------------------------------------------
+== WiFi.gatewayIP() ==
 
-#### Description
+=== Description ===
 
-Gets the <span class="wikiword">WiFi</span> hardware's gateway IP
+Gets the WiFi hardware's gateway IP
 address.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.gatewayIP();\
+WiFi.gatewayIP();
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 An array containing the hardware gateway IP address
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -41,6 +40,3 @@ An array containing the hardware gateway IP address
       }
     }
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

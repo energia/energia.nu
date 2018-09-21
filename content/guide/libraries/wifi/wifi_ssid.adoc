@@ -1,26 +1,26 @@
-<span class="wikiword">WiFi</span>.SSID()
------------------------------------------
+== WiFi.SSID() ==
 
-#### Description
+=== Description ===
 
 Gets the SSID of the current network
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.SSID(); <span
-class="wikiword">WiFi</span>.SSID(wifiAccessPoint)
+WiFi.SSID();
 
-#### Parameters
+WiFi.SSID(wifiAccessPoint)
+
+=== Parameters ===
 
 wifiAccessPoint: specifies from which network to get the information
 
-#### Returns
+=== Returns ===
 
-A string containing the SSID the <span
-class="wikiword">WiFi</span> device is currently connected to. string
-containing name of network requested.
+A string containing the SSID the WiFi device is currently connected to.
 
-#### Example
+string containing name of network requested.
+
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -64,8 +64,3 @@ containing name of network requested.
         Serial.println(WiFi.SSID(thisNet));
       }
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")

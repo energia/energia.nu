@@ -9,6 +9,7 @@ and receive the ADC conversion result from the ADS1118.
 ### Syntax
 
 -   ADS.writeSPI(value, 0); //sets to mode 0
+
 -   ADS.writeSPI(value, 1); //sets to mode 1
 
  
@@ -20,5 +21,4 @@ int that should pass either a '0' or a '1'
 
 ### Returns
 
-ADC result   [Reference
-Home](http://energia.nu/reference/ "Reference") || [ADS1118 Home](http://energia.nu/reference/ads1118-thermocouple-boosterpack/ "ADS1118 Thermocouple BoosterPack")
+ADC result

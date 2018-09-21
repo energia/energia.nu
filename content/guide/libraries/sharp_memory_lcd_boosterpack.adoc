@@ -1,0 +1,38 @@
+== Sharp Memory LCD BP Library ==
+The BoosterPack uses SPI communication, so including the SPI library is required. Verified to work on MSP430 and CC3200 LaunchPads. Download the zip file link:/guide/libraries/files/LCD_SharpBoosterPack_SPI.zip[HERE].
+
+== LCD_SharpBoosterPack_SPI_Main.ino ==
+[source,c]
+----
+include::/content/guide/libraries/code/sharp-memory-lcd-boosterpack-LCD_SharpBoosterPack_SPI_Main.ino[]
+----
+
+== LCD_SharpBoosterPack_SPI.h ==
+[source,c]
+----
+include::/content/guide/libraries/code/sharp-memory-lcd-boosterpack-LCD_SharpBoosterPack_SPI.h[]
+----
+
+== LCD_SharpBoosterPack_SPI.cpp ==
+[source,c]
+----
+include::/content/guide/libraries/code/sharp-memory-lcd-boosterpack-LCD_SharpBoosterPack_SPI.cpp[]
+----
+
+== Terminal6.h ==
+[source,c]
+----
+include::/content/guide/libraries/code/sharp-memory-lcd-boosterpack-Terminal6.h[]
+----
+
+== Termainal12.h ==
+[source,c]
+----
+include::/content/guide/libraries/code/sharp-memory-lcd-boosterpack-Terminal12.h[]
+----
+
+=== keywords.txt ===
+[source,txt]
+----
+include::/content/guide/libraries/code/sharp-memory-lcd-boosterpack-keyword.txt[]
+----

@@ -1,6 +1,6 @@
 == First Sketch ==
 
-In the getting started guide (http://energia.nu/guide/install/windows/[Windows], http://energia.nu/guide/install/macosx/[Mac OS X], http://energia.nu/guide/install/linux/[Linux]), you uploaded a sketch that blinks an LED. In this tutorial, you'll learn how each part of that sketch works.
+In the getting started guide (http://energia.nu/guide/install/windows/[Windows], http://energia.nu/guide/install/macos/[Mac OS X], http://energia.nu/guide/install/linux/[Linux]), you uploaded a sketch that blinks an LED. In this tutorial, you'll learn how each part of that sketch works.
 
 === Sketch ===
 
@@ -8,7 +8,7 @@ A _sketch_ is the name that Energia uses for a program. It's the unit of code th
 
 === Comments ===
 
-The first few lines of the http://energia.nu/guide/tutorial_blink/[Blink] sketch are a _comment_:
+The first few lines of the http://energia.nu/guide/tutorials/basics/tutorial_blink/[Blink] sketch are a _comment_:
 
 ----
 /*
@@ -33,7 +33,7 @@ the message ''LED connected to digital pin 14'' is a comment.
 
 A _variable_ is a place for storing a piece of data. It has a name, a type, and a value. For example, the line from the Blink sketch above declares a variable with the name `ledPin`, the type `int`, and an initial value of 14. It's being used to indicate which LaunchPad pin the LED is connected to. Every time the name `ledPin` appears in the code, its value will be retrieved. In this case, the person writing the program could have chosen not to bother creating the `ledPin` variable and instead have simply written 14 everywhere they needed to specify a pin number. The advantage of using a variable is that it's easier to move the LED to a different pin: you only need to edit the one line that assigns the initial value to the variable.
 
-Often, however, the value of a variable will change while the sketch runs. For example, you could store the value read from an input into a variable. There's more information in the http://energia.nu/guide/variabledeclaration/[Variables tutorial].
+Often, however, the value of a variable will change while the sketch runs. For example, you could store the value read from an input into a variable. There's more information in the http://energia.nu/guide/foundations/programming_technique/variabledeclaration/[Variables tutorial].
 
 === Functions ===
 
@@ -52,7 +52,7 @@ You can _call_ a function that's already been defined (either in your sketch or 
 
 === pinMode(), digitalWrite(), and delay() ===
 
-The `pinMode()` function configures a pin as either an input or an output. To use it, you pass it the number of the pin to configure and the constant `INPUT` or `OUTPUT`. When configured as an input, a pin can detect the state of a sensor like a pushbutton; this is discussed in a http://energia.nu/guide/tutorial_digitalreadserial/[later tutorial]. As an output, it can drive an actuator like an LED.
+The `pinMode()` function configures a pin as either an input or an output. To use it, you pass it the number of the pin to configure and the constant `INPUT` or `OUTPUT`. When configured as an input, a pin can detect the state of a sensor like a pushbutton; this is discussed in a http://energia.nu/guide/tutorials/basics/[later tutorial]. As an output, it can drive an actuator like an LED.
 
 The `digitalWrite()` functions outputs a value on a pin. For example, the line:
 
@@ -82,8 +82,8 @@ There are two special functions that are a part of every Energia sketch: `setup(
 
 === See Also ===
 
-* http://energia.nu/reference/setup[`setup()`]
-* http://energia.nu/reference/loop/[`loop()`]
-* http://energia.nu/reference/pinmode/[`pinMode()`] 
-* http://energia.nu/reference/digitalwrite/[`digitalWrite()`]
-* http://energia.nu/reference/delay/[`delay()`]
+* http://energia.nu/reference/en/language/structure/sketch/setup[`setup()`]
+* http://energia.nu/reference/en/language/structure/sketch/loop/[`loop()`]
+* http://energia.nu/reference/en/language/functions/digital-io/pinmode/[`pinMode()`] 
+* http://energia.nu/reference/en/language/functions/digital-io/digitalwrite/[`digitalWrite()`]
+* http://energia.nu/reference/en/language/functions/time/delay/[`delay()`]

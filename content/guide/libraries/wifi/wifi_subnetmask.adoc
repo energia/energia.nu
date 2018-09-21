@@ -1,23 +1,22 @@
-<span class="wikiword">WiFi</span>.subnetMask()
------------------------------------------------
+== WiFi.subnetMask() ==
 
-#### Description
+=== Description ===
 
-Gets the <span class="wikiword">WiFi hardware's</span> subnet mask
+Gets the WiFi hardware's subnet mask
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.subnet();
+WiFi.subnet();
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 the subnet mask of the hardware
 
-#### Example
+=== Example ===
 
     #include <WiFi.h>
     int status = WL_IDLE_STATUS;     // the Wifi radio's status
@@ -52,6 +51,3 @@ the subnet mask of the hardware
 
     void loop () {
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

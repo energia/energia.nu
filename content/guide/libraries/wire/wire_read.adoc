@@ -10,7 +10,7 @@ a call to link:../wire_requestfrom[requestFrom()] or was transmitted from a mast
 
 [source,arduino]
 ----
-`Wire.read()`
+Wire.read()
 ----
 
 ### Parameters

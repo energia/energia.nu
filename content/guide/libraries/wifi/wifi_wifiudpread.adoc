@@ -1,25 +1,25 @@
-WiFiUDP.read()
---------------
+== WiFiUDP.read() ==
 
-#### Description
+=== Description ===
 
-Reads UDP data from the specified buffer. If no arguments are given, it
-will return the next character in the buffer. This function can only be
-successfully called after
-[WiFiUDP.parsePacket()](http://energia.nu/reference/wifi/wifi_wifiparsepacket/ "WiFi_WiFiParsePacket"){.wikilink}.
+Reads UDP data from the specified buffer. If no arguments are given, it will return the next character in the buffer. This function can only be successfully called after link:../wifi_wifiparsepacket/[WiFiUDP.parsePacket()].
 
-#### Syntax
+=== Syntax ===
 
-WiFiUDP.read(); WiFiUDP.read(buffer, len);
+WiFiUDP.read();
 
-#### Parameters
+WiFiUDP.read(buffer, len);
 
-**buffer**: buffer to hold incoming packets (char\*) **len**: maximum
-size of the buffer (int)
+=== Parameters ===
 
-#### Returns
+**buffer**: buffer to hold incoming packets (char*)
 
-b: the characters in the buffer (char) size: the size of the buffer -1:
-if no buffer is available [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")
+**len**: maximum size of the buffer (int)
+
+=== Returns ===
+
+b: the characters in the buffer (char)
+
+size: the size of the buffer
+
+-1: if no buffer is available

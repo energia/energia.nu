@@ -156,8 +156,8 @@ To make the pitches.h file, click on the ''new Tab'' button that looks like an a
 
 === See Also ===
 
-* link:/reference/en/language/variables/data-types/string/array/[Array()]
-* link:/reference/en/language/structure/control-struture/for/[for()]
+* link:/reference/en/language/variables/data-types/array/[Array()]
+* link:/reference/en/language/structure/control-structure/for/[for()]
 * link:/reference/en/language/functions/advanced-io/tone/[tone()]
 * link:/guide/tutorials/digital/tutorial_tone2/[PitchFollower]:play a pitch on a piezo speaker depending on an analog input.
 * link:/guide/tutorials/digital/tutorial_tone3/[SimpleKeyboard]:a three-key musical keyboard using force sensors and a piezo speaker.

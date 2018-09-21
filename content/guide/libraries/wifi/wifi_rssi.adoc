@@ -1,24 +1,24 @@
-<span class="wikiword">WiFi</span>.RSSI()
------------------------------------------
+== WiFi.RSSI() ==
 
-#### Description
+=== Description ===
 
 Gets the signal strength of the connection to the router
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.RSSI();\
-<span class="wikiword">WiFi</span>.RSSI(wifiAccessPoint);\
+WiFi.RSSI();
 
-#### Parameters
+WiFi.RSSI(wifiAccessPoint);
+
+=== Parameters ===
 
 wifiAccessPoint: specifies from which network to get the information
 
-#### Returns
+=== Returns ===
 
 long : the current RSSI /Received Signal Strength in dBm
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -46,6 +46,3 @@ long : the current RSSI /Received Signal Strength in dBm
     }
 
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

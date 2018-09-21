@@ -1,21 +1,16 @@
-*WiFiUDP*.flush()
------------------
+== WiFiUDP.flush() ==
 
 Discard any bytes that have been written to the client but not yet read.
-flush() inherits from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
-utility class.
+flush() inherits from the http://energia.nu/reference/stream/[Stream] utility class.
 
-#### Syntax
+=== Syntax ===
 
-*<span class="wikiword">WiFiUDP</span>*.flush()
+*WiFiUDP*.flush()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
-none [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")
+none

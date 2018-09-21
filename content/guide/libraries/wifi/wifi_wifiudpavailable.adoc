@@ -1,26 +1,23 @@
-*WiFIUDP*.available()
----------------------
+== WiFIUDP.available() ==
 
-#### Description
+=== Description ===
 
 Get the number of bytes (characters) available for reading from the
 buffer. This is data that's already arrived. This function can only be
 successfully called after WiFiUDP.parsePacket(). available() inherits
-from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+from the http://energia.nu/reference/stream/[Stream]
 utility class.
 
-#### Syntax
+=== Syntax ===
 
-*<span class="wikiword">WiFiUDP</span>*.available()
+*WiFiUDP*.available()
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
-the number of bytes available in the current packet 0: if parsePacket
-hasn't been called yet [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")
+the number of bytes available in the current packet 
+
+0: if parsePacket hasn't been called yet

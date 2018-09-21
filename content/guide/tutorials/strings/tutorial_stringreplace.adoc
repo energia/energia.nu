@@ -1,6 +1,6 @@
 == String Replace Function ==
 
-The String link:/reference/en/language/variables/data-types/functions/replace/[`replace()`] function allows you to replace all instances of a given character with another character. You can also use replace to replace substrings of a string with a different substring.
+The String link:/reference/en/language/variables/data-types/string/functions/replace/[`replace()`] function allows you to replace all instances of a given character with another character. You can also use replace to replace substrings of a string with a different substring.
 
 === Relevant Groundwork ===
 

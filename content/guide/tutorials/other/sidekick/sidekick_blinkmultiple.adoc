@@ -1,0 +1,72 @@
+== Example 03: Multiple LED (Many Outputs) ==
+
+Learn how to control several outputs simultaneously.
+
+=== Hardware Required ===
+
+* TI LaunchPad
+* Breadboard BoosterPack
+* Breadboard
+* 4x Red LED
+* 4x Green LED
+* 9x Jumper Wires
+* 8x 330 ohm resistor (optional)
+
+ 
+=== Relevant Groundwork ===
+
+In this example we are going to take the blink example a bit further and incorporate more LEDs and more pins.  We are going to connect eight LEDs to the LaunchPad which will give us the option to run different lighting sequences.  We will get to build a bigger circuit and learn a bit more about the concepts in programming.
+
+Let’s talk about for loops. We know from our loop() function that a loop will run forever. What makes a FOR loop special is it will run until the conditions of the FOR loop are met.
+
+In this example, we are going to use for loops to help us run through an object called an array quickly and efficiently. We are going to use an array to store our LED pins. An array is just a variable where we can store multiple values. Basically it’s like a list, and we can enter different list items into the array which are separated by commas. An array makes use of the square brackets [] which contain either the size (when declaring the array) or the position in the array (when using it as a variable). Understanding arrays just takes a little bit of practice, but are extremely useful.
+
+In this example, we will also introduce functions. You’ve already been using functions (remember setup() and loop()?) but now we can define our own custom functions. Here we are using functions to help us create light patterns with the LEDs.
+
+You may be asking yourself why the variables and function names with more than one word (compound words) start with a lower case letter but proceed with capitalized letters. This is called camel case, which is a popular style when writing code. You as the programmer can use whatever style you like when declaring variables and functions, but camel case is a popular one that you will see in many code examples. Also, why can’t the names start with a number? In C programming, you can’t have a variable that begins with a number, otherwise you will get an error from the compiler. This is because in our code we use numbers as mathematical values so the compiler wants to make sure you are clearly using numbers and variables properly.
+Circuit & Schematic
+
+With Breadboard BoosterPack
+
+image::../img/SidekickExample03-BB_bb.png[800,600]
+
+With LaunchPad
+
+image::../img/SidekickExample03_bb.png[800,600]
+
+==== Code ====
+
+[source,c]
+----
+include::content/guide/tutorials/other/sidekick/code/sidekick_blinkmultiple.ino[]
+----
+
+=== Programming Challenge ===
+
+Can you create a new function with a different lighting sequence?
+Troubleshooting
+
+Code not uploading?
+
+* Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
+* Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
+
+
+LED not lighting up?
+
+* Make sure you properly uploaded the code and that you properly named your variables for the LED pins. There is very little chance that your LED is broken, but we can verify by blinking a different LED with the same code.
+* Make sure your pins are properly connected, if they are not the LED will not light up properly. The GND pin of the LED (shorter leg) should be connected to the GND pin of the LaunchPad.
+
+
+LED sequence is off?
+
+* Check your wires are sequential with the LaunchPad pins. The example assumes that the LEDs are connected in order.
+
+Still not right? Start from the beginning!
+
+* It is very easy to make a small mistake that can be hard to spot. With these simple circuits it can make sense to take everything out of the breadboard and try setting it up again.
+
+
+For additional support, try searching the Energia forums on 43oh.com. We believe in you to figure out any problems, now believe in yourself and find the solution!

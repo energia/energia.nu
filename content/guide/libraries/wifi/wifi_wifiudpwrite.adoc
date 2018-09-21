@@ -1,26 +1,25 @@
-WiFiUDP.write()
----------------
+== WiFiUDP.write() ==
 
-#### Description
+=== Description ===
 
-Writes UDP data to the remote connection. Must be wrapped between
-[beginPacket](http://energia.nu/reference/wifi/wifi_wifiudpbeginpacket/ "WiFi_WiFiUDPBeginPacket"){.wikilink}()
-and
-[endPacket](http://energia.nu/reference/wifi/wifi_wifiudpendpacket/ "WiFi_WiFiUDPEndPacket"){.wikilink}().
+Writes UDP data to the remote connection. Must be wrapped between link:../wifi_wifiudpbeginpacket/[beginPacket] and link:../wifi_wifiudpendpacket/[endPacket].
 beginPacket() initializes the packet of data, it is not sent until
 endPacket() is called.
 
-#### Syntax
+=== Syntax ===
 
-WiFiUDP.write(byte); WiFiUDP.write(buffer, size);
+WiFiUDP.write(byte);
 
-#### Parameters
+WiFiUDP.write(buffer, size);
 
-**byte**: the outgoing byte **buffer**: the outgoing message **size**:
-the size of the buffer
+=== Parameters ===
 
-#### Returns
+**byte**: the outgoing byte
+
+**buffer**: the outgoing message
+
+**size**: the size of the buffer
+
+=== Returns ===
 
 single byte into the packet bytes size from buffer into the packet
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")
