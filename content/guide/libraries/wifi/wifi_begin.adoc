@@ -1,33 +1,36 @@
-<span class="wikiword">WiFi</span>.begin()
-------------------------------------------
+== WiFi.begin() ==
 
-#### Description
+=== Description ===
 
-Initializes the <span class="wikiword">WiFi</span> library's network
+Initializes the WiFi library's network
 settings and provides the current status.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.begin(); <span
-class="wikiword">WiFi</span>.begin(ssid); <span
-class="wikiword">WiFi</span>.begin(ssid, pass); <span
-class="wikiword">WiFi</span>.begin(ssid, keyIndex, key);
+WiFi.begin();
 
-#### Parameters
+WiFi.begin(ssid);
 
-**ssid**: the SSID (Service Set Identifier) is the name of the <span
-class="wikiword">WiFi</span> network you want to connect to.
-**keyIndex**: WEP encrypted networks can hold up to 4 different keys.
-This identifies which key you are going to use. **key**: a hexadecimal
-string used as a security code for WEP encrypted networks. **pass**: WPA
-encrypted networks use a password in the form of a string for security.
+WiFi.begin(ssid, pass);
 
-#### Returns
+WiFi.begin(ssid, keyIndex, key);
 
--   WL\_CONNECTED when connected to a network
--   WL\_IDLE\_STATUS when not connected to a network, but powered on
+=== Parameters ===
 
-#### Example
+**ssid**: the SSID (Service Set Identifier) is the name of the WiFi network you want to connect to.
+
+**keyIndex**: WEP encrypted networks can hold up to 4 different keys. This identifies which key you are going to use.
+
+**key**: a hexadecimal string used as a security code for WEP encrypted networks.
+
+**pass**: WPA encrypted networks use a password in the form of a string for security.
+
+=== Returns ===
+
+-   WL_CONNECTED when connected to a network
+-   WL_IDLE_STATUS when not connected to a network, but powered on
+
+=== Example ===
 
     #include <WiFi.h>
 
@@ -42,7 +45,3 @@ encrypted networks use a password in the form of a string for security.
     }
 
     void loop () {}
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")

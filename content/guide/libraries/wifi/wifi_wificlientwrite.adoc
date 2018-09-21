@@ -1,22 +1,18 @@
-*WiFiClient*.write()
---------------------
+== WiFiClient.write() ==
 
-#### Description
+=== Description ===
 
 Write data to the server the client is connected to.
 
-#### Syntax
+=== Syntax ===
 
 *client*.write(data)
 
-#### Parameters
+=== Parameters ===
 
 data: the byte or char to write
 
-#### Returns
+=== Returns ===
 
 byte: the number of characters written. it is not necessary to read this
 value.
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

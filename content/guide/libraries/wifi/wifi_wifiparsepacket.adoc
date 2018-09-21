@@ -1,22 +1,19 @@
-WiFiUDP.parsePacket()
----------------------
+== WiFiUDP.parsePacket() ==
 
-#### Description
+=== Description ===
 
 It starts processing the next available incoming packet, checks for the
 presence of a UDP packet, and reports the size. parsePacket() must be
 called before reading the buffer with UDP.read().
 
-#### Syntax
+=== Syntax ===
 
 UDP.parsePacket();
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
 the size of the packet in bytes 0: if no packets are available
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

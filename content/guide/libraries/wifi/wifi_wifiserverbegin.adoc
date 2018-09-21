@@ -1,23 +1,22 @@
-*WiFiServer*.begin()
---------------------
+== WiFiServer.begin() ==
 
-#### Description
+=== Description ===
 
 Tells the server to begin listening for incoming connections.
 
-#### Syntax
+=== Syntax ===
 
 *server*.begin()
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
 None
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -53,6 +52,3 @@ None
     void loop() {
 
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

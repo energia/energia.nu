@@ -1,22 +1,17 @@
-<span class="wikiword">WiFi</span>.disconnect()
------------------------------------------------
+== WiFi.disconnect() ==
 
-#### Description
+=== Description ===
 
-Disconnects the <span class="wikiword">WiFi</span> hardware from the
-current network.
+Disconnects the WiFi hardware from the current network.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.disconnect();
+WiFi.disconnect();
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
-nothing   [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")
+nothing

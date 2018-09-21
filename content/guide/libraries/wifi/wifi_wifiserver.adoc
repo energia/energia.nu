@@ -1,24 +1,23 @@
-<span class="wikiword">WiFiServer</span>()
-------------------------------------------
+== WiFiServer() ==
 
-#### Description
+=== Description ===
 
 Creates a server that listens for incoming connections on the specified
 port.
 
-#### Syntax
+=== Syntax ===
 
 Server(port);
 
-#### Parameters
+=== Parameters ===
 
 **port**: the port to listen on (int)
 
-#### Returns
+=== Returns ===
 
 None
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -54,6 +53,3 @@ None
     void loop() {
 
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

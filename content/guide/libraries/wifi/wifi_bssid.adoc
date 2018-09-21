@@ -1,24 +1,22 @@
-<span class="wikiword">WiFi</span>.BSSID()
-------------------------------------------
+== WiFi.BSSID() ==
 
-#### Description
+=== Description ===
 
 Gets the MAC address of the routher you are connected to
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.BSSID(bssid);\
+WiFi.BSSID(bssid);
 
-#### Parameters
+=== Parameters ===
 
 bssid : 6 byte array
 
-#### Returns
+=== Returns ===
 
-A byte array containing the MAC address of the router the <span
-class="wikiword">WiFi</span> shield is currently connected to.
+A byte array containing the MAC address of the router the WiFi shield is currently connected to.
 
-#### Example
+=== Example ===
 
     #include <WiFi.h>
 
@@ -56,6 +54,3 @@ class="wikiword">WiFi</span> shield is currently connected to.
     }
 
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

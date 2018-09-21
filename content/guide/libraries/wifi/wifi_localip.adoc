@@ -1,23 +1,22 @@
-<span class="wikiword">WiFi</span>.localIP()
---------------------------------------------
+== WiFi.localIP() ==
 
-#### Description
+=== Description ===
 
-Gets the <span class="wikiword">WiFi</span> shield's IP address
+Gets the WiFi shield's IP address
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.localIP();\
+WiFi.localIP();
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 the IP address of the shield
 
-#### Example
+=== Example ===
 
     #include <WiFi.h>
 
@@ -48,6 +47,3 @@ the IP address of the shield
     }
 
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

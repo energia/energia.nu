@@ -1,43 +1,47 @@
-<span class="wikiword">WiFi</span>.config()
--------------------------------------------
+== WiFi.config() ==
 
-#### Description
+=== Description ===
 
 `WiFi.config()` allows you to configure a static IP address as well as
-change the DNS, gateway, and subnet addresses on the <span
-class="wikiword">WiFi</span> hardware. Unlike `WiFi.begin()` which
-automatically configures the <span class="wikiword">WiFi</span> hardware
+change the DNS, gateway, and subnet addresses on the WiFi hardware. Unlike `WiFi.begin()` which
+automatically configures the WiFi hardware
 to use DHCP, `WiFi.config()` allows you to manually set the network
 address of the hardware. Calling `WiFi.config()` before `WiFi.begin()`
-forces `begin()` to configure the <span class="wikiword">WiFi</span>
+forces `begin()` to configure the WiFi
 hardware with the network addresses specified in `config()`. You can
 call `WiFi.config()` after `WiFi.begin()`, but the hardware will
 initialize with `begin()` in the default DHCP mode. Once the `config()`
 method is called, it will change the network address as requested.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.config(ip); <span
-class="wikiword">WiFi</span>.config(ip, dns); <span
-class="wikiword">WiFi</span>.config(ip, dns, gateway); <span
-class="wikiword">WiFi</span>.config(ip, dns, gateway, subnet);
+WiFi.config(ip);
 
-#### Parameters
+WiFi.config(ip, dns);
 
-**ip**: the IP address of the device (array of 4 bytes) **dns**: the
-address for a DNS server. **gateway**: the IP address of the network
-gateway (array of 4 bytes). optional: defaults to the device IP address
-with the last octet set to 1 **subnet**: the subnet mask of the network
-(array of 4 bytes). optional: defaults to 255.255.255.0
+WiFi.config(ip, dns, gateway);
 
-#### Returns
+WiFi.config(ip, dns, gateway, subnet);
+
+
+=== Parameters ===
+
+**ip**: the IP address of the device (array of 4 bytes)
+
+**dns**: the address for a DNS server.
+
+**gateway**: the IP address of the network gateway (array of 4 bytes). optional: defaults to the device IP address with the last octet set to 1
+
+**subnet**: the subnet mask of the network (array of 4 bytes). optional: defaults to 255.255.255.0
+
+=== Returns ===
 
 Nothing
 
-#### Example
+=== Example ===
 
 This example shows how to set the static IP address, 192.168.0.177, of
-the LAN network to the <span class="wikiword">WiFi</span> hardware:
+the LAN network to the WiFi hardware:
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -83,8 +87,3 @@ the LAN network to the <span class="wikiword">WiFi</span> hardware:
     }
 
     void loop () {}
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")

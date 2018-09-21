@@ -1,24 +1,18 @@
-WiFiUDP.remoteIP()
-------------------
+== WiFiUDP.remoteIP() ==
 
-#### Description
+=== Description ===
 
-Gets the IP address of the remote connection. This function must be
-called after
-[WiFiUDP.parsePacket()](http://energia.nu/reference/wifi/wifi_wifiparsepacket/ "WiFi_WiFiParsePacket"){.wikilink}.
+Gets the IP address of the remote connection. This function must be called after link:../wifi_wifiparsepacket/[WiFiUDP.parsePacket()].
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFiUDP</span>.remoteIP();
+WiFiUDP.remoteIP();
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
 4 bytes : the IP address of the host who sent the current incoming
 packet
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

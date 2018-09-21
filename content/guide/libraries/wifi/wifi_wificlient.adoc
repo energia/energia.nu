@@ -1,20 +1,19 @@
-<span class="wikiword">WiFiClient</span>()
-------------------------------------------
+== WiFiClient() ==
 
-#### Description
+=== Description ===
 
 Creates a client that can connect to to a specified internet IP address
 and port as defined in client.connect().
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFiClient</span>()
+WiFiClient()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -56,6 +55,3 @@ none
     void loop() {
 
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

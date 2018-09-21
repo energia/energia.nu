@@ -1,27 +1,26 @@
-*WiFiClient*.available()
-------------------------
+== WiFiClient.available() ==
 
-#### Description
+=== Description ===
 
 Returns the number of bytes available for reading (that is, the amount
 of data that has been written to the client by the server it is
 connected to). available() inherits from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+http://energia.nu/reference/stream/[Stream]
 utility class.
 
-#### Syntax
+=== Syntax ===
 
 *client*.available()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 The number of bytes available.
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -78,6 +77,3 @@ The number of bytes available.
           ;
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

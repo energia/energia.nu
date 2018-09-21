@@ -1,24 +1,23 @@
-<span class="wikiword">WiFi</span>.scanNetworks()
--------------------------------------------------
+== WiFi.scanNetworks() ==
 
-#### Description
+=== Description ===
 
-Scans for available <span class="wikiword">WiFi</span> networks and
+Scans for available WiFi networks and
 returns the discovered number
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">WiFi</span>.scanNetworks();\
+WiFi.scanNetworks();
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 byte : number of discovered networks
 
-#### Example
+=== Example ===
 
     #include <SPI.h>
     #include <WiFi.h>
@@ -51,6 +50,3 @@ byte : number of discovered networks
     }
 
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")

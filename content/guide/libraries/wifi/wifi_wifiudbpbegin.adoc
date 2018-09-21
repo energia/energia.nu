@@ -1,23 +1,21 @@
-WiFiUDP.begin()
----------------
+== WiFiUDP.begin() ==
 
-#### Description
+=== Description ===
 
-Initializes the <span class="wikiword">WiFi</span> UDP library and
-network settings. Starts <span class="wikiword">WiFiUDP</span> socket,
-listening at local port PORT \*/
+Initializes the WiFi UDP library and
+network settings. Starts WiFiUDP socket,
+listening at local port PORT
 
-#### Syntax
+=== Syntax ===
 
 WiFiUDP.begin(port);
 
-#### Parameters
+=== Parameters ===
 
 **port**: the local port to listen on (int)
 
-#### Returns
+=== Returns ===
 
-1: if successful 0: if there are no sockets available to use
+1: if successful
 
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")
+0: if there are no sockets available to use

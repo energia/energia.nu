@@ -1,22 +1,18 @@
-*WiFiUDP*.stop()
-----------------
+== WiFiUDP.stop() ==
 
-#### Description
+=== Description ===
 
 Disconnect from the server. Release any resource being used during the
 UDP session.
 
-#### Syntax
+=== Syntax ===
 
-*<span class="wikiword">WiFiUDP</span>*.stop()
+*WiFiUDP*.stop()
 
-#### Parameters
-
-none
-
-#### Returns
+=== Parameters ===
 
 none
 
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[WiFi Library](http://energia.nu/reference/wifi/ "WiFi")
+=== Returns ===
+
+none

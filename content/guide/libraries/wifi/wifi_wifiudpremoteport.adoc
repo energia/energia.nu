@@ -1,22 +1,18 @@
-WiFIUDP.remotePort()
---------------------
+== WiFIUDP.remotePort() ==
 
-#### Description
+=== Description ===
 
 Gets the port of the remote UDP connection. This function must be called
-after
-[UDP.parsePacket()](http://energia.nu/reference/wifi/wifi_wifiparsepacket/ "WiFi_WiFiParsePacket"){.wikilink}.
+after link:../wifi_wifiparsepacket/[UDP.parsePacket()].
 
-#### Syntax
+=== Syntax ===
 
 UDP.remotePort();
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
-The port of the host who sent the current incoming packet [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [WiFi
-Library](http://energia.nu/reference/wifi/ "WiFi")
+The port of the host who sent the current incoming packet
