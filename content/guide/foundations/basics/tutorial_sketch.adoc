@@ -1,6 +1,6 @@
 == First Sketch ==
 
-In the getting started guide (http://energia.nu/guide/install/windows/[Windows], http://energia.nu/guide/install/macosx/[Mac OS X], http://energia.nu/guide/install/linux/[Linux]), you uploaded a sketch that blinks an LED. In this tutorial, you'll learn how each part of that sketch works.
+In the getting started guide (http://energia.nu/guide/install/windows/[Windows], http://energia.nu/guide/install/macos/[Mac OS X], http://energia.nu/guide/install/linux/[Linux]), you uploaded a sketch that blinks an LED. In this tutorial, you'll learn how each part of that sketch works.
 
 === Sketch ===
 
