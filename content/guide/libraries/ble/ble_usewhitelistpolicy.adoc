@@ -1,26 +1,18 @@
-<span class="wikiword">ble.useWhiteListPolicy()</span>
-------------------------------------------------------
+== ble.useWhiteListPolicy() ==
 
-#### Description
+=== Description ===
 
 Enable or disable the whitelist. When enabled, modify the whitelist
 using HCI commands.
 
-#### Syntax
+=== Syntax ===
 
 `ble.useWhiteListPolicy(useWhiteList);`
 
-#### Parameters
+=== Parameters ===
 
 **useWhiteList**: bool indicating whether or not to use a whitelist.
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
-
-#### 
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+link:../ble_error/[Status code]

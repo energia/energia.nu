@@ -1,33 +1,35 @@
-<span class="wikiword">BLE\_Service</span>
-------------------------------------------
+== BLE_Service ==
 
-#### Description
+=== Description ===
 
 The data type used to declare a service.
 
-#### Syntax
-
+=== Syntax ===
+[source,arduino]
+----
     BLE_Char *arrayOfChars[] = {&char1, &char2, ...};
     BLE_Service service =
     {
       UUID,
       numChars, arrayOfChars
     };
-
-#### Parameters
+----
+=== Parameters ===
 
 **UUID**: The 2 or 16 byte identifier for the service. 2 byte UUID's are
 reserved for officially adopted services. For creating a 16 byte UUID
-for custom services, see this
-[reference](http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#UUID).
+for custom services, see this http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#UUID[reference].
+
 **numChars**: The number of characteristics in the service and the
-number of elements in `arrayOfChars`. **arrayOfChars**: A pointer to an
-array of
-[BLE\_Char's](http://energia.nu/reference/ble/ble-addservice/ble_char/),
+number of elements in `arrayOfChars`.
+
+**arrayOfChars**: A pointer to an
+array of http://energia.nu/reference/ble/ble-addservice/ble_char/[BLE_Char's],
 declared using the syntax above or below in the example.
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <BLE.h>
 
     byte char1Value = 0;
@@ -70,8 +72,4 @@ declared using the syntax above or below in the example.
      {0xF0, 0xFF},
      4, simpleServiceChars
     };
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

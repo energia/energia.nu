@@ -1,30 +1,28 @@
-<span class="wikiword">ble.setAdvertName()</span>
--------------------------------------------------
+== ble.setAdvertName() ==
 
-#### Description
+
+=== Description ===
 
 Sets the advertised name of the device. This is what is displayed when
 scanning for Bluetooth devices on a laptop or cell phone.
 
-#### Syntax
+=== Syntax ===
 
-ble.setAdvertName(advertName); // [char
-array](http://energia.nu/reference/string/) or string literal
-ble.setAdvertName(&advertName); // [String
-object](http://energia.nu/reference/stringobject/)
+ble.setAdvertName(advertName); // link:/reference/en/language/variables/data-types/string/[char array] or string literal
 
-#### Parameters
+ble.setAdvertName(&advertName); // link:/reference/en/language/variables/data-types/stringobject/[String object]
 
-**advertName**: Either a [char
-array](http://energia.nu/reference/string/) or a pointer to a [String
-object](http://energia.nu/reference/stringobject/).
+=== Parameters ===
 
-#### Returns
+**advertName**: Either a link:/reference/en/language/variables/data-types/string/char array] or a pointer to a link:/reference/en/language/variables/data-types/stringobject/[String object].
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+=== Returns ===
 
-#### Example (string literal)
+link:../ble_error/[Status code]
 
+=== Example === (string literal)
+[source,arduino]
+----
     #include <BLE.h>
 
     void setup() {
@@ -32,9 +30,10 @@ object](http://energia.nu/reference/stringobject/).
       ble.setAdvertName("Energia BLE");
       ble.startAdvert();
     }
-
-#### Example ([char array](http://energia.nu/reference/string/))
-
+----
+=== Example === (link:/reference/en/language/variables/data-types/string/[char array])
+[source,arduino]
+----
     #include <BLE.h>
     char advertName[] = "Energia BLE";
     void setup() {
@@ -42,9 +41,10 @@ object](http://energia.nu/reference/stringobject/).
       ble.setAdvertName(advertName);
       ble.startAdvert();
     }
-
-#### Example ([String object](http://energia.nu/reference/stringobject/))
-
+----
+=== Example === (link:/reference/en/language/variables/data-types/stringobject/[String object])
+[source,arduino]
+----
     #include <BLE.h>
     String advertName = String("Energia BLE");
     void setup() {
@@ -52,8 +52,4 @@ object](http://energia.nu/reference/stringobject/).
       ble.setAdvertName(advertName);
       ble.startAdvert();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

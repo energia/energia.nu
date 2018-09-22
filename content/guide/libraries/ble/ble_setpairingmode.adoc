@@ -1,15 +1,14 @@
-<span class="wikiword">ble.setPairingMode()</span>
---------------------------------------------------
+== ble.setPairingMode() ==
 
-#### Description
+=== Description ===
 
 Sets whether to use security and when to initiate it.
 
-#### Syntax
+=== Syntax ===
 
 `ble.setPairingMode(pairingMode);`
 
-#### Parameters
+=== Parameters ===
 
 **pairingMode**: The mode to use.
 
@@ -21,12 +20,13 @@ Sets whether to use security and when to initiate it.
 
  
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+link:../ble_error/[Status code]
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <BLE.h>
 
     void setup() {
@@ -40,8 +40,4 @@ Sets whether to use security and when to initiate it.
     void loop() {
       ble.handleEvents();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

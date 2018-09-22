@@ -1,5 +1,5 @@
-BLE Input Output
-----------------
+== BLE Input Output ==
+
 
 This app serves as an advanced demo to show the user how to create and
 interact with BLE services. This app achieves most of the same
@@ -8,36 +8,42 @@ Input Output is an excellent starting point for users who are looking to
 define their own services (custom or adopted), and start to use advanced
 features such as security.
 
-#### How it works
+=== How it works ===
 
 This example uses employs two BLE Services. Services (and their
 underlying characteristics) are the vehicle for data transfer over BLE.
 For more information about BLE Services and Characteristics, please
-refer to the [SimpleLink Academy Custom Services
-Module](http://software-dl.ti.com/lprf/simplelink_academy/modules/ble_01_custom_profile/ble_01_custom_profile.html).
+refer to the http://software-dl.ti.com/lprf/simplelink_academy/modules/ble_01_custom_profile/ble_01_custom_profile.html[SimpleLink Academy Custom Services
+Module].
 The BLE Input Output sketch aims to communicate user input from the
 MSP432 LaunchPad to a smart phone in the form of button presses.
 Similarly, it takes output from the smart phone and displays it in the
 form of the tri color LEDs. To do so, we must create two services, the
 button service, and the LED service.
 
-#### Creating a BLE Service
+=== Creating a BLE Service ===
 
 Using the BLE Energia library, you can create a service like the
 simpleButtonService below:
+[source,arduino]
+----
 ` /* BLE LED Service is made up of LED Chars */ BLE_Char *simpleButtonServiceChars[] = {&button1Char, &button2Char};`
 /\* LED Service Declaration \*/ BLE\_Service simpleButtonService = {
 {0x00, 0xFF}, 2, simpleButtonServiceChars };
+----
 
-#### Creating a BLE Characteristic
+=== Creating a BLE Characteristic ===
 
 Next, you can create the characteristics of the service as below:
-` BLE_Char led1Char = { {0xF1, 0xFF}, /* 16 bit BLE UUID = 0xFFF1 */ BLE_AUTHEN | BLE_WRITABLE| BLE_READABLE, /* BLE Properties */ "LED 1" /* User Description */ };`
+[source,arduino]
+----
+BLE_Char led1Char = { {0xF1, 0xFF}, /* 16 bit BLE UUID = 0xFFF1 */ BLE_AUTHEN | BLE_WRITABLE| BLE_READABLE, /* BLE Properties */ "LED 1" /* User Description */ };
+----
 Notice that each characteristic has its own UUID, Properties, and User
 description. These are some of the building blocks of a BLE
 characteristic.
 
-#### Making it secure
+=== Making it secure ===
 
 Security is a major concern for IoT devices. In this example we have
 decided to make characteristic secure by adding the following tag to its
@@ -70,13 +76,7 @@ to open the Energia Serial Monitor.*
 6.  Then press pair on your phone.
 7.  You will now be able to control LED1.
 
-[![serial\_monitor\_pairing](http://energia.nu/wordpress/wp-content/uploads/2016/11/serial_monitor_pairing.png){.aligncenter
-.size-full .wp-image-5460 width="300"
-height="113"}](http://energia.nu/wordpress/wp-content/uploads/2016/11/serial_monitor_pairing.png)[![num\_comparison\_iphone](http://energia.nu/wordpress/wp-content/uploads/2016/11/num_comparison_iphone-169x300.png){.aligncenter
-.wp-image-5461 .size-medium width="169"
-height="300"}](http://energia.nu/wordpress/wp-content/uploads/2016/11/num_comparison_iphone.png)
+image::http://energia.nu/wordpress/wp-content/uploads/2016/11/serial_monitor_pairing.png[serial monitor pairing]
+
+image::http://energia.nu/wordpress/wp-content/uploads/2016/11/num_comparison_iphone-169x300.png[num_comparison_iphone]
  
-
-#### Running the Demo
-
-TBD    

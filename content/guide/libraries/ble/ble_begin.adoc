@@ -1,23 +1,20 @@
-<span class="wikiword">ble.begin()</span>
------------------------------------------
+== ble.begin() ==
 
-#### Description
+
+=== Description ===
 
 Initializes the communication layer with the network processor. The only
 method that can be called before this is
-[`ble.setLogLevel()`](http://energia.nu/reference/ble/ble-setloglevel/).
+link:../ble_setloglevel/[`ble.setLogLevel()`].
 
-#### Syntax
+=== Syntax ===
 
 ble.begin();
 
-#### Parameters
+=== Parameters ===
 
 Nothing
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/) [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+link:../ble_error/[Status code]

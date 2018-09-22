@@ -1,27 +1,27 @@
-<span class="wikiword">ble.useBonding()</span>
-----------------------------------------------
+== ble.useBonding() ==
 
-#### Description
+=== Description ===
 
 Enables or disables bonding.
 
-#### Syntax
+=== Syntax ===
 
 `ble.useBonding(bonding);`
 
-#### Parameters
+=== Parameters ===
 
 **bonding**: bool indicating whether or not to use bonding.
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+link:../ble_error/[Status code]
 
-#### Example
+=== Example ===
 
 An MSP432 connected to the Energia serial monitor has display and yes/no
 (buttons) capabilities.
-
+[source,arduino]
+----
     #include <BLE.h>
 
     void setup() {
@@ -35,8 +35,4 @@ An MSP432 connected to the Energia serial monitor has display and yes/no
     void loop() {
       ble.handleEvents();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

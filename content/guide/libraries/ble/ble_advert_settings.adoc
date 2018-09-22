@@ -1,12 +1,12 @@
-<span class="wikiword">BLE\_Advert\_Settings</span>
----------------------------------------------------
+== BLE_Advert_Settings ==
 
-#### Description
+=== Description ===
 
 The data type used to set advertising behavior.
 
-#### Syntax
-
+=== Syntax ===
+[source,arduino]
+----
     BLE_Advert_Settings advertSettings =
     {
       advertMode,
@@ -14,14 +14,14 @@ The data type used to set advertising behavior.
       interval,
       connectedBehavior
     };
-
-#### Parameters
+----
+=== Parameters ===
 
 **advertMode**: Sets the advertisement mode.
 
--   BLE\_ADV\_MODE\_NONCONN: Nonconnectable undirected advertisements.
--   BLE\_ADV\_MODE\_CONN: Connectable undirected advertisements.
--   BLE\_ADV\_MODE\_SCANNABLE: This mode compensates for the small size
+-   BLE_ADV_MODE_NONCONN: Nonconnectable undirected advertisements.
+-   BLE_ADV_MODE_CONN: Connectable undirected advertisements.
+-   BLE_ADV_MODE_SCANNABLE: This mode compensates for the small size
     of advertisement packets. A BLE central device can respond with a
     scan request packet to advertisements from a peripheral in
     this mode. The peripheral must listen for these scan request
@@ -31,27 +31,32 @@ The data type used to set advertising behavior.
     be advertised at the expense of higher power consumption.
 
 **timeout**: How long to advertise for in milliseconds. 0 for
-indefinitely. **interval**: Advertising Interval (interval \* 0.625 ms).
-0 for 100ms default **connectedBehavior**: The advertising behavior
+indefinitely.
+
+**interval**: Advertising Interval (interval * 0.625 ms).
+0 for 100ms default
+
+**connectedBehavior**: The advertising behavior
 during and after connections.
 
--   BLE\_ADV\_STOP\_ON\_CONN: Advertising is disabled during connection
+-   BLE_ADV_STOP_ON_CONN: Advertising is disabled during connection
     and will not start after.
--   BLE\_ADV\_RESTART\_ON\_CONN\_EST: Advertising will continue with
+-   BLE_ADV_RESTART_ON_CONN_EST: Advertising will continue with
     non-connectable advertising when connection is established. There
     are separate GAP parameters for setting the connected
     advertising interval.
--   BLE\_ADV\_RESTART\_ON\_CONN\_TERM: Advertising will restart with
+-   BLE_ADV_RESTART_ON_CONN_TERM: Advertising will restart with
     connectable advertising when a connection is terminated.
 
  
 
-#### Example
+=== Example ===
 
 Indefinite nonconnectable (e.g. for a simple beacon) advertisement every
 900ms. Note that the last member, the connected behavior, of
 advertSettings has no effect because this is nonconnectable advertising.
-
+[source,arduino]
+----
     #include <BLE.h>
 
     BLE_Advert_Settings advertSettings =
@@ -70,8 +75,4 @@ advertSettings has no effect because this is nonconnectable advertising.
     void loop() {
       ble.handleEvents();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----
