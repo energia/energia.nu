@@ -1,6 +1,6 @@
 == String Substring Function ==
 
-The String function link:/reference/en/language/variables/data-types/functions/substring/[`substring()`] is closely related to link:/reference/en/language/variables/data-types/functions/setchartat/[`charAt()`], link:/reference/en/language/variables/data-types/functions/startswith/[`startsWith()`] and link:/reference/en/language/variables/data-types/string/functions/endswith/[`endsWith()`]. It allows you to look for an instance of a particular substring within a given String.
+The String function link:/reference/en/language/variables/data-types/string/functions/substring/[`substring()`] is closely related to link:/reference/en/language/variables/data-types/string/functions/setchartat/[`charAt()`], link:/reference/en/language/variables/data-types/string/functions/startswith/[`startsWith()`] and link:/reference/en/language/variables/data-types/string/functions/endswith/[`endsWith()`]. It allows you to look for an instance of a particular substring within a given String.
 
 === Relevant Groundwork ===
 

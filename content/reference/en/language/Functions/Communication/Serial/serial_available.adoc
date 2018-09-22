@@ -1,6 +1,6 @@
 == available() ==
 === Description ===
-Get the number of bytes (characters) available for reading from the serial port. This is data that’s already arrived and stored in the serial receive buffer (which holds 128 bytes). available() inherits from the link:../../stream[Stream] utility class.
+Get the number of bytes (characters) available for reading from the serial port. This is data that’s already arrived and stored in the serial receive buffer (which holds 128 bytes). available() inherits from the link:/reference/en/language/functions/communication/stream/[Stream] utility class.
 
 === Syntax ===
 Serial.available()

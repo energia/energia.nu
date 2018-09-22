@@ -6,7 +6,7 @@ Gets a client that is connected to the server and has data available for
 reading. The connection persists when the returned client object goes
 out of scope; you can close it by calling *client*.stop(). available()
 inherits from the
-link:../../stream[Stream]
+link:/reference/en/language/functions/communication/stream/[Stream]
 utility class.
 
 === Syntax ===

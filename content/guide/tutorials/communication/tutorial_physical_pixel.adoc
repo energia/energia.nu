@@ -29,7 +29,7 @@ The LaunchPad will look for ASCII characters that will be sent from the Energia 
 
 In the `setup()` section, we initialize link:/reference/en/language/functions/communication/serial/[Serial] communication and set the pin associated to the Green LED (Pin 14) as an output.
 
-In the `loop()` section, link:/reference/en/language/functions/communication/serial/available/[`Serial.available()`] will look for characters read from the Serial Monitor. This is inside an if statement that will continuously run while the Serial is available. We set our variable `incomingByte` to what is being read from the Serial Monitor. There are 2 if statements that follow. The first controls what will happen when an 'H' is read in the Serial Monitor. If an 'H' is received, it will set the Green LED High using the `digitalWrite()` function. The second if statement controls what happens when an 'L' is received. Very similar to the previous statement, only difference is when 'L' is seen, the LED goes Low.
+In the `loop()` section, link:/reference/en/language/functions/communication/serial/serial_available/[`Serial.available()`] will look for characters read from the Serial Monitor. This is inside an if statement that will continuously run while the Serial is available. We set our variable `incomingByte` to what is being read from the Serial Monitor. There are 2 if statements that follow. The first controls what will happen when an 'H' is read in the Serial Monitor. If an 'H' is received, it will set the Green LED High using the `digitalWrite()` function. The second if statement controls what happens when an 'L' is received. Very similar to the previous statement, only difference is when 'L' is seen, the LED goes Low.
 
 *Processing*
 
@@ -169,7 +169,7 @@ void draw() {
 === See Also ===
 
 * link:/reference/en/language/functions/communication/serial/[serial()]
-* link:/reference/en/language/functions/communication/serial/read/[serial.read()]
+* link:/reference/en/language/functions/communication/serial/serial_read/[serial.read()]
 * link:/reference/en/language/structure/control-structure/if/[if()]
 * link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
 * link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.

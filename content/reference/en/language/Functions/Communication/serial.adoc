@@ -62,7 +62,7 @@ Depending on your hardware you may have more than one pair of UART pins. By defa
 === MSP430G2 Hardware Configuration ===
 There are several versions of the Launchpad in the wild, and as each package ships with two different MSPs, the array of configurations can be bewildering to the user new to the Launchpad platform or new to microcontroller programming in general. The latest Launchpad, (v1.5) ships with a http://www.ti.com/product/msp430g2553[MSP430G2553] seated in the DIP socket, as pictured in figure 1.
 
-image::/guide/libraries/serial/img/M430G2553.jpg[]
+image::/reference/en/language/functions/communication/serial/img/M430G2553.jpg[]
 
 Figure 1: MSP430 chip with hardware UART.It is ultimately the chip in the socket that determines the availability of hardware Serial, as all versions of the launchpad board can be reconfigured to support MSP430 chips with a hardware UART if you have them on hand. `The other chip that ships in the Launchpad v1.5 box is an` http://www.ti.com/product/msp430g2452[MSP430G2452]`, which does not have an onboard hardware UART. Therefore, even if you have Launchpad v1.5 it is advisable to check that you have the right chip inserted before proceeding`
 
@@ -70,7 +70,7 @@ If your Launchpad is version 1.4 or earlier, the chips that it shipped with have
 
 If your Launchpad is version 1.5 it will be labeled “MSP-EXP430G2” with the text “Rev 1.5” in smaller type immediately below, as pictured. In order to enable the Hardware UART on the launchpad, you must manually change the jumper positions on header J3 to match those pictured in figure 2, by rotating them 90 degrees from the position they shipped in. A diagram is silkscreened on the board for clarity.
 
-image::/guide/libraries/serial/img/Launchpad.jpg[]
+image::/reference/en/language/Functions/Communication/Serial/img/Launchpad.jpg[]
 
 Figure 2: Launchpad Revision 1.5 with jumpers set for hardware UART
 The Launchpad 1.5 ships with the jumpers in their default position (software UART only) to mimic the behavior of earlier revisions of the Launchpad. By rotating the jumpers, you can use the Energia Serial Library normally.
@@ -79,7 +79,7 @@ The Launchpad 1.5 ships with the jumpers in their default position (software UAR
 === Hardware UART ===
 For hardware UART users, the configuration is extremely simple — it behaves exactly the same as on the Arduino platform. It is noteworthy however, that the onboard Launchpad USB to serial bridge is limited to 9600 baud, as opposed to the higher baud rates available on recent Arduino boards like as the Uno
 
-image::/guide/libraries/serial/img/EnergiaHardwareSerial.png[]
+image::/reference/en/language/functions/communication/serial/img/EnergiaHardwareSerial.png[]
 Figure 3: Screenshot of Energia code using the hardware UART.
 
 === Software UART ===

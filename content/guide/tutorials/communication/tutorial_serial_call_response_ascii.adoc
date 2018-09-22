@@ -197,9 +197,9 @@ void serialEvent(Serial myPort) {
 === See Also ===
 
 * link:/reference/en/language/functions/communication/serial/[serial()]
-* link:/reference/en/language/functions/communication/serial/begin/[serial.begin()]
-* link:/reference/en/language/functions/communication/serial/available/[serial.available()]
-* link:/reference/en/language/functions/communication/serial/print/[serial.print()]
+* link:/reference/en/language/functions/communication/serial/serial_begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/serial_available/[serial.available()]
+* link:/reference/en/language/functions/communication/serial/serial_print/[serial.print()]
 * link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
 * link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
 * link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.

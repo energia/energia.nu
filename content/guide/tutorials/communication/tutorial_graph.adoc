@@ -158,7 +158,7 @@ void serialEvent (Serial myPort) {
 === See Also ===
 
 * link:/reference/en/language/functions/communication/serial/[serial()]
-* link:/reference/en/language/functions/communication/serial/read/[serial.read()]
+* link:/reference/en/language/functions/communication/serial/serial_read/[serial.read()]
 * link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
 * link:/reference/en/language/functions/analog-io/analogwrite/[analogWrite()]
 * link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.

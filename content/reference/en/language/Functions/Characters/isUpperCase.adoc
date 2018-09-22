@@ -76,7 +76,7 @@ else
 *   link:../../../variables/data-types/char[char]
 *   link:../../../structure/control-structure/if[if (conditional operators)]
 *   link:../../../structure/control-structure/while[while (conditional operators)]
-*  link:../../communication/serial/read[read()]
+*  link:../../communication/serial/serial_read[read()]
 
 --
 // SEE ALSO SECTION ENDS
