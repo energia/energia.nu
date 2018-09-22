@@ -92,7 +92,7 @@ The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cy
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../zero-due-mkr-family/analogwriteresolution[analogWriteResolution()]
+*  link:../../zero-due-mkr-family/analogwriteresolution[analogWriteResolution()]
 
 [role="definition"]
 * #DEFINITION# link:/guide/foundations/micro/tutorial_pwm[PWM^]

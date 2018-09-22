@@ -99,7 +99,7 @@ Why use unsigned variables at all?
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../constants/integerconstants[Integer Constants]
+*  link:../../constants/integerconstants[Integer Constants]
 
 --
 // SEE ALSO SECTION ENDS

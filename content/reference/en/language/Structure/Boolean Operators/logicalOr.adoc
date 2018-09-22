@@ -60,7 +60,7 @@ Do not confuse the boolean || (double pipe) operator with the bitwise OR operato
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../bitwise-operators/bitwiseor[| Bitwise OR]
+*  link:../../bitwise-operators/bitwiseor[| Bitwise OR]
 
 --
 // SEE ALSO SECTION ENDS

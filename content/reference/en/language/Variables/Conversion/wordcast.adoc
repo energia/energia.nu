@@ -51,7 +51,7 @@ Converts a value to the link:../../data-types/word[word] data type.
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../data-types/word[word]
+*  link:../../data-types/word[word]
 
 
 --

@@ -46,7 +46,7 @@
 
 .IPAddress class
 * link:../wifi/wifi_localip[localIP()]
-* link:../wifi/wifi_subnetmas/[subnetMask()]
+* link:../wifi/wifi_subnetmask/[subnetMask()]
 * link:../wifi/wifi_gatewayip[gatewayIP()]
 
 .Server class
@@ -124,7 +124,7 @@ The WiFi class initializes the ethernet library and network settings.
 The IPAddress class provides information about the network configuration.
 
 * link:../wifi/wifi_localip[localIP()]
-* link:../wifi/wifi_subnetmas/[subnetMask()]
+* link:../wifi/wifi_subnetmask/[subnetMask()]
 * link:../wifi/wifi_gatewayip[gatewayIP()]
 
 ### Server class

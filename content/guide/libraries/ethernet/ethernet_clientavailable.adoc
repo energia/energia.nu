@@ -5,7 +5,7 @@
 Returns the number of bytes available for reading (that is, the amount
 of data that has been written to the client by the server it is
 connected to). available() inherits from the
-link:stream/[Stream]
+link:../../stream/[Stream]
 utility class.
 
 === Syntax ===

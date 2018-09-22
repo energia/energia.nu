@@ -112,7 +112,7 @@ Using a 16 bit resolution (or any resolution *higher* than actual hardware capab
 * #EXAMPLE# http://arduino.cc/en/Tutorial/AnalogInputPins[Description of the analog input pins]
 
 [role="language"]
-* #LANGUAGE# link:../../analog-io/analogread[analogRead()]
+*  link:../../analog-io/analogread[analogRead()]
 
 --
 // SEE ALSO SECTION ENDS

@@ -67,7 +67,7 @@ x /= 2;      // x now contains 1
 === See also
 
 [role="language"]
-* #LANGUAGE#  link:../../arithmetic-operators/division[Normal Division]
+*   link:../../arithmetic-operators/division[Normal Division]
 
 --
 // SEE ALSO SECTION ENDS

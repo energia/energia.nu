@@ -58,7 +58,7 @@ Make sure you don't mistake the boolean AND operator, && (double ampersand) for 
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../bitwise-operators/bitwiseand[& (Bitwise AND)]
+*  link:../../bitwise-operators/bitwiseand[& (Bitwise AND)]
 
 --
 // SEE ALSO SECTION ENDS

@@ -88,11 +88,11 @@ When you use the `Mouse.click()` command, the Arduino takes over your mouse! Mak
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../mouseend[Mouse.end()]
-* #LANGUAGE# link:../mousemove[Mouse.move()]
-* #LANGUAGE# link:../mousepress[Mouse.press()]
-* #LANGUAGE# link:../mouserelease[Mouse.release()]
-* #LANGUAGE# link:../mouseispressed[Mouse.isPressed()]
+*  link:../mouseend[Mouse.end()]
+*  link:../mousemove[Mouse.move()]
+*  link:../mousepress[Mouse.press()]
+*  link:../mouserelease[Mouse.release()]
+*  link:../mouseispressed[Mouse.isPressed()]
 
 --
 // SEE ALSO SECTION ENDS

@@ -66,7 +66,7 @@ The bitwise not ~ (tilde) looks much different than the boolean not ! (exclamati
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../bitwise-operators/bitwisenot[~ Bitwise NOT]
+*  link:../../bitwise-operators/bitwisenot[~ Bitwise NOT]
 
 --
 // SEE ALSO SECTION ENDS

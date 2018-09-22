@@ -46,7 +46,7 @@ byte
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../../variables/data-types/word[word()]
+*  link:../../../variables/data-types/word[word()]
 
 --
 // SEE ALSO SECTION ENDS

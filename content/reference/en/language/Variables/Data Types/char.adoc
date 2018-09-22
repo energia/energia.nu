@@ -57,7 +57,7 @@ The char datatype is a signed type, meaning that it encodes numbers from -128 to
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../../functions/communication/serial/println[Serial.println]
+*  link:../../../functions/communication/serial/println[Serial.println]
 
 --
 // SEE ALSO SECTION ENDS

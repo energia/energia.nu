@@ -67,7 +67,7 @@ x *= 2;      // x now contains 4
 === See also
 
 [role="language"]
-* #LANGUAGE#  link:../../arithmetic-operators/multiplication[Normal Multiplication]
+*   link:../../arithmetic-operators/multiplication[Normal Multiplication]
 
 --
 // SEE ALSO SECTION ENDS

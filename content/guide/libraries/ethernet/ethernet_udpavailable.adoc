@@ -7,7 +7,7 @@ buffer. This is data that's already arrived. This function can only be
 successfully called after
 link:../ethernet_udpparsepacket/[UDP.parsePacket()]
 available() inherits from the
-link:stream/[Stream]
+link:../../stream/[Stream]
 utility class.
 
 
