@@ -62,13 +62,16 @@
 * link:../ethernet/ethernet_clientstop[stop()]
 
 .EthernetUDP
-* link:../spi/spi_begin[begin()]
-* link:../spi/spi_end[end()]
-* link:../spi/spi_setbitorder[setBitOrder()]
-* link:../spi/spi_setclockdivider[setClockDivider()]
-* link:../spi/spi_setdatamode[setDataMode()]
-* link:../spi/spi_transfer[transfer()]
-* link:../spi/spi_setmodule[setModule()]
+* link:../ethernet/ethernet_udpbegin[begin()]
+* link:../ethernet/ethernet_udpread[read()]
+* link:../ethernet/ethernet_udpwrite[write()]
+* link:../ethernet/ethernet_udpbeginpacket[beginPacket()]
+* link:../ethernet/ethernet_udpendpacket[endPacket()]
+* link:../ethernet/ethernet_udpparsepacket[parsePacket()]
+* link:../ethernet/ethernet_udpavailable[available()]
+* link:../ethernet/ethernet_udpstop[stop()]
+* link:../ethernet/ethernet_udpremoteip[remoteIP()]
+* link:../ethernet/ethernet_udpremoteport[remotePort()]
 
 ++++
     </div>

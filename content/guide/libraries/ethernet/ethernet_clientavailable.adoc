@@ -1,28 +1,29 @@
-*EthernetClient*.available()
-----------------------------
+== EthernetClient.available() ==
 
-#### Description
+=== Description ===
 
 Returns the number of bytes available for reading (that is, the amount
 of data that has been written to the client by the server it is
 connected to). available() inherits from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+link:stream/[Stream]
 utility class.
 
-#### Syntax
+=== Syntax ===
 
-*client*.available()
+client.available()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 The number of bytes available.
 
-#### Example
+=== Example ===
 
+[source,arduino]
+----
     #include <Ethernet.h>
     #include <SPI.h>
 
@@ -65,6 +66,4 @@ The number of bytes available.
           ;
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

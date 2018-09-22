@@ -1,25 +1,27 @@
-*EthernetClient*.connected()
-----------------------------
+== EthernetClient.connected() ==
 
-#### Description
+=== Description ===
 
 Whether or not the client is connected. Note that a client is considered
 connected if the connection has been closed but there is still unread
 data.
 
-#### Syntax
+=== Syntax ===
 
-*client*.connected()
+client.connected()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 Returns true if the client is connected, false if not.
 
-#### Example
+=== Example ===
+
+[source,arduino]
+----
 
     #include <Ethernet.h>
     #include <SPI.h>
@@ -63,6 +65,4 @@ Returns true if the client is connected, false if not.
           ;
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

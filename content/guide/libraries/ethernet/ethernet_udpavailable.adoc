@@ -1,30 +1,31 @@
-*EthernetUDP*.available()
--------------------------
+== EthernetUDP.available() ==
 
-#### Description
+=== Description ===
 
 Get the number of bytes (characters) available for reading from the
 buffer. This is data that's already arrived. This function can only be
 successfully called after
-[UDP.parsePacket()](http://energia.nu/reference/ethernet/ethernet_udpparsepacket/ "Ethernet_UDPParsePacket"){.wikilink}.
+link:../ethernet_udpparsepacket/[UDP.parsePacket()]
 available() inherits from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+link:stream/[Stream]
 utility class.
 
-#### Syntax
 
-*UDP*.available()
+=== Syntax ===
 
-#### Parameters
+UDP.available()
+
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
 the number of bytes available to read
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>        
     #include <Ethernet.h>
     #include <EthernetUdp.h>
@@ -74,6 +75,4 @@ the number of bytes available to read
         Serial.println(packetBuffer);
      }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

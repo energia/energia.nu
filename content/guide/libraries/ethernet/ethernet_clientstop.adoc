@@ -1,21 +1,17 @@
-*EthernetClient*.stop()
------------------------
+== EthernetClient.stop() ==
 
-#### Description
+=== Description ===
 
 Disconnect from the server.
 
-#### Syntax
+=== Syntax ===
 
-*client*.stop()
+client.stop()
 
-#### Parameters
-
-none
-
-#### Returns
+=== Parameters ===
 
 none
 
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+=== Returns ===
+
+none

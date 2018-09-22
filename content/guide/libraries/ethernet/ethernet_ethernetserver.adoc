@@ -1,25 +1,25 @@
-EthernetServer()
-----------------
+== EthernetServer() ==
 
-#### Description
+=== Description ===
 
 Create a server that listens for incoming connections on the specified
 port.
 
-#### Syntax
+=== Syntax ===
 
 Server(port);
 
-#### Parameters
+=== Parameters ===
 
 **port**: the port to listen on (int)
 
-#### Returns
+=== Returns === 
 
 None
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>
     #include <Ethernet.h>
 
@@ -56,6 +56,4 @@ None
         server.write(client.read());
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

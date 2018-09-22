@@ -1,26 +1,26 @@
-<span class="wikiword">IPAddress</span>()
------------------------------------------
+== IPAddress() ==
 
-#### Description
+=== Description ===
 
 Defines an IP address. It can be used to declare both local and remote
 addresses.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">IPAddress</span>(address);
+IPAddress(address);
 
-#### Parameters
+=== Parameters ===
 
 **address**: a comma delimited list representing the address (4 bytes,
 ex. 192, 168, 1, 1)
 
-#### Returns
+=== Returns ===
 
 None
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>
     #include <Ethernet.h>
 
@@ -51,6 +51,4 @@ None
 
     void loop() {
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

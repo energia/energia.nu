@@ -1,30 +1,30 @@
-*EthernetServer*.available()
-----------------------------
+== EthernetServer.available() ==
 
-#### Description
+=== Description === 
 
 Gets a client that is connected to the server and has data available for
 reading. The connection persists when the returned client object goes
 out of scope; you can close it by calling *client*.stop(). available()
 inherits from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+link:stream[Stream]
 utility class.
 
-#### Syntax
+=== Syntax ===
 
-*server*.available()
+server.available()
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
 a Client object; if no Client has data available for reading, this
 object will evaluate to false in an if-statement (see the example below)
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <Ethernet.h>
     #include <SPI.h>
 
@@ -60,6 +60,4 @@ object will evaluate to false in an if-statement (see the example below)
         server.write(client.read());
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

@@ -1,26 +1,26 @@
-*EthernetUDP*.remoteIP()
-------------------------
+== EthernetUDP.remoteIP() ==
 
-#### Description
+=== Description ===
 
 Gets the IP address of the remote connection. This function must be
 called after
-[UDP.parsePacket()](http://energia.nu/reference/ethernet/ethernet_udpparsepacket/ "Ethernet_UDPParsePacket"){.wikilink}.
+link:../ethernet_udpparsepacket/[UDP.parsePacket()]
 
-#### Syntax
+=== Syntax ===
 
 UDP.remoteIP();
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
 4 bytes : the IP address of the remote connection
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>        
     #include <Ethernet.h>
     #include <EthernetUdp.h>
@@ -60,6 +60,4 @@ None
       }
 
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----
