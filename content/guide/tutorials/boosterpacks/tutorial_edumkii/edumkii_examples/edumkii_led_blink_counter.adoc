@@ -57,4 +57,4 @@ void loop()
 }
 ----
 
-http://energia.nu/guide/edumkii/[EDUMKII Home]
+link:../../[EDUMKII Home]

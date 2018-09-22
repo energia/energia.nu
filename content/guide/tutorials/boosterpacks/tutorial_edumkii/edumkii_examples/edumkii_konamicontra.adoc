@@ -284,4 +284,4 @@ int backToCenter(void)
 }
 ----
 
-http://energia.nu/guide/edumkii/[EDUMKII Home]
+link:../../[EDUMKII Home]
