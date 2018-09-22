@@ -1,37 +1,23 @@
-<span class="wikiword">EasyLink</span>.begin()
-----------------------------------------------
+== EasyLink.begin() ==
 
-#### Description
+=== Description ===
 
-Initializes the <span class="wikiword">EasyLink</span> library's RF
+Initializes the EasyLink library's RF
 settings and provides the current status.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">EasyLink</span>.begin(); <span
-class="wikiword">EasyLink</span>.begin(EasyLink\_PhyType);
+EasyLink<.begin();
 
-#### Parameters
+EasyLink.begin(EasyLink_PhyType);
 
-**EasyLink\_PhyType**: the EasyLink\_PhyType is the name of the <span
-class="wikiword">EasyLink\_PhyType</span> to be used. By default the
-EasyLink\_PhyType is set to EasyLink\_Phy\_50kbps2gfsk when calling
+=== Parameters ===
+
+**EasyLink_PhyType**: the EasyLink_PhyType is the name of the EasyLink_PhyType to be used. By default the
+EasyLink_PhyType is set to EasyLink_Phy_50kbps2gfsk when calling
 begin() without parameters. Currently this is the only PHY type
 supported.
 
-#### Returns
+=== Returns ===
 
-See the [EasyLink Status
-Codes](http://energia.nu/reference/easylink/easylink-status-codes/)
-reference page.
-
-<div>
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [EasyLink
-Library](http://energia.nu/reference/easylink/ "EasyLink")
-<div>
-
-</div>
-
-</div>
+link:../easylink_status_codes/[EasyLink Status Codes]
