@@ -17,7 +17,8 @@ none
 the subnet mask of the hardware
 
 === Example ===
-
+[source,arduino]
+----
     #include <WiFi.h>
     int status = WL_IDLE_STATUS;     // the Wifi radio's status
 
@@ -51,3 +52,4 @@ the subnet mask of the hardware
 
     void loop () {
     }
+----

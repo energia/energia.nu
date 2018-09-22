@@ -18,7 +18,8 @@ Server(port);
 None
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -53,3 +54,4 @@ None
     void loop() {
 
     }
+----

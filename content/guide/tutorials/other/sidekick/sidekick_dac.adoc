@@ -14,7 +14,7 @@ In this example we will use a Digital to Analog converter.
 
 ==== Code ====
 
-[source,c]
+[source,arduino]
 ----
 include::content/guide/tutorials/other/sidekick/code/sidekick_dac.ino[]
 ----

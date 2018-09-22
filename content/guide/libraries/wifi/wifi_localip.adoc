@@ -17,7 +17,8 @@ none
 the IP address of the shield
 
 === Example ===
-
+[source,arduino]
+----
     #include <WiFi.h>
 
     char ssid[] = "yourNetwork";      //SSID of your network
@@ -47,3 +48,4 @@ the IP address of the shield
     }
 
     void loop () {}
+----

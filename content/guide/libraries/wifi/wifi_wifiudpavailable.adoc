@@ -5,7 +5,7 @@
 Get the number of bytes (characters) available for reading from the
 buffer. This is data that's already arrived. This function can only be
 successfully called after WiFiUDP.parsePacket(). available() inherits
-from the http://energia.nu/reference/stream/[Stream]
+from the link:/reference/en/language/functions/communication/stream/[Stream]
 utility class.
 
 === Syntax ===

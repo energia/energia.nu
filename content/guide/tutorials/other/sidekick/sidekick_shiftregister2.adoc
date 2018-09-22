@@ -20,7 +20,7 @@ In this example we will use a shift register to increase our number of output pi
 
 ==== Code ====
 
-[source,c]
+[source,arduino]
 ----
 include::content/guide/tutorials/other/sidekick/code/sidekick_shiftregister2.ino[]
 ----

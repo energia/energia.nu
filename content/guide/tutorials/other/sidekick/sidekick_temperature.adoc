@@ -34,7 +34,7 @@ image::../img/SidekickExample09_bb.png[800,600]
 
 ==== Code ====
 
-[source,c]
+[source,arduino]
 ----
 include::content/guide/tutorials/other/sidekick/code/sidekick_temperature.ino[]
 ----

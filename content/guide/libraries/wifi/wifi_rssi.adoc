@@ -19,7 +19,8 @@ wifiAccessPoint: specifies from which network to get the information
 long : the current RSSI /Received Signal Strength in dBm
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -46,3 +47,4 @@ long : the current RSSI /Received Signal Strength in dBm
     }
 
     void loop () {}
+----

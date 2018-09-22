@@ -42,7 +42,8 @@ Nothing
 
 This example shows how to set the static IP address, 192.168.0.177, of
 the LAN network to the WiFi hardware:
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -87,3 +88,4 @@ the LAN network to the WiFi hardware:
     }
 
     void loop () {}
+----

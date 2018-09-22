@@ -7,7 +7,7 @@ Gets a client that is connected to the server and has data available for
 reading. The connection persists when the returned client object goes
 out of scope; you can close it by calling *client*.stop(). available()
 inherits from the
-http://energia.nu/reference/stream/[Stream]
+link:/reference/en/language/functions/communication/stream/[Stream]
 utility class.
 
 === Syntax ===
@@ -24,7 +24,8 @@ a Client object; if no Client has data available for reading, this
 object will evaluate to false in an if-statement
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -68,3 +69,4 @@ object will evaluate to false in an if-statement
         client.stop();
       }
     }
+----

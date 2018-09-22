@@ -14,7 +14,8 @@ WiFiClient()
 none
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -55,3 +56,4 @@ none
     void loop() {
 
     }
+----

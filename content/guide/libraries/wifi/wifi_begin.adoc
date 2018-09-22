@@ -31,7 +31,8 @@ WiFi.begin(ssid, keyIndex, key);
 -   WL_IDLE_STATUS when not connected to a network, but powered on
 
 === Example ===
-
+[source,arduino]
+----
     #include <WiFi.h>
 
     //SSID of your network 
@@ -45,3 +46,4 @@ WiFi.begin(ssid, keyIndex, key);
     }
 
     void loop () {}
+----

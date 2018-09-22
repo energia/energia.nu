@@ -98,10 +98,10 @@ the internet. It can serve as either a server accepting incoming
 connections or a client making outgoing ones. The library supports WEP
 and WPA2 Personal encryption, but not WPA2 Enterprise. Supported Devices:
 CC3100, CC3200 Energia communicates with the WiFi network processor using the SPI bus. The
-WiFi library is very similar to the [Ethernet](http://energia.nu/reference/ethernet/ "Ethernet")
+WiFi library is very similar to the link:../ethernet/[Ethernet]
 library, and many of the function calls are the same. For additional
-information on Simplink WiFi, visit the support page from TI: [Embedded
-WiFi ](http://www.ti.com/lsds/ti/wireless_connectivity/embedded_wi-fi/overview.page)
+information on Simplink WiFi, visit the support page from TI: http://www.ti.com/lsds/ti/wireless_connectivity/embedded_wi-fi/overview.page[Embedded
+WiFi]
 
 ### WiFi class
 
@@ -177,35 +177,32 @@ The UDP class enables UDP message to be sent and received.
 
 ### Examples
 
--   [ConnectNoEncryption](http://arduino.cc/en/Tutorial/ConnectNoEncryption)
+-   http://arduino.cc/en/Tutorial/ConnectNoEncryption[ConnectNoEncryption]
     : Demonstrates how to connect to an open network
--   [ConnectWithWEP](http://arduino.cc/en/Tutorial/ConnectWithWEP)
+-   http://arduino.cc/en/Tutorial/ConnectWithWEP[ConnectWithWEP]
     : Demonstrates how to connect to a network that is encrypted with
     WEP
--   [ConnectWithWPA](http://arduino.cc/en/Tutorial/ConnectWithWPA)
+-   http://arduino.cc/en/Tutorial/ConnectWithWPA[ConnectWithWPA]
     : Demonstrates how to connect to a network that is encrypted with
     WPA2Personal
--   [ScanNetworks](http://arduino.cc/en/Tutorial/ScanNetworks)
+-   http://arduino.cc/en/Tutorial/ScanNetworks[ScanNetworks]
     : Displays all WiFi networks in range
--   [WiFiChatServer](http://arduino.cc/en/Tutorial/WiFiChatServer)
+-   http://arduino.cc/en/Tutorial/WiFiChatServer[WiFiChatServer]
     : Set up a simple chat server
--   [WiFiXivelyClient](http://arduino.cc/en/Tutorial/WiFiXivelyClient)
+-   http://arduino.cc/en/Tutorial/WiFiXivelyClient[WiFiXivelyClient]
     : connect to xively.com, a free datalogging site
--   [WiFiXivelyClientString](http://arduino.cc/en/Tutorial/WiFiXivelyClientString)
+-   http://arduino.cc/en/Tutorial/WiFiXivelyClientString[WiFiXivelyClientString]
     :send strings to xively.com
--   [WiFiWebClient](http://arduino.cc/en/Tutorial/WiFiWebClient)
+-   http://arduino.cc/en/Tutorial/WiFiWebClient[WiFiWebClient]
     : Connect to a remote webserver
--   [WiFiWebClientRepeating](http://arduino.cc/en/Tutorial/WiFiWebClientRepeating)
+-   http://arduino.cc/en/Tutorial/WiFiWebClientRepeating[WiFiWebClientRepeating]
     : Make repeated HTTP calls to a webserver
--   [WiFiWebServer](http://arduino.cc/en/Tutorial/WiFiWebServer)
+-   http://arduino.cc/en/Tutorial/WiFiWebServer[WiFiWebServer]
     : Serve a webpage from the WiFi shield
--   [WiFiSendReceiveUDPString](http://arduino.cc/en/Tutorial/WiFiSendReceiveUDPString)
+-   http://arduino.cc/en/Tutorial/WiFiSendReceiveUDPString[WiFiSendReceiveUDPString]
     : Send and receive a UDP string
--   [UdpNTPClient](http://arduino.cc/en/Tutorial/UdpNTPClient)
+-   http://arduino.cc/en/Tutorial/UdpNTPClient[UdpNTPClient]
     : Query a Network Time Protocol (NTP) server using UDP
-
-[Reference Home](http://energia.nu/reference/ "Reference") || 
-[Libraries Home](http://energia.nu/guide/libraries/ "Libraries")  
 
 ++++
     </div>
