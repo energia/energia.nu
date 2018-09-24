@@ -1,24 +1,25 @@
-if(EthernetClient)
-------------------
+== if(EthernetClient) ==
 
-#### Description
+=== Description ===
 
 Indicates if the specified Ethernet client is ready.
 
-#### Syntax
+=== Syntax ===
 
 if (client)
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 boolean : returns true if the specified client is available.
 
-#### Example:
+=== Example ===
 
+[source,arduino]
+----
     #include <Ethernet.h>
     #include <SPI.h>
 
@@ -64,6 +65,4 @@ boolean : returns true if the specified client is available.
           ;
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

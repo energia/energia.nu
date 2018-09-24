@@ -1,0 +1,20 @@
+== readBytes() ==
+=== Description ===
+Serial.readBytes() reads characters from the serial port into a buffer. The function terminates if the determined length has been read, or it times out (see link:../serial_settimeout[Serial.setTimeout()]). Serial.readBytes() returns the number of characters placed in the buffer. A 0 means no valid data was found. Serial.readBytes() inherits from the link:/reference/en/language/functions/communication/stream/[Stream] utility class.
+
+ 
+
+=== Syntax ===
+Serial.readBytes(buffer, length)
+
+ 
+
+=== Parameters ===
+buffer: the buffer to store the bytes in (char[] or byte[])
+
+length : the number of bytes to read (int)
+
+ 
+
+=== Returns ===
+byte

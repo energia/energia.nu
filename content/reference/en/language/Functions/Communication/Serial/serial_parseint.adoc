@@ -1,0 +1,19 @@
+== parseInt() ==
+=== Description ===
+Looks for the next valid integer in the incoming serial stream. parseInt() inherits from the link:/reference/en/language/functions/communication/stream/[Stream] utility class.
+
+ 
+
+=== Syntax ===
+Serial.parseInt()
+
+ 
+
+=== Parameters ===
+none
+
+ 
+
+=== Returns ===
+int : the next valid integer
+

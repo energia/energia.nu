@@ -1,17 +1,17 @@
-*EthernetClient*.write()
-------------------------
+== EthernetClient.write() ==
 
-#### Description
+=== Description ===
 
 Write data to the server the client is connected to. This data is sent
 as a byte or series of bytes.
 
-#### Syntax
+=== Syntax ===
 
-*client*.write(val)\
-*client*.write(buf, len)
+client.write(val)
 
-#### Parameters
+client.write(buf, len)
+
+=== Parameters ===
 
 **val**: a value to send as a single byte (byte or char)
 
@@ -19,11 +19,8 @@ as a byte or series of bytes.
 
 **len**: the length of the buffer
 
-#### Returns
+=== Returns === 
 
-byte\
+byte
 write() returns the number of bytes written. It is not necessary to read
 this value.
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")

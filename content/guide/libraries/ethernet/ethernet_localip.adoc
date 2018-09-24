@@ -1,25 +1,25 @@
-Ethernet.localIP()
-------------------
+== Ethernet.localIP() ==
 
-#### Description
+=== Description ===
 
 Obtains the IP address of the Ethernet shield. Useful when the address
 is auto assigned through DHCP.
 
-#### Syntax
+=== Syntax ===
 
 Ethernet.localIP();
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
 the IP address
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include 
     #include 
 
@@ -51,6 +51,4 @@ the IP address
     void loop() {
 
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

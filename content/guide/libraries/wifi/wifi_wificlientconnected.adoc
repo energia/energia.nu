@@ -20,7 +20,8 @@ none
 Returns true if the client is connected, false if not.
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -72,3 +73,4 @@ Returns true if the client is connected, false if not.
           ;
       }
     }
+----

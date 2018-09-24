@@ -1,54 +1,57 @@
-<span class="wikiword">BLE\_Char</span>
----------------------------------------
+== BLE_Char ==
 
-#### Description
+
+=== Description ===
 
 The data type used to declare a characteristic. All characteristic
 values are initialized to a single byte of data with a value of 0. Read
 and write a characteristic value
-using [`ble.readValue()`](http://energia.nu/reference/ble/ble-readvalue/)
+using link:../ble_readvalue/[`ble.readValue()`]
 and
-[`ble.writeValue()`](http://energia.nu/reference/ble/ble-writevalue/) after
-[`ble.addService()`](http://energia.nu/reference/ble/ble-addservice/)
+link:../ble_writevalue/[`ble.writeValue()`] after
+link:../ble-addservice/[`ble.addService()`]
 has been called on a service containing the characteristic. Note that a
 characteristic can only be part of a single service.
 
-#### Syntax
-
+=== Syntax ===
+[source,arduino]
+----
     BLE_Char char =
     {
       UUID,
       properties,
       charDesc
     };
-
-#### Parameters
+----
+=== Parameters ===
 
 **UUID**: The 2 or 16 byte identifier for the service. 2 byte UUID's are
 reserved for officially adopted services. For creating a 16 byte UUID
 for custom services, see this
-[reference](http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#UUID).
+http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#UUID[reference].
+
 **properties**: A bitwise OR of the desired characteristic properties.
 
--   BLE\_READABLE: The client can read the characteristic value.
--   BLE\_WRITABLE\_NORSP: The client can write the characteristic value
+-   BLE_READABLE: The client can read the characteristic value.
+-   BLE_WRITABLE_NORSP: The client can write the characteristic value
     without needing confirmation of the write.
--   BLE\_WRITABLE: The client can write the characteristic and require a
+-   BLE_WRITABLE: The client can write the characteristic and require a
     confirmation of the write.
--   BLE\_NOTIFIABLE: The client can request to receive notifications of
+-   BLE_NOTIFIABLE: The client can request to receive notifications of
     server-side writes to the characteristic value. The notifications
     contain the written value, and the client does not need to respond.
--   BLE\_INDICATABLE: The client can request to receive indications of
+-   BLE_INDICATABLE: The client can request to receive indications of
     server-side writes to the characteristic value. The
     indications contain the written value, and the client must confirm
     that it received the indication.
 
-**charDesc**: Optional. A [char array
-string](http://energia.nu/reference/string/) that describes the
+**charDesc**: Optional. A link:/reference/en/language/variables/data-types/string/[char array
+string] that describes the
 characteristic value.
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <BLE.h>
 
     char char1Value = 0;
@@ -91,8 +94,4 @@ characteristic value.
      {0xF0, 0xFF},
      4, simpleServiceChars
     };
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

@@ -46,8 +46,8 @@ The tangent of the angle (`double`).
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../../variables/data-types/float[float]
-* #LANGUAGE# link:../../../variables/data-types/double[double]
+*  link:../../../variables/data-types/float[float]
+*  link:../../../variables/data-types/double[double]
 
 --
 // SEE ALSO SECTION ENDS

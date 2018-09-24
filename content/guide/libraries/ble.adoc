@@ -32,28 +32,28 @@
 ++++
 
 .BLE class
-* link:../ble/ble-begin[begin()]
-* link:../ble/ble-setloglevel[setLogLevel()]
-* link:../ble/ble-handleevents[handleEvents()]
-* link:../ble/ble-terminateconn[terminateConn()]
-* link:../ble/ble-end[end()]
-* link:../ble/ble-isconnected[isConnected()]
-* link:../ble/ble-isadvertising[isAdvertising()]
-* link:../ble/ble-addservice[addService()]
-* link:../ble/ble-startadvert[startAdvert()]
-* link:../ble/ble-stopadvert[stopAdvert()]
-* link:../ble/ble-setadvertname[setAdvertName()]
-* link:../ble/ble-writevalue[writeValue()]
-* link:../ble/ble-readvalue[readValue\_<type>;()]
+* link:../ble/ble_begin[begin()]
+* link:../ble/ble_setloglevel[setLogLevel()]
+* link:../ble/ble_handleevents[handleEvents()]
+* link:../ble/ble_terminateconn[terminateConn()]
+* link:../ble/ble_end[end()]
+* link:../ble/ble_isconnected[isConnected()]
+* link:../ble/ble_isadvertising[isAdvertising()]
+* link:../ble/ble_addservice[addService()]
+* link:../ble/ble_startadvert[startAdvert()]
+* link:../ble/ble_stopadvert[stopAdvert()]
+* link:../ble/ble_setadvertname[setAdvertName()]
+* link:../ble/ble_writevalue[writeValue()]
+* link:../ble/ble_readvalue[readValue()]
 
 .Security
-* link:../ble/ble-setpairingmode[setPairingMode()]
-* link:../ble/ble-setiocapabilities[setIoCapabilities()]
-* link:../ble/ble-usebonding[useBonding()]
-* link:../ble/ble-eraseallbonds[eraseAllBonds()]
-* link:../ble/ble-replacelrubond[replaceLruBond()]
-* link:../ble/ble-sendsecurityrequest[sendSecurityRequest()]
-* link:../ble/ble-usewhitelistpolicy[setWhiteListPolicy()]
+* link:../ble/ble_setpairingmode[setPairingMode()]
+* link:../ble/ble_setiocapabilities[setIoCapabilities()]
+* link:../ble/ble_usebonding[useBonding()]
+* link:../ble/ble_eraseallbonds[eraseAllBonds()]
+* link:../ble/ble_replacelrubond[replaceLruBond()]
+* link:../ble/ble_sendsecurityrequest[sendSecurityRequest()]
+* link:../ble/ble_usewhitelistpolicy[setWhiteListPolicy()]
 
 .Advanced Parameters and Commands
 * setGattParam()
@@ -66,8 +66,8 @@
 * setMaxConnInt()
 * setRespLatency()
 * setBleTimeout()
-* link:../ble/ble-getadvertdata[getAdvertData()]
-* link:../ble/ble-setvalueformat[setValueFormat()]
+* link:../ble/ble_getadvertdata[getAdvertData()]
+* link:../ble/ble_setvalueformat[setValueFormat()]
 
 ++++
     </div>
@@ -108,20 +108,18 @@ below are required by the BLE Energia Library for proper operation.
 These pins may not be used by the user application or otherwise
 electrically loaded.*
 
-[lpbpstack](http://energia.nu/wordpress/wp-content/uploads/2016/07/LPBPstack.jpg)
-(http://energia.nu/wordpress/wp-content/uploads/2016/07/LPBPstack.jpg)
+image::http://energia.nu/wordpress/wp-content/uploads/2016/07/LPBPstack.jpg[lpbpstack]
 
-[ble\_energia\_pinout](http://energia.nu/wordpress/wp-content/uploads/2016/07/ble_energia_pinout.png)
-(http://energia.nu/wordpress/wp-content/uploads/2016/07/ble_energia_pinout.png)
+image::http://energia.nu/wordpress/wp-content/uploads/2016/07/ble_energia_pinout.png[ble_energia_pinout]
 
 ### Sample Applications
 
 The Energia BLE library ships with two sample applications:
 
--   [SerialOverBLE](http://energia.nu/reference/ble/serialoverblesampleapp/)
--   [BLEInputOutput](http://energia.nu/reference/ble/bleinputoutputsampleapp/)
+-   link:serialoverblesampleapp/[SerialOverBLE]
+-   link:bleinputoutputsampleapp/[BLEInputOutput]
 
-  These sample applications demonstrate the capabilities of the BLE
+These sample applications demonstrate the capabilities of the BLE
 Energia library and should provide a foundation for user development
 using the library.
 
@@ -131,19 +129,19 @@ The BLE class initializes the communication layer with the NP and
 provides an interface for the Energia sketch to configure it. Basic BLE
 functionality is controlled by the following:
 
-* link:../ble/ble-begin[begin()]
-* link:../ble/ble-setloglevel[setLogLevel()]
-* link:../ble/ble-handleevents[handleEvents()]
-* link:../ble/ble-terminateconn[terminateConn()]
-* link:../ble/ble-end[end()]
-* link:../ble/ble-isconnected[isConnected()]
-* link:../ble/ble-isadvertising[isAdvertising()]
-* link:../ble/ble-addservice[addService()]
-* link:../ble/ble-startadvert[startAdvert()]
-* link:../ble/ble-stopadvert[stopAdvert()]
-* link:../ble/ble-setadvertname[setAdvertName()]
-* link:../ble/ble-writevalue[writeValue()]
-* link:../ble/ble-readvalue[readValue\_<type>;()]
+* link:../ble/ble_begin[begin()]
+* link:../ble/ble_setloglevel[setLogLevel()]
+* link:../ble/ble_handleevents[handleEvents()]
+* link:../ble/ble_terminateconn[terminateConn()]
+* link:../ble/ble_end[end()]
+* link:../ble/ble_isconnected[isConnected()]
+* link:../ble/ble_isadvertising[isAdvertising()]
+* link:../ble/ble_addservice[addService()]
+* link:../ble/ble_startadvert[startAdvert()]
+* link:../ble/ble_stopadvert[stopAdvert()]
+* link:../ble/ble_setadvertname[setAdvertName()]
+* link:../ble/ble_writevalue[writeValue()]
+* link:../ble/ble_readvalue[readValue()]
 
  
 
@@ -153,34 +151,34 @@ Bluetooth data is organized into a hierarchy of services and
 characteristics. Services are a collection of related characteristics.
 The built-in serial service, for example, contains two characeristics
 for transmitting and receiving data. Two primers that are worth reading
-can be found in [Texas
-Instruments](http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#Custom_Profile.2FService)
+can be found in http://processors.wiki.ti.com/index.php/Tutorial:_How_to_Create_a_Custom_Bluetooth_Smart_Embedded_Application_with_the_CC2650DK#Custom_Profile.2FService[Texas
+Instruments]
 and
-[Adafruit](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt#services-and-characteristics)
+https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt#services-and-characteristics[Adafruit]
 tutorials. Most of the details are abstracted with the data types
-[`BLE_Char`](http://energia.nu/reference/ble/ble-addservice/ble_char/)
+link:ble_char/[`BLE_Char`]
 and
-[`BLE_Service`](http://energia.nu/reference/ble/ble-addservice/ble_service/).
+link:ble_service/[`BLE_Service`].
 Add a service to the NP with
-[ble.addService()](http://energia.nu/reference/ble/ble-addservice/).
+link:ble_addservice/[ble.addService()].
 
 
 ### Error Handling
 
 Many functions provide status and error information, either returning
 `BLE_SUCCESS` or `BLE_CHECK_ERROR`, in which case the variable
-[`ble.error`](http://energia.nu/?page_id=5190&preview=true) can be
+link:ble_error/[`ble.error`] can be
 checked for the specific error.
 
 ### Security
 
-* link:../ble/ble-setpairingmode[setPairingMode()]
-* link:../ble/ble-setiocapabilities[setIoCapabilities()]
-* link:../ble/ble-usebonding[useBonding()]
-* link:../ble/ble-eraseallbonds[eraseAllBonds()]
-* link:../ble/ble-replacelrubond[replaceLruBond()]
-* link:../ble/ble-sendsecurityrequest[sendSecurityRequest()]
-* link:../ble/ble-usewhitelistpolicy[setWhiteListPolicy()]
+* link:../ble/ble_setpairingmode[setPairingMode()]
+* link:../ble/ble_setiocapabilities[setIoCapabilities()]
+* link:../ble/ble_usebonding[useBonding()]
+* link:../ble/ble_eraseallbonds[eraseAllBonds()]
+* link:../ble/ble_replacelrubond[replaceLruBond()]
+* link:../ble/ble_sendsecurityrequest[sendSecurityRequest()]
+* link:../ble/ble_usewhitelistpolicy[setWhiteListPolicy()]
  
 
 ### Advanced Parameters and Commands
@@ -195,19 +193,19 @@ checked for the specific error.
 * setMaxConnInt()
 * setRespLatency()
 * setBleTimeout()
-* link:../ble/ble-getadvertdata[getAdvertData()]
-* link:../ble/ble-setvalueformat[setValueFormat()]
+* link:../ble/ble_getadvertdata[getAdvertData()]
+* link:../ble/ble_setvalueformat[setValueFormat()]
  
  
 ### Going Further
 
 If you are interested in learning more about the internals of the BLE
 Energia Library or would like to move to C programming with the MSP432
-and CC2650MODA combo, please see the [SNP + SAP SimpleLink Academy
-Module](http://software-dl.ti.com/lprf/simplelink_academy/modules/ble_snp_sap_intro/ble_snp_sap_intro.html) for
+and CC2650MODA combo, please see the http://software-dl.ti.com/lprf/simplelink_academy/modules/ble_snp_sap_intro/ble_snp_sap_intro.html[SNP + SAP SimpleLink Academy
+Module] for
 more information. For additional information on the CC2650MODA
-BoosterPack or BLE, visit the support page from TI: [Embedded
-BLE](http://www.ti.com/lsds/ti/wireless_connectivity/bluetooth_bluetooth-ble/simplelink-ulp-ble.page)
+BoosterPack or BLE, visit the support page from TI: http://www.ti.com/lsds/ti/wireless_connectivity/bluetooth_bluetooth-ble/simplelink-ulp-ble.page[Embedded
+BLE]
 
 ### Flashing the CC2650MODA BoosterPack
 
@@ -216,19 +214,12 @@ Simple Network Processor image from the TI BLE SDK. You can obtain these
 images for the CC2650MODA from the following links. Select the link that
 corresponds to your operating system.
 
--   [Windows](http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.exe&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files)
--   [Mac
-    OSX](http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.app.zip&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files)
--   [Linux](http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.run&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files)
+-   http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.exe&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files[Windows]
+-   http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.app.zip&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files[Mac OSX]
+-   http://software-dl.ti.com/dsps/forms/self_cert_export.html?prod_no=ble_2_02_simple_np_setup.run&ref_url=http://software-dl.ti.com/lprf/BLE-Simple-Network-Processor-Hex-Files[Linux]
 
     *Note: The Mac installer comes as a zip file, you will need to unzip
 it before running.* 
-
-[Reference Home](http://energia.nu/reference/ "Reference") 
-|| 
-
-[Libraries Home](http://energia.nu/guide/libraries/ "Libraries")
-
 ++++
     </div>
 </div>

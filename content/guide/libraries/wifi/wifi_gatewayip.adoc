@@ -18,7 +18,8 @@ none
 An array containing the hardware gateway IP address
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
     int status = WL_IDLE_STATUS; // the Wifi radio's status
@@ -40,3 +41,4 @@ An array containing the hardware gateway IP address
       }
     }
     void loop () {}
+----

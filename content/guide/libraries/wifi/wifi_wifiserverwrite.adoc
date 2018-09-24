@@ -18,6 +18,8 @@ byte : the number of bytes written. It is not necessary to read this.
 
 === Example ===
 
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -53,3 +55,4 @@ byte : the number of bytes written. It is not necessary to read this.
         server.write(client.read());
       }
     }
+----

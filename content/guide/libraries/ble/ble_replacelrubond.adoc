@@ -1,27 +1,19 @@
-<span class="wikiword">ble.replaceLruBond()</span>
---------------------------------------------------
+== ble.replaceLruBond() ==
 
-#### Description
+=== Description ===
 
 Enable or disable replacing the least recently used bond when a new bond
 is formed.
 
-#### Syntax
+=== Syntax ===
 
 `ble.replaceLruBond(replacement);`
 
-#### Parameters
+=== Parameters ===
 
 **replacement**: bool indicating whether or not to replace the least
 recently used bond when a new bond is formed.
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
-
-#### 
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+link:../ble_error/[Status code]

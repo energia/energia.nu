@@ -1,24 +1,24 @@
-EthernetUPD.begin()
--------------------
+== EthernetUPD.begin() ==
 
-#### Description
+=== Description ===
 
 Initializes the ethernet UDP library and network settings.
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">EthernetUDP</span>.begin(localPort);\
+EthernetUDP.begin(localPort);
 
-#### Parameters
+=== Parameters ===
 
 **localPort**: the local port to listen on (int)
 
-#### Returns
+=== Returns ===
 
 1 if successful, 0 if there are no sockets available to use.
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>     
     #include <Ethernet.h>
     #include <EthernetUdp.h>
@@ -50,6 +50,4 @@ Initializes the ethernet UDP library and network settings.
     void loop() {
 
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

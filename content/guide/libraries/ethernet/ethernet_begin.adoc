@@ -1,38 +1,50 @@
-Ethernet.begin()
-----------------
+== Ethernet.begin() ==
 
-#### Description
+=== Description ===
 
 Initializes the ethernet library and network settings. With version 1.0,
 the library supports DHCP. Using Ethernet.begin(mac) with the proper
 network setup, the Connected LaunchPad will automatically obtain an IP
 address. This increases the sketch size significantly.
 
-#### Syntax
+=== Syntax ===
 
-Ethernet.begin(mac); Ethernet.begin(mac, ip); Ethernet.begin(mac, ip,
-dns); Ethernet.begin(mac, ip, dns, gateway); Ethernet.begin(mac, ip,
-dns, gateway, subnet);
+Ethernet.begin(mac);
 
-#### Parameters
+Ethernet.begin(mac, ip);
+
+Ethernet.begin(mac, ip,dns);
+
+Ethernet.begin(mac, ip, dns, gateway);
+
+Ethernet.begin(mac, ip, dns, gateway, subnet);
+
+=== Parameters ===
 
 **mac**: the MAC (Media access control) address for the device (array of
 6 bytes). this is the Ethernet hardware address of your LaunchPad.
-**ip**: the IP address of the device (array of 4 bytes) **dns**: the IP
-address of the DNS server (array of 4 bytes). optional: defaults to the
-device IP address with the last octet set to 1 **gateway**: the IP
-address of the network gateway (array of 4 bytes). optional: defaults to
-the device IP address with the last octet set to 1 **subnet**: the
-subnet mask of the network (array of 4 bytes). optional: defaults to
+
+**ip**: the IP address of the device (array of 4 bytes)
+
+**dns**: the IP address of the DNS server (array of 4 bytes). optional: defaults to the
+device IP address with the last octet set to 1
+
+**gateway**: the IP address of the network gateway (array of 4 bytes). optional: defaults to
+the device IP address with the last octet set to 1
+
+**subnet**: the subnet mask of the network (array of 4 bytes). optional: defaults to
 255.255.255.0
 
-#### Returns
+=== Returns ===
 
 The DHCP version of this function, Ethernet.begin(mac), returns an int:
 1 on a successful DHCP connection, 0 on failure. The other versions
 don't return anything.
 
-#### Example
+=== Example ===
+
+[source,arduino]
+----
 
     #include <SPI.h>
     #include <Ethernet.h>
@@ -48,6 +60,4 @@ don't return anything.
     }
 
     void loop () {}
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

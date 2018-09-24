@@ -42,7 +42,7 @@ Next, in the main loop of your code, you need to establish a variable to store t
 int sensorValue = analogRead(A3);
 ----
 
-Finally, you need to print this information to your serial window as a decimal (`DEC`) value. You can do this with the command link:/reference/en/language/functions/communication/serial/println/[Serial.println()] in your last line of code:
+Finally, you need to print this information to your serial window as a decimal (`DEC`) value. You can do this with the command link:/reference/en/language/functions/communication/serial/serial_println/[Serial.println()] in your last line of code:
 
 ----
 Serial.println(sensorValue, DEC)

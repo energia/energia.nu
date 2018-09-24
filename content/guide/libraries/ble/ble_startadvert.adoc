@@ -1,38 +1,41 @@
-<span class="wikiword">ble.startAdvert()</span>
------------------------------------------------
+== ble.startAdvert() ==
 
-#### Description
+
+=== Description ===
 
 Starts advertising over BLE. This optionally takes a parameter of type
-[BLE\_Advert\_Settings](http://energia.nu/reference/ble/ble-startadvert/ble_advert_settings/). These
+link:../ble_advert_settings/[BLE_Advert_Settings]. These
 settings do not actually determine what is sent over the air, so this
 function is independent of
-[`ble.setAdvertName()`](http://energia.nu/reference/ble/ble-setadvertname/)
+link:../ble_setadvertname/[`ble.setAdvertName()`]
 and
-[`ble.setAdvertData()`](http://energia.nu/reference/ble/ble-setadvertdata/)
+link:../ble_setadvertdata/[`ble.setAdvertData()`]
 (for advanced BLE users).
 
-#### Syntax
+=== Syntax ===
 
-ble.startAdvert(); ble.startAdvert(&advertSettings);
+ble.startAdvert();
 
-#### Parameters
+ble.startAdvert(&advertSettings);
+
+=== Parameters ===
 
 **&advertSettings**: Pointer to an instance of
-[BLE\_Advert\_Settings](http://energia.nu/reference/ble/ble-startadvert/ble_advert_settings/).
+link:../ble_advert_settings/[BLE_Advert_Settings].
 If not provided, indefinite connectable advertising with a 100ms
 interval that stops during connection and restarts afterwards will be
 used.
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+link:../ble_error/[Status code]
 
-#### Example (default settings)
+=== Example === (default settings)
 
 Indefinite connectable advertising every 100ms that restarts on
 connection termination.
-
+[source,arduino]
+----
     #include <BLE.h>
 
     void setup() {
@@ -43,13 +46,14 @@ connection termination.
     void loop() {
       ble.handleEvents();
     }
-
-#### Example (custom settings)
+----
+=== Example === (custom settings)
 
 Indefinite nonconnectable (e.g. for a simple beacon) advertisement every
 900ms. Note that the last member, the connected behavior, of
 advertSettings has no effect because this is nonconnectable advertising.
-
+[source,arduino]
+----
     #include <BLE.h>
 
     BLE_Advert_Settings advertSettings =
@@ -68,8 +72,4 @@ advertSettings has no effect because this is nonconnectable advertising.
     void loop() {
       ble.handleEvents();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

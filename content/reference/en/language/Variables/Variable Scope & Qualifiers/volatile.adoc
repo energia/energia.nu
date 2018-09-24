@@ -34,7 +34,7 @@ Remedy:
 While the variable is read, interrupts need to be disabled, so they can't mess with the bits, while they are read.
 There are several ways to do this:
 
-1. #LANGUAGE# link:../../../functions/interrupts/nointerrupts[noInterrupts]
+1.  link:../../../functions/interrupts/nointerrupts[noInterrupts]
 
 2. use the ATOMIC_BLOCK macro. Atomic operations are single MCU operations - the smallest possible unit.
 
@@ -108,7 +108,7 @@ volatile int input_from_interrupt;
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../../functions/external-interrupts/attachinterrupt[attachInterrupt]
+*  link:../../../functions/external-interrupts/attachinterrupt[attachInterrupt]
 
 --
 // SEE ALSO SECTION ENDS

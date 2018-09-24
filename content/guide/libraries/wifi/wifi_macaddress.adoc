@@ -17,7 +17,8 @@ mac: a 6 byte array to hold the MAC address
 byte array : 6 bytes representing the MAC address of your shield
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -56,3 +57,4 @@ byte array : 6 bytes representing the MAC address of your shield
     }
 
     void loop () {}
+----

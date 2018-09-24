@@ -70,7 +70,7 @@ DDRD = DDRD | B11111100; // set direction bits for pins 2 to 7, leave 0 and 1 un
 
 
 [role="language"]
-* #LANGUAGE# link:../../boolean-operators/logicalor[|| Logical OR]
+*  link:../../boolean-operators/logicalor[|| Logical OR]
 
 [role="example"]
 * #EXAMPLE# https://www.arduino.cc/playground/Code/BitMath[BitMath Tutorial^]

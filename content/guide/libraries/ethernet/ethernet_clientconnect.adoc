@@ -1,38 +1,41 @@
-*EthernetClient*.connect()
---------------------------
+== EthernetClient.connect() ==
 
-#### Description
+=== Description ===
 
 Connects to a specified IP address and port. The return value indicates
 success or failure. Also supports DNS lookups when using a domain name.
 
-#### Syntax
+=== Syntax
 
-*client*.connect()\
-*client*.connect(ip, port)\
-*client*.connect(URL, port)
+client.connect()
 
-#### Parameters
+client.connect(ip, port)
+
+client.connect(URL, port)
+
+=== Parameters ===
 
 ip: the IP address that the client will connect to (array of 4 bytes)
 
 URL: the domain name the client will connect to (string,
-ex.:"arduino.cc")
+ex.:"energia.nu")
 
 port: the port that the client will connect to (int)
 
-#### Returns
+=== Returns ===
 
 Returns an int (1,-1,-2,-3,-4) indicating connection status :
 
--   SUCCESS 1
--   TIMED\_OUT -1
--   INVALID\_SERVER -2
--   TRUNCATED -3
--   INVALID\_RESPONSE -4
+*   SUCCESS 1
+*   TIMED_OUT -1
+*   INVALID_SERVER -2
+*   TRUNCATED -3
+*   INVALID_RESPONSE -4
 
-#### Example
+=== Example ===
 
+[source,arduino]
+----
     #include <Ethernet.h>
     #include <SPI.h>
 
@@ -75,6 +78,4 @@ Returns an int (1,-1,-2,-3,-4) indicating connection status :
           ;
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

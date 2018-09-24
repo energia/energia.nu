@@ -1,7 +1,7 @@
 == WiFiUDP.flush() ==
 
 Discard any bytes that have been written to the client but not yet read.
-flush() inherits from the http://energia.nu/reference/stream/[Stream] utility class.
+flush() inherits from the link:/reference/en/language/functions/communication/stream/[Stream] utility class.
 
 === Syntax ===
 

@@ -59,4 +59,4 @@ delay(300);
 }
 ----
  
-http://energia.nu/guide/edumkii/[EDUMKII Home]
+link:../../[EDUMKII Home]

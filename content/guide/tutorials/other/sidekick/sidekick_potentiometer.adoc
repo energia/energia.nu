@@ -33,7 +33,7 @@ image::../img/SidekickExample06_bb.png[800,600]
 
 ==== Code ====
 
-[source,c]
+[source,arduino]
 ----
 include::content/guide/tutorials/other/sidekick/code/sidekick_potentiometer.ino[]
 ----

@@ -71,7 +71,7 @@ You can use either `const` or `#define` for creating numeric or string constants
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../../structure/further-syntax/define[#define]
+*  link:../../../structure/further-syntax/define[#define]
 
 --
 // SEE ALSO SECTION ENDS

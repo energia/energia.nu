@@ -1,15 +1,15 @@
-<span class="wikiword">ble.setIoCapabilities()</span>
------------------------------------------------------
+== ble.setIoCapabilities() ==
 
-#### Description
+
+=== Description ===
 
 Tell the network processor what IO capabilities the Energia device has.
 
-#### Syntax
+=== Syntax ===
 
 `ble.setIoCapabilities(ioCapabilities);`
 
-#### Parameters
+=== Parameters ===
 
 **ioCapabilities**: The mode to use.
 
@@ -24,15 +24,16 @@ Tell the network processor what IO capabilities the Energia device has.
 
  
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+link:../ble_error/[Status code]
 
-#### Example
+=== Example ===
 
 An MSP432 connected to the Energia serial monitor has display and yes/no
 (buttons) capabilities.
-
+[source,arduino]
+----
     #include <BLE.h>
 
     void setup() {
@@ -46,8 +47,4 @@ An MSP432 connected to the Energia serial monitor has display and yes/no
     void loop() {
       ble.handleEvents();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

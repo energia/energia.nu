@@ -1,21 +1,18 @@
-*EthernetClient*.flush()
-------------------------
+== EthernetClient.flush() ==
 
 Discard any bytes that have been written to the client but not yet read.
 flush() inherits from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
+http://energia.nu/reference/stream/[Stream]
 utility class.
 
-#### Syntax
+=== Syntax ===
 
-*client*.flush()
+client.flush()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
-none [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [Ethernet
-Library](http://energia.nu/reference/ethernet/ "Ethernet")
+none

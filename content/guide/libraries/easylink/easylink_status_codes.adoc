@@ -1,6 +1,7 @@
-<span class="wikiword">EasyLink Status Codes</span>
----------------------------------------------------
+== EasyLink Status Codes ==
 
+[source,arduino]
+----
     typedef enum
     {
         EasyLink_Status_Success         = 0, ///Success
@@ -15,3 +16,4 @@
         EasyLink_Status_Busy_Error      = 9, ///Busy Error
         EasyLink_Status_Aborted         = 10 ///Cmd stopped or aborted
     } EasyLink_Status;
+----

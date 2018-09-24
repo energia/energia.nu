@@ -1,22 +1,19 @@
-<span class="wikiword">ble.end()</span>
----------------------------------------
+== ble.end() ==
 
-#### Description
+
+=== Description ===
 
 Completely closes the communication layer with the NP and resets the BLE
 class.
 
-#### Syntax
+=== Syntax ===
 
 ble.end();
 
-#### Parameters
+=== Parameters ===
 
 Nothing
 
-#### Returns
+=== Returns ===
 
-Nothing [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+Nothing

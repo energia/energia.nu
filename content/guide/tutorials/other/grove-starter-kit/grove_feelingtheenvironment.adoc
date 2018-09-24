@@ -3,7 +3,7 @@
 
 Find the latest and greatest code example link:https://github.com/Seeed-Studio/LaunchPad_Kit[HERE] on GitHub.
 
-[source,c]
+[source,arduino]
 ----
 include::content/guide/tutorials/other/grove-starter-kit/code/grove_feelingtheenvironment.ino[]
 ----

@@ -1,31 +1,31 @@
-<span class="wikiword">ble.addService()</span>
-----------------------------------------------
+== ble.addService() ==
 
-#### Description
+=== Description ===
 
 Initializes a service and its characteristics and registers them with
 the NP. Services and characteristics should not be directly modified
 after they are added.
 
-#### Syntax
+=== Syntax ===
 
 `ble.addService(&service);`
 
-#### Parameters
+=== Parameters ===
 
 **service**: Pointer to an instance of
-[BLE\_Service](http://energia.nu/reference/ble/ble-addservice/ble_service/).
+link:../ble_service/[BLE_Service].
 This and the contained
-[BLE\_Char's](http://energia.nu/reference/ble/ble-addservice/ble_char/)
+link:../ble_char/[BLE_Char's]
 should just be statically declared and initialized by the Energia user
 as shown in the example.
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+link:../ble_error/[Status code]
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <BLE.h>
 
     int heartRateMeasurement = 0;
@@ -61,8 +61,4 @@ as shown in the example.
     void loop() {
       ble.handleEvents();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

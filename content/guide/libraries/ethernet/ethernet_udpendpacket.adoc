@@ -1,24 +1,24 @@
-*EthernetUDP*.endPacket()
--------------------------
+== EthernetUDP.endPacket() ==
 
-#### Description
+=== Description ===
 
 Called after writing UDP data to the remote connection.
 
-#### Syntax
+=== Syntax ===
 
-UDP.endPacket();\
+UDP.endPacket();
 
-#### Parameters
-
-None
-
-#### Returns
+=== Parameters ===
 
 None
 
-#### Example
+=== Returns ===
 
+None
+
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>        
     #include <Ethernet.h>
     #include <EthernetUdp.h>
@@ -46,6 +46,4 @@ None
       Udp.write("hello");
       Udp.endPacket();
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

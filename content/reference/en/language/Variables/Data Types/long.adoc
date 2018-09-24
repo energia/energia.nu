@@ -61,7 +61,7 @@ If doing math with integers, at least one of the numbers must be followed by an 
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../constants/integerconstants[Integer Constants]
+*  link:../../constants/integerconstants[Integer Constants]
 
 --
 // SEE ALSO SECTION ENDS

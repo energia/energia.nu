@@ -17,7 +17,8 @@ bssid : 6 byte array
 A byte array containing the MAC address of the router the WiFi shield is currently connected to.
 
 === Example ===
-
+[source,arduino]
+----
     #include <WiFi.h>
 
     //SSID of your network 
@@ -54,3 +55,4 @@ A byte array containing the MAC address of the router the WiFi shield is current
     }
 
     void loop () {}
+----

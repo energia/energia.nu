@@ -1,21 +1,17 @@
-<span class="wikiword">ble.isAdvertising()</span>
--------------------------------------------------
+== ble.isAdvertising() ==
 
-#### Description
+=== Description ===
 
 Returns whether the NP is advertising.
 
-#### Syntax
+=== Syntax ===
 
 ble.isAdvertising();
 
-#### Parameters
+=== Parameters ===
 
 Nothing
 
-#### Returns
+=== Returns ===
 
-bool indicating whether the NP is advertising. [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+bool indicating whether the NP is advertising.

@@ -1,31 +1,31 @@
-<span class="wikiword">ble.writeValue()</span>
-----------------------------------------------
+== ble.writeValue() ==
 
-#### Description
+=== Description ===
 
 Writes to a characteristic value. This handles validation, notifications
 and indications, and other necessary bookkeeping. The data type of the
 characteristic is set to the type of the variable passed as `value`. Use
 this to initialize the characteristics after calling
-[`ble.addService()`](http://energia.nu/reference/ble/ble-addservice/).
+link:../ble_addservice/[`ble.addService()`].
 
-#### Syntax
+=== Syntax ===
 
 `ble.writeValue(&bleChar, value);`
 
-#### Parameters
+=== Parameters ===
 
-**&bleChar**: A pointer to a
-[BLE\_Char](http://energia.nu/reference/ble/ble-addservice/ble_char/).
+**&bleChar**: A pointer to a link:../ble_char/[BLE_Char].
+
 **value**: The value to write. The following types are supported:
 `bool, char, unsigned char, int, unsigned int, long, unsigned long, float, double, uint8_t*, char*, String`
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+link:../ble_error/[Status code]
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <BLE.h>
 
     char char1Value = 0;
@@ -89,8 +89,4 @@ this to initialize the characteristics after calling
         ble.writeValue(&char1, char1Value);
       }
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

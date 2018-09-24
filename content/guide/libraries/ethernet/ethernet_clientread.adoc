@@ -1,21 +1,17 @@
-*EthernetClient*.read()
------------------------
+== EthernetClient.read() ==
 
 Read the next byte received from the server the client is connected to
 (after the last call to read()). read() inherits from the
-[Stream](http://energia.nu/reference/stream/ "Stream"){.wikilink}
-utility class.
+link:/reference/en/language/functions/communication/stream/[Stream] utility class.
 
-#### Syntax
+=== Syntax ===
 
-*client*.read()
+client.read()
 
-#### Parameters
+=== Parameters ===
 
 none
 
-#### Returns
+=== Returns ===
 
-The next byte (or character), or -1 if none is available. [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink} || [Ethernet
-Library](http://energia.nu/reference/ethernet/ "Ethernet")
+The next byte (or character), or -1 if none is available.

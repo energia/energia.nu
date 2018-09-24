@@ -100,11 +100,11 @@ void loop(){
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../mouseclick[Mouse.click()]
-* #LANGUAGE# link:../mouseend[Mouse.end()]
-* #LANGUAGE# link:../mousemove[Mouse.move()]
-* #LANGUAGE# link:../mousepress[Mouse.press()]
-* #LANGUAGE# link:../mouserelease[Mouse.release()]
+*  link:../mouseclick[Mouse.click()]
+*  link:../mouseend[Mouse.end()]
+*  link:../mousemove[Mouse.move()]
+*  link:../mousepress[Mouse.press()]
+*  link:../mouserelease[Mouse.release()]
 
 --
 // SEE ALSO SECTION ENDS

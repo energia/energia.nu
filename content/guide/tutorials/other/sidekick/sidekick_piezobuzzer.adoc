@@ -30,7 +30,7 @@ image::../img/SidekickExample05_bb-692x1024.png[800,600]
 
 ==== Code ====
 
-[source,c]
+[source,arduino]
 ----
 include::content/guide/tutorials/other/sidekick/code/sidekick_piezobuzzer.ino[]
 ----

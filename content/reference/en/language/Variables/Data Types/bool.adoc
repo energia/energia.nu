@@ -74,7 +74,7 @@ void loop()
 === See also
 
 [role="language"]
-* #LANGUAGE# link:../../../variables/constants/constants[constants]
+*  link:../../../variables/constants/constants[constants]
 
 --
 // SEE ALSO SECTION ENDS

@@ -13,7 +13,8 @@ lookups when using a domain name (ex:google.com).
 *client*.connect(URL, port)
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -53,3 +54,4 @@ lookups when using a domain name (ex:google.com).
     void loop() {
 
     }
+----

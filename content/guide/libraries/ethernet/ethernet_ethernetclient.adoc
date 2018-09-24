@@ -1,23 +1,22 @@
-<span class="wikiword">EthernetClient</span>()
-----------------------------------------------
+== EthernetClient() ==
 
-#### Description
+=== Description ===
 
 Creates a client which can connect to a specified internet IP address
-and port (defined in the
-[client.connect()](http://energia.nu/reference/ethernet/ethernet_clientconnect/ "Ethernet_ClientConnect"){.wikilink}
-function).
+and port (defined in the link:../ethernet_clientconnect/[client.connect()] function).
 
-#### Syntax
+=== Syntax ===
 
-<span class="wikiword">EthernetClient</span>()
+EthernetClient()
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Example
+=== Example ===
 
+[source,arduino]
+----
     #include <Ethernet.h>
     #include <SPI.h>
 
@@ -61,6 +60,4 @@ None
           ;
       }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

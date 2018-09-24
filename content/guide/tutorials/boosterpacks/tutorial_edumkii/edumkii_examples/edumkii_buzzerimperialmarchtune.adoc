@@ -161,4 +161,4 @@ beep(a, 650);
 }
 ----
 
-http://energia.nu/guide/edumkii/[EDUMKII Home]
+link:../../[EDUMKII Home]

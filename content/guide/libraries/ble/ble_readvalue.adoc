@@ -1,10 +1,10 @@
-ble.readValue()
----------------
+== ble.readValue() ==
 
-#### Description
+
+=== Description ===
 
 Reads a characteristic value. Functions cannot be overloaded by return
-type, so the type is part of the function name. Except for uint8\_t
+type, so the type is part of the function name. Except for uint8_t
 arrays, char arrays, and String objects, these functions check to make
 sure the number of stored bytes matches the size of the requested type.
 `readValue_uint8_t()` takes a pointer to an integer to store the buffer
@@ -16,29 +16,46 @@ returned arrays should not be modified. Create a copy if the data is
 going to be modified or persist because a write by the client can modify
 or free the arrays.
 
-#### Syntax
+=== Syntax ===
 
-`ble.readValue_bool(&bleChar);` `ble.readValue_char(&bleChar);`
-`ble.readValue_uchar(&bleChar);` `ble.readValue_int(&bleChar);`
-`ble.readValue_uint(&bleChar);` `ble.readValue_long(&bleChar);`
-`ble.readValue_ulong(&bleChar);` `ble.readValue_float(&bleChar);`
+`ble.readValue_bool(&bleChar);`
+
+`ble.readValue_char(&bleChar);`
+
+`ble.readValue_uchar(&bleChar);`
+
+`ble.readValue_int(&bleChar);`
+
+`ble.readValue_uint(&bleChar);` 
+
+`ble.readValue_long(&bleChar);`
+
+`ble.readValue_ulong(&bleChar);`
+
+`ble.readValue_float(&bleChar);`
+
 `ble.readValue_double(&bleChar);`
+
 `ble.readValue_uint8_t(&bleChar, &len);`
-`ble.readValue_charArr(&bleChar);` `ble.readValue_String(&bleChar);`
 
-#### Parameters
+`ble.readValue_charArr(&bleChar);`
 
-**&bleChar**: A pointer to the
-[BLE\_Char](http://energia.nu/reference/ble/ble-addservice/ble_char/) to
-read. **&len**: A pointer to an integer for reading a byte array only.
-All other types either have a known size or are null-terminated.
+`ble.readValue_String(&bleChar);`
 
-#### Returns
+
+=== Parameters ===
+
+**&bleChar**: A pointer to the link:../ble_char/[BLE_Char] to read.
+
+**&len**: A pointer to an integer for reading a byte array only. All other types either have a known size or are null-terminated.
+
+=== Returns ===
 
 Either the stored characteristic value or a pointer to the data.
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <BLE.h>
 
     char char1Value = 0;
@@ -110,10 +127,4 @@ Either the stored characteristic value or a pointer to the data.
         Serial.println("===================");
       }
     }
-
-#### 
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

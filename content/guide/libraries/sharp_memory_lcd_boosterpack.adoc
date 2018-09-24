@@ -2,7 +2,7 @@
 The BoosterPack uses SPI communication, so including the SPI library is required. Verified to work on MSP430 and CC3200 LaunchPads. Download the zip file link:/guide/libraries/files/LCD_SharpBoosterPack_SPI.zip[HERE].
 
 == LCD_SharpBoosterPack_SPI_Main.ino ==
-[source,c]
+[source,arduino]
 ----
 include::/content/guide/libraries/code/sharp-memory-lcd-boosterpack-LCD_SharpBoosterPack_SPI_Main.ino[]
 ----

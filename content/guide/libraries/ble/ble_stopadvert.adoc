@@ -1,21 +1,17 @@
-<span class="wikiword">ble.stopAdvert()</span>
-----------------------------------------------
+== ble.stopAdvert() ==
 
-#### Description
+=== Description ===
 
 Requests for the NP to stop advertising.
 
-#### Syntax
+=== Syntax ===
 
 ble.stopAdvert();
 
-#### Parameters
+=== Parameters ===
 
 Nothing
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/) [Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+link:../ble_error/[Status code]

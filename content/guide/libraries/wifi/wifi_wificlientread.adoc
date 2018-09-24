@@ -2,7 +2,7 @@
 
 Read the next byte received from the server the client is connected to
 (after the last call to read()). read() inherits from the
-http://energia.nu/reference/stream/[Stream]
+link:/reference/en/language/functions/communication/stream/[Stream]
 utility class.
 
 === Syntax ===

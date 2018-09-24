@@ -22,29 +22,29 @@ The code is also available on the example pages below for copy and paste into yo
 
 === Basic Examples ===
 
->> http://energia.nu/guide/sidekick/sidekick_blink/[Example 00: Blinking LED] (Output)
+>> link:./sidekick_blink/[Example 00: Blinking LED] (Output)
 
->> http://energia.nu/guide/sidekick/sidekick_fadergbled/[Example 01: Fade RGB LED] (PWM)
+>> link:./sidekick_fadergbled/[Example 01: Fade RGB LED] (PWM)
 
->> http://energia.nu/guide/sidekick/sidekick_pushbutton/[Example 02: Push Button] (Input)
+>> link:./sidekick_pushbutton/[Example 02: Push Button] (Input)
 
->> http://energia.nu/guide/sidekick/sidekick_blinkmultiple/[Example 03: Multiple LED] (Many Outputs)
+>> link:./sidekick_blinkmultiple/[Example 03: Multiple LED] (Many Outputs)
 
->> http://energia.nu/guide/sidekick/sidekick_shiftregister/[Example 04: Shift Register] (Integrated Circuit)
+>> link:./sidekick_shiftregister/[Example 04: Shift Register] (Integrated Circuit)
 
->> http://energia.nu/guide/sidekick/sidekick_piezobuzzer/[Example 05: Piezo Buzzer] (Sound)
+>> link:./sidekick_piezobuzzer/[Example 05: Piezo Buzzer] (Sound)
 
->> http://energia.nu/guide/sidekick/sidekick_potentiometer/[Example 06: Potentiometer] (Variable Resistor)
+>> link:./sidekick_potentiometer/[Example 06: Potentiometer] (Variable Resistor)
 
->> http://energia.nu/guide/sidekick/sidekick_photoresistor/[Example 07: Photoresistor] (Light Sensor)
+>> link:./sidekick_photoresistor/[Example 07: Photoresistor] (Light Sensor)
 
->> http://energia.nu/guide/sidekick/sidekick_spinmotor/[Example 08: Spin the Motor] (Transistor)
+>> link:./sidekick_spinmotor/[Example 08: Spin the Motor] (Transistor)
 
->> http://energia.nu/guide/sidekick/sidekick_switchvoltage/[Example 08B: Switching Voltage] (Transistor)
+>> link:./sidekick_switchvoltage/[Example 08B: Switching Voltage] (Transistor)
 
->> http://energia.nu/guide/sidekick/sidekick_temperature/[Example 09: Temperature] (Thermistor and Temp Sensor)
+>> link:./sidekick_temperature/[Example 09: Temperature] (Thermistor and Temp Sensor)
 
->> http://energia.nu/guide/sidekick/sidekick_sevensegmentdisplay/[Example 10: 7 Segment Display] (Digital Display)
+>> link:./sidekick_sevensegmentdisplay/[Example 10: 7 Segment Display] (Digital Display)
 
 *Advanced Examples*
 
@@ -56,25 +56,25 @@ The code is also available on the example pages below for copy and paste into yo
 
 >> Example: Photoresistor Fade (Input and Output)
 
->> http://energia.nu/guide/sidekick/sidekick_shiftregister2/[Example: Shift Register 2] (IC and Display)
+>> link:./sidekick_shiftregister2/[Example: Shift Register 2] (IC and Display)
 
->>* http://energia.nu/guide/sidekick/sidekick_shiftregister3/[Example: Shift Register 3] (IC)
+>> link:./sidekick_shiftregister3/[Example: Shift Register 3] (IC)
 
->>* http://energia.nu/guide/sidekick/sidekick_shiftregister4/[Example: Shift Register 4] (Shift In IC)
+>> link:./sidekick_shiftregister4/[Example: Shift Register 4] (Shift In IC)
 
->>* http://energia.nu/guide/sidekick/sidekick_spinmotor2/[Example: Spin the Motor 2] (Motor Driver)
+>> link:./sidekick_spinmotor2/[Example: Spin the Motor 2] (Motor Driver)
 
->>* http://energia.nu/guide/sidekick/sidekick_spinservo/[Example: Spin the Servo] (Servo)
+>> link:./sidekick_spinservo/[Example: Spin the Servo] (Servo)
 
->>* http://energia.nu/guide/sidekick/sidekick_dac/[Example: DAC] (Digital to Analog IC)
+>> link:./sidekick_dac/[Example: DAC] (Digital to Analog IC)
 
->>* http://energia.nu/guide/sidekick/sidekick_555timer/[Example: 555 Timer] (IC and Switch)
+>> link:./sidekick_555timer/[Example: 555 Timer] (IC and Switch)
 
->>* Example: IR Emitter and Receiver (Wireless)
+>> Example: IR Emitter and Receiver (Wireless)
 
->>* http://energia.nu/guide/#tutorials[Energia Core Tutorials]
+>> http://energia.nu/guide/#tutorials[Energia Core Tutorials]
 
->>* http://energia.nu/guide/grove-starter-kit/[Mix Sidekick with Grove Starter Kit for LaunchPad]
+>> http://energia.nu/guide/grove-starter-kit/[Mix Sidekick with Grove Starter Kit for LaunchPad]
 
 * May require additional hardware beyond Sidekick Basic Kit for TI LaunchPadTM
 
@@ -152,4 +152,4 @@ https://www.seeedstudio.com/Sidekick-Basic-Kit-for-TI-LaunchPad-p-2571.html[Buy 
 image::../img/SEEED-logo1-W280.jpg[]
 image::../img/logo.png[]
 
-*Sidekick*   http://energia.nu/guide/sidekick/#examples[Examples] | http://energia.nu/guide/sidekick/#components[Components List] | http://energia.nu/guide/sidekick/#buy[Buy Now]
+*Sidekick*   link:./#examples[Examples] | link:./#components[Components List] | link:./#buy[Buy Now]

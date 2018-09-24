@@ -22,7 +22,7 @@ Note that any unused input pins should be grounded.
 
 ==== Code ====
 
-[source,c]
+[source,arduino]
 ----
 include::content/guide/tutorials/other/sidekick/code/sidekick_shiftregister4.ino[]
 ----

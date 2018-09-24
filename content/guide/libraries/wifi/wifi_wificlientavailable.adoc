@@ -5,7 +5,7 @@
 Returns the number of bytes available for reading (that is, the amount
 of data that has been written to the client by the server it is
 connected to). available() inherits from the
-http://energia.nu/reference/stream/[Stream]
+link:/reference/en/language/functions/communication/stream/[Stream]
 utility class.
 
 === Syntax ===
@@ -21,7 +21,8 @@ none
 The number of bytes available.
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -77,3 +78,4 @@ The number of bytes available.
           ;
       }
     }
+----

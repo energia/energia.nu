@@ -26,6 +26,8 @@ Nothing
 This example shows how to set the Google DNS (8.8.8.8). You can set it
 as an object IPAddress.
 
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -69,3 +71,4 @@ as an object IPAddress.
 
     void loop () {
     }
+----

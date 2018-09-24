@@ -1,26 +1,26 @@
-*EthernetUDP*.remotePort()
---------------------------
+== EthernetUDP.remotePort() ==
 
-#### Description
+=== Description ===
 
 Gets the port of the remote UDP connection. This function must be called
 after
-[UDP.parsePacket()](http://energia.nu/reference/ethernet/ethernet_udpparsepacket/ "Ethernet_UDPParsePacket"){.wikilink}.
+link:../ethernet_udpparsepacket/[UDP.parsePacket()]
 
-#### Syntax
+=== Syntax ===
 
 UDP.remotePort();
 
-#### Parameters
+=== Parameters ===
 
 None
 
-#### Returns
+=== Returns ===
 
 int : the port of the UDP connection to a remote host
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>       
     #include <Ethernet.h>
     #include <EthernetUdp.h>
@@ -70,6 +70,4 @@ int : the port of the UDP connection to a remote host
         Serial.println(packetBuffer);
      }
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

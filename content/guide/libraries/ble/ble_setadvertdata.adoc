@@ -1,7 +1,6 @@
-<span class="wikiword">ble.setAdvertData()</span>
--------------------------------------------------
+== ble.setAdvertData() ==
 
-#### Description
+=== Description ===
 
 Sets the payload for one of the three advertisement packet
 types: advertisements when not in a connection, advertisements when in a
@@ -9,11 +8,11 @@ connection, and scan responses. If the connected advertisement data is
 not set, the nonconnected advertisement data will be used. See the
 Bluetooth specification for details on the payload structure.
 
-#### Syntax
+=== Syntax ===
 
 `ble.setAdvertData(advertType, len, advertData);`
 
-#### Parameters
+=== Parameters ===
 
 **advertType**: The type of advertisement payload to set.
 
@@ -21,18 +20,21 @@ Bluetooth specification for details on the payload structure.
 -   `BLE_ADV_DATA_CONN`
 -   `BLE_ADV_DATA_SCANRSP`
 
-  **len**: The number of bytes in `advertData`. **advertData**: A
+**len**: The number of bytes in `advertData`.
+
+**advertData**: A
 pointer to a `uint8_t` array.
 
-#### Returns
+=== Returns ===
 
-[Status code](http://energia.nu/reference/ble/ble-error/)
+link:../ble_error/[Status code]
 
-#### Example
+=== Example ===
 
 This example demonstrates setting the nonconnected advertising data with
 its default value.
-
+[source,arduino]
+----
     #include <BLE.h>
 
     static uint8_t defNotConnAD[] =
@@ -55,8 +57,4 @@ its default value.
       ble.setAdvertData(defNotConnAD);
       ble.startAdvert();
     }
-
-[Reference
-Home](http://energia.nu/reference/ "Reference"){.wikilink}<span
-style="color: #202020;"> || </span>[BLE
-Library](http://energia.nu/reference/ble/ "WiFi")
+----

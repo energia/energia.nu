@@ -25,7 +25,8 @@ byte : value represents the type of encryption
 -   AUTO = 8
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -52,3 +53,4 @@ byte : value represents the type of encryption
     }
 
     void loop () {}
+----

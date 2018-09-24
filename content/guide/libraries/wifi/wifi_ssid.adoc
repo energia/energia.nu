@@ -21,7 +21,8 @@ A string containing the SSID the WiFi device is currently connected to.
 string containing name of network requested.
 
 === Example ===
-
+[source,arduino]
+----
     #include <SPI.h>
     #include <WiFi.h>
 
@@ -64,3 +65,4 @@ string containing name of network requested.
         Serial.println(WiFi.SSID(thisNet));
       }
     }
+----

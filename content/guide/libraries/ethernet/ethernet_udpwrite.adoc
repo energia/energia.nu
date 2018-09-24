@@ -1,31 +1,36 @@
-*EthernetUDP*.write()
----------------------
+== EthernetUDP.write() ==
 
-#### Description
+=== Description ===
 
 Writes UDP data to the remote connection. Must be wrapped between
-[beginPacket](http://energia.nu/reference/ethernet/ethernet_udpbeginpacket/ "Ethernet_UDPBeginPacket"){.wikilink}()
+link:../ethernet_udpbeginpacket[beginPacket]
 and
-[endPacket](http://energia.nu/reference/ethernet/ethernet_udpendpacket/ "Ethernet_UDPEndPacket"){.wikilink}().
+link:../ethernet_udpendpacket[endPacket].
 beginPacket() initializes the packet of data, it is not sent until
 endPacket() is called.
 
-#### Syntax
+=== Syntax ===
 
-UDP.write(message); UDP.write(buffer, size);
+UDP.write(message);
 
-#### Parameters
+UDP.write(buffer, size);
 
-**message**: the outgoing message (char) **buffer**: an array to send as
-a series of bytes (byte or char) **size**: the length of the buffer
+=== Parameters ===
 
-#### Returns
+**message**: the outgoing message (char)
+
+**buffer**: an array to send as a series of bytes (byte or char)
+
+**size**: the length of the buffer
+
+=== Returns ===
 
 byte : returns the number of characters sent. This does not have to be
 read
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>     
     #include <Ethernet.h>
     #include <EthernetUdp.h>
@@ -56,6 +61,4 @@ read
       Udp.write("hello");
       Udp.endPacket();
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

@@ -1,25 +1,26 @@
-*EthernetUDP*.beginPacket()
----------------------------
+== EthernetUDP.beginPacket() ==
 
-#### Description
+=== Description ===
 
 Starts a connection to write UDP data to the remote connection
 
-#### Syntax
+=== Syntax ===
 
-UDP.beginPacket(remoteIP, remotePort);\
+UDP.beginPacket(remoteIP, remotePort);
 
-#### Parameters
+=== Parameters ===
 
-**remoteIP**: the IP address of the remote connection (4 bytes)\
-**remotePort**: the port of the remote connection (int)\
+**remoteIP**: the IP address of the remote connection (4 bytes)
 
-#### Returns
+**remotePort**: the port of the remote connection (int)
+
+=== Returns ===
 
 None
 
-#### Example
-
+=== Example ===
+[source,arduino]
+----
     #include <SPI.h>    
     #include <Ethernet.h>
     #include <EthernetUdp.h>
@@ -47,6 +48,4 @@ None
       Udp.write("hello");
       Udp.endPacket();
     }
-
-[Reference Home](http://energia.nu/reference/ "Reference"){.wikilink} ||
-[Ethernet Library](http://energia.nu/reference/ethernet/ "Ethernet")
+----

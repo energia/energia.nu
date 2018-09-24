@@ -64,7 +64,7 @@ x += 4;      // x now contains 6
 === See also
 
 [role="language"]
-* #LANGUAGE#  link:../../arithmetic-operators/addition[Normal Addition]
+*   link:../../arithmetic-operators/addition[Normal Addition]
 
 --
 // SEE ALSO SECTION ENDS

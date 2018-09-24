@@ -20,8 +20,8 @@ If you have not already done so, follow the instructions for your operating syst
 === Pin Map
 The following diagram show the complete pin map for the MSP430G2553 LaunchPad Rev 1.5 in Energia.  Additional pin maps for other revisions and devices are further below.  Make sure the jumpers are correctly oriented for HW UART if you want to receive data through the Energia serial monitor.
 
-[caption="Figure 1: ",link=../img/LaunchPads-MSP430G2---Pins-Maps-13-42.jpeg]
-image::../img/LaunchPads-MSP430G2---Pins-Maps-13-42.jpeg[MSP430G2,800]
+[caption="Figure 1: ",link=../img/LaunchPads-MSP430G2-—-Pins-Maps-13-42.jpeg]
+image::../img/LaunchPads-MSP430G2-—-Pins-Maps-13-42.jpeg[MSP430G2,800]
 
 === Getting Started Video
 
