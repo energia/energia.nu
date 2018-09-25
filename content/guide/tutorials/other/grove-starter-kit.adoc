@@ -20,9 +20,9 @@ Grove modules utilize a simple 4 wire connector (VCC, GND, SIG1, SIG2 or NC).
 
 === Pin Maps ===
 
-image::../img/Grove_BoosterPack_bottom_Pins.jpg[]
+image:../img/Grove_BoosterPack_bottom_Pins.jpg[]
 
-image::../img/Grove-BoosterPack_on_top_Pins.jpg[]
+image:../img/Grove-BoosterPack_on_top_Pins.jpg[]
 
 === Examples ===
 
@@ -112,18 +112,11 @@ image::../img/GroveBaseBP.jpg[]
 
 https://www.seeedstudio.com/Grove-Base-BoosterPack-p-2177.html[Seeed Studio] 
 
-https://www.makershed.com/products/grove-base-boosterpack[MakerShed] 
-
 https://www.digikey.com/product-detail/en/103020019/1597-1188-ND/5487459[Digi-Key] 
 
 https://www.mouser.com/ProductDetail/Seeed-Studio/103020019/?qs=SElPoaY2y5ItKK%2fmcnPYtA%3d%3d[Mouser Electronics]	
 
-
-https://www.jameco.com/webapp/wcs/stores/servlet/Product_10001_10001_2219372_-1[Jameco]	
-
-
 http://www.nkcelectronics.com/Grove-Base-BoosterPack-for-TI-Launchpad_p_469.html[NKC Electronics] 
-
 
 http://www.intertexelectronics.com/Grove-Base-Launchpad-BoosterPack-No-sensors-included-P13432.aspx[Intertex Electronics]	
 
@@ -146,7 +139,5 @@ http://www.nkcelectronics.com/Grove-Starter-Kit-for-LaunchPad_p_468.html[NKC Ele
 http://www.intertexelectronics.com/Grove-Starter-Kit-for-LaunchPad-Includes-11-sensors-P13431.aspx[Intertex Electronics]	
 
 image::../img/ORDER_Seeed.png[]
-image::../img/maker-logo.png[]
-image::../img/ORDER_jameco.png[]
 image::../img/ORDER_nkcelectronics.png[]
 image::../img/ORDER_intertex.png[]
