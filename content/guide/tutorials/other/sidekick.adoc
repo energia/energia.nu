@@ -11,40 +11,41 @@ The Seeedstudio Sidekick Basic Kit for TI LaunchPadTM is a great starting point 
 
 You can purchase the Sidekick Basic Kit for TI LaunchPadTM at https://www.mouser.com/ProductDetail/106060002?R=0virtualkey0virtualkey106060002[Mouser Electronics], https://www.digikey.com/product-detail/en/106060002/1597-1149-ND/5774940[Digi-Key], and https://www.seeedstudio.com/Sidekick-Basic-Kit-for-TI-LaunchPad-p-2571.html[SeeedStudio today].
 
-Download the sample code folder here: http://energia.nu/wordpress/wp-content/uploads/2015/11/Sidekick_LaunchPad.zip[www.energia.nu/sidekickcode]
+Download the sample code folder here: http://s3.amazonaws.com/energiaUS/files/Sidekick_LaunchPad.zip[Sidekick Code]
 
 Sidekick includes loose components, wires, and a breadboard to compliment your LaunchPad development kit. The manual includes 10 different example circuits but many more are possible by gathering additional components or using creativity.  This is a must have item for any LaunchPad developer!
 
+[#examples]
 === Examples ===
 
-Download the example code at http://energia.nu/wordpress/wp-content/uploads/2015/11/Sidekick_LaunchPad.zip[www.energia.nu/sidekickcode]. It will also be available in the Energia code examples for version 18+.
+Download the example code at http://s3.amazonaws.com/energiaUS/files/Sidekick_LaunchPad.zip[Sidekick Code]. It will also be available in the Energia code examples for version 18+.
 The code is also available on the example pages below for copy and paste into your sketches
 
 === Basic Examples ===
 
->> link:./sidekick_blink/[Example 00: Blinking LED] (Output)
+>> link:../sidekick/sidekick_blink/[Example 00: Blinking LED] (Output)
 
->> link:./sidekick_fadergbled/[Example 01: Fade RGB LED] (PWM)
+>> link:../sidekick/sidekick_fadergbled/[Example 01: Fade RGB LED] (PWM)
 
->> link:./sidekick_pushbutton/[Example 02: Push Button] (Input)
+>> link:../sidekick/sidekick_pushbutton/[Example 02: Push Button] (Input)
 
->> link:./sidekick_blinkmultiple/[Example 03: Multiple LED] (Many Outputs)
+>> link:../sidekick/sidekick_blinkmultiple/[Example 03: Multiple LED] (Many Outputs)
 
->> link:./sidekick_shiftregister/[Example 04: Shift Register] (Integrated Circuit)
+>> link:../sidekick/sidekick_shiftregister/[Example 04: Shift Register] (Integrated Circuit)
 
->> link:./sidekick_piezobuzzer/[Example 05: Piezo Buzzer] (Sound)
+>> link:../sidekick/sidekick_piezobuzzer/[Example 05: Piezo Buzzer] (Sound)
 
->> link:./sidekick_potentiometer/[Example 06: Potentiometer] (Variable Resistor)
+>> link:../sidekick/sidekick_potentiometer/[Example 06: Potentiometer] (Variable Resistor)
 
->> link:./sidekick_photoresistor/[Example 07: Photoresistor] (Light Sensor)
+>> link:../sidekick/sidekick_photoresistor/[Example 07: Photoresistor] (Light Sensor)
 
->> link:./sidekick_spinmotor/[Example 08: Spin the Motor] (Transistor)
+>> link:../sidekick/sidekick_spinmotor/[Example 08: Spin the Motor] (Transistor)
 
->> link:./sidekick_switchvoltage/[Example 08B: Switching Voltage] (Transistor)
+>> link:../sidekick/sidekick_switchvoltage/[Example 08B: Switching Voltage] (Transistor)
 
->> link:./sidekick_temperature/[Example 09: Temperature] (Thermistor and Temp Sensor)
+>> link:../sidekick/sidekick_temperature/[Example 09: Temperature] (Thermistor and Temp Sensor)
 
->> link:./sidekick_sevensegmentdisplay/[Example 10: 7 Segment Display] (Digital Display)
+>> link:../sidekick/sidekick_sevensegmentdisplay/[Example 10: 7 Segment Display] (Digital Display)
 
 *Advanced Examples*
 
@@ -56,28 +57,29 @@ The code is also available on the example pages below for copy and paste into yo
 
 >> Example: Photoresistor Fade (Input and Output)
 
->> link:./sidekick_shiftregister2/[Example: Shift Register 2] (IC and Display)
+>> link:../sidekick/sidekick_shiftregister2/[Example: Shift Register 2] (IC and Display)
 
->> link:./sidekick_shiftregister3/[Example: Shift Register 3] (IC)
+>> link:../sidekick/sidekick_shiftregister3/[Example: Shift Register 3] (IC)
 
->> link:./sidekick_shiftregister4/[Example: Shift Register 4] (Shift In IC)
+>> link:../sidekick/sidekick_shiftregister4/[Example: Shift Register 4] (Shift In IC)
 
->> link:./sidekick_spinmotor2/[Example: Spin the Motor 2] (Motor Driver)
+>> link:../sidekick/sidekick_spinmotor2/[Example: Spin the Motor 2] (Motor Driver)
 
->> link:./sidekick_spinservo/[Example: Spin the Servo] (Servo)
+>> link:../sidekick/sidekick_spinservo/[Example: Spin the Servo] (Servo)
 
->> link:./sidekick_dac/[Example: DAC] (Digital to Analog IC)
+>> link:../sidekick/sidekick_dac/[Example: DAC] (Digital to Analog IC)
 
->> link:./sidekick_555timer/[Example: 555 Timer] (IC and Switch)
+>> link:../sidekick/sidekick_555timer/[Example: 555 Timer] (IC and Switch)
 
 >> Example: IR Emitter and Receiver (Wireless)
 
->> http://energia.nu/guide/#tutorials[Energia Core Tutorials]
+>> http://energia.nu/guide/#_tutorials[Energia Core Tutorials]
 
->> http://energia.nu/guide/grove-starter-kit/[Mix Sidekick with Grove Starter Kit for LaunchPad]
+>> http://energia.nu/guide/tutorials/other/grove-starter-kit/[Mix Sidekick with Grove Starter Kit for LaunchPad]
 
 * May require additional hardware beyond Sidekick Basic Kit for TI LaunchPadTM
 
+[#components]
 === Components ===
 
 1x 400 Tie-Point Breadboard
@@ -120,13 +122,13 @@ The code is also available on the example pages below for copy and paste into yo
 
 1x Small DC Motor
 
-1x 7 Segment Single Digit Display (http://www.kingbrightusa.com/error/baditem.asp[SA39-11SRWA] - http://energia.nu/wordpress/wp-content/uploads/2015/07/SevenSegmentDS.pdf[datasheet])
+1x 7 Segment Single Digit Display (https://octopart.com/sa39-11srwa-kingbright-702753[SA39-11SRWA] - http://datasheet.octopart.com/SA39-11SRWA-Kingbright-datasheet-90639.pdf[datasheet])
 
 1x 8-bit Shift Register (http://www.ti.com/product/SN74HC595[SN74HC595N] - http://www.ti.com/lit/ds/symlink/sn74hc595.pdf[datasheet])
 
 1x NPN Transistor (http://www.ti.com/product/LP395[LP395Z/NOPB] - http://www.ti.com/lit/ds/symlink/lp395.pdf[datasheet])
 
-1x NPN Transistor (2N2222 - datasheet)
+1x NPN Transistor (https://octopart.com/2n2222a-nte+electronics-1490818[2N2222] - http://datasheet.octopart.com/2N2222A.-NTE-Electronics-datasheet-65913.pdf[datasheet])
 
 1x Analog Temperature Sensor (http://www.ti.com/product/LM19[LM19CIZ/NOPB] - http://www.ti.com/lit/ds/symlink/lm19.pdf[datasheet])
 
@@ -139,6 +141,7 @@ The code is also available on the example pages below for copy and paste into yo
 1x Sidekick Manual
 
 
+[#buy]
 === Buy Now ===
 
 You can purchase the Sidekick Basic Kit for TI LaunchPad from these retailers.
