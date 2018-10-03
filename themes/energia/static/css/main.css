@@ -53,12 +53,12 @@ font-size: 12px;
 }
 
 #reference a:link {
-color: #E67E22;
+color: #D50000;
 text-decoration:none;
 }
 
 #reference a:visited {
-color: #E67E22;
+color: #D50000;
 text-decoration:none;
 }
 
@@ -103,12 +103,12 @@ text-decoration:none;
 }
 
 #pagetext a:link {
-color: #E67E22;
+color: #D50000;
 text-decoration:none;
 }
 
 #pagetext a:visited {
-color: #E67E22;
+color: #D50000;
 text-decoration:none;
 }
 
@@ -274,18 +274,18 @@ h4 {
 }
 
 #pagefooter a:link {
-color: #E67E22;
+color: #D50000;
 text-decoration:none;
 }
 
 #pagefooter a:visited {
-color: #E67E22;
+color: #D50000;
 text-decoration:none;
 }
 
 .accordion {
     background-color: #eee;
-    color: #E67E22;
+    color: #D50000;
     cursor: pointer;
     padding: 18px;
     width: 100%;
