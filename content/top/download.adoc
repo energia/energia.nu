@@ -1,21 +1,21 @@
-== Download Energia 18 aka Energia 1.6.10E18 ==
+== Download Energia 21 aka Energia 1.8.7E21 ==
 
 =========================
 .Board and library manager!
-Energia release 18 (aka Energia 1.6.10E18) and up feature the new board (core) / library manager. By default the Energia
+Energia release 18 (aka Energia 1.8.7E21) and up feature the new board (core) / library manager. By default the Energia
 installation comes with support for the MSP430. Other cores such as CC1310, CC3220, TivaC, CC3200 and MSP432 can be installed through the board manager by selection Tools
 ->Board->Board Manager. For more details on how to install additional cores/boards see the link:/guide/boards/[board manager guide guide]. The cores included in the board manager are: MSP430, MSP432 (MT, TI-RTOS based multitasking), CC3200 and TivaC. The CC3200 (MT) TI-RTOS based multitasking based core will be made available in the near future through the board manager. CC2650 has been removed from Energia due to the lack of BLE support that could not be enabled because of licensing issues with the BLE stack.
 =========================
 
-== Energia 1.6.10E18 (8/11/2016) ==
-.Mac OS X: Signed Binary release version 1.6.10E18 (8/11/2016).
-Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18-macosx-signed.zip[energia-1.6.10E18-macosx-signed.zip]
+== Energia 1.8.7E21 (10/17/2018) ==
+.Mac OS X: Signed Binary release version 1.8.7E21 (10/17/2018).
+Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.8.7E21-macosx-signed.zip[energia-1.8.7E21-macosx-signed.zip]
 
-.Windows: Binary release version 1.6.10E18 (8/11/2016).
-Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18-windows.zip[energia-1.6.10E18-windows.zip]
+.Windows: Binary release version 1.8.7E21 (10/17/2018).
+Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.8.7E21-windows.zip[energia-1.8.7E21-windows.zip]
 
-.Linux 64-bit: Binary release version 1.6.10E18 (8/11/2016).
-Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18-linux64.tar.xz[energia-1.6.10E18-linux64.tar.xz] 
+.Linux 64-bit: Binary release version 1.8.7E21 (10/17/2018).
+Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.8.7E21-linux64.tar.xz[energia-1.8.7E21-linux64.tar.xz]
 
 ==========================
 .Installation Guide
@@ -27,102 +27,110 @@ Step-by-step instructions for setting up the Energia IDE and running your first 
 ==========================
 
 == Previous Releases ==
-*Release 0101E0017* 
+*Release 0101E0017*
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-macosx.dmg[energia-0101E0017-macosx.dmg]:Mac OS X: Binary release version 0101E0017 (12/9/2015). 
+http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18-macosx-signed.zip[energia-1.6.10E18-macosx-signed.zip]:Mac OS X: Binary release version 1.6.10E18 (8/11/2016).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-windows.zip[energia-0101E0017-windows.zip]:Windows: Binary release version 0101E0011 (12/9/2015). 
+http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18-windows.zip[energia-1.6.10E18-windows.zip]:Windows: Binary release version 1.6.10E18 (8/11/2016).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-linux.tgz[energia-0101E0017-linux.tgz]:Linux 32-bit: Binary release version 0101E0017 (12/9/2015). 
+http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18-linux64.tar.xz[energia-1.6.10E18-linux64.tar.xz]:Linux 64-bit: Binary release version 1.6.10E18 (8/11/2016).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-linux64.tgz[energia-0101E0017-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (12/9/2015). 
+*Release 0101E0017*
 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-macosx.dmg[energia-0101E0017-macosx.dmg]:Mac OS X: Binary release version 0101E0017 (12/9/2015).
 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-windows.zip[energia-0101E0017-windows.zip]:Windows: Binary release version 0101E0011 (12/9/2015).
 
-*Release 0101E0016* 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-linux.tgz[energia-0101E0017-linux.tgz]:Linux 32-bit: Binary release version 0101E0017 (12/9/2015).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-macosx.dmg[energia-0101E0016-macosx.dmg]:Mac OS X: Binary release version 0101E0016 (7/8/2015). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-windows.zip[energia-0101E0016-windows.zip]:Windows: Binary release version 0101E0011 (7/8/2015). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-linux.tgz[energia-0101E0016-linux.tgz]:Linux 32-bit: Binary release version 0101E0016 (7/8/2015). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-linux64.tgz[energia-0101E0016-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (3/24/2015). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0017-linux64.tgz[energia-0101E0017-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (12/9/2015).
 
 
-*Release 0101E0015* 
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-macosx.dmg[energia-0101E0015-macosx.dmg]:Mac OS X: Binary release version 0101E0015 (3/24/2015). 
+*Release 0101E0016*
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-windows.zip[energia-0101E0015-windows.zip]:Windows: Binary release version 0101E0011 (3/24/2015). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-macosx.dmg[energia-0101E0016-macosx.dmg]:Mac OS X: Binary release version 0101E0016 (7/8/2015).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-linux.tgz[energia-0101E0015-linux.tgz]:Linux 32-bit: Binary release version 0101E0015 (3/24/2015). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-windows.zip[energia-0101E0016-windows.zip]:Windows: Binary release version 0101E0011 (7/8/2015).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-linux.tgz[energia-0101E0016-linux.tgz]:Linux 32-bit: Binary release version 0101E0016 (7/8/2015).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0016-linux64.tgz[energia-0101E0016-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (3/24/2015).
+
+
+*Release 0101E0015*
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-macosx.dmg[energia-0101E0015-macosx.dmg]:Mac OS X: Binary release version 0101E0015 (3/24/2015).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-windows.zip[energia-0101E0015-windows.zip]:Windows: Binary release version 0101E0011 (3/24/2015).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-linux.tgz[energia-0101E0015-linux.tgz]:Linux 32-bit: Binary release version 0101E0015 (3/24/2015).
 
 http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-linux64.tgz[energia-0101E0015-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (3/24/2015).
 
 
-*Release 0101E0014* 
+*Release 0101E0014*
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-linux64.tgz[energia-0101E0014-macosx.dmg]:Mac OS X: Binary release version 0101E0014 (12/09/2014). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0015-linux64.tgz[energia-0101E0014-macosx.dmg]:Mac OS X: Binary release version 0101E0014 (12/09/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0014-windows.zip[energia-0101E0014-windows.zip]:Windows: Binary release version 0101E0011 (12/09/2014). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0014-windows.zip[energia-0101E0014-windows.zip]:Windows: Binary release version 0101E0011 (12/09/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0014-linux.tgz[energia-0101E0014-linux.tgz]:Linux 32-bit: Binary release version 0101E0014 (12/09/2014). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0014-linux.tgz[energia-0101E0014-linux.tgz]:Linux 32-bit: Binary release version 0101E0014 (12/09/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0014-linux64.tgz[energia-0101E0014-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (12/09/2014). 
-
-
-*Release 0101E0013* 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-macosx.dmg[energia-0101E0013-macosx.dmg]:Mac OS X: Binary release version 0101E0013 (09/05/2014). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-windows.zip[energia-0101E0013-windows.zip]:Windows: Binary release version 0101E0011 (09/05/2014). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-linux.tgz[energia-0101E0013-linux.tgz]:Linux 32-bit: Binary release version 0101E0013 (09/05/2014). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-linux64.tgz[energia-0101E0013-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (09/05/2014). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0014-linux64.tgz[energia-0101E0014-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (12/09/2014).
 
 
-*Release 0101E0012* 
+*Release 0101E0013*
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-macosx.dmg[energia-0101E0012-macosx.dmg]:Mac OS X: Binary release version 0101E0012 (3/18/2014). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-macosx.dmg[energia-0101E0013-macosx.dmg]:Mac OS X: Binary release version 0101E0013 (09/05/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-windows.zip[energia-0101E0012-windows.zip]:Windows: Binary release version 0101E0011 (3/18/2014). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-windows.zip[energia-0101E0013-windows.zip]:Windows: Binary release version 0101E0011 (09/05/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-linux.tgz[energia-0101E0012-linux.tgz]:Linux 32-bit: Binary release version 0101E0012 (3/18/2014). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-linux.tgz[energia-0101E0013-linux.tgz]:Linux 32-bit: Binary release version 0101E0013 (09/05/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-linux64.tgz[energia-0101E0012-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (3/18/2014). 
-
-
-*Release 0101E0011* 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-macosx.dmg[energia-0101E0011-macosx.dmg]:Mac OS X: Binary release version 0101E0011 (12/17/2013). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-windows.zip[energia-0101E0011-windows.zip]:Windows: Binary release version 0101E0011 (12/17/2013). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-linux.tgz[energia-0101E0011-linux.tgz]:Linux 32-bit: Binary release version 0101E0011 (12/17/2013). 
-
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-linux64.tgz[energia-0101E0011-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (12/17/2013). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0013-linux64.tgz[energia-0101E0013-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (09/05/2014).
 
 
-*Release 0101E0010* 
+*Release 0101E0012*
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-macosx.dmg[energia-0101E0010-macosx.dmg]:Mac OS X: Binary release version 0101E0010 (09/12/2013). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-macosx.dmg[energia-0101E0012-macosx.dmg]:Mac OS X: Binary release version 0101E0012 (3/18/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-windows.zip[energia-0101E0010-windows.zip]:Windows: Binary release version 0101E0010 (09/12/2013). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-windows.zip[energia-0101E0012-windows.zip]:Windows: Binary release version 0101E0011 (3/18/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-linux.tgz[energia-0101E0010-linux.tgz]:Linux 32-bit: Binary release version 0101E0010 (09/12/2013). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-linux.tgz[energia-0101E0012-linux.tgz]:Linux 32-bit: Binary release version 0101E0012 (3/18/2014).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-linux64.tgz[energia-0101E0010-linux64.tgz]:Linux 64-bit: Binary release version 0101E0010 (09/12/2013). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0012-linux64.tgz[energia-0101E0012-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (3/18/2014).
 
 
-*Release 0101E0009* 
+*Release 0101E0011*
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-macosx.dmg[energia-0101E0009-macosx.dmg]:Mac OS X: Binary release version 0101E0009 (12/06/2012). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-macosx.dmg[energia-0101E0011-macosx.dmg]:Mac OS X: Binary release version 0101E0011 (12/17/2013).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-windows.zip[energia-0101E0009-windows.zip]:Windows: Binary release version 0101E0009 (12/06/2012). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-windows.zip[energia-0101E0011-windows.zip]:Windows: Binary release version 0101E0011 (12/17/2013).
 
-http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-linux.tgz[energia-0101E0009-linux.tgz]:Linux: Binary release version 0101E0009 (12/06/2012). 
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-linux.tgz[energia-0101E0011-linux.tgz]:Linux 32-bit: Binary release version 0101E0011 (12/17/2013).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0011-linux64.tgz[energia-0101E0011-linux64.tgz]:Linux 64-bit: Binary release version 0101E0011 (12/17/2013).
+
+
+*Release 0101E0010*
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-macosx.dmg[energia-0101E0010-macosx.dmg]:Mac OS X: Binary release version 0101E0010 (09/12/2013).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-windows.zip[energia-0101E0010-windows.zip]:Windows: Binary release version 0101E0010 (09/12/2013).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-linux.tgz[energia-0101E0010-linux.tgz]:Linux 32-bit: Binary release version 0101E0010 (09/12/2013).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0010-linux64.tgz[energia-0101E0010-linux64.tgz]:Linux 64-bit: Binary release version 0101E0010 (09/12/2013).
+
+
+*Release 0101E0009*
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-macosx.dmg[energia-0101E0009-macosx.dmg]:Mac OS X: Binary release version 0101E0009 (12/06/2012).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-windows.zip[energia-0101E0009-windows.zip]:Windows: Binary release version 0101E0009 (12/06/2012).
+
+http://energia.nu/downloads/downloadv3.php?file=energia-0101E0009-linux.tgz[energia-0101E0009-linux.tgz]:Linux: Binary release version 0101E0009 (12/06/2012).
 
 
 == Community Contributed Alternatives ==
