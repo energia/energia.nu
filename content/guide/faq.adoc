@@ -1,0 +1,16 @@
+== Frequently Asked Questions ==
+
+image::/guide/img/43oh.png[43oh]
+
+Here is the FAQ compiled at 43oh forum.
+
+- https://forum.43oh.com/topic/10199-netiquette-for-newbies/[Netiquette for Newbies]
+- https://forum.43oh.com/topic/4824-what-information-to-provide-when-asking-for-help/[Information to Provide When Asking for Help]
+- https://forum.43oh.com/topic/11198-i%C2%B2c-check-list/[I²C Check-List]
+- https://forum.43oh.com/topic/7511-howto-porting-libraries-some-help-needed/[Porting an Arduino library to Energia]
+- https://forum.43oh.com/topic/6944-posting-a-library-for-energia/[Posting a Library for Energia]
+- http://energia.nu/pin-maps/[Energia Pin Naming]
+- http://energia.nu/pin-maps/[Use Pins Number instead of Pins Names with Energia]
+- https://forum.43oh.com/topic/10444-is-it-better-to-change-header-or-remap-gpio-in-my-sketch/[Add a New Board to Energia]
+- https://embeddedcomputing.weebly.com/launchpads-and-boosterpacks-pins-maps.html[LaunchPad and BoosterPack Pins Maps]
+- https://github.com/rei-vilo/Galaxia_Library[Boards Supporting the Galaxia Library﻿]
