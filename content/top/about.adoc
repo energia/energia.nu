@@ -1,0 +1,23 @@
+== Who Are We ==
+:linkattrs:
+Energia is an open-source electronics prototyping platform started in January 2012. The goal is to bring the Wiring - Arduino framework to the Texas Instruments LaunchPad and BoosterPack boards.
+
+The founding members are:
+
+=== Robert Wessels ===
+
+image::../img/RobertWessel.png[Robert Wessel]
+
+Robert Wessels is an engineer at Texas Instruments and launched Energia in January 2012. Since June 2012, he is full time developer of Energia.
+
+=== Rei Vilo ===
+
+image::../img/ReiVilo.png[Rei Vilo]
+
+Rei Vilo joined the project at the very beginning and designed the logo. He focuses on testing and contributes with libraries, especially for screens, sensors and RTOS, with the Galaxia library. He has developed https://embedxcode.weebly.com[embedXcode], embedded computing on Xcode, a template for Xcode, Apple's official IDE on macOS, to  ease development for the most popular boards. Finally, he designs and delivers training workshops about Energia to universities.
+
+=== Another One? ===
+
+=== The Astronauts ===
+
+The Astronauts include about two dozen team members who contribute on a punctual basis to the Energia project.
