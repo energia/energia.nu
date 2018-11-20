@@ -1,0 +1,22 @@
+== Guide to the MSP430FR6989 LaunchPad (MSP-EXP430FR6989)
+
+The MSP-EXP430FR6989 LaunchPad shines as an ultra low power platform for projects. The board has 128 kB of FRAM memory which enables extremely low power consumption, non-volatility, and fast write cycles.
+
+This hardware is open source! Get the design files from TI: http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSP-EXP430FR6989/latest/index_FDS.html[MSP-EXP430FR6989 Software Examples and Design Files].
+
+Drivers may or may not be required in order to start using this LaunchPad. Download and open Energia on your system. Connect your LaunchPad to your computer over USB. Select MSP430fr5969 under Tools > Board, and select the correct serial port under Tools > Serial Port. If you don't see a selectable serial port, you likely have a driver issue.
+
+=== Installing the drivers
+==========================
+If you have not already done so, follow the instructions for your operating system to install the drivers here:
+
+* link:/guide/install/windows/[Windows]
+* link:/guide/install/macos/[Mac OS X]
+* link:/guide/install/linux/[Linux]
+==========================
+
+=== Pin Map
+The following diagram shows the complete pin map for the MSP430FR5969 LaunchPad in Energia. Click  the image to enlarge.
+
+[caption="Figure 1: ",link=../img/MSP-EXP430FR6989.jpg]
+image::../img/MSP-EXP430FR6989.jpg[MSP430G2,800]
