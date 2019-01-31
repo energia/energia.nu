@@ -16,7 +16,7 @@ If you have not already done so, follow the instructions for your operating syst
 ==========================
 
 === Pin Map
-The following diagram shows the complete pin map for the MSP430FR5969 LaunchPad in Energia. Click  the image to enlarge.
+The following diagram shows the complete pin map for the MSP430FR6989 LaunchPad in Energia. Click  the image to enlarge.
 
 [caption="Figure 1: ",link=../img/MSP-EXP430FR6989.jpg]
 image::../img/MSP-EXP430FR6989.jpg[MSP430G2,800]

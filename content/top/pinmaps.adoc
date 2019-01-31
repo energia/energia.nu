@@ -48,7 +48,7 @@ Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depend
 * link:msp-exp430fr5739[MSP430FR5739 LaunchPad (MSP-EXP430FR5739)]
 * link:msp-exp430fr5969[MSP430FR5969 LaunchPad (MSP-EXP430FR5969)]
 * link:msp-exp430fr5994[MSP430FR5994 LaunchPad (MSP-EXP430FR5994)]
-* link:msp-exp430fr6989[MSP430FR5994 LaunchPad (MSP-EXP430FR6989)]
+* link:msp-exp430fr6989[MSP430FR6989 LaunchPad (MSP-EXP430FR6989)]
 
 === 16-bit C2000
 * link:launchxl-f28027f[C2000 F28027 LaunchPad (LAUNCHXL-F28027F)]
