@@ -1,6 +1,6 @@
 == println() ==
 === Description ===
-Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or ‘\r’) and a newline character (ASCII 10, or ‘\n’). This command takes the same forms as link:../serial_print[Serial.print()].
+Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or &lsquo;\r&rsquo;) and a newline character (ASCII 10, or &lsquo;\n&rsquo;). This command takes the same forms as link:../serial_print[Serial.print()].
 
  
 
@@ -12,7 +12,7 @@ Serial.println(val, format)
  
 
 === Parameters ===
-val: the value to print – any data type
+val: the value to print - any data type
 
  
 

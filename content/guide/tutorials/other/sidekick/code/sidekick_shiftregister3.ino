@@ -95,7 +95,7 @@ void shiftOut(int myDataPin, int myClockPin, byte myDataOut) {
   digitalWrite(myDataPin, 0);
   digitalWrite(myClockPin, 0);
 
-  //for each bit in the byte myDataOut�
+  //for each bit in the byte myDataOut &#65533;
   //NOTICE THAT WE ARE COUNTING DOWN in our for loop
   //This means that %00000001 or "1" will go through such
   //that it will be pin Q0 that lights. 

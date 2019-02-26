@@ -48,7 +48,7 @@ The smaller of the two numbers.
 
 [float]
 === Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
+// Describe what the example code is all about and add relevant code   &#9658;THIS SECTION IS MANDATORY&#9664;
 The code ensures that it never gets above 100.
 
 [source,arduino]

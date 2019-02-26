@@ -52,7 +52,7 @@ b: if x is greater than b
 
 [float]
 === Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
+// Describe what the example code is all about and add relevant code   &#9658;THIS SECTION IS MANDATORY&#9664;
 The code limits the sensor values to between 10 to 150.
 
 [source,arduino]

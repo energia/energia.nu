@@ -119,7 +119,7 @@ void setup()
   // Connect the left and right pins to VCC and GND
   // Connect the buzzer longer leg to pin 19 and shorter leg
   // to GND
-  // Note: we don’t have to configure analog pins as input or
+  // Note: we don&apos;t have to configure analog pins as input or
   // output to use them 
   pinMode(RED_LED, OUTPUT);  // set your LED pin to OUTPUT
   pinMode(19, OUTPUT); // set your Buzzer pin to OUTPUT 

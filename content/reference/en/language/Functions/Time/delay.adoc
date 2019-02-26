@@ -46,7 +46,7 @@ Nothing
 
 [float]
 === Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
+// Describe what the example code is all about and add relevant code   &#9658;THIS SECTION IS MANDATORY&#9664;
 The code pauses the program for one second before toggling the output pin.
 
 [source,arduino]

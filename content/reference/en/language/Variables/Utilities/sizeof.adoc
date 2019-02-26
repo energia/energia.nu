@@ -38,7 +38,7 @@ The number of bytes in a variable or bytes occupied in an array. (size_t)
 
 [float]
 === Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
+// Describe what the example code is all about and add relevant code   &#9658;THIS SECTION IS MANDATORY&#9664;
 The `sizeof` operator is useful for dealing with arrays (such as strings) where it is convenient to be able to change the size of the array without breaking other parts of the program.
 
 This program prints out a text string one character at a time. Try changing the text phrase.
