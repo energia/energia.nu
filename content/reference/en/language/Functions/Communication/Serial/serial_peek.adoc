@@ -15,4 +15,4 @@ None
  
 
 === Returns ===
-the first byte of incoming serial data available (or -1 if no data is available) – int
+The first byte of incoming serial data available (or -1 if no data is available) - int

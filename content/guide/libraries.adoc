@@ -4,50 +4,50 @@
 
 These libraries are included in the official release of Energia. Learn how to manage and import your libraries with link:/guide/libraries/library-manager/[this tutorial].
 
-* Adafruit_TMP006 – TMP006 Library for CC3200
-* Air430BoostUSAFCC – Library for CC110L Sub-1GHz radio BoosterPack for use in North America
-* Air430BoostEuropeETSI – Library for CC110L Sub-1GHz radio BoosterPack for use in Europe
-* aJson – JSON parser
-* BMA222 – Accelerometer Library for CC3200
-* CogLCD – Crystal on Glass LCD library using SPI
-* DriverLib – TI&#8217;s Driver Libraries exposed with Energia APIs
-* EduBPMKII_Screen – library for LCD screen on BOOSTXL-EDUBPMKII
-* EEPROM – EEPROM management library for TM4C
-* link:ethernet/[Ethernet] – Connect with Ethernet using this library
-* http://energia.nu/guide/tutorials/connectivity/tutorial_standardfirmata[Firmata] – Dynamically control the microcotroller with serial communication
-* IRremote – Infrared remote library
-* LiquidCrystal – Generic LCD library
-* LCD_SharpBoosterPack_SPI – Sharp Memory LCD library
-* MspFlash – Manipulate the flash memory for MSP430
-* M2XStreamClient – AT&amp;T M2X data service client library
-* MQTTClient – IBM IoT Foundation MQTT client library
-* PubNub – PubNub MQTT Client library
-* PubSubClient – Generic MQTT Client library
-* link:/reference/en/language/functions/communication/serial[Serial] – UART communication abstraction
-* Servo – Control a servo motor using this library
-* Software Serial – Software UART library
-* link:/guide/libraries/spi/[SPI] – SPI communication abstraction
-* link:/reference/en/language/functions/communication/stream[Stream] – Parent library for many communication libraries like Serial
-* Stepper – Control a stepper motor
-* https://www.temboo.com/hardware/ti/getting-started[Temboo] – Harness data from hundreds of web services using Temboo APIs
-* USBSerial – Multi-instance USB serial library
-* link:/guide/libraries/wifi[WiFi] – Use the powerful SimpleLink Wi-Fi features with these helpful APIs
-* link:/guide/libraries/wire[Wire] – I2C communication abstraction
+* Adafruit_TMP006 - TMP006 Library for CC3200
+* Air430BoostUSAFCC - Library for CC110L Sub-1GHz radio BoosterPack for use in North America
+* Air430BoostEuropeETSI - Library for CC110L Sub-1GHz radio BoosterPack for use in Europe
+* aJson - JSON parser
+* BMA222 - Accelerometer Library for CC3200
+* CogLCD - Crystal on Glass LCD library using SPI
+* DriverLib - TI&#8217;s Driver Libraries exposed with Energia APIs
+* EduBPMKII_Screen - library for LCD screen on BOOSTXL-EDUBPMKII
+* EEPROM - EEPROM management library for TM4C
+* link:ethernet/[Ethernet] - Connect with Ethernet using this library
+* http://energia.nu/guide/tutorials/connectivity/tutorial_standardfirmata[Firmata] - Dynamically control the microcotroller with serial communication
+* IRremote - Infrared remote library
+* LiquidCrystal - Generic LCD library
+* LCD_SharpBoosterPack_SPI - Sharp Memory LCD library
+* MspFlash - Manipulate the flash memory for MSP430
+* M2XStreamClient - AT&amp;T M2X data service client library
+* MQTTClient - IBM IoT Foundation MQTT client library
+* PubNub - PubNub MQTT Client library
+* PubSubClient - Generic MQTT Client library
+* link:/reference/en/language/functions/communication/serial[Serial] - UART communication abstraction
+* Servo - Control a servo motor using this library
+* Software Serial - Software UART library
+* link:/guide/libraries/spi/[SPI] - SPI communication abstraction
+* link:/reference/en/language/functions/communication/stream[Stream] - Parent library for many communication libraries like Serial
+* Stepper - Control a stepper motor
+* https://www.temboo.com/hardware/ti/getting-started[Temboo] - Harness data from hundreds of web services using Temboo APIs
+* USBSerial - Multi-instance USB serial library
+* link:/guide/libraries/wifi[WiFi] - Use the powerful SimpleLink Wi-Fi features with these helpful APIs
+* link:/guide/libraries/wire[Wire] - I2C communication abstraction
 
 === BoosterPack Energia Libraries ===
 
 * https://web.archive.org/web/20180212162049/http://energia.nu/reference/ads1118-thermocouple-boosterpack/[ADS1118 Thermocouple BP] (430BOOST-ADS1118)
 * CC110L Sub-1GHz RF BP (430BOOST-CC110L)
-* link:/guide/libraries/sharp_memory_lcd_boosterpack[Sharp® Memory LCD BP] (430BOOST-SHARP96)
+* link:/guide/libraries/sharp_memory_lcd_boosterpack[Sharp Memory LCD BP] (430BOOST-SHARP96)
 
 
 === Contributed Energia Libraries ===
 Big thanks to the community for helping to expand the capabilities of Energia through open source libraries!  Download relevant libraries here and use them in your next project.
 
-* https://github.com/ILAMtitan/WS2811Driver[WS2811Driver] – MSP430 library for Adafruit NeoPixel and other WS281x based LEDs
-* https://github.com/njneerW/WS2812_drv[WS2812 Library] – Library for LED Strips using DMA instead of CPU cycles for TM4C LaunchPad
-* http://forum.43oh.com/topic/3398-energia-library-for-educational-boosterpack-launchpad/[Educational BoosterPack] – Educational BoosterPack MK I library
-* http://forum.43oh.com/topic/3158-energia-library-capacitive-touch-library/[Capacitive Touch Library] – Library for the popular Capacitive Touch BoosterPack
+* https://github.com/ILAMtitan/WS2811Driver[WS2811Driver] - MSP430 library for Adafruit NeoPixel and other WS281x based LEDs
+* https://github.com/njneerW/WS2812_drv[WS2812 Library] - Library for LED Strips using DMA instead of CPU cycles for TM4C LaunchPad
+* http://forum.43oh.com/topic/3398-energia-library-for-educational-boosterpack-launchpad/[Educational BoosterPack] - Educational BoosterPack MK I library
+* http://forum.43oh.com/topic/3158-energia-library-capacitive-touch-library/[Capacitive Touch Library] - Library for the popular Capacitive Touch BoosterPack
 * http://forum.43oh.com/topic/3746-charlieplexing-and-more-library/[Charlieplexiing]
 * http://forum.43oh.com/topic/3729-energia-library-andisplay-for-a-common-anode-display-and-kadisplay-for-a-common-cathode-display/[Andisplay for a common Anode display, and Kadisplay for a common cathode display]
 * http://forum.43oh.com/topic/3237-energia-library-nordic-nrf24l01-library/[Nordic nRF24L01+Library]

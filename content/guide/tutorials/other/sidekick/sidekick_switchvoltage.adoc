@@ -21,7 +21,7 @@ A microcontroller can be very useful for controlling small things like LEDs and 
 
 image::../img/npn.png[]
 
-There is usually some math required to figure out what kind of resistor you need for the voltage you want to use. This math is based off of Ohm’s Law that says voltage in a circuit is equal to current times resistance (V=IR). For the example, you won’t need to worry about the calculations, but if you wanted to build your own circuit you may need to run through calculations to find the proper values for the components to work.
+There is usually some math required to figure out what kind of resistor you need for the voltage you want to use. This math is based off of Ohm's Law that says voltage in a circuit is equal to current times resistance (V=IR). For the example, you won't need to worry about the calculations, but if you wanted to build your own circuit you may need to run through calculations to find the proper values for the components to work.
 
 CAUTION: The transistor can get VERY hot when powered on or connected incorrectly. Do not touch or yank the transistor until it is cool to the touch. There is a chance that you can burn out your transistor, so make sure you set up the circuit exactly as shown.
 
@@ -57,7 +57,7 @@ Code not uploading?
 
 * Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
 * Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset. This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
-* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error "No unused FET Found" which means it can't find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
 * If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
 
  
@@ -67,9 +67,9 @@ Motor not spinning?
 * Make sure you properly uploaded the code and that you properly named your variables for the pins.
 * Your motor will probably need 5V or more to spin. If your LaunchPad does not have a 5V rail, you may need to hook up an external power supply like 4 AA or AAA batteries.
 * The motor may have too much current at the beginning so you may need to give the motor a kickstart with your finger to get it going. Some transistors can handle this better than others.
-* It’s possible you may have burned out your transistor by accident if you plugged it in wrong. Any NPN transistor can be used to make this circuit if you need to get a replacement. A common one is 2N2222 or the TIP31.
+* It's possible you may have burned out your transistor by accident if you plugged it in wrong. Any NPN transistor can be used to make this circuit if you need to get a replacement. A common one is 2N2222 or the TIP31.
 * Try rebuilding the circuit from scratch and make sure your connections are correct.
-* If you’ve done all you can with no luck, move on to the next example. Motor control can be a tricky thing to debug.
+* If you've done all you can with no luck, move on to the next example. Motor control can be a tricky thing to debug.
 
 Motor constantly spinning?
 

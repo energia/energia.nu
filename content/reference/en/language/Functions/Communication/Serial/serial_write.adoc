@@ -40,6 +40,6 @@ void setup(){
 void loop(){
   Serial.write(45); // send a byte with the value 45
 
-   int bytesSent = Serial.write("hello"); //send the string "hello" and return the length of the string.
+   int bytesSent = Serial.write("hello" &#128308;); //send the string "hello" &#128308; and return the length of the string.
 }
 ----

@@ -18,7 +18,7 @@ In this circuit we will be incorporating a 555 timer to make a delay timer.
  
 === Relevant Groundwork ===
 
-This circuit will be extra special because it will require minimal power and can last a long time on battery power. To make it easier to use the sidekick we will power the circuit from the LaunchPad connected to USB, but it’s important to note that the microcontroller is doing nothing except supplying power to the circuit.  This circuit is purely analog, so no code will be required.
+This circuit will be extra special because it will require minimal power and can last a long time on battery power. To make it easier to use the sidekick we will power the circuit from the LaunchPad connected to USB, but it's important to note that the microcontroller is doing nothing except supplying power to the circuit.  This circuit is purely analog, so no code will be required.
 
 A timer can be used in an analog circuit to help trigger events at certain intervals.
 
@@ -28,4 +28,4 @@ The timer is wired in a mono-stable mode to emit a single delay pulse. The pulse
 
 In this simple circuit we will just turn on an LED with the transistor so we can see the state change.
 
-You can adjust the duration of the 555 timer by choosing different values for the capacitors. Search for “calculate 555 duration” to find out how to adjust the timing to your liking.
+You can adjust the duration of the 555 timer by choosing different values for the capacitors. Search for "calculate 555 duration" to find out how to adjust the timing to your liking.

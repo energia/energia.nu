@@ -77,13 +77,13 @@ void updateRegister(int value){
 /* updateRegister2() - in this function we will update the state of the shift register.
  * We first pull the latch pin low, then for each bit we use a bit mask to check bit by 
  * bit which LEDs should be illuminated based on which number we are writing. This bit 
- * mask uses the binary ‘and’ operation to compare the value being written with the bit 
- * mask equal to ‘10000000’.  If the most significant bit, or the left-most bit, is a 
- * ‘1’, then the result of the ‘and’ operation will also be a ‘1’.  We then shift the 
+ * mask uses the binary &apos;and&apos; operation to compare the value being written with the bit 
+ * mask equal to &apos;10000000&apos;.  If the most significant bit, or the left-most bit, is a 
+ * '1', then the result of the &apos;and&apos; operation will also be a &apos;1&apos;.  We then shift the 
  * data stored in the value variable left by one bit so that every bit will sequentially 
- * become the most significant bit.  A shift is done using the ‘<<’ operator to shift the 
- * value left, or the ‘>>’ operator to shift the value right.  If the most significant bit 
- * is determined to be a ‘1’, then the corresponding LED is illuminated by writing HIGH to 
+ * become the most significant bit.  A shift is done using the &apos;<<&apos; operator to shift the 
+ * value left, or the &apos;>>&apos; operator to shift the value right.  If the most significant bit 
+ * is determined to be a &apos;1&apos;, then the corresponding LED is illuminated by writing HIGH to 
  * the data pin, otherwise a LOW is written.  Iterating through the value eight times allows
  * each bit to be compared to the bit mask. After this comparison on all eight bits is 
  * complete, we pulse the clock by turning it HIGH then LOW very quickly. We then pull the 

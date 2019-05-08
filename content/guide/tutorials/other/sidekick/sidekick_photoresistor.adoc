@@ -15,7 +15,7 @@ We will learn how to tell the difference between light and dark using a photores
  
 === Relevant Groundwork ===
 
-We’ve covered sensing physical inputs from humans using a potentiometer and button, but what about sensing environmental characteristics? We can use a special component called a photoresistor to detect how much light is available. A photoresistor is another variable resistor that changes resistance based on light exposure. This won’t be super accurate in measuring light with precision but it can give us a basic gauge of how bright or dark the environment is at the moment. When measuring relative light, higher values occur for a well lit setting and lower values occur in darker settings. For example, you may want the lights in house to turn on when it gets dark, and turn off when the sun comes back out. This is called a passive system, meaning no human interaction is required for it to work properly. An active system will require a human to do some work like push a button.  Having systems act in a passive manner can make electronics seem like magic. That’s why sensors are so important to many projects and products!
+We've covered sensing physical inputs from humans using a potentiometer and button, but what about sensing environmental characteristics? We can use a special component called a photoresistor to detect how much light is available. A photoresistor is another variable resistor that changes resistance based on light exposure. This won't be super accurate in measuring light with precision but it can give us a basic gauge of how bright or dark the environment is at the moment. When measuring relative light, higher values occur for a well lit setting and lower values occur in darker settings. For example, you may want the lights in house to turn on when it gets dark, and turn off when the sun comes back out. This is called a passive system, meaning no human interaction is required for it to work properly. An active system will require a human to do some work like push a button.  Having systems act in a passive manner can make electronics seem like magic. That's why sensors are so important to many projects and products!
 
 This is a pretty straight forward example on how to use a photocell. Use a voltage divider with a 10K pulldown resistor.  If you are in a brighter area, you can use a 1K resistor, which will give you better levels at bright light, but worse detail at darker levels. This is a trade off, depending on what is more important for your project. For this example, we are going to cover the sensor to make a stark contrast between dark and light.
 Circuit & Schematic
@@ -45,7 +45,7 @@ Code not uploading?
 
 * Check for errors in Energia debug window. The compiler will tell you what is happening. Errors are in red text.
 * Sometimes your LaunchPad gets stuck or hung up on the previous code. Unplug your LaunchPad and plug it back in to perform a full reset.  This is called a power on reset. Sometimes using the RESET button can work but taking away the power and letting the microcontroller fully reset is often best.
-* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error “No unused FET Found” which means it can’t find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
+* If you have a failure to upload it could be your drivers are not properly installed. Energia will sometimes give the error "No unused FET Found" which means it can't find a LaunchPad connected to your computer. Make sure you download the drivers for your operating system found on the Getting Started Guide.
 * If you had no problem with the previous Blink example, your Energia should be correctly set up. Restart your LaunchPad and restart Energia IDE if you encounter any problems. Make sure to select the right serial port and board type under the Tools menu.
 
  
@@ -59,7 +59,7 @@ LED not lighting up?
 
 LED not fading?
 
-* Make sure you have your 1K or 10K pulldown resistor properly connected. If it is not then the LED won’t fade in a noticeable fashion.
+* Make sure you have your 1K or 10K pulldown resistor properly connected. If it is not then the LED won't fade in a noticeable fashion.
 * Watch carefully, you may have to completely cover the sensor to notice any changes. Your fading might seem very minor but if it is doing it, then the code is running correctly. You can try to adjust the code to make the effect more dramatic, but the senor is not super sensitive.
 * You can verify that the sensor is changing by checking your Serial Monitor. You should see the values changing as you interact with the sensor. Make sure your baud rate is set for 9600 and you have selected the correct serial port for UART.
 
