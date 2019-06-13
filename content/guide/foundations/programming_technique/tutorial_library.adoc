@@ -40,7 +40,7 @@ void dash()
 
 If you run this sketch, it will flash out the code for SOS (a distress call) on pin 14.
 
-The sketch has a few different parts that we'll need to bring into our library. First, of course, we have the `*dot()*` and `*dash()*` functions that do the actual blinking. Second, there's the *ledPin* variable which the functions use to determine which pin to use. Finally, there's the call to http://energia.nu/reference/pinmode/[`*pinMode()*`] that initializes the pin as an output.
+The sketch has a few different parts that we'll need to bring into our library. First, of course, we have the `*dot()*` and `*dash()*` functions that do the actual blinking. Second, there's the *ledPin* variable which the functions use to determine which pin to use. Finally, there's the call to link:/reference/en/language/functions/digital-io/pinmode/[`*pinMode()*`] that initializes the pin as an output.
 
 Let's start turning the sketch into a library!
 
@@ -229,9 +229,9 @@ Second, we now create an instance of the Morse class called *morse:*
 Morse morse(14);
 ----
 
-When this line gets executed (which actually happens even before the http://energia.nu/reference/setup/[`*setup()*`] function), the constructor for the Morse class will be called, and passed the argument you've given here (in this case, just *14*).
+When this line gets executed (which actually happens even before the link:/reference/en/language/structure/sketch/setup/[`*setup()*`] function), the constructor for the Morse class will be called, and passed the argument you've given here (in this case, just *14*).
 
-Notice that our http://energia.nu/reference/setup/[`*setup()*`] is now empty; that's because the call to http://energia.nu/reference/pinmode/[`*pinMode()*`] happens inside the library (when the instance is constructed).
+Notice that our link:/reference/en/language/structure/sketch/setup/[`*setup()*`] is now empty; that's because the call to link:/reference/en/language/functions/digital-io/pinmode/[`*pinMode()*`] happens inside the library (when the instance is constructed).
 
 Finally, to call the `*dot()*` and `*dash()*` functions, we need to prefix them with *morse*. The name of the instance we want to use. We could have multiple instances of the Morse class, each on their own pin stored in the `*_pin*` private variable of that instance. By calling a function on a particular instance, we specify which instance's variables should be used during that call to a function. That is, if we had both:
 

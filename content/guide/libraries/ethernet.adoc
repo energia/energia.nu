@@ -51,7 +51,7 @@
 * link:../ethernet/ethernet_clientconstructor[Client()]
 * link:../ethernet/ethernet_ethernetclient[EthernetClient()]
 * link:../ethernet/ethernet_ifethernetclient[if(EthernetClient)]
-* link:../ethernet/ethernet_clientconnected[connected()]
+* link:../ethernet/ethernet_clientconnected/[connected()]
 * link:../ethernet/ethernet_clientconnect[connect()]
 * link:../ethernet/ethernet_clientwrite[write()]
 * link:../ethernet/ethernet_serverprint[print()]

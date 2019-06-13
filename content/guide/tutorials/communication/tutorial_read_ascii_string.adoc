@@ -1,6 +1,6 @@
 == ReadASCIIString ==
 
-This sketch uses the link:/reference/en/language/functions/communication/serial/serial_parseint/[`Serial.parseInt()`] function to locate values separated by a non-alphanumeric character. Often people use a comma to indicate different pieces of information (this format is commonly referred to as comma-separated-values), but other characters like a space or a period will work too. The values are parsed into ints and used to determine the color of a RGB LED. You'll use the serial monitor to send strings like "5,220,70" to the LaunchPad to change the lights.
+This sketch uses the link:/reference/en/language/functions/communication/serial/parseint/[`Serial.parseInt()`] function to locate values separated by a non-alphanumeric character. Often people use a comma to indicate different pieces of information (this format is commonly referred to as comma-separated-values), but other characters like a space or a period will work too. The values are parsed into ints and used to determine the color of a RGB LED. You'll use the serial monitor to send strings like "5,220,70" to the LaunchPad to change the lights.
 
 === Hardware Required ===
 
@@ -36,7 +36,7 @@ const int greenPin = 10;
 const int bluePin = 12;
 ----
 
-In your http://energia.nu/Setup.html[`setup()`], begin serial communication at 9600 bits of data per second between LaunchPad and your computer with the line:
+In your link:/reference/en/language/structure/sketch/setup/[`setup()`], begin serial communication at 9600 bits of data per second between LaunchPad and your computer with the line:
 
 ----
 Serial.begin(9600);
@@ -56,7 +56,7 @@ In the link:/reference/en/language/structure/sketch/loop/[`loop()`], check to se
 while (Serial.available() > 0) {
 ----
 
-Next, declare some local variables for storing the serial information. This will be the brightness of the LEDs. Using link:/reference/en/language/functions/communication/serial/serial_parseint/[`Serial.parseInt()`] to separate the data by commas, read the information into your variables:
+Next, declare some local variables for storing the serial information. This will be the brightness of the LEDs. Using link:/reference/en/language/functions/communication/serial/parseint/[`Serial.parseInt()`] to separate the data by commas, read the information into your variables:
 
 ----
 int red = Serial.parseInt();

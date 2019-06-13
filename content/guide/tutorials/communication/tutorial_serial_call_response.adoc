@@ -13,7 +13,7 @@ This example demonstrates multi-byte communication from the MSP430 LaunchPad to 
 
 === Relevant Groundwork ===
 
-In this code, we use the function link:/reference/en/language/functions/communication/serial/serial_write/[`Serial.write()`]. This function writes the value of what is in the function as binary data to the Serial Monitor. For instance if we put `Serial.write(100)`; into Energia sketch, when we open the Serial monitor, we will see a string of `'d'` written on the Serial Monitor which 100 in decimal corresponds to `'d'` in ASCII.
+In this code, we use the function link:/reference/en/language/functions/communication/serial/write/[`Serial.write()`]. This function writes the value of what is in the function as binary data to the Serial Monitor. For instance if we put `Serial.write(100)`; into Energia sketch, when we open the Serial monitor, we will see a string of `'d'` written on the Serial Monitor which 100 in decimal corresponds to `'d'` in ASCII.
 
 Connect analog sensors to analog input pin 0 and 1 with 10K ohm resistors used as voltage dividers. Connect a pushbutton or switch to digital I/O pin 2 with a 10Kohm resistor as a reference to ground.
 
@@ -192,9 +192,9 @@ void serialEvent(Serial myPort) {
 === See Also ===
 
 * link:/reference/en/language/functions/communication/serial/[serial()]
-* link:/reference/en/language/functions/communication/serial/serial_begin/[serial.begin()]
-* link:/reference/en/language/functions/communication/serial/serial_available/[serial.available()]
-* link:/reference/en/language/functions/communication/serial/serial_print/[serial.print()]
+* link:/reference/en/language/functions/communication/serial/begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/available/[serial.available()]
+* link:/reference/en/language/functions/communication/serial/print/[serial.print()]
 * link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
 * link:/guide/tutorials/communication/tutorial_dimmer/[Dimmer]:move the mouse to change the brightness of an LED.
 * link:/guide/tutorials/communication/tutorial_graph/[Graph]:send data to the computer and graph it in Processing.

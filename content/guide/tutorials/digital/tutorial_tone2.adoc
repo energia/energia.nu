@@ -61,8 +61,8 @@ void loop() {
 
 === See Also ===
 
-* link:/reference/en/language/variables/data-types/string/array/[Array()]
-* link:/reference/en/language/structure/control-struture/for/[for()]
+* link:/reference/en/language/variables/data-types/array/[Array()]
+* link:/reference/en/language/structure/control-structure/for/[for()]
 * link:/reference/en/language/functions/advanced-io/tone/[tone()]
 * link:/reference/en/language/functions/math/map/[map()]
 * link:/guide/tutorials/digital/tutorial_tone/[Tone]:play a melody with a piezo speaker.

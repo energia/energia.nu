@@ -123,4 +123,4 @@ video::BDChvLXHPnw[youtube]
 
 * link:/reference/en/language/structure/sketch/setup/[setup()]
 * link:/reference/en/language/structure/sketch/loop/[loop()]
-* link:/reference/en/language/functions/communication/serial/serial_println[serial.println()]
+* link:/reference/en/language/functions/communication/serial/println/[serial.println()]

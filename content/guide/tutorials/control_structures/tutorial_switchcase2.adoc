@@ -113,9 +113,9 @@ void loop() {
  
 === See Also ===
 
-* link:/reference/en/language/functions/communication/serial/serial_begin/[serial.begin()]
-* link:/reference/en/language/functions/communication/serial/serial_read/[serial.read()]
-* link:/reference/en/language/functions/communication/serial/serial_available/[serial.available()]
+* link:/reference/en/language/functions/communication/serial/begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/read/[serial.read()]
+* link:/reference/en/language/functions/communication/serial/available/[serial.available()]
 * link:/guide/tutorials/control_structures/tutorial_switchcase2/[switch()case]
 * link:/reference/en/language/functions/digital-io/digitalwrite/[digitalWrite()]
 * link:/guide/tutorials/communication/tutorial_serial_call_response/[Serial Call Response]:send multiple variables using a call and response (handshaking) method.
