@@ -2,7 +2,7 @@
 
 === Core Libraries ===
 
-These libraries are included in the official release of Energia. Learn how to manage and import your libraries with link:/guide/libraries/library-manager/[this tutorial].
+These libraries are included in the official release of Energia. Learn how to manage and import your libraries with link:/guide/foundations/programming_technique/tutorial_library/[this tutorial].
 
 * Adafruit_TMP006 - TMP006 Library for CC3200
 * Air430BoostUSAFCC - Library for CC110L Sub-1GHz radio BoosterPack for use in North America

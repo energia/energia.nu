@@ -13,7 +13,7 @@ The code below sequentially stores 10 readings from your analog sensor into an a
 
 Connect the three wires from the potentiometer to your LaunchPad board. The first goes to ground from one of the outer pins of the potentiometer. The second goes from 3 volts to the other outer pin of the potentiometer. The third goes from analog input A3 to the middle pin of the potentiometer. By turning the shaft of the potentiometer, you change the amount of resistance on either side of the wiper which is connected to the center pin of the potentiometer. This changes the voltage at the center pin. When the resistance between the center and the side connected to 3 volts is close to zero (and the resistance on the other side is close to 10 kilohms), the voltage at the center pin nears 3 volts. When the resistances are reversed, the voltage at the center pin nears 0 volts, or ground. This voltage is the *analog voltage* that you're reading as an input.
 
-The LaunchPad has a circuit inside called an *analog-to-digital converter* that reads this changing voltage and converts it to a number between 0 and 1023. When the shaft is turned all the way in one direction, there are 0 volts going to the pin, and the input value is 0. When the shaft is turned all the way in the opposite direction, there are 3 volts going to the pin and the input value is 1023. In between, link://reference/analogread/[`analogRead()`] returns a number between 0 and 1023 that is proportional to the amount of voltage being applied to the pin.
+The LaunchPad has a circuit inside called an *analog-to-digital converter* that reads this changing voltage and converts it to a number between 0 and 1023. When the shaft is turned all the way in one direction, there are 0 volts going to the pin, and the input value is 0. When the shaft is turned all the way in the opposite direction, there are 3 volts going to the pin and the input value is 1023. In between, link:/reference/en/language/functions/analog-io/analogread/[`analogRead()`] returns a number between 0 and 1023 that is proportional to the amount of voltage being applied to the pin.
 
 === Circuit ===
 
@@ -111,7 +111,7 @@ video::DYf982c-Ia4[youtube]
 
 * link:/reference/en/language/structure/sketch/setup/[setup()]
 * link:/reference/en/language/structure/sketch/loop/[loop()]
-* link:/reference/en/language/functions/analog-io/[analogRead()]
+* link:/reference/en/language/functions/analog-io/analogread/[analogRead()]
 * link:/reference/en/language/variables/data-types/int/[int]
 * link:/reference/en/language/functions/communication/serial/[serial]
 * link:/reference/en/language/variables/data-types/float/[float]

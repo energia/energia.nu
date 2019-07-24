@@ -15,7 +15,7 @@ Programmers should consider the size of the numbers they wish to store in choosi
 
 === Variable Scope ===
 
-Another important choice that programmers face is where to declare variables. The specific place that variables are declared influences how various functions in a program will _see_ the variable. This is called variable link:/reference/en/language/variables/variable-scope-&-qualifiers/scope/[scope].
+Another important choice that programmers face is where to declare variables. The specific place that variables are declared influences how various functions in a program will _see_ the variable. This is called variable link:/reference/en/language/variables/variable-scope--qualifiers/scope/[scope].
 
 === Initializing Variables ===
 
@@ -43,7 +43,7 @@ When variables are made to exceed their maximum capacity they ''roll over'' back
 
 === Using Variables ===
 
-Once variables have been declared, they are used by setting the variable equal to the value one wishes to store with the http://energia.nu/reference/assignment/[assignment operator] (single equal sign). The assignment operator tells the program to put whatever is on the right side of the equal sign into the variable on the left side.
+Once variables have been declared, they are used by setting the variable equal to the value one wishes to store with the link:/reference/en/language/structure/arithmetic-operators/assignment/[assignment operator] (single equal sign). The assignment operator tells the program to put whatever is on the right side of the equal sign into the variable on the left side.
 
 ----
 inputVariable1 = 7;             // sets the variable named inputVariable1 to 7
@@ -90,11 +90,11 @@ You can name a variable any word that is not already one of the keywords in Ener
 
 === Variable Scope ===
 
-* link:/reference/en/language/variables/variable-scope-&-qualifiers/scope/[Variable Scope]
+* link:/reference/en/language/variables/variable-scope--qualifiers/scope/[Variable Scope]
  
 === See also ===
 
-* http://energia.nu/reference/arithmetic/[+=] (compound addition)
-* http://energia.nu/reference/arithmetic/[-=] (compound subtraction)
+* link:/reference/en/language/structure/arithmetic-operators/addition/[+=] (compound addition)
+* link:/reference/en/language/structure/arithmetic-operators/subtraction/[-=] (compound subtraction)
  
  

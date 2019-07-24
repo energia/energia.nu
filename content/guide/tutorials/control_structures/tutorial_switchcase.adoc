@@ -103,10 +103,10 @@ void loop() {
 
 === See Also ===
 
-* link:/reference/en/language/functions/communication/serial/serial_begin/[serial.begin()]
+* link:/reference/en/language/functions/communication/serial/begin/[serial.begin()]
 * link:/reference/en/language/functions/analog-io/analogread[analogRead()]
 * link:/reference/en/language/functions/math/map/[map()]
-* link:/reference/en/language/functions/communication/serial/serial_println/[serial.println()]
+* link:/reference/en/language/functions/communication/serial/println/[serial.println()]
 * link:/guide/tutorials/control_structures/tutorial_ifstatement/[If Statement]:how to use an if statement to change output conditions based on changing input conditions.
 * link:/guide/tutorials/control_structures/tutorial_forloop[For Loop]:controlling multiple LEDs with a for loop.
 * link:/guide/tutorials/control_structures/tutorial_array/[Array]:a variation on the For Loop example that demonstrates how to use an array.

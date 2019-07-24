@@ -57,7 +57,7 @@ potentiometer.
 * If everything is working, we should start to see sensor values streaming into the terminal.
 * Turn the knob & see the sensor readings change!
 
-*NOTE:* Check out this helpful pin diagram created by Energia contributor & community member, Rei Vilo: http://energia.nu/pin-maps/guide_cc3200launchpad/
+*NOTE:* Check out this helpful pin diagram created by Energia contributor & community member, Rei Vilo: link:/pinmaps/cc3200-launchxl/
 
 video::l13fSSby0oY[youtube]
  

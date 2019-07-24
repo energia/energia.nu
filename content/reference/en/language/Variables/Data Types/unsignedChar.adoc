@@ -56,7 +56,7 @@ unsigned char myChar = 240;
 === See also
 
 [role="language"]
-*  link:../../../functions/communication/serial/serial_println[Serial.println]
+*  link:/reference/en/language/functions/communication/serial/println/[Serial.println]
 
 --
 // SEE ALSO SECTION ENDS
