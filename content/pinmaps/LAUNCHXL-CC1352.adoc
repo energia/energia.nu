@@ -1,0 +1,15 @@
+== Guide to the CC1352R1 SimpleLink BLE and sub-1GHz (LAUNCHXL-CC1352R1)
+
+The http://www.ti.com/tool/LAUNCHXL-CC1352R1[LAUNCHXL-CC1352] has on board Sub 1-GHz radio to easily add a wireless connection. Use the Energia WiFi library to get online quickly and easily. There is an official Eenrgia library for the http://www.ti.com/product/CC1352[CC1352], EasyLink.
+
+Energia MT is supported for CC1352. You can make use of multi-tasking in your Energia sketches and automatically enter low power modes when idle. Learn more about MT!
+
+This hardware is open source! Get the http://www.ti.com/lit/zip/swrc345[LAUNCHXL-CC1352R1 Design Files] from TI.
+
+=== Pin Map
+The following diagram shows the complete pins map for the http://www.ti.com/product/CC1352R1[CC1352R1] LaunchPad in Energia. Click the image to view a larger version of the image.
+
+[caption="Figure 1: ",link=../img/LAUNCHXL-CC1352R1. png]
+image::../img/LAUNCHXL-CC1352R1.png[LAUNCHXL-CC1352R1,800]
+
+NOTE: The lighter colors indicate no connection.
