@@ -55,6 +55,7 @@ Users are encouraged to use the physical pin numbers (1-20, 1-40, or 1-80 depend
 
 === 32-bit CC13xx
 * link:launchxl-cc1310[CC1310 SimpleLink sub-1GHz (LAUNCHXL-CC1310)]
+* link:launchxl-cc1352[CC1352R1 SimpleLink sub-1GHz (LAUNCHXL-CC1352R1)]
 
 === 32-bit CC3200
 * link:cc3200-launchxl[CC3200 WiFi LaunchPad (CC3200-LAUNCHXL)]
