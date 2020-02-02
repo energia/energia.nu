@@ -1,13 +1,13 @@
-== Download Energia 21 aka Energia 1.8.7E21 ==
+== Download Energia 23 aka Energia 1.8.10E23 ==
 
 =========================
 .Board and library manager!
-Energia release 18 (aka Energia 1.8.7E21) and up feature the new board (core) / library manager. By default the Energia
-installation comes with support for the MSP430. Other cores such as CC1310, CC3220, TivaC, CC3200 and MSP432 can be installed through the board manager by selection Tools
+Energia release 23 (aka Energia 1.8.7E23) and up feature the new board (core) / library manager. By default the Energia
+installation comes with support for the MSP430. Other cores such as CC1310, CC13x2, CC3220, TivaC, CC3200 and MSP432 can be installed through the board manager by selection Tools
 ->Board->Board Manager. For more details on how to install additional cores/boards see the link:/guide/boards/[board manager guide guide]. The cores included in the board manager are: MSP430, MSP432 (MT, TI-RTOS based multitasking), CC3200 and TivaC. The CC3200 (MT) TI-RTOS based multitasking based core will be made available in the near future through the board manager. CC2650 has been removed from Energia due to the lack of BLE support that could not be enabled because of licensing issues with the BLE stack.
 =========================
 
-== Energia 1.8.7E23 (12/17/2019) ==
+== Energia 1.8.10E23 (12/17/2019) ==
 .Mac OS X: Signed Binary release version 1.8.10E23 (12/17/2019).
 Download here: http://energia.nu/downloads/downloadv4.php?file=energia-1.8.10E23-macosx-signed.zip[energia-1.8.10E23-macosx-signed.zip]
 
